@@ -1,0 +1,55 @@
+html {
+  background: $gdi--blue;
+}
+
+body {
+  background: #fff;
+  box-shadow: -5px 0 0 $gdi--green,
+              -10px 0 0 rgba($gdi--green, .75),
+              -15px 0 0 rgba($gdi--green, .5),
+              -20px 0 0 rgba($gdi--green, .25),
+              5px 0 0 $gdi--green,
+              10px 0 0 rgba($gdi--green, .75),
+              15px 0 0 rgba($gdi--green, .5),
+              20px 0 0 rgba($gdi--green, .25);
+  color: $body--color;
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+}
+
+header,
+footer {
+  padding: 20px 0;
+  text-align: center;
+  vertical-align: middle;
+
+  nav {
+    ul {
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+  }
+
+  .fa {
+    font-size: 2em;
+  }
+}
+
+header {
+  border-bottom: 10px solid $gdi--yellow;
+  margin-bottom: 20px;
+}
+
+footer {
+  border-top: 10px solid $gdi--yellow;
+  margin-top: 20px;
+}
+
+a {
+  color: $link--color;
+  &:hover { color: $link--color--hover; }
+}

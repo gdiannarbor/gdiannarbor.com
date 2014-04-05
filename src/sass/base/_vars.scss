@@ -1,0 +1,24 @@
+
+// Typography
+
+$base-font-family: 'Gotham-Book', serif;
+
+
+// Icon Fonts
+
+$fa-font-path: "../fonts/fontawesome";
+
+
+// Colors
+
+$gdi--grey: #333333;
+$gdi--blue: #00A9B4;
+$gdi--green: #92BB44;
+$gdi--maroon: #8B0036;
+$gdi--yellow: #EDAB23;
+$gdi--pink: #F05B62;
+
+$body--color: $gdi--grey;
+
+$link--color: $gdi--maroon;
+$link--color--hover: $gdi--pink;
