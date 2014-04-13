@@ -1,3 +1,11 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 html {
   background: $gdi--blue;
 }
@@ -21,32 +29,44 @@ body {
 header,
 footer {
   padding: 20px 0;
-  text-align: center;
   vertical-align: middle;
+}
+
+header {
+  border-bottom: 10px solid $gdi--yellow;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
 
   nav {
-    ul {
-      padding: 0;
-    }
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  ul { margin: 0; }
+
+  li {
+    display: inline-block;
+    margin: 0 .25em;
+  }
+}
+
+footer {
+  border-top: 10px solid $gdi--yellow;
+  margin-top: 20px;
+  text-align: center;
+
+  nav {
+    ul { padding: 0; }
+
     li {
       display: inline-block;
       margin: 0 1em;
     }
   }
 
-  .fa {
-    font-size: 2em;
-  }
-}
-
-header {
-  border-bottom: 10px solid $gdi--yellow;
-  margin-bottom: 20px;
-}
-
-footer {
-  border-top: 10px solid $gdi--yellow;
-  margin-top: 20px;
+  .fa { font-size: 2em; }
 }
 
 a {

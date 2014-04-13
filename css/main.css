@@ -645,6 +645,11 @@ th {
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
+/* line 118, ../src/sass/lib/font-awesome/_icons.scss */
+.fa-calendar:before {
+  content: "\f073";
+}
+
 /* line 155, ../src/sass/lib/font-awesome/_icons.scss */
 .fa-twitter:before {
   content: "\f099";
@@ -665,12 +670,12 @@ th {
   content: "\f0e1";
 }
 
-/* line 1, ../src/sass/base/_base.scss */
+/* line 9, ../src/sass/base/_base.scss */
 html {
   background: #00a9b4;
 }
 
-/* line 5, ../src/sass/base/_base.scss */
+/* line 13, ../src/sass/base/_base.scss */
 body {
   background: #fff;
   box-shadow: -5px 0 0 #92bb44, -10px 0 0 rgba(146, 187, 68, 0.75), -15px 0 0 rgba(146, 187, 68, 0.5), -20px 0 0 rgba(146, 187, 68, 0.25), 5px 0 0 #92bb44, 10px 0 0 rgba(146, 187, 68, 0.75), 15px 0 0 rgba(146, 187, 68, 0.5), 20px 0 0 rgba(146, 187, 68, 0.25);
@@ -680,47 +685,61 @@ body {
   width: 800px;
 }
 
-/* line 21, ../src/sass/base/_base.scss */
+/* line 29, ../src/sass/base/_base.scss */
 header,
 footer {
   padding: 20px 0;
-  text-align: center;
   vertical-align: middle;
 }
-/* line 28, ../src/sass/base/_base.scss */
-header nav ul,
+
+/* line 35, ../src/sass/base/_base.scss */
+header {
+  border-bottom: 10px solid #edab23;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+/* line 41, ../src/sass/base/_base.scss */
+header nav {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+/* line 47, ../src/sass/base/_base.scss */
+header ul {
+  margin: 0;
+}
+/* line 49, ../src/sass/base/_base.scss */
+header li {
+  display: inline-block;
+  margin: 0 .25em;
+}
+
+/* line 55, ../src/sass/base/_base.scss */
+footer {
+  border-top: 10px solid #edab23;
+  margin-top: 20px;
+  text-align: center;
+}
+/* line 61, ../src/sass/base/_base.scss */
 footer nav ul {
   padding: 0;
 }
-/* line 31, ../src/sass/base/_base.scss */
-header nav li,
+/* line 63, ../src/sass/base/_base.scss */
 footer nav li {
   display: inline-block;
   margin: 0 1em;
 }
-/* line 37, ../src/sass/base/_base.scss */
-header .fa,
+/* line 69, ../src/sass/base/_base.scss */
 footer .fa {
   font-size: 2em;
 }
 
-/* line 42, ../src/sass/base/_base.scss */
-header {
-  border-bottom: 10px solid #edab23;
-  margin-bottom: 20px;
-}
-
-/* line 47, ../src/sass/base/_base.scss */
-footer {
-  border-top: 10px solid #edab23;
-  margin-top: 20px;
-}
-
-/* line 52, ../src/sass/base/_base.scss */
+/* line 72, ../src/sass/base/_base.scss */
 a {
   color: #8b0036;
 }
-/* line 54, ../src/sass/base/_base.scss */
+/* line 74, ../src/sass/base/_base.scss */
 a:hover {
   color: #f05b62;
 }
