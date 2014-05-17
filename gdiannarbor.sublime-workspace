@@ -35,15 +35,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1489,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/sass/base/_vars.scss",
-			"settings":
-			{
-				"buffer_size": 346,
+				"buffer_size": 2188,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,7 +43,7 @@
 			"file": "src/sass/base/_base.scss",
 			"settings":
 			{
-				"buffer_size": 944,
+				"buffer_size": 1205,
 				"line_ending": "Unix"
 			}
 		}
@@ -96,6 +88,8 @@
 	},
 	"file_history":
 	[
+		"/Users/jewls/Sites/gdiannarbor.com/src/sass/base/_vars.scss",
+		"/Users/jewls/Sites/gdiannarbor.com/src/sass/lib/font-awesome/_icons.scss",
 		"/Users/jewls/Sites/gdiannarbor.com/src/sass/main.scss",
 		"/Users/jewls/Sites/gdiannarbor.com/.gitignore",
 		"/Users/jewls/Sites/gdiannarbor.com/css/main.css",
@@ -104,7 +98,6 @@
 		"/Users/jewls/Sites/gdiannarbor.com/config.rb",
 		"/Users/jewls/Downloads/html5-boilerplate-master/css/normalize.css",
 		"/Users/jewls/Sites/gdiannarbor.com/src/sass/lib/font-awesome/_variables.scss",
-		"/Users/jewls/Sites/gdiannarbor.com/src/sass/lib/font-awesome/_icons.scss",
 		"/Users/jewls/Sites/gdiannarbor.com/src/sass/lib/font-awesome/_font-awesome.scss",
 		"/Users/jewls/Sites/gdiannarbor.com/src/main.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/base/_mixins.scss",
@@ -228,6 +221,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"meet",
 			"meetup",
 			"twitter",
 			"linkedin",
@@ -358,15 +352,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1489,
+						"buffer_size": 2188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								573,
-								573
+								584,
+								584
 							]
 						],
 						"settings":
@@ -376,7 +370,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 362.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -384,47 +378,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/sass/base/_vars.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								93,
-								93
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "src/sass/base/_base.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 944,
+						"buffer_size": 1205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								869,
-								869
+								900,
+								900
 							]
 						],
 						"settings":
@@ -434,10 +400,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 79.0,
+						"translation.y": 275.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
