@@ -1,7 +1,7 @@
 
 // Typography
 
-$base-font-family: 'Gotham-Book', serif;
+$base-font-family: "Gotham-Book", Verdana, "Trebuchet MS", Arial, serif;
 
 
 // Icon Fonts
@@ -9,16 +9,30 @@ $base-font-family: 'Gotham-Book', serif;
 $fa-font-path: "../fonts/fontawesome";
 
 
-// Colors
+// Color Pallete
 
-$gdi--grey: #333333;
-$gdi--blue: #00A9B4;
-$gdi--green: #92BB44;
-$gdi--maroon: #8B0036;
-$gdi--yellow: #EDAB23;
-$gdi--pink: #F05B62;
+$white:         #ffffff;
+$grey--light:   #f4f4f4;
+$grey:          #333333;
+$blue:          #00A9B4;
+$green:         #92BB44;
+$maroon:        #8B0036;
+$yellow:        #EDAB23;
+$pink:          #F05B62;
 
-$body--color: $gdi--grey;
+$link--light--color:        $maroon;
+$link--light--color--hover: $pink;
 
-$link--color: $gdi--maroon;
-$link--color--hover: $gdi--pink;
+$link--dark--color:         $yellow;
+$link--dark--color--hover:  $pink;
+
+
+// Grid
+
+$susy: (
+  gutter-position: inside,
+  columns: 12,
+  gutters: 1,
+  column-width: 3.25em,
+  global-box-sizing: border-box
+);

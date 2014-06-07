@@ -1,0 +1,85 @@
+.meetups {
+  @include container;
+}
+
+.meetups__join {
+  @extend %font--medium;
+  @include border-radius(4px);
+  background: $blue;
+  color: $white;
+  display: block;
+  float: right;
+  line-height: 3em;
+  padding: 0 1em;
+
+  &:hover {
+    @include transform(scale(1.025));
+    background: $yellow;
+    color: $white;
+  }
+}
+
+.events__header { margin: 2em 0 0; }
+
+.month {
+  @include span(6);
+
+  &.odd { padding-left: 0; }
+  &:not(.odd) { padding-right: 0; }
+}
+
+.month__name {
+  background: rgba($grey, .25);
+  color: $white;
+  line-height: 2em;
+  padding: 0 .5em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+
+.event {
+  border-bottom: 1px dotted rgba($grey, .25);
+  padding: 1.5em 0;
+  &:last-child { border-bottom: none; }
+}
+
+.event__rsvp {
+  @include border-radius(4px);
+  background: $green;
+  color: $white;
+  display: block;
+  float: right;
+  line-height: 2em;
+  margin: 0 0 1em 1em;
+  padding: 0 .5em;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover {
+    @include transform(scale(1.05));
+    background: $yellow;
+    color: $white;
+  }
+}
+
+.event__name {
+  @extend %font--medium;
+  color: $blue;
+}
+
+.event__date span {
+  @extend %font--medium;
+}
+
+@include susy-breakpoint(max-width 48em, 8) {
+  .meetups__join {
+    display: block;
+    float: none;
+  }
+
+  .month {
+    @include span(8);
+    padding: 0;
+  }
+}

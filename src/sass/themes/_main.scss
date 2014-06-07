@@ -1,0 +1,76 @@
+.theme--main {
+  background: $grey;
+
+  .content {
+    background: $grey--light;
+    padding-bottom: 2em;
+  }
+
+  .container {
+    @include container;
+  }
+
+  .sidebar {
+    @include span(3);
+    @include border-bottom-radius(50px);
+    @include box-shadow(0 0 10px rgba($grey, .25));
+    background: $white;
+    text-align: center;
+
+    ul { margin: 1em 0 3em; }
+    li { margin-top: 1em; }
+
+    .fa { font-size: 2em; }
+  }
+
+  .main {
+    @include span(9);
+    color: $grey;
+  }
+
+  .logo {
+    display: block;
+    margin: 1.5em 0;
+
+    img {
+      @extend %transition;
+      width: 100%;
+    }
+
+    &:hover img {
+      @extend %transition;
+      @include transform(scale(1.05));
+    }
+  }
+
+  .footer {
+    background: $grey;
+    padding: 2em 0;
+    margin-top: 0;
+
+    a {
+      color: $link--dark--color;
+      &:hover { color: $link--dark--color--hover; }
+    }
+  }
+
+  @include susy-breakpoint(max-width 64em, 12) {
+    .sidebar { @include span(4); }
+    .main    { @include span(8); }
+  }
+
+  @include susy-breakpoint(max-width 48em, 8) {
+    .sidebar, .main { @include span(4); }
+  }
+
+  @include susy-breakpoint(max-width 30em, 8) {
+    .sidebar {
+      @include span(7);
+      float: none;
+      margin: 0 auto 1em;
+      padding: .5em;
+    }
+    .logo img { width: 80%; }
+    .main     { @include span(8); }
+  }
+}

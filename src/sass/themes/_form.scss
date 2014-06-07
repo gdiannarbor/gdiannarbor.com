@@ -1,0 +1,43 @@
+.theme--form {
+  background: $blue;
+
+  body {
+    background: $white;
+    @include box-shadow(-5px 0 0 $green,
+                    -10px 0 0 rgba($green, .75),
+                    -15px 0 0 rgba($green, .5),
+                    -20px 0 0 rgba($green, .25),
+                    5px 0 0 $green,
+                    10px 0 0 rgba($green, .75),
+                    15px 0 0 rgba($green, .5),
+                    20px 0 0 rgba($green, .25));
+    color: $grey;
+    margin: 0 auto;
+    padding: 20px;
+    width: 820px;
+  }
+
+  header,
+  footer {
+    vertical-align: middle;
+  }
+
+  header {
+    border-bottom: 10px solid $yellow;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+
+    nav {
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+  }
+
+  footer {
+    border-top: 10px solid $yellow;
+    padding: 40px 0 20px;
+  }
+}

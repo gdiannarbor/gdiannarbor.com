@@ -1,75 +1,48 @@
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html {
-  background: $gdi--blue;
-}
+html, body { margin: 0; }
 
-body {
-  background: #fff;
-  box-shadow: -5px 0 0 $gdi--green,
-              -10px 0 0 rgba($gdi--green, .75),
-              -15px 0 0 rgba($gdi--green, .5),
-              -20px 0 0 rgba($gdi--green, .25),
-              5px 0 0 $gdi--green,
-              10px 0 0 rgba($gdi--green, .75),
-              15px 0 0 rgba($gdi--green, .5),
-              20px 0 0 rgba($gdi--green, .25);
-  color: $body--color;
-  margin: 0 auto;
-  padding: 20px;
-  width: 800px;
-}
+h1, h2, h3, h4, h5, h6 { @extend %font--medium; }
+b, strong              { @extend %font--bold; }
+i, em                  { @extend %font--italic; }
 
-header,
-footer {
-  padding: 20px 0;
-  vertical-align: middle;
-}
+a {
+  @extend %transition;
+  color: $link--light--color;
+  text-decoration: none;
 
-header {
-  border-bottom: 10px solid $gdi--yellow;
-  margin-bottom: 20px;
-  position: relative;
-  text-align: center;
+  .fa { @extend %transition; }
 
-  nav {
-    position: absolute;
-    top: 0;
-    right: 10px;
-  }
+  &:hover {
+    @extend %transition;
+    color: $link--light--color--hover;
 
-  ul { margin: 0; }
-
-  li {
-    display: inline-block;
-    margin: 0 .25em;
-  }
-}
-
-footer {
-  border-top: 10px solid $gdi--yellow;
-  margin-top: 20px;
-  text-align: center;
-
-  nav {
-    ul { padding: 0; }
-
-    li {
-      display: inline-block;
-      margin: 0 1em;
+    .fa {
+      @extend %transition;
+      @include transform(scale(1.1));
     }
   }
+}
+
+footer {
+  margin-top: 2em;
+  text-align: center;
 
   .fa { font-size: 2em; }
 }
 
-a {
-  color: $link--color;
-  &:hover { color: $link--color--hover; }
+nav ul { margin: 0; padding: 0; }
+
+[class*="list--horz"] {
+  li {
+    display: inline-block;
+    margin: 0 1em;
+  }
+
+  &.list--cozy li    { margin: 0 .5em; }
+  &.list--compact li { margin: 0 .25em; }
 }

@@ -1,0 +1,17 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%transition {
+  @include transition-delay(0s);
+  @include transition-duration(.1s);
+  @include transition-property(font-size margin padding transform width height background-color color opacity);
+}
+
+%font--bold   { font-family: "Gotham-Bold"; }
+%font--italic { font-family: "Gotham-Italic"; }
+%font--medium { font-family: "Gotham-Medium"; }
