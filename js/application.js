@@ -28,7 +28,7 @@ function parseMeetupData(classes) {
 
   } else {
     var html = '<div class = "month odd">';
-    var max = classes.length > 5 ? 5 : classes.length;
+    var max = classes.length > 10 ? 10 : classes.length;
     var month = -1;
 
     for (var i=0; i < max; i++) {
