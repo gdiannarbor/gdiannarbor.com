@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Girl Develop It Ann Arbor</title>
+
+    <meta name="description" content="This is the reveal.js template for Girl Develop It Ann Arbor.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/rainbow.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Event Intro -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3 class="event__title">Event Title<br /><small>Optional Subtitle</small></h3>
+            <p><small>Speaker Name &nbsp; | &nbsp; @speaker</small></p>
+            <aside class="notes">
+            </aside>
+          </div>
+        </section>
+
+        <!-- Wifi Setup -->
+        <section>
+          <h3>Get Connected!</h3>
+
+          <div class="box">
+            <p><strong>Wifi Network:</strong> network-name</p>
+            <p class="box--small"><strong>Password:</strong> network-pass</p>
+          </div>
+        </section>
+
+        <!-- GDI Welcome -->
+        <section>
+          <h3>Welcome!</h3>
+
+          <p class="box"><strong>Girl Develop It</strong> is here to empower and assist women interested in getting into and advancing in the tech industry through affordable and accessible programs.</p>
+          <!-- <p class="box">Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p> -->
+
+          <div class="copy--small">
+            <h4 class="green">Some "rules"</h4>
+            <ul>
+              <li>We are here for you!</li>
+              <li>Every question is important.</li>
+              <li>Help each other.</li>
+              <li><strong>Have fun!</strong></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Community Events -->
+        <section>
+          <h3>Community Events</h3>
+          <ul class="box--small copy--small left" style="width: 46%">
+            <li><strong class="red">GDI A2 - Code &amp; Coffee</strong><br /><small>Saturday 6/21 @ Amer's on State St.</small></li>
+            <li><strong>A2 R User Group - 1st Meetup!</strong><br /><small>Thursday 6/19 @ Espresso Royale on Main St.</small></li>
+          </ul>
+          <ul class="box--small copy--small right" style="width: 46%">
+            <li><strong>A2 R User Group - 1st Meetup!</strong><br /><small>Thursday 6/19 @ Espresso Royale on Main St.</small></li>
+            <li class="blue"><em>Did we miss anything?</em></li>
+          </ul>
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <!-- Sponsors -->
+        <section>
+          <h3>Sponsors!</h3>
+          <img src="images/event-sponsors.png" class="box--small img--bare" />
+        </section>
+
+        <!-- Sponsor Spotlight -->
+        <section>
+          <h3>Sponsor Spotlight</h3>
+          <img src="images/stout.png" class="box img--bare" />
+        </section>
+
+        <!-- Event Intro -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3 class="event__title">Event Title<br /><small>Optional Subtitle</small></h3>
+            <p><small>Speaker Name &nbsp; | &nbsp; @speaker</small></p>
+            <aside class="notes">
+            </aside>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div class="copyright">
+          @gdiannarbor ~
+          <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+            <img alt="Creative Commons License" class="img--bare" src="images/cc.png" />
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
