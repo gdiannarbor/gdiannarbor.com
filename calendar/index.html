@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+ <head>
+  <title>MeetupGator</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' href='css/fullcalendar.css' />
+  <style>
+.btn.btn-table {
+  padding: 1px 5px 1px;
+  font-size: 7px;
+  margin-right: -3px;
+  margin-top: -3px;
+ }
+  </style>
+ </head>
+ <body>
+ <div class="container" style="margin-top:20px;">
+
+  <div style="width: 100%;">
+    <div class="pull-left" style="width: 30%;">
+      <p>To add a group, enter its meetup URL or ID: <br>
+      <div class="form-inline">
+      <input type="text" id="group-id"> <button id="add-group" class="btn btn-small" type="button">Add</button>
+      </div>
+      </p>
+
+      <table class="table" id="groups-table" style="display:none;">
+       <thead>
+        <tr><th>Group  <th># Events <th>
+       </thead>
+       <tbody></tbody>
+      </table>
+
+      <br>
+
+      <p>To add your Google calendar, enter <a href="http://support.google.com/calendar/bin/answer.py?hl=en&answer=37648">its URL</a>:</p>
+      <div class="form-inline">
+      <input type="text" id="calendar-url">  <button id="add-calendar" class="btn btn-small" type="button">Add</button>
+      </div>
+      <table id="calendars-table" class="table" style="margin-top: 10px;">
+       <tbody></tbody>
+      </table>
+      <div>
+      <input id="calendar-holidays" type="checkbox" checked="checked"> Show/hide US holidays
+      </div>
+
+    </div>
+
+    <div class="pull-right" style="width: 65%;">
+
+      <ul class="nav nav-pills pull-left">
+        <li id="events-calendar-link" class="events-link active"><a href="javascript:changeView('calendar')">Calendar View</a>
+        <li id="events-table-link" class="events-link"><a href="javascript:changeView('table')">Table View</a>
+        <li id="events-list-link" class="events-link"><a href="javascript:changeView('list')">List View</a>
+      </ul>
+
+      <div id="events-calendar" class="events-view" style=""></div>
+
+      <table id="events-table" class="table events-view"  style="display:none;">
+       <thead>
+        <tr><th>Date/Time   <th>Event   <th>Group
+       </thead>
+       <tbody></tbody>
+      </table>
+
+      <ul id="events-list" class="events-view" style="display:none;clear:left;">
+
+      </ul>
+
+    </div>
+  </div>
+
+
+ </div>
+
+ <script src="js/moment.min.js"></script>
+ <script src="js/jquery.min.js"></script>
+ <script src='js/fullcalendar.min.js'></script>
+ <script src='js/gcal.js'></script>
+ <script src='js/lscache.js'></script>
+<script type="text/javascript">
+var MG = {};
+MG.groups = [];
+MG.groupedEvents = {};
+
+function getHashParam(name) {
+  var regexS = name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var splitUrl = unescape(window.location.href).split('#');
+  var hash  = ((splitUrl.length > 1) && splitUrl[1]) || '';
+  var results = regex.exec(hash);
+  if( results === null )
+    return null;
+  else
+    return results[1];
+}
+
+function changeHashParam(name, value) {
+  var regexS = name  + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var hash  = window.location.hash;
+  var results = regex.exec(hash);
+  if (getHashParam(name)) {
+    window.location.hash = window.location.hash.replace(regex, name + '=' + value);
+  } else {
+    if (window.location.hash.indexOf('=') > -1) {
+      window.location.hash += '&';
+    }
+    window.location.hash += name + '=' + value;
+  }
+}
+
+function changeView(viewId) {
+  $('.events-view').hide();
+  $('#events-' + viewId).show();
+
+  $('.events-link').removeClass('active');
+  $('#events-' + viewId + '-link').addClass('active');
+}
+
+function getGroupsFromHash() {
+  var groupsHash = getHashParam('groups');
+  if (groupsHash) return groupsHash.split(',');
+  return [];
+}
+
+function addGroupToHash(groupId) {
+  var groups = getGroupsFromHash();
+  groups.push(groupId);
+  changeHashParam('groups', groups.join(','));
+}
+
+function removeGroupFromHash(groupId) {
+  var groups = getGroupsFromHash();
+  var idx = groups.indexOf(groupId);
+  if (idx != -1) {
+    groups.splice(idx, 1);
+    changeHashParam('groups', groups.join(','));
+  }
+}
+
+
+function renderEvents() {
+  $('#events-list').empty();
+  $('#events-table tbody').empty();
+
+  var allEvents = [];
+  $.each(MG.groupedEvents, function(groupId, events) {
+    allEvents = allEvents.concat(MG.groupedEvents[groupId]);
+  });
+
+  // Sort events by time
+  allEvents.sort(function(a, b) {
+    return a.time > b.time;
+  });
+
+  // Add to table
+
+  $.each(allEvents, function(index, event) {
+
+    var dateTime = moment(event.time).format('ddd, MMM Do, h:mma');
+    var eventStr = '<a href="' + event.event_url + '">' + event.name + '</a>';
+    var groupId  = event.group.urlname;
+    var groupStr = '<a href="http://meetup.com/' + groupId + '">' + groupId + '</a>';
+    // add to table
+    var $eventRow = $('<tr><td>' + dateTime + '<td>' + eventStr + '<td>' + groupStr);
+    $eventRow.addClass('group-' + groupId);
+    $('#events-table tbody').append($eventRow);
+
+    var $eventItem = $('<li></li>');
+    $eventItem.append(dateTime + ': ' + eventStr + ' (' + groupStr + ')');
+    $('#events-list').append($eventItem);
+  });
+
+  $('#events-calendar').fullCalendar('refetchEvents');
+}
+
+function renderGroups() {
+  $('#groups-table tbody').empty();
+
+  var allGroups = [];
+  $.each(MG.groupedEvents, function(groupId, events) {
+    allGroups.push(groupId);
+  });
+
+  // Sort alphabetically
+  allGroups.sort();
+
+  $.each(allGroups, function(index, groupId) {
+    var groupStr = '<a href="http://meetup.com/' + groupId + '">' + groupId + '</a>';
+    var $groupRow = $('<tr>').addClass('group-' + groupId);
+    $groupRow.append('<td>' + groupStr);
+    var badgeClass = (MG.groupedEvents[groupId].length > 0) ? 'badge badge-success' : 'badge';
+    $groupRow.append('<td><span class="' + badgeClass + '">' + MG.groupedEvents[groupId].length + '</span>');
+    var $removeButton = $('<td><button class="btn btn-table remove-group">X</button>');
+    $removeButton.on('click', function() {
+      delete MG.groupedEvents[groupId];
+      removeGroupFromHash(groupId);
+      renderGroups();
+      renderEvents();
+    });
+    $groupRow.append($removeButton);
+    $('#groups-table tbody').append($groupRow);
+  });
+
+  if (allGroups.length > 0) {
+    $('#groups-table').show();
+  }
+}
+
+function getGroupEvents(groupId) {
+  var meetupParams = {'key': '551f79233a251a351215671b7a60',
+                      'group_urlname': groupId};
+  var meetupUrl = 'https://api.meetup.com/2/events.json?' + $.param(meetupParams);
+
+  var proxyUrl = 'proxy?url=' + escape(meetupUrl);
+  $.getJSON(proxyUrl, function(data){
+    if(data){
+      MG.groupedEvents[groupId] = data.results;
+      renderGroups();
+      renderEvents();
+    }
+  });
+}
+
+function refreshGroups() {
+  // For anything in hash we dont have events for, fetch them
+  var groups = getGroupsFromHash();
+  $.each(groups, function(index, groupId) {
+    if (!(groupId in MG.groupedEvents)) {
+      getGroupEvents(groupId);
+    }
+  });
+
+  // If there are groups in our data that arent in hash, delete
+  $.each(MG.groupedEvents, function(groupId, events) {
+    if ($.inArray(groupId, groups) == -1) {
+      delete MG.groupedEvents[groupId];
+    }
+  });
+}
+
+$(document).ready(function(){
+
+  $('#add-group').on('click', function(event) {
+    event.preventDefault();
+    var groupId = $('#group-id').val();
+    if (groupId.indexOf('meetup.com') > -1) {
+      var regEx = /meetup.com\/([^/]*)/g;
+      groupId = regEx.exec(groupId)[1];
+    }
+    if (!MG.groupedEvents[groupId]) {
+      addGroupToHash(groupId);
+      getGroupEvents(groupId);
+    }
+  });
+
+  $('#events-calendar').fullCalendar({
+    editable: false,
+    aspectRatio: 2,
+    header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+    },
+    eventSources: [
+    function(start, end, callback) {
+      var allEvents = [];
+      $.each(MG.groupedEvents, function(groupId, events) {
+        $.each(events, function(index, event) {
+          allEvents.push({title: event.name, start: new Date(event.time), url: event.event_url, color: '#C92525'});
+        });
+      });
+      callback(allEvents);
+    }
+    ]
+  });
+
+  function toggleHolidays() {
+    var holidaysCalendar = {url: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic',
+  color: '#bbb'};
+    if ($('#calendar-holidays').attr('checked') == 'checked') {
+      $('#events-calendar').fullCalendar('addEventSource', holidaysCalendar);
+    } else {
+      $('#events-calendar').fullCalendar('removeEventSource', holidaysCalendar);
+    }
+  }
+  $('#calendar-holidays').click(toggleHolidays);
+
+  function addCalendar(calendarUrl) {
+    var regEx = /feeds\/([^/]*)/g;
+    var calendarMatches = regEx.exec(calendarUrl);
+    if (!calendarMatches) {
+      alert('Dont think that a valid Google calendar feed, sorry!');
+      return;
+    }
+    calendarUsername = unescape(calendarMatches[1]);
+    var privateCalendar = {url: calendarUrl};
+    $('#events-calendar').fullCalendar('addEventSource', privateCalendar);
+    var $calendarRow = $('<tr></tr>');
+    $calendarRow.append('<td><a target="_blank" href="' + calendarUrl + '">' + calendarUsername + '</a></td>');
+    var $removeButton = $('<td><button class="btn btn-table remove-group">X</button>');
+    $removeButton.on('click', function() {
+      $calendarRow.remove();
+      $('#events-calendar').fullCalendar('removeEventSource', privateCalendar);
+    });
+    $calendarRow.append($removeButton);
+    $('#calendars-table').append($calendarRow);
+  }
+
+  $('#add-calendar').click(function() {
+    addCalendar($('#calendar-url').val());
+  });
+
+  $(window).on('hashchange', function() {
+    refreshGroups();
+  });
+
+  $(window).on('unload', function() {
+    lscache.set('holidays', $('#calendar-holidays').attr('checked'));
+
+    var calendars = [];
+    $('#calendars-table td a').each(function() {
+      var calendarUrl = $(this).attr('href');
+      calendars.push(calendarUrl);
+    });
+    lscache.set('calendars', calendars);
+
+    var groups = getGroupsFromHash();
+    lscache.set('groups', groups);
+  });
+
+  // Check localStorage for holiday setting, check it if its there.
+  var holidays = lscache.get('holidays');
+  if (holidays) {
+    if (holidays == 'checked') {
+      $('#calendar-holidays').attr('checked', 'checked');
+    } else {
+      $('#calendar-holidays').removeAttr('checked');
+    }
+  }
+  toggleHolidays();
+
+  // If there are calendars in localStorage, use them.
+  var calendars = lscache.get('calendars');
+  $.each(calendars || [], function(index, calendarUrl) {
+    addCalendar(calendarUrl);
+  });
+
+  // If there's nothing after the hash, we use groups from localStorage if there are any.
+  // If there is anything in the hash, we refresh the groups.
+  if (window.location.hash.length < 2) {
+    var groups = lscache.get('groups');
+    if (groups) {
+      changeHashParam('groups', groups.join(','));
+    }
+  } else {
+    refreshGroups();
+  }
+
+  $('#events-calendar').fullCalendar('refetchEvents');
+});
+
+</script>
+</body>
+</html>
