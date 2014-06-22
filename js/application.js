@@ -50,12 +50,20 @@ function parseMeetupData(classes) {
               + '<div class = "event__info">'
                 + '<a class="event__name" target="_blank" href="' + classes[i].event_url + '">'
                   + classes[i].name + '</a>'
-                + '<div class="event__date"><span>' + meetup_date.toLocaleDateString() + '</span> @ ' + classes[i].venue.name + '</div>'
+                + '<div class="event__date"><span>' + meetup_date.toLocaleDateString() + '</span>' + venue_info(classes[i]) + '</div>'
               + '</div>'
             + '</div>';
     }
 
     html += '</div>';
     $('.events').html(html);
+  }
+}
+
+function venue_info(course) {
+  if (course.venue) {
+    return ' @ ' + course.venue.name;
+  } else {
+    return ' @ <em>TBD</em>';
   }
 }
