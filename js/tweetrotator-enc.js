@@ -152,7 +152,59 @@
       };
 
       var E=function(a){
-        if(L.convertTextlink==true){a=B(a)}if(L.linkHashtags==true){a=C(a)}if(L.linkUsernames==true){a=D(a)}a=a.replace(/ \<\/a\>/g,"</a> ");return a};var F=function(a){var b=Date.parse(a);var c=new Date();var d=c.getTime();var e=parseInt((d-b)/1000);if(e<0)return false;if(e<=60)return"Seconds ago";if(e<3600)return parseInt(e/60)+" minutes ago";if(e<=1.5*3600)return"One hour ago";if(e<23.5*3600)return Math.round(e/3600)+" hours ago";if(e<1.5*24*3600)return"One day ago";var f=a.split(' ');return f[4].replace(/\:\d+$/,'')+' '+f[2]+' '+f[1]+(f[3]!=c.getFullYear()?' '+f[3]:'')};var G=function(){if(L.autorotate==false){p=true}else{p=false}s=setInterval(function(){if(p==true){clearInterval(s)}if(p==false){H()}},(L.idletime*1000))};var H=function(){var a=$(h+" ul.nav li.active");if(a.next().size()>0){A(a.next())}else{A($(h+" ul.nav li").first())}};if(document.domain.indexOf("localhost")>-1||document.domain.indexOf("codecanyon")>-1||document.domain.indexOf("johandorper")>-1||document.domain.indexOf("envato")>-1){if(L.liveTweetsToken==""){alert("You need to create your LiveTweets token, read the documentation for more information.")}else{v()}}else{alert("Error - you need to buy this plugin in order to use it.")}})}})(jQuery);
+        if(L.convertTextlink==true){
+          a=B(a)
+        }
+        if(L.linkHashtags==true){
+          a=C(a)
+        }
+        if(L.linkUsernames==true){
+          a=D(a)
+        }
+        a=a.replace(/ \<\/a\>/g,"</a> ");
+        return a
+      };
+
+      var F=function(a){
+        var b=Date.parse(a);
+        var c=new Date();
+        var d=c.getTime();
+        var e=parseInt((d-b)/1000);
+        if(e<0)return false;
+        if(e<=60)return"Seconds ago";
+        if(e<3600)return parseInt(e/60)+" minutes ago";
+        if(e<=1.5*3600)return"One hour ago";
+        if(e<23.5*3600)return Math.round(e/3600)+" hours ago";
+        if(e<1.5*24*3600)return"One day ago";
+        var f=a.split(' ');
+        return f[4].replace(/\:\d+$/,'')+' '+f[2]+' '+f[1]+(f[3]!=c.getFullYear()?' '+f[3]:'')
+      };
+
+      var G=function(){
+        if(L.autorotate==false){
+          p=true
+        }else{
+          p=false
+        }
+        s=setInterval(function(){
+          if(p==true){clearInterval(s)}
+          if(p==false){H()}
+        },(L.idletime*1000))
+      };
+
+      var H=function(){
+        var a=$(h+" ul.nav li.active");
+        if(a.next().size()>0){
+          A(a.next())
+        }else{
+          A($(h+" ul.nav li").first())
+        }
+      };
+
+      v();
+    })
+  }
+})(jQuery);
 
 
 
