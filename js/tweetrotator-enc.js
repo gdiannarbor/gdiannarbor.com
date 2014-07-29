@@ -39,7 +39,8 @@
       var t=L.operator;
       // var u="http://livetweets.johandorper.com/Get/?callback=?&domain="+escape(window.location.host)+"&token="+L.liveTweetsToken+"&q="+escape(t)+"&rpp="+L.tweetlimit;
       // var u="https://api.twitter.com/1.1/search/tweets.json?q="+escape(t)+"&count="+L.tweetlimit+"&result_type=recent";
-      var u="../twitter-proxy.php?url=search/tweets.json?q="+escape(t)+"&count="+L.tweetlimit+"&result_type=recent";
+      var api_path = encodeURIComponent("search/tweets.json?q="+escape(t)+"&count="+L.tweetlimit+"&result_type=recent")
+      var u="../twitter-proxy.php?url="+api_path;
 
       var v=function(){
         g.addClass("tweet_rotator");
