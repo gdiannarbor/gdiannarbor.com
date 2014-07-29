@@ -13,7 +13,7 @@
 
  * Tweet Rotator is a JQuery plugin that lets you easily
  * load in Tweets from Twitter based on a valid Twitter
- * search operator.
+ * search query.
 
  * Thx to Fox Junior for the timer Plugin: http://www.foxjunior.eu/
  */
@@ -24,7 +24,21 @@
     var J=new Date();
     J=J.getTime();
 
-    var K={operator:"#apple",multiple_colors:true,direction:"horizontal",tweetlimit:6,autorotate:true,idletime:3,convertTextlink:true,linkHashtags:true,linkUsernames:true,parameters:"",default_from_line:"Tweet from ",default_time_line:"// Posted ",prefix:"color_"};
+    var K={
+      query:"#apple",
+      multiple_colors:true,
+      direction:"horizontal",
+      limit:6,
+      autorotate:true,
+      delay:3,
+      convertTextlink:true,
+      linkHashtags:true,
+      linkUsernames:true,
+      parameters:"",
+      default_from_line:"Tweet from ",
+      default_time_line:"// Posted ",
+      prefix:"color_"
+    };
     var L=$.extend(K,I);
 
     return this.each(function(){
@@ -36,8 +50,8 @@
       var p=false;var q=false;
       var r=L.prefix;
       var s="";
-      var t=L.operator;
-      var u="../twitter-proxy.php?url="+encodeURIComponent("search/tweets.json?q="+escape(t)+"&count="+L.tweetlimit+"&result_type=recent");
+      var t=L.query;
+      var u="../twitter-proxy.php?url="+encodeURIComponent("search/tweets.json?q="+escape(t)+"&count="+L.limit+"&result_type=recent");
 
       var v=function(){
         g.addClass("tweet_rotator");
@@ -107,7 +121,7 @@
                 H();
                 G();
                 q=false
-              },(L.idletime*1000))
+              },(L.delay*1000))
             }
           }
         })
@@ -188,7 +202,7 @@
         s=setInterval(function(){
           if(p==true){clearInterval(s)}
           if(p==false){H()}
-        },(L.idletime*1000))
+        },(L.delay*1000))
       };
 
       var H=function(){

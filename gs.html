@@ -13,11 +13,9 @@
         $(document).ready(function () {
             // TODO every 200 seconds, reset / repeat
             $("#live").liveTweets({
-                operator:        "#got",
-                multiple_colors: true,
-                tweetlimit:      10,
-                autorotate:      true,
-                idletime:        10
+                query: "#got",
+                limit: 10,
+                delay: 10
             });
         });
     </script>
