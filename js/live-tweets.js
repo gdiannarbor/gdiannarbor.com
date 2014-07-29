@@ -46,42 +46,47 @@
       var h="#"+$(this).attr("id");
       var j=g.width();
       var k=g.height();
-      var l=0;var m=0;var n=0;var o=6;
-      var p=false;var q=false;
+      var l=0;
+      var m=0;
+      var n=0;
+      var o=6;
+      var p=false;
+      var q=false;
       var r=L.prefix;
       var s="";
       var t=L.query;
       var u="../twitter-proxy.php?url="+encodeURIComponent("search/tweets.json?q="+escape(t)+"&count="+L.limit+"&result_type=recent");
 
-      var v=function(){
+      var init=function(){
         g.addClass("tweet_rotator");
         g.append("<div class='tweet_holder'/>");
-        w()
+        getTweets()
       };
 
-      var w=function(){
-        $.getJSON(u,function(c){
-          $.each(c.statuses,function(a,b){
-            x(b);l++
+      var getTweets=function(){
+        $.getJSON(u,function(data){
+          $.each(data.statuses,function(index,tweet){
+            addTweet(tweet);l++
           });
-          z();
-          G()
-        })};
+          addNav();
+          startRotation()
+        })
+      };
 
-      var x=function(a){
-        console.log(a);
-        var b=$("<div class='tweetparent "+y()+"' id='tweet_"+l+"'></div>");
+      var addTweet=function(tweet){
+        console.log(tweet);
+        var b=$("<div class='tweetparent "+getColorClass()+"' id='tweet_"+l+"'></div>");
         var c=$("<div class='tweetbox'></div>");
-        c.append("<span>"+L.default_from_line+"<a target='_blank' href='http://www.twitter.com/"+a.user.screen_name+"'>@"+a.user.screen_name+"</a></span>");
-        c.append("<div class='profile-img'><img src="+a.user.profile_image_url.replace('_normal', '')+" /></div>")
-        c.append("<p>"+E(a.text)+"</p>");
-        c.append("<em>"+L.default_time_line+F(a.created_at)+"</em>");
+        c.append("<span>"+L.default_from_line+"<a target='_blank' href='http://www.twitter.com/"+tweet.user.screen_name+"'>@"+tweet.user.screen_name+"</a></span>");
+        c.append("<div class='profile-img'><img src="+tweet.user.profile_image_url.replace('_normal', '')+" /></div>")
+        c.append("<p>"+E(tweet.text)+"</p>");
+        c.append("<em>"+L.default_time_line+F(tweet.created_at)+"</em>");
         b.css({width:j+"px",height:k+"px"});
         b.append(c);
         $(h+" .tweet_holder").append(b)
       };
 
-      var y=function(){
+      var getColorClass=function(){
         if(L.multiple_colors==true){
           if(n==0){
             n++;return r+n
@@ -97,7 +102,7 @@
         }
       };
 
-      var z=function(){
+      var addNav=function(){
         var a=$("<ul class='nav'/>");
         for(var i=0;i<l;i++){
           if(m==i){
@@ -112,14 +117,14 @@
           $(h+" .tweetparent, "+h+" ul.nav li").css("float","left")
         }
         $(h+" .nav").delegate("li:not(.active)","click",function(){
-          A($(this));
+          animateNext($(this));
           if(L.autorotate==true){
             p=true;
             if(q==false){
               q=true;
               setTimeout(function(){
-                H();
-                G();
+                goToNext();
+                startRotation();
                 q=false
               },(L.delay*1000))
             }
@@ -127,7 +132,7 @@
         })
       };
 
-      var A=function(a){
+      var animateNext=function(a){
         $(h+" .nav li").removeClass("active");
         a.addClass("active");
         if(L.direction=="vertical"){
@@ -193,7 +198,7 @@
         return f[4].replace(/\:\d+$/,'')+' '+f[2]+' '+f[1]+(f[3]!=c.getFullYear()?' '+f[3]:'')
       };
 
-      var G=function(){
+      var startRotation=function(){
         if(L.autorotate==false){
           p=true
         }else{
@@ -201,20 +206,20 @@
         }
         s=setInterval(function(){
           if(p==true){clearInterval(s)}
-          if(p==false){H()}
+          if(p==false){goToNext()}
         },(L.delay*1000))
       };
 
-      var H=function(){
+      var goToNext=function(){
         var a=$(h+" ul.nav li.active");
         if(a.next().size()>0){
-          A(a.next())
+          animateNext(a.next())
         }else{
-          A($(h+" ul.nav li").first())
+          animateNext($(h+" ul.nav li").first())
         }
       };
 
-      v();
+      init();
     })
   }
 })(jQuery);
