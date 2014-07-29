@@ -2,33 +2,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tweet Rotator 2.0 - Rotating Tweets on your website.</title>
+    <title>GDI Ann Arbor</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/tweetrotator-enc.js"></script>
+    <script type="text/javascript" src="js/live-tweets.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
-    <link rel="stylesheet" type="text/css" href="css/tweetrotator.css">
+    <link rel="stylesheet" type="text/css" href="css/live-tweets.css">
 
     <script>
         $(document).ready(function () {
-            $("#example").tweetrotator({
-                operator: "#trueblood",
+            // TODO every 200 seconds, reset / repeat
+            $("#live").liveTweets({
+                operator:        "#got",
                 multiple_colors: true,
-                tweetlimit: 20,
-                autorotate: true,
-                idletime: 10
+                tweetlimit:      10,
+                autorotate:      true,
+                idletime:        10
             });
         });
     </script>
 </head>
 <body>
-
-    <div class="wrapper">
-        <div class="shadow">
-            <div id="example"></div>
-        </div>
-    </div>
-
+    <div id="live"></div>
 </body>
 </html>

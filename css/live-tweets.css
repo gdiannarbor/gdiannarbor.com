@@ -1,0 +1,28 @@
+html { background: #333; }
+body { text-align: center; padding-top: 0; }
+#live { width: 100%; height: 1000px; margin: auto; }
+
+.tweet_rotator { overflow: hidden;  position: relative; }
+.tweet_holder { position: relative; }
+.tweetparent { overflow: hidden;  }
+.tweetbox { display: block;  padding: 15%; text-align: left; }
+
+.tweetbox .profile-img { float: left; margin-right: 20px; height: 500px;}
+.tweetbox .profile-img img { height: 200px; border: 5px solid #000; }
+.tweetbox span { font-family: 'Droid Sans', serif; font-size: 18px; color: #fff; text-transform: uppercase; }
+.tweetbox span a { color: #fff; text-decoration: none; }
+.tweetbox p { padding-top: 15px; font-family: 'Droid Sans', serif; font-size: 42px; color: #fff; font-weight: 700; letter-spacing: 0.010em; line-height: 1.25em; padding-bottom: 20px; word-spacing: 0.04em; }
+.tweetbox p a { color: #000; }
+.tweetbox em { font-family: 'Droid Sans', serif; font-size: 12px; color: #fff; text-transform: uppercase;  }
+
+.tweet_rotator ul.nav { display: none; position: absolute; bottom: 0px; right: 0px; padding: 5px;}
+.tweet_rotator ul.nav li { cursor: pointer; width: 20px; height: 20px; display: block; }
+.tweet_rotator ul.nav li.active { background-position: 0px -20px; }
+
+.color_1  { background-color: #06bbfe; }
+.color_2  { background-color: #00A9B4; }
+.color_3  { background-color: #EDAB23; }
+.color_4  { background-color: #8B0036; }
+.color_5  { background-color: #92BB44; }
+.color_6  { background-color: #F05B62; }
+
