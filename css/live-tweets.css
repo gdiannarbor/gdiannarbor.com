@@ -1,6 +1,6 @@
 html { background: #333; }
 body { text-align: center; padding-top: 0; }
-#live { width: 100%; height: 1000px; margin: auto; }
+#liveTweets { width: 100%; height: 1000px; margin: auto; }
 
 .tweet_rotator { overflow: hidden; position: relative; }
 .tweet_holder { position: relative; }
