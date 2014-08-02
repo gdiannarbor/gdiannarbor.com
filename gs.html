@@ -11,16 +11,23 @@
 
     <script>
         $(document).ready(function () {
-            // TODO every 200 seconds, reset / repeat
-            $("#live").liveTweets({
-                query: "#got",
-                limit: 10,
-                delay: 10
-            });
+            var initTweets = function() {
+                $("#liveTweets").remove();
+
+                $('body').html("<div id='liveTweets'></div>");
+
+                $("#liveTweets").liveTweets({
+                    query: "#got",
+                    limit: 10,
+                    delay: 10
+                });
+            }
+
+            initTweets();
+            setTimeout('initTweets', 10000);
         });
     </script>
 </head>
 <body>
-    <div id="live"></div>
 </body>
 </html>

@@ -19,10 +19,10 @@ body { text-align: center; padding-top: 0; }
 .tweet_rotator ul.nav li { cursor: pointer; width: 20px; height: 20px; display: block; }
 .tweet_rotator ul.nav li.active { background-position: 0px -20px; }
 
-.color_1  { background-color: #06bbfe; }
-.color_2  { background-color: #00A9B4; }
-.color_3  { background-color: #EDAB23; }
-.color_4  { background-color: #8B0036; }
-.color_5  { background-color: #92BB44; }
-.color_6  { background-color: #F05B62; }
+.color_1  { background-color: #016f98; } /* #06bbfe */
+.color_2  { background-color: #007880; } /* #00A9B4 */
+.color_3  { background-color: #cb8e11; } /* #EDAB23 */
+.color_4  { background-color: #8B0036; } /* #8B0036 */
+.color_5  { background-color: #759636; } /* #92BB44 */
+.color_6  { background-color: #880c12; } /* #F05B62 */
 
