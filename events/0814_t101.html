@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Intro to Web Concepts - Girl Develop It</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intro Web Concepts course. Material was originally developed by Matt Torbin and Elise Wei.
+
+    The course is meant to be taught in a single two-hour workshop.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/rainbow.css">
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section>
+                <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+                <div class="box--small">
+                    <h3 class="event__title">Tech 101</h3>
+                    <p><small>#GDIA2TECH101</small></p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+            <!-- GDI Welcome -->
+            <section>
+                <h3>Welcome!</h3>
+
+                <p class="box"><strong>Girl Develop It</strong> is here to empower and assist women interested in getting into and advancing in the tech industry through affordable and accessible programs.</p>
+                <!-- <p class="box">Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p> -->
+
+                <div class="copy--small">
+                    <h4 class="green">Some "rules"</h4>
+                    <ul>
+                        <li>We are here for you!</li>
+                        <li>Every question is important.</li>
+                        <li>Help each other.</li>
+                        <li><strong>Have fun!</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section>
+                <h3>Upcoming Events</h3>
+                <div class="box">
+                    <h3 class="event__title">Intro to WordPress<small><span class="green">2-Night Workshop</span></small></h3>
+                    <h3 class="event__title"><small>Mon. 8/25 &amp; Wed. 8/27 @ Pillar</small></h3>
+                    <p><small>6pm - 9pm &nbsp; | &nbsp; 1327 Jones Dr.</small></p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+            <section>
+                <h3>Upcoming Events</h3>
+                <div class="box">
+                    <h3 class="event__title"><small><span class="blue">$: echo "hello, command line"</span><br /><span class="green">#an introduction</span></small></h3>
+                    <h3 class="event__title"><small>Tuesday 9/9 @ Atomic Object</small></h3>
+                    <p><small>6:30pm &nbsp; | &nbsp; 206 S. Fifth Ave #200</small></p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+            <section>
+                <h3>Upcoming Events</h3>
+                <div class="box">
+                    <h3 class="event__title">Lightening Talks<br /><small><span class="green">JavaScript</span></small></h3>
+                    <h3 class="event__title"><small>Wednesday 9/17 @ The Forge by Pillar</small></h3>
+                    <p><small>6:30pm &nbsp; | &nbsp; 1327 Jones Dr.</small></p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+            <section>
+                <h3>Upcoming Events</h3>
+                <div class="box">
+                    <h3 class="event__title">Getting Sassy With CSS<br /><small><span class="green">A Sass Workshop</span></small></h3>
+                    <h3 class="event__title"><small>Tues. 9/23 &amp; Thur. 9/25 @ Nutshell</small></h3>
+                    <p><small>6:00pm &nbsp; | &nbsp; 212 S. 5th Ave</small></p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+            <!-- Community Events -->
+            <section>
+                <h3>Community Events</h3>
+                <ul class="box--small copy--small left" style="width: 48%">
+                    <li><strong>A2 Ruby Brigade - Component Based Architecture</strong><br /><small>Tuesday 8/26 @ Atomic Object</small></li>
+                    <li><strong>WordPress A2 - Lessons Learned Launching a Premium Plugin</strong><br /><small>Wednesday 8/27 @ Room 2001 LSA Building</small></li>
+                    <li><strong>GDG A3 - Android TV</strong><br /><small>Thursday 8/28 @ Arbormoon</small></li>
+                    <li><strong>Craftsman Guild - Docker</strong><br /><small>Tuesday 9/2 @ Atomic Object</small></li>
+                    <li><strong>AACS - Patentability of Software</strong><br /><small>Wednesday 9/3 @ Atomic Object</small></li>
+                </ul>
+                <ul class="box--small copy--small right" style="width: 48%">
+                    <li><strong>Mobile Monday - Wearable Platforms</strong><br /><small>Wednesday 9/3 @ SPARK</small></li>
+                    <li><strong>SEM.js - Assemble.io</strong><br /><small>Monday 9/8 @ Nutshell</small></li>
+                    <li><strong class="red">GDI Detroit - Intro to OOCSS</strong><br /><small>Wednesday 9/10 @ AO Detroit</small></li>
+                    <li><strong>Duo Tech Talks - Modern Security Eng. Organizations</strong><br /><small>Friday 9/12 @ Duo Security</small></li>
+                    <li><strong>A2 New Tech - Monthly Meetup</strong><br /><small>Tuesday 9/16 @ Law School, South Hall, Room 1225</small></li>
+                    <li class="green"><em>Plus soooo many more we couldn't fit here...</em></li>
+                </ul>
+                <aside class="notes"></aside>
+            </section>
+
+            <!-- Sponsors -->
+            <section>
+                <h3>Sponsors!</h3>
+                <img src="images/sponsors-mlive.png" class="img--bare box" />
+            </section>
+
+            <!-- Event Intro -->
+            <section>
+                <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+                <div class="box--small">
+                    <h3 class="event__title">Tech 101</h3>
+                    <p><small>#GDIA2TECH101</small></p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+            <section>
+                <h2>About us</h2>
+                <ul>
+                    <li>
+                        Ronda Bergman
+                        <ul>
+                            <li>GDI-AA Co-Leader, Software Engineer @Terumo</li>
+                            <li>
+                                Experience
+                                <aside>15 years .Net </aside>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Vera Reynolds
+                        <ul>
+                            <li>Software Journeyman @Pillar</li>
+                            <li>
+                                Experience
+                                <aside>2 years Java </aside>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What we'll cover</h2>
+                <ul>
+                    <li>
+                        Terms &amp; technologies
+                        <ul>
+                            <li>Acronyms, the world wide web, languages/libraries/frameworks</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Building a web site
+                        <ul>
+                            <li>Considerations, UX &amp; IA, tools</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Web development professionals
+                        <ul>
+                            <li>Team structure, becoming one</li>
+                        </ul>
+                    </li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Acronyms, how the internet works, client vs server, languages/libraries/frameworks</li>
+                        <li>Considerations, UX/IA, downsides of WYSIWYG, demo, differences in languages, tools</li>
+                        <li>Hiring, becoming one, team structure</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h2>What to expect</h2>
+                <ul>
+                    <li>This is a survey of a very broad topic</li>
+                    <li class="fragment">Get a sense of what you'd like to know more about</li>
+                    <li class="fragment">I don't know everything, and neither will you</li>
+                    <li class="fragment">Have fun! (and ask questions)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What does a web page actually look like?</h2>
+            </section>
+
+            <section>
+                <h2>Terms &amp; Technologies</h2>
+            </section>
+
+            <section>
+                <h3>Terms</h3>
+                <div class="left-align">
+                    <p class="fragment"><strong>HTML</strong>: Hyper Text Markup Language - The code structure used to convey the content of a web site</p>
+                    <p class="fragment"><strong>CSS</strong>: Cascading Style Sheets - A language used to describe the presentation of the content</p>
+                    <p class="fragment"><strong>WYSIWYG</strong>: What You See Is What You Get - A type of editing software meant to be used by those who don't know how to code</p>
+                </div>
+                <aside class="notes">
+                    <ul>
+                        <li>WYSIWYG - Dreamweaver is the most common example</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Terms</h3>
+                <div class="left-align">
+                    <p class="fragment"><strong>IDE</strong>: Integrated Development Environment - Software meant to support the entire development process, often including compilation for a server-side language</p>
+                    <p class="fragment"><strong>CMS</strong>: Content Management System - A program that allows publishing, editing, and modifying content as well as maintenance from a central interface</p>
+                    <p class="fragment"><strong>Open source</strong>: A program in which the source code is available to the general public for use and/or modification from its original design</p>
+                </div>
+                <aside class="notes">
+                    <ul>
+                        <li>IDE - Visual Studio, Eclipse, Xcode</li>
+                        <li>CMS - (Web CMS) Wordpress, Drupal. (Enterprise-level) Interwoven</li>
+                        <li>Open source - Perl, Python, PHP, jQuery. Mention derivative works also being open source.</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Terms</h3>
+                <div class="left-align">
+                    <p class="fragment"><strong>API</strong>: Application Programming Interface - An easy-to-use interface or set of tools made available to access a complex application</p>
+                    <p class="fragment"><strong>IP Address</strong>: Internet Protocol Address - A unique address for a computer or a server. Some IP Addresses are only unique to the network they are on while others are completely unique</p>
+                    <p class="fragment"><strong>DNS</strong>: Domain Name Service - A directory that associates domain names with host IPs to allow users to connect to web sites via <b>URLs</b></p>
+                </div>
+                <aside class="notes">
+                    <ul>
+                        <li>API - like the "drive thru" version of interfacing with a service</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Terms</h3>
+                <div class="left-align">
+                    <p class="fragment"><strong>SEO</strong>: Search Engine Optimization - The process of increasing your web site's perceived value to search engine algorithms, raising its rank in search results</p>
+                    <p class="fragment"><strong>Web 2.0</strong>: Buzzword generally describing a trend towards interactivity, rich media, and social engagement in web design</p>
+                    <p class="fragment"><strong>The Cloud</strong>: Services and technology that offer remote storage, processing, or other functionality by way of the internet</p>
+                </div>
+                <aside class="notes">
+                    <ul>
+                        <li>Cloud - your Google Drive, for example</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h2>What is the world wide web?</h2>
+                <img class="fragment" src="images/t101/client-server.png" alt="" />
+            </section>
+
+            <section>
+                <h3>Home and daily life of a web site</h3>
+                <p class="left-align">A typical web site will live or is "hosted" on a web server. Web servers are often large computers connected to a network.</p>
+                <ul>
+                    <li class="fragment">Type a web site address (URL) into the address bar</li>
+                    <li class="fragment">DNS connects you to the hosting server</li>
+                    <li class="fragment">The files are then sent back to your computer for display</li>
+                    <li class="fragment">Sometimes code must be compiled before being sent back to you.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Clients vs. Servers</h3>
+                <div class="left-align">
+                    <p class="fragment">Clients make requests, servers fulfill them (usually).</p>
+                    <p class="fragment">For our web discussions, client = browser, but search engine crawlers, command line interfaces, and other applications can also behave as clients.</p>
+                    <p class="fragment">While any type of computer can be used as a server, they are generally larger and more powerful than others.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Parsing languages &amp; media</h3>
+                <div style="width: 48%; margin-right: 2%; float: left; text-align: left;">
+                    <p>Client-side:</p>
+                    <ul class="fragment">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Flash (with plugin)</li>
+                        <li>Images</li>
+                    </ul>
+                </div>
+                <div style="width: 50%; float: left; text-align: left;">
+                    <p>Sever-side:</p>
+                    <ul class="fragment">
+                        <li>PHP</li>
+                        <li>Perl</li>
+                        <li>Python</li>
+                        <li>Ruby</li>
+                        <li>.Net</li>
+                        <li>Java</li>
+                        <li>ColdFusion</li>
+                        <li>Databases</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>Not languages</h3>
+                <ul>
+                    <li class="fragment">
+                        Libraries are collections of programming shortcuts for a language
+                        <ul>
+                            <li>jQuery, Prototype, &amp; Mootools</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Frameworks may include libraries, software, and more. Basically, a collection of assets/tools that helps you work in a particular language, usually from scratch
+                        <ul>
+                            <li>Rails, Cake</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        A specification is a set of currently acceptable rules for a given language
+                        <ul>
+                            <li>HTML5 expands on the HTML4 spec and deprecates some older HTML syntax</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Not languages</h3>
+                <ul>
+                    <li>AJAX is none of these, but is a technique combining multiple languages to return results from the server without needing to refresh a page. It stands for Asynchronous JavaScript And XML.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Java != JavaScript</h2>
+                <div style="width: 48%; margin-right: 2%; float: left; text-align: left;">
+                    <p>Java:</p>
+                    <ul class="fragment">
+                        <li>Server-side</li>
+                        <li>Object-oriented</li>
+                        <li>Requires special parser (JVM)</li>
+                        <li>By Sun Microsystems</li>
+                    </ul>
+                </div>
+                <div style="width: 50%; float: left; text-align: left;">
+                    <p>JavaScript:</p>
+                    <ul class="fragment">
+                        <li>Primarily client-side</li>
+                        <li>Primarily written procedurally</li>
+                        <li>Parsed by any browser</li>
+                        <li>By Netscape</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Web standards</h2>
+                <p class="left-align">In general, this means a site should:</p>
+                <ul>
+                    <li class="fragment">Have valid HTML, CSS, and JavaScript</li>
+                    <li class="fragment">Meet accessibility standards</li>
+                    <li class="fragment">Meet semantic guidelines</li>
+                    <li class="fragment">Have valid meta data</li>
+                    <li class="fragment">Have proper character encoding</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Responsive Design</h2>
+                <ul>
+                    <li class="fragment">Laptop, ipad, ipad mini, smartphone...</li>
+                    <li class="fragment">Goal = easy viewing/interacting experience across devices</li>
+                    <li class="fragment">Fluid layout</li>
+                    <li class="fragment">Selective features</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Building a web site</h2>
+            </section>
+
+            <section>
+                <h3>Considerations before building</h3>
+                <ul>
+                    <li class="fragment">What is the purpose of the site?</li>
+                    <li class="fragment">Know your audience</li>
+                    <li class="fragment">
+                        Hosting and a domain name
+                        <ul class="fragment">
+                            <li>Domain name registration should cost about $20/yr</li>
+                            <li>Hosting should cost around $75/yr</li>
+                            <li>Hosting choices may depend on supported server-side tech</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Whether to build it yourself or hire someone</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h3>User Experience &amp; Information Architecture</h3>
+                    <p>A user-friendly, well-architected site will:</p>
+                    <ul>
+                        <li class="fragment">Deepen engagement</li>
+                        <li class="fragment">Increase conversion</li>
+                        <li class="fragment">Raise satisfaction</li>
+                        <li class="fragment">Bring users back</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Sitemaps &amp; decision trees</h3>
+                    <div style="width: 48%; margin-right: 2%; float: left; text-align: left;">
+                        <img src="images/t101/sitemap.gif" alt="" />
+                    </div>
+                    <div style="width: 50%; float: left; text-align: left;">
+                        <img src="images/t101/Imaging.jpg" alt="" />
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>Both important to UX/IA</li>
+                            <li>Sitemaps show the organization of pages and assets for a site</li>
+                            <li>Decision trees help predict how the user will move through the site or utilize interactive tools/forms</li>
+                        </ul>
+                    </aside>
+                </section>
+            </section>
+
+            <!--<section>
+                <h3>WYSIWYG vs. hand-coding</h3>
+                <ul>
+                    <li>WYSIWYG code editors make general assumptions about what you intended to write which often is not accurate or best</li>
+                    <li class="fragment">They make the job of professionals <em>much</em> more difficult when the code is written poorly and filled with junk</li>
+                    <li class="fragment">To truly understand what you are building, you need to learn the fundamental components</li>
+                    <li class="fragment">Once you know how to code by hand, there are no limits to what you can build!</li>
+                </ul>
+            </section>-->
+
+            <section>
+                <section>
+                    <h3>What languages to use</h3>
+                    <p class="fragment">That depends...</p>
+                    <ul>
+                        <li class="fragment">HTML and CSS will almost certainly be used</li>
+                        <li class="fragment">JavaScript may be used for interactivity</li>
+                        <li class="fragment">Server-side languages will likely be used for any data storage or retrieval</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Server-side languages: What are the differences?</h3>
+                    <ul>
+                        <li>The main difference is syntax</li>
+                        <ul>
+                            <li>The set of rules that define the combinations of symbols that are considered to be correctly structured programs in that language</li>
+                        </ul>
+                        <li class="fragment">They have slightly different strengths and philosophies</li>
+                        <li class="fragment">
+                            Which you choose to use will depend on
+                            <ul>
+                                <li>What you are familiar with or want to learn</li>
+                                <li>What your host supports</li>
+                                <li>Community and documentation</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Hello world</h3>
+                    <p>PHP</p>
+                    <pre>
+                    <code>
+    echo "Hello, world!";
+                            </code>
+                        </pre>
+                    <p>Java</p>
+                    <pre>
+                    <code>
+    class HelloWorld {
+      static public void main( String args[] ) {
+        System.out.println( "Hello World!" );
+      }
+    }
+                            </code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Hello world</h3>
+                    <p>Python</p>
+                    <pre>
+                    <code>
+    'Hello, world!'
+                            </code>
+                        </pre>
+                    <p>Ruby</p>
+                    <pre>
+                    <code>
+    puts 'Hello, world!'
+                            </code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Hello world</h3>
+                    <p>JavaScript</p>
+                    <p><small>Not server-side, but just for example</small></p>
+                    <pre>
+                    <code>
+    document.writeln('Hello, World!');
+                            </code>
+                        </pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Tools of the trade</h3>
+                    <p class="left-align">To build your web site, you will probably need:</p>
+                    <ul>
+                        <li class="fragment">A simple text editor or code editor such as SublimeText, Notepad++, or TextWrangler to write your code. Many can be found for free.</li>
+                        <li class="fragment">A web browser such as Chrome, Firefox, or Safari to test your code. All popular modern browsers are free.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Tools of the trade - Browsers</h3>
+                    <img class="fragment" src="images/t101/Usage_share_of_web_browsers_(Source_StatCounter).svg.png" alt="" />
+                    <p><small>Source: <a target="_blank" href="http://gs.statcounter.com/#browser-US-monthly-200807-201212">StatCounter Global Stats - Browser Market Share</a></small></p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Click through to show the difference between global browser shares and US.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Tools of the trade</h3>
+                    <p class="left-align">You will also need:</p>
+                    <ul>
+                        <li class="fragment">An FTP (file transfer protocol) client such as WinSCP, Cyberduck, or CoffeeCup FTP to get files from your computer to the server. Many are free.</li>
+                        <li class="fragment">Optionally, an image editor such as IrfanView, Gimp, or Photoshop to edit images which will be used on the web site. Some are available for free.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>Web development professionals</h2>
+            </section>
+
+            <section>
+                <h3>Meet the web team</h3>
+                <ul>
+                    <li class="fragment">
+                        Front end
+                        <ul>
+                            <li>User Experience Designer</li>
+                            <li>Graphic Designer</li>
+                            <li>Web Developer</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Back end
+                        <ul>
+                            <li>Server Admin</li>
+                            <li>Database Admin</li>
+                            <li>Software Engineer</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Overall
+                        <ul>
+                            <li>QA Engineer</li>
+                            <li>Project Manager</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!--<section>
+                <h3>How to hire a developer</h3>
+                <p class="left-align">Remember the three Rs:</p>
+                <ul>
+                    <li class="fragment"><strong>References</strong>: Talk to people who have worked with the developer before. Were they prompt? Pleasant? Forthright?</li>
+                    <li class="fragment"><strong>Requirements</strong>: Can they do the work that needs to be done. Ask for samples of their prior work and ask exactly which parts of the process they were responsible for. Design? UX? DB architecture? QA?</li>
+                    <li class="fragment"><strong>Reality</strong>: If it sounds too good to be true, it probably is. This website will be a reflection of you, either personally or professionally. Hire someone you feel will be invested in a job well done.</li>
+                </ul>
+            </section>-->
+
+            <section>
+                <h3>How to become a developer</h3>
+                <ul>
+                    <li>Degrees and certifications: they don't hurt</li>
+                    <li class="fragment">Be curious, a problem solver, and intrepid</li>
+                    <li class="fragment">Build things. For yourself, if no one will pay you</li>
+                    <li class="fragment">Through all of this, learn your craft and how things work</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Questions?</h2>
+                <div style="font-size:1200%; height:100%; margin-top:40%" class="blue">
+                    ?
+                    <div class="clear"></div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <div class="copyright">
+                Intro to Web Concepts ~ @gdiannarbor ~
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            rollingLinks: true,
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+
+</body>
+
+</html>
