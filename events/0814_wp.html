@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to WordPress Workshop | Girl Develop It Ann Arbor</title>
+
+    <meta name="description" content="GDI Ann Arbor Intro to WordPress Workshop empowers women who want to learn how to create a professional quality website. The workshop is presented in two sessions and covers how to install, use the dashboard, improve security, utilize themes, create user friendly navigation, plugins and widgets.">
+    <meta name="author" content="Girl Develop It Ann Arbor | Kristi Smythe">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/rainbow.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Begin Vertical Slides for WP Installation Happiness Hour -->
+        <section>
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="350px" />
+            <div class="box--small">
+              <h3 class="event__title">Intro to WordPress<br /><small><span class="green">Installation Happy Hour</span></small></h3>
+              <p><small>Kristi <span>Smythe</span> | @kdezigns99 | #GDIA2WP</small></p>
+
+              <div><small>
+                <p><strong>Wifi Network:</strong> network-name</p>
+                <p><strong>Password:</strong> network-pass</p>
+                <p><strong>Slides</strong>: <a target="_blank" href="http://bit.ly/gdia2_wps">http://bit.ly/gdia2_wps</a></p>
+                </small>
+              </div>
+            </div>
+
+            <aside class="notes">Installation prep - Chrome is the default browser in DesktopServer and offers easy to use Developer tools.</aside>
+          </section>
+
+          <section>
+            <h3>WordPress Installation</h3>
+
+            <p class="blue">What are the Options?</p>
+            <div class="box">
+             <ol class="list--tall">
+              <li class="fragment"><span class="green">Free DesktopServer:</span> Local [on your computer] WP site creation prior to public launch on host server</li>
+              <li class="fragment"><span class="blue">Hosting Control Panel:</span> on yourLiveSite.com</li>
+              <li class="fragment"><span class="pink">Manual WP Install:</span> via FTP to your yourLiveSite.com</li>
+            </ol>
+            </div>
+            <aside class="notes">DesktopServer offers you the ability to work on your site locally on your computer before you publish it live to the world on the server that houses your hosted domain. To publish your site for others to see, you will need to upload it to a hosting server. You can use your hosting control panel to install WP or do this manually via FTP
+              </aside>
+          </section>
+
+          <section>
+            <h3>WP Local Install<br/><small class="green">DesktopServer</small></h3>
+
+            <p>
+              <a href ="http://serverpress.com/downloads/" target="_blank">
+              <img src="images/wp/desktopServer.jpg" class="img--bare" />Download, Extract and Install DesktopServer</a>
+            </p>
+
+             <aside class="notes">
+              </aside>
+          </section>
+
+          <section>
+            <h4>Launch DesktopServer</h4>
+            <img src="images/wp/desktopServer-Launch.png" alt="DesktopServer launch interface" class="img--bare" height="500px"/>
+           <aside class="notes">
+              </aside>
+          </section>
+
+          <section>
+            <h4>Install WordPress in DesktopServer</h4>
+             <img src="images/wp/desktopServer-WPInstall.png" alt="DesktopServer WordPress installation" class="img--bare" height="500px"/>
+             <aside class="notes">
+              </aside>
+          </section>
+
+          <section>
+            <h4>Setup Your Site in DesktopServer</h4>
+             <img src="images/wp/desktopServer-WPSiteSetup.png" alt="DesktopServer WordPress installation" class="img--bare" height="500px"/>
+              <aside class="notes">Site security is super important, so make sure
+              </aside>
+          </section>
+
+          <section>
+            <h4>Setup Your Site in DesktopServer</h4>
+             <img src="images/wp/desktopServer-WPSiteConfig.png" alt="DesktopServer WordPress site settings" class="img--bare" height="500px"/>
+
+             <aside class="notes">
+              </aside>
+          </section>
+
+          <section>
+              <h3>WordPress Installation</h3>
+              <p>On your Hosted Domain</p>
+              <img src="images/wp/cPanel-Login.png" class="img--bare" height="350px" />
+              <br /> Login to your Hosting Control Panel
+              <aside class="notes">
+              </aside>
+          </section>
+
+          <section>
+            <h3>In your Control Panel Interface</h3>
+
+            <img src="images/wp/WP-one-click-install.jpeg" class="img--bare" height="150px" />
+            <p class="green">Find and Click the W app icon -> then click 'Install'</p>
+              <p class="blue">Enter Your Installation Settings:</p>
+
+          <p><strong>In Directory:</strong> remove wp (blank for Home install)</p>
+          <p>Enter your username (replace admin)</p>
+          <p>Click <strong>Install</strong></p>
+          <p class="green">Note: Control Panels vary so we'll help you now</p>
+
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <section>
+            <h3>WP Manual Installation</h3>
+            <ol>
+          <li style="margin-bottom: 10px;">In your Control Panel: Open DB -> MyPHPAdmin</li>
+          <li style="margin-bottom: 10px;">Create your wp_databasename and user</li>
+          <li style="margin-bottom: 10px;">Download and extract WP 3.9.2</li>
+          <li style="margin-bottom: 10px;">Set up wp-config.php</li>
+          <li style="margin-bottom: 10px;">Upload the WP 3.9.2 files via FTP</li>
+          <li style="margin-bottom: 10px;">Run the Install Script</li>
+          </ol>
+          <p><a href ="http://codex.wordpress.org/Installing_WordPress" target="_blank">How to Install WP via FTP</a></p>
+          <aside class="notes">
+              </aside>
+          </section>
+
+          <!-- NOTE: Use this placeholder for horizontal transition into workshop slides-->
+        </section>
+        <!-- End Vertical Slides for WordPress Installation -->
+
+        <!-- EVENT INTRO -->
+        <section>
+          <!-- Event Intro -->
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="350px" />
+            <div class="box--small">
+              <h3 class="event__title">Intro to WordPress<br /><small><span class="green">Workshop</span></small></h3>
+              <p><small>Kristi Smythe | @kdezigns99 | #GDIA2WP</small></p>
+
+              <div><small>
+                <p><strong>Wifi Network:</strong> network-name</p>
+                <p><strong>Password:</strong> network-pass</p>
+                <p><strong>Slides</strong>: <a target="_blank" href="http://bit.ly/gdia2_wps">http://bit.ly/gdia2_wps</a></p>
+                </small>
+              </div>
+            </div>
+
+            <aside class="notes">Installation prep - Chrome is the default browser in DesktopServer and offers easy to use Developer tools.</aside>
+          </section>
+
+          <!-- GDI Welcome -->
+          <section>
+            <h3>Welcome!</h3>
+
+            <p class="box"><strong>Girl Develop It</strong> is here to empower and assist women interested in getting into and advancing in the tech industry through affordable and accessible programs.</p>
+
+            <div class="copy--small">
+              <h4 class="green">Some "rules"</h4>
+              <ul>
+                <li>We are here for you!</li>
+                <li>Every question is important.</li>
+                <li>Help each other.</li>
+                <li><strong>Have fun!</strong></li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Sponsors -->
+          <section>
+            <h3>Sponsors!</h3>
+            <img src="images/sponsors-pillar.png" class="box--small img--bare" />
+          </section>
+
+          <!-- Community Events -->
+          <section>
+            <h3>Upcoming Events</h3>
+            <div class="box">
+              <h3 class="event__title">
+
+                  <span class="blue">WordCamp Ann Arbor</span>
+                  <br />
+                  <small><span class="green">1-Day Conference</span>
+                </small>
+              </h3>
+              <h3 class="event__title">
+                <small>October 4 @ The Michigan League
+                </small>
+              </h3>
+              <p>
+                <small>
+                  All Day | 911 N. University Ave
+                </small>
+              </p>
+              <p><small>
+                <a href="http://2014.annarbor.wordcamp.org" target="_blank">2014.annarbor.wordcamp.org | Tickets - $12</a>
+              </small>
+              </p>
+            </div>
+          </section>
+
+          <section>
+              <h3>Upcoming Events</h3>
+              <div class="box">
+                  <h3 class="event__title">
+                      <small>
+                        <span class="blue">$: echo "hello, command line"</span><br />
+                        <span class="green">#an introduction</span>
+                      </small>
+                  </h3>
+                  <h3 class="event__title">
+                    <small>Tuesday 9/9 @ Atomic Object</small>
+                  </h3>
+                  <p>
+                    <small>6:30pm &nbsp; | &nbsp; 206 S. Fifth Ave #200</small>
+                  </p>
+                  <aside class="notes"></aside>
+              </div>
+          </section>
+
+          <section>
+            <h3>Upcoming Events</h3>
+            <div class="box">
+                <h3 class="event__title">Lightening Talks<br /><small><span class="green">JavaScript</span></small></h3>
+                <h3 class="event__title"><small>Wednesday 9/17 @ The Forge by Pillar</small></h3>
+                <p><small>6:30pm &nbsp; | &nbsp; 1327 Jones Dr.</small></p>
+                <aside class="notes"></aside>
+            </div>
+          </section>
+
+          <section>
+              <h3>Upcoming Events</h3>
+              <div class="box">
+                  <h3 class="event__title">Getting Sassy With CSS<br /><small><span class="green">A Sass Workshop</span></small></h3>
+                  <h3 class="event__title"><small>Tues. 9/23 &amp; Thur. 9/25 @ Nutshell</small></h3>
+                  <p><small>6:00pm &nbsp; | &nbsp; 212 S. 5th Ave</small></p>
+                  <aside class="notes"></aside>
+              </div>
+          </section>
+
+          <section>
+            <h3>Community Events</h3>
+            <ul class="box--small copy--small left" style="width: 48%">
+                <li><strong>A2 Ruby Brigade - Component Based Architecture</strong><br /><small>Tuesday 8/26 @ Atomic Object</small></li>
+                <li><strong>WordPress A2 - Lessons Learned Launching a Premium Plugin</strong><br /><small>Wednesday 8/27 @ Room 2001 LSA Building</small></li>
+                <li><strong>GDG A3 - Android TV</strong><br /><small>Thursday 8/28 @ Arbormoon</small></li>
+                <li><strong>Craftsman Guild - Docker</strong><br /><small>Tuesday 9/2 @ Atomic Object</small></li>
+                <li><strong>AACS - Patentability of Software</strong><br /><small>Wednesday 9/3 @ Atomic Object</small></li>
+            </ul>
+            <ul class="box--small copy--small right" style="width: 48%">
+                <li><strong>Mobile Monday - Wearable Platforms</strong><br /><small>Wednesday 9/3 @ SPARK</small></li>
+                <li><strong>SEM.js - Assemble.io</strong><br /><small>Monday 9/8 @ Nutshell</small></li>
+                <li><strong class="red">GDI Detroit - Intro to OOCSS</strong><br /><small>Wednesday 9/10 @ AO Detroit</small></li>
+                <li><strong>Duo Tech Talks - Modern Security Eng. Organizations</strong><br /><small>Friday 9/12 @ Duo Security</small></li>
+                <li><strong>A2 New Tech - Monthly Meetup</strong><br /><small>Tuesday 9/16 @ Law School, South Hall, Room 1225</small></li>
+                <li class="green"><em>Plus soooo many more we couldn't fit here...</em></li>
+            </ul>
+            <aside class="notes"></aside>
+          </section>
+
+          <!-- Event Intro -->
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="350px" />
+            <div class="box--small">
+              <h3 class="event__title">Intro to WordPress<br /><small>Workshop - Session 1</small></h3>
+              <p><small>Kristi Smythe | @kdezigns99 | #GDIA2WP</small></p>
+
+              <div><small>
+                <p><strong>Wifi Network:</strong> network-name</p>
+                <p><strong>Password:</strong> network-pass</p>
+                <p><strong>Slides</strong>: <a target="_blank" href="http://bit.ly/gdia2_wps">http://bit.ly/gdia2_wps</a></p>
+                </small>
+              </div>
+
+              <aside class="notes">
+              </aside>
+            </div>
+          </section>
+        </section>
+        <!-- end Vertical slides for Events - right arrow to proceed-->
+
+        <!-- This is the Workshop TOC Topic Page with anchor links to main sections in this Workshop -->
+
+        <!-- Event Slides -->
+        <!-- Workshop Project -->
+        <section>
+            <h3>What we're building today:</h3>
+            <p>Your first AWESOME WordPress Website!</p>
+
+            <div class="box"><h4>Why WordPress?</h4></div>
+            <ul>
+            <li class="fragment"><span class="green">Speed</span>: Build a site quickly with little or no budget</li>
+            <li class="fragment"><span class="green">Collaborate</span>: Multiple users</span> on one WordPress site</li>
+            <li class="fragment"><span class="green">Engage</span>: Comments, Social Media Links & "Feeds"</li>
+            <li class="fragment"><span class="green">Monetize</span>: with Advertising, Affiliate Marketing, or an eCommerce Store (with Plugins for WP)</li>
+            </ul>
+             <aside class="notes">
+              </aside>
+          </section>
+        <!-- About Me -->
+          <section>
+            <h3>About Me - Kristi Smythe</h3>
+            <div class="box">
+              <p class="green">Certified eCommerce Specialist since 2004</p>
+              <p class="box--small">Multi-Channel Marketing, SEO, Google Analytics</p>
+              <p class="box--small">Custom WordPress and Shopping Cart<br />Development and Support</p>
+              <p class="box--small">Sales and Lead Gen Optimization</p>
+              <p class="box--small">Cloud Hosting with Private Git or Subversion Repos</p>
+              <p class="blue">Lifelong Learning Enthusiast!</p>
+              <aside class="notes">My strength is in helping business owners focus on the
+                perspective of their potential visitors and customers when we co-create a
+                site or app development strategy. Customer oriented POV facilitates a visitor to satisfied customer conversion funnel that we utilize for content generation and marketing.
+              </aside>
+            </div>
+          </section>
+          <!-- NOTE: Use this placeholder for a workshop, if standard presentation - might want to include this in "Event Slides" -->
+
+          <!-- Meet the Team -->
+          <section>
+            <h3>Meet the team!</h3>
+            <div class="box">
+
+                <p class="box">What is your <span class="green">name</span>?</p>
+                <p class="box">What is your <span class="yellow">140-character bio</span>?</p>
+                <p class="box">What is the <span class="blue">topic or name</span> of your <br /><span class="blue">[new WordPress] site?</span> </p>
+
+              <aside class="notes">Group introductions and website name or topic. The Website
+                Planning Tool will help participants with introductions. </aside>
+            </div>
+          </section>
+
+        <section>
+            <h3>Let's Dive In!</h3>
+            <h4>Your WordPress Dashboard</h4>
+            <div class="box">
+              <p class="green">Login with your uname and pw</p>
+              <p class="box--small">Update WordPress to the latest version</p>
+              <p class="box--small">Check the top nav bar for more updates</p>
+              <p class="box--small">Select 'Updates' to access updates interface</p>
+              <p class="box--small">Run all of your Updates</p>
+              <p class="blue">Next step: Security Checkup!</p>
+
+              <aside class="notes">Login if needed to your WP Dashboard. The top
+                navigation bar contains a circled arrows prompt that has a number
+                beside it if you have updates to install. You can either click this
+                prompt or the Updates item in the left column navigation to open
+                your Updates interface. It's important to keep your site updated for
+                security reasons. Perks for updating include new functionalities and
+                features. There's another security improvement we're going to make.
+              </aside>
+            </div>
+          </section>
+          <section>
+          <section>
+            <h3>WordPress Security - Important!</h3>
+            <div class="box">
+              <p>Avoid Dashboard login from Public WiFi!</p>
+              <p class="box--small">Check for  and run WordPress updates regularly</p>
+              <p class="box--small green">In Dashboard -> Open Users</p>
+              <p class="box--small">If uname is admin - create a new user, delete admin</p>
+              <p class="box--small">Does your password qualify as 'Strong'?</p>
+              <p class="blue">[Pro Tip:] SSL Certificate protects<br />
+                user login info during transmission</p>
+
+
+              <aside class="notes">Keeping your site secure is important. You'll need to purchase a quality SSL certificate if you're monetizing your site or if you're setting it up to attract social participation and networking with multiple users. The default use of admin as a uname and wp-admin as the name of your admin directory make your site more vulnerable to automated hacking. So we're going to change these now as a security best practice for protecting your WordPress website.
+              </aside>
+            </div>
+          </section>
+
+            <section>
+            <h3>WordPress Security -> wp-login</h3>
+            <p class="blue">Let's install our first Plugin</p>
+            <div class="box--small">
+              <p>The default WP login page is wp-login.php</p>
+              <p class="box--small">We're going to install a Plugin to alter this</p>
+              <p class="box--small green">In Dashboard -> Open Plugins</p>
+              <p class="box--small">Click 'Add New' at the top</p>
+              <p class="box--small">Enter 'rename wp-login' in the Search box -> Search Plugins</p>
+              <p class="blue">click 'Install Now'...[installing]...then 'Activate Plugin'</p>
+
+
+              <aside class="notes">The Dashboard admin login code for all WordPress sites is in a file named wp-login.php - this is therefore a primary target for automated hacker scripts, so we're going to enable you to rename this login access path to add a layer of protection to your site. All of the available Security Plugins for WP are not created equal. I've experimented with some of them and most cause your site to load slower, which frustrates visitors. This Plugin is recommended by our friends at A2Hosting. It's light weight and effective so we're going to install it now.
+              </aside>
+            </div>
+          </section>
+
+          <section>
+            <h4>WordPress Security -> Permalinks</h4>
+            <div class="box">
+              <p>Activation automagic opens Settings -> Permalinks</p>
+              <p class="box--small">First change: from 'Default' to 'Post name'</p>
+              <p class="box--small green">Under Optional -> Rename wp-login.php </p>
+              <p class="box--small">Enter something unique</p>
+              <p class="box--small blue">'Save Changes'</p>
+              <p>Check out your new Dashboard url!</p>
+
+
+              <aside class="notes">After activation you're going automagically going to land in Settings -> Permalinks. First we're going to change one of the standard Permalinks Settings from Default to Post name. This is important for two reasons - 1) this change makes your post and page url's [links] readable; and 2) it's necessary to enable the next Permalink change we're going to make to add security to your site by changing the location name of your Dashboard login url [link]. You can pick any word or phrase as the replacement name for your login address. The default entry from wp-login to 'login' is just a prompt that tells you you're changing the address of your login URL / link.
+              </aside>
+            </div>
+          </section>
+         </section>
+
+          <section>
+            <h3>Now Let's Explore <br />Customize Themes</h3>
+            <div class="box">
+              <p class="blue">Open Appearance -> Themes</p>
+              <p class="box--small green">Twenty Fourteen is the Active Theme</p>
+              <p class="box--small"><small>(no worries, we'll find more great free Themes later!)</small></p>
+              <p class="box--small">You can Activate one of the other pre-loaded Themes</p>
+              <p>Click your <span class="blue">Customize</span> Button</p>
+
+              <aside class="notes">
+                You can use the Twenty Fourteen theme or Activate one of the other pre-loaded themes. We're going to rough in some customizations and create some content before focusing on finding a theme that fits your taste. For now we're going to play with the Customize options to get comfortable with this interface.
+              </aside>
+            </div>
+          </section>
+
+           <section>
+            <h3>Theme 'Customize' Interface</h3>
+            <div class="box--small">
+              <p class="blue">Expand Site Title and Tagline - enter your info</p>
+              <p class="box--small green">Experiment with Colors, Header Image etc.</p>
+              <p class="box--small">We'll skip 'Static Front Page' and revisit this later</p>
+              <p class="box--small">New feature: Widgets are in the Customize menu!</p>
+              <p class="box--small">Widgets are drag-and-drop</p>
+              <p class="box--small">Click<span class="blue"> Save</span> to make the changes</p>
+              <p>It's Demo time!</p>
+              <aside class="notes">
+                Expand your Site title and tag line. Enter your customizations and be sure to click Save. We'll
+                skip the 'Static Front Page' item for now, and revist this and alternate Theme installation and activation after we've experimented with and demonstrated the difference between Pages and Posts.
+              </aside>
+            </div>
+          </section>
+
+
+           <section>
+            <h3>Dashboard & View Site</h3>
+            <div class="box">
+              <p class="green">@Left side of your Dashboard top Nav Bar</p>
+              <p class="box--small">Click your site Name</p>
+              <p class="box--small">Then <span class="blue">right-click 'View Site'</span> in the dropdown</p>
+              <p class="box--small blue">Select 'Open in new Tab'</p>
+              <p>Personal preference - [2 tab toggle] or [in same tab]</p>
+
+              <aside class="notes">Opening your Dashboard and 'View Site' in
+                separate tabs allows you to easily View your changes as you
+                make modifications to your site. You can toggle between the
+                Dashboard and View Site in the same browser tab, but if you
+                forget to properly save your changes you're more likely to loose
+                them when you switch to 'View Site'</aside>
+            </div>
+          </section>
+          <section>
+          <section>
+            <h3>ON! 2 Posts and Pages!</h3>
+            <h4 class="green">What's the Dif??</h4>
+            <div class="box">
+              <p class="blue">Let's start with Pages</p>
+              <p class="box--small">Pages: content = quick and easy access for visitors</p>
+              <p class="box--small">'Static' page - term refers to Navigation</p>
+              <p>Pages: can contain interactive content and media</p>
+
+              <aside class="notes">Pages are for content that you want your visitors to always find quick and easy. The industry term for this 'always available' content via Pages is 'static'. However static refers to the navigation - you can include interactive dynamic content and media in your Pages.</aside>
+            </div>
+          </section>
+
+          <section>
+            <h3>Let's Create our First Page!</h3>
+            <h4 class="green">We'll start with our About page</h4>
+            <div class="box">
+              <p class="blue">Select Pages -> Add New</p>
+              <p>Enter 'About' in the Page Title</p>
+              <p>Add some text about you, your company, or site</p>
+              <p>
+                <strong>Link:</strong>
+                <a href ="http://www.blindtextgenerator.com/lorem-ipsum" target="_blank">Lorem Placeholder Text Tool for Us Web Devs</a>
+              </p><br/>
+                <p>Now Let's Experiment with</p>
+                  <p class="green">Visual v Text, Save Draft, Preview, Publish,</p>
+                  <p>and other Page options while we're here</p>
+                  <p class="pink"><small>Copy your About content into Notepad or Text edit. We're going to use this again.</small></p>
+
+              <aside class="notes">To demonstrate this static concept and the difference between Pages and Posts - lets create an About Page in your new site. We'll also copy this About content into your first Post to compare. We'll create more Pages, after we've experimented with the About content in both a page and post. You'll see the
+                difference in how the Navigation is delivered. Open Notepad or Text Edit. Copy and paste your About content into your text editor and save for use in a comparison Post.</aside>
+            </div>
+          </section>
+
+          <section>
+            <h3>Let's Setup Our Main Nav</h3>
+            <h4 class="green">Open Appearance -> Menus</h4>
+            <div class="box">
+              <p class="blue">Enter 'Main Navigation' in Menu Name</p>
+              <p class="box--small">Click 'Create Menu'</p>
+              <p class="box--small"><span class="green">Check √</span>'Automatically add new...'</p>
+              <p class="box--small"><span class="green">Check √</span>  'Top primary menu'</p>
+              <p class="box--small">Now Click <span class="blue">'Save Menu'</span></p>
+                <p><a href ="http://codex.wordpress.org/Appearance_Menus_Screen"target="_blank">More info on creating Menus in your Dashboard</a></p>
+              </div>
+              <aside class="notes">To demonstrate this static Navigation concept and the difference between Pages and Posts - lets start by setting up the main
+                navigation by opening Appearance, Menus.
+                Check out the 'Pages' - 'Add to Menu' interface in the left column.
+                You should see the new About Page you just created and the WP generated
+                Sample Page in this column. Check your new About Page, then Add to Menu.
+                There are two tabs at the top of your Menus interface. We're going to open
+                and look at Manage Locations later in our Workshop after we've created more
+                content. Be sure to save before you leave the Menus interface.
+              </aside>
+
+          </section>
+
+           <section>
+            <h3>Now Let's Create a Few Posts!</h3>
+            <p><span class="pink">Posts Navigation:</span> Based on Categories</p>
+              <p><span class="pink">Order of Appearance:</span> Is by posting date</p>
+            <div class="box">
+              <h4 class="green">1st Post:</h4>
+              <p><small>Copy 'About' content into a new 'About' Post</small></p>
+              <h4 class="blue">2nd Post:</h4>
+              <p><small>Create another post with Lorem title and content</small></p>
+            </div>
+              <p class="copy--small">Posts->Add New->Enter title->Paste Content->
+                <span class="blue">Publish</span></p>
+              <p class="green">View your site</p>
+
+
+              <aside class="notes">Posts are for content that you want your visitors to check
+                in regularly to view new information. As you create new Posts, earlier Posts
+                are moved down the viewing hierarchy, so content like your About info is
+                better served in a Page that will always be available in your main navigation.</aside>
+
+          </section>
+        </section>
+           <section>
+            <h3>Clean up and Design Time!</h3>
+              <p class="copy--small">GoTo: Posts->All Posts->Hover Title->Select Edit</p>
+              <hr>
+              <p><span class="blue">Create some Categories!</span></p>
+              <p class="green">Assign your Posts to Categories</p><br />
+              <p><span class="pink">Add Tags:</span> Based on topic</p>
+              <p><span class="pink">Add Featured Image:</span> It's Demo/Assist time!</p>
+
+            <div class="box--small">
+
+              <h4 class="green">Edit Your About Post: <br />
+                <small>change the title/content to repurpose this post </small></h4>
+              <h4 class="blue">Edit Your Lorem placeholder: <br />
+                <small>leave as is or change and repurpose</small></h4>
+                 <h4 class="green">Create more Posts and Pages!</h4>
+            </div>
+              <aside class="notes">Post Categories are super important to setup and
+                assign. Your Categories appear as the Posts Navigation items in the Sidebar
+                of your site. You might have noticed there isn't an option for Posts to
+                be displayed in full-width like Pages. This is because the sidebar houses
+                your navigation scheme for the date driven content you create in Posts.
+                It's demo and assist time.
+              </aside>
+            </section>
+
+            <section>
+            <section>
+            <h3>Q&amp;A</h3>
+            <h4 class="green box--small">#Posts and #Pages<br /><small>What's the difference?</small></h4>
+
+            <h4 class="blue">What do you like best about WP so far?</h4>
+            <div class="box">
+              <h3>Assistance Time &amp; Extra Credit!</h3>
+              <div class="box">
+              <p>Hop into Appearance->Themes->Add New<br />
+                <span class="blue">Install 2-4 new Themes -> you like =D </span></p>
+              <p class="green">Activate one of them</p>
+              <p><span class="pink">View what you're creating in different Themes!</p>
+              </div>
+              <aside class="notes">Now that you have created a few Posts and Pages,
+                you can hop into Appearance -> Themes. Install and Activate one of the
+                other free Themes to see how easy it is to change the appearance of your site.
+                Your homework is to have more fun creating content and exploring the
+                free Themes that are available in the Themes interface of your WP Dashboard.
+                We'll resume our next session with Theme customizations and learn how to use Widgets and Plugins to tune your site with the goal of attracting and interacting with visitors.
+              </aside>
+            </div>
+          </section>
+
+          <section>
+          <h3>Session 1: Resource Links</h3>
+            <p><a href ="http://make.wordpress.org/core/handbook/installing-a-local-server/installing-desktopserver/" target="_blank">How to Install WP with DesktopServer</a></p>
+            <p><a href ="http://codex.wordpress.org/Installing_WordPress" target="_blank">How to Install WP via FTP</a></p>
+
+            <p><a href ="http://www.blindtextgenerator.com/lorem-ipsum" target="_blank">Lorem Placeholder Text Tool</a></p>
+
+            <p><a href ="http://bit.ly/1qDwqdH" target="_blank">WordPress Security Tips from A2 Hosting</a></p>
+
+            <p><a href ="http://codex.wordpress.org/Appearance_Menus_Screen"target="_blank">How to Create Navigation in Appearance -> Menus</a></p>
+         </section>
+       </section>
+         <section>
+            <h3>Session 2: Sneek Peek</h3>
+
+            <div class="box--small">
+              <h5 class="green">Theme Customization!</h5>
+                <p><small>Tuning the Look and Feel</small></p>
+
+              <h5 class="blue">Widgets!</h5>
+                <p><small>What they do and where</small></p>
+
+              <h5 class="pink">Plugins!</h5>
+              <p><small> Discover awesomeness to power up your site</small></p>
+
+              <h5 class="green">Play with Some CODE!</h5>
+                <p><small>Yes! We're going to dive under the hood!</small></p>
+
+              <h5 class="blue">How to Publish with DesktopServer</h5>
+                <p><small>Using the DesktopServer Plugin and your Hosting Control Panel</small></p>
+            </div>
+              <p></p>
+              <aside class="notes">
+              </aside>
+          </section>
+
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="350px" />
+            <h3>You're awesome!</h3>
+              <p class="green">Go Girl, Develop It! </p>
+              <p class="blue">See you <strong>Wednesday</strong> for Session 2!</p>
+              <p><small>Thanks to Pillar Technology!!</small></p>
+          </section>
+
+          <!-- End Workshop Session 1 -->
+          <!-- Begin Workshop Session 2 -->
+
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="350px" />
+          <div class="box--small">
+              <h3 class="event__title">Intro to WordPress<br /><small>Workshop</small></h3>
+              <p><small>Kristi Smythe | @kdezigns99 | #GDIA2WP</small></p>
+          </div>
+          <aside class="notes">
+          </aside>
+        </section>
+
+      </div>
+
+      <footer>
+        <div class="copyright">
+          @gdiannarbor ~ #GDIA2WP
+          <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+            <img alt="Creative Commons License" class="img--bare" src="images/cc.png" />
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
