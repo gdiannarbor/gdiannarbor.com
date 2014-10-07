@@ -3,3 +3,5 @@
 .htaccess
 apc.php
 robots.txt
+tests/shots-wraith
+tests/shots-phantom
