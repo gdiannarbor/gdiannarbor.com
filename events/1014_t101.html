@@ -149,19 +149,19 @@
                 <!-- About Us -->
                 <section>
                     <h2>About Us</h2>
-                    <ul class="list--tall box--small">
+                    <ul class="list--tall box">
                         <li>
                             <strong class="blue">Ronda Bergman</strong>
-                            <ul>
+                            <ul class="copy--xsmall">
                                 <li>GDI-AA Co-Leader, Software Engineer @Terumo</li>
                                 <li>
                                     <strong>Experience:</strong> 15 years .Net
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="box">
                             <strong class="blue">Vera Reynolds</strong>
-                            <ul>
+                            <ul class="copy--xsmall">
                                 <li>Software Journeyman @Pillar</li>
                                 <li>
                                     <strong>Experience:</strong> 2 years Java
@@ -202,7 +202,7 @@
                         <li>This is a <span class="green">survey</span> of a very <span class="blue">broad topic</span></li>
                         <li class="fragment">Get a <span class="green">sense</span> of <span class="blue">what you'd like to know</span> more about</li>
                         <li class="fragment"><span class="red">I don't know everything,</span> <span class="pink">and neither will you</span></li>
-                        <li class="fragment"><span class="yellow">Have fun!</span> (and ask questions)</li>
+                        <li class="fragment"><span class="yellow">Have fun!</span> (and ask questions!!)</li>
                     </ul>
                 </section>
 
@@ -852,10 +852,9 @@
                 <!-- Tools of the trade -->
                 <section>
                     <h3>Tools of the Trade</h3>
-                    <p class="left-align">To build your web site, you will probably need:</p>
-                    <ul>
-                        <li class="fragment">A simple text editor or code editor such as SublimeText, Notepad++, or TextWrangler to write your code. Many can be found for free.</li>
-                        <li class="fragment">A web browser such as Chrome, Firefox, or Safari to test your code. All popular modern browsers are free.</li>
+                    <ul class="box list--tall">
+                        <li class="fragment"><strong class="blue">Text Editor</strong><br /><span class="copy--xsmall">SublimeText, Notepad++, Vim, Atom<br /><em><span class="copy--small">(All of those are FREE!)</span></em></span></li>
+                        <li class="fragment"><strong class="blue">Browser</strong><br /><span class="copy--xsmall">Chrome, Firefox, or Safari.<br /><em><span class="copy--small">(The more you have to test with, the better.)</span></em></span></li>
                     </ul>
                     <aside class="notes">
                         <ul>
@@ -863,7 +862,7 @@
                             <li>Browsers (you want to make sure it works for as many people as possible)</li>
                             <li>
                                 <ul>
-                                    <li>If you don’t like a browsers, that doesn’t mean your users aren’t using it</li>
+                                    <li>If you don’t like a browser, that doesn’t mean your users aren’t using it</li>
                                     <li>You can use google analytics to get browser stats on your users</li>
                                 </ul>
                             </li>
@@ -871,18 +870,14 @@
                     </aside>
                 </section>
 
-                <!-- Tools of the trade -->
+                <!-- Tools of the trade - Browsers -->
                 <section>
                     <h3>Tools of the Trade - Browsers</h3>
-                    <img class="fragment" src="images/t101/Usage_share_of_web_browsers_(Source_StatCounter).svg.png" alt="" />
+                    <img src="images/t101/Usage_share_of_web_browsers_(Source_StatCounter).svg.png" alt="" width="550" />
                     <p><small>Source: <a target="_blank" href="http://gs.statcounter.com/#browser-US-monthly-200807-201212">StatCounter Global Stats - Browser Market Share</a></small></p>
                     <aside class="notes">
                         <ul>
                             <li>Click through to show the difference between global browser shares and US.</li>
-                        </ul>
-                    </aside>
-                    <aside class="notes">
-                        <ul>
                             <li>Still a large market for the different browsers - should at least test in all of them</li>
                         </ul>
                     </aside>
@@ -890,15 +885,16 @@
 
                 <!-- Tools of the trade -->
                 <section>
-                    <h3>Tools of the Trade</h3>
-                    <p class="left-align">You will also need:</p>
-                    <ul>
-                        <li class="fragment">An FTP (file transfer protocol) client such as WinSCP, Cyberduck, or CoffeeCup FTP to get files from your computer to the server. Many are free.</li>
-                        <li class="fragment">Optionally, an image editor such as IrfanView, Gimp, or Photoshop to edit images which will be used on the web site. Some are available for free.</li>
+                    <h3>Other Tools of the Trade</h3>
+                    <ul class="box list--tall">
+                        <li class="fragment"><strong class="blue">Version Control</strong><br /><span class="copy--xsmall">Keep a <span class="yellow">backup history</span> of all your code changes.<br /><em><span class="copy--small">Git, Subversion, CVS</span></em></span></li>
+                        <li class="fragment"><strong class="blue">FTP</strong>: File Transfer Protocol | <span class="blue">SSH</span> | <span class="blue">SCP</span><br /><span class="copy--xsmall"><span class="yellow">Get your files on a server</span><br /><em><span class="copy--small">WinSCP, Cyberduck, CoffeeCup FTP</span></em></span></li>
+                        <li class="fragment"><strong class="blue">Image Editor</strong><br /><span class="copy--xsmall"><em>Maybe.</em> Depends on the complexity and design of your site.<br /><em><span class="copy--small">Gimp, Photoshop</span></em></span></li>
                     </ul>
                     <aside class="notes">
                         <ul>
-                            <li>FTP client (to move your files to the server)</li>
+                            <li>version control</li>
+                            <li>FTP / SSH / SCP</li>
                             <li>Image editor</li>
                         </ul>
                     </aside>
@@ -909,42 +905,32 @@
             <!-- Web Development Careers -->
             <section>
                 <section>
-                    <h2>Web Development Careers</h2>
+                    <h3>Web Development Careers</h3>
                 </section>
 
                 <!-- Meet the web team -->
                 <section>
                     <h3>Meet the Web Team</h3>
-                    <ul>
+                    <ul class="box--small list--tall">
                         <li class="fragment">
-                            Front end
-                            <ul>
-                                <li>User Experience Designer</li>
-                                <li>Graphic Designer</li>
-                                <li>Web Developer</li>
-                            </ul>
+                            <strong class="blue">Content &amp; Marketing</strong><br /><span class="copy--xsmall">Copywriters, SEO Strategists, Content Strategists</span>
                         </li>
                         <li class="fragment">
-                            Back end
-                            <ul>
-                                <li>Server Admin</li>
-                                <li>Database Admin</li>
-                                <li>Software Engineer</li>
-                            </ul>
+                            <strong class="blue">Design</strong><br /><span class="copy--xsmall">UX Designers, Web Designers, Graphics Designers</span>
                         </li>
                         <li class="fragment">
-                            Overall
-                            <ul>
-                                <li>QA Engineer</li>
-                                <li>Project Manager</li>
-                            </ul>
+                            <strong class="blue">Development</strong><br /><span class="copy--xsmall">Front End Developers, Back End Developers, Server Admins, Database Admins</span>
+                        </li>
+                        <li class="fragment">
+                            <strong class="blue">Management &amp; QA</strong><br /><span class="copy--xsmall">Project Manager, QA Engineers</span>
                         </li>
                     </ul>
                     <aside class="notes">
                         <ul>
-                            <li>User Experience, Information Architect, graphic design, web design</li>
-                            <li>Server admin, db admin, software engineer</li>
-                            <li>Quality Assurance, Project Manager</li>
+                            <li>Content &amp; Marketing - copywriters, seo</li>
+                            <li>Design - UX, Information Architect, graphic design, web design</li>
+                            <li>Development - frontend, backend, server, db</li>
+                            <li>Management &amp; QA - Project Manager, Quality Assurance</li>
                         </ul>
                     </aside>
                 </section>
@@ -962,11 +948,12 @@
                 <!-- How to become a developer -->
                 <section>
                     <h3>How to Become a Developer</h3>
-                    <ul>
-                        <li>Degrees and certifications: they don't hurt</li>
-                        <li class="fragment">Be curious, a problem solver, and intrepid</li>
-                        <li class="fragment">Build things. For yourself, if no one will pay you</li>
-                        <li class="fragment">Through all of this, learn your craft and how things work</li>
+                    <ul class="box--small list--tall">
+                        <li><strong class="blue">Degrees and Certifications</strong><br /><span class="copy--xsmall">They don't hurt, but you can get by without them.</span></li>
+                        <li><strong class="blue">Curiosity</strong><br /><span class="copy--xsmall">Make mistakes. Be a problem solver. Be intrepid.</span></li>
+                        <li><strong class="blue">Build things</strong><br /><span class="copy--xsmall">A lot of things. For yourself, for friends. Build a portfolio.</span></li>
+                        <li><strong class="blue">Learn</strong><br /><span class="copy--xsmall">And learn some more. Don't stop there, keep learning.</span></li>
+                        <li><strong class="blue">Network</strong><br /><span class="copy--xsmall">Go to tech meetups, conferences, and workshops. Meet your people.</span></li>
                     </ul>
                     <aside class="notes">
                         <ul>
@@ -985,6 +972,19 @@
                 </section>
             </section>
 
+
+            <!-- Event Outro / Questions -->
+            <section>
+                <img src="images/gdi_logo_badge.png" class="img--bare" height="400" />
+                <div class="box--small">
+                    <h3 class="event__title">Tech 101</h3>
+                    <p><small>#GDIA2T101</small></p>
+                    <p class="green">Questions?</p>
+                    <aside class="notes"></aside>
+                </div>
+            </section>
+
+
             <!--<section>
                 <h3>WYSIWYG vs. hand-coding</h3>
                 <ul>
@@ -994,15 +994,6 @@
                     <li class="fragment">Once you know how to code by hand, there are no limits to what you can build!</li>
                 </ul>
             </section>-->
-
-            <!-- Questions -->
-            <section>
-                <h2>Questions?</h2>
-                <div style="font-size:1200%; height:100%; margin-top:40%" class="blue">
-                    ?
-                    <div class="clear"></div>
-                </div>
-            </section>
         </div>
 
         <footer>
