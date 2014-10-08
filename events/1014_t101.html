@@ -176,15 +176,19 @@
                     <ul class="box--small list--tall">
                         <li>
                             <h4 class="blue">Terms &amp; Technologies</h4>
-                            <small>ACRONYMS; the world wide web; languages, libraries, and frameworks - oh my!</small>
+                            <small>ACRONYMS! oh my!</small>
+                        </li>
+                        <li class="fragment">
+                            <h4 class="blue">How the web works</h4>
+                            <small>Servers, and clients, and networks!</small>
                         </li>
                         <li class="fragment">
                             <h4 class="blue">Building a web site</h4>
-                            <small>Considerations, UX &amp; IA, tools</small>
+                            <small>Languages, considerations, UX &amp; IA, tools</small>
                         </li>
                         <li class="fragment">
-                            <h4 class="blue">Web development professionals</h4>
-                            <small>Team structure, becoming one</small>
+                            <h4 class="blue">Web development careers</h4>
+                            <small>Team structure, becoming a developer</small>
                         </li>
                     </ul>
                     <aside class="notes"></aside>
@@ -537,7 +541,6 @@
             <section>
                 <section>
                     <h2>Building a Web Site</h2>
-                    <aside class="notes"></aside>
                 </section>
 
                 <!-- Considerations -->
@@ -572,47 +575,16 @@
                     </aside>
                 </section>
 
-                <!-- Responsive Design -->
-                <section>
-                    <h2>Responsive Design</h2>
-                    <ul>
-                        <li class="fragment">Laptop, ipad, ipad mini, smartphone...</li>
-                        <li class="fragment">Goal = easy viewing/interacting experience across devices</li>
-                        <li class="fragment">Fluid layout</li>
-                        <li class="fragment">Selective features</li>
-                    </ul>
-                    <aside class="notes">
-                        <ul>
-                            <li>Laptop, ipad, ipad mini, smartphone…</li>
-                            <li>
-                                <ul>
-                                    <li>have you ever opened a web page on your phone only to be greeted by a miniscule text with buttons so tiny you have to zoom in 3 times to get them?</li>
-                                </ul>
-                            </li>
-                            <li>goal = easy viewing/interacting experience across various devices</li>
-                            <li>fluid layout</li>
-                            <li>
-                                <ul>
-                                    <li>things float nicely to occupy available space</li>
-                                    <li>same content</li>
-                                </ul>
-                            </li>
-                            <li>selective features</li>
-                            <li>
-                                <ul>
-                                    <li>hide things from mobile users</li>
-                                    <li>lufthansa example</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </aside>
-                </section>
-
                 <!-- UX & IA -->
                 <section>
-                    <h3>User Experience &amp; Information Architecture</h3>
-                    <p>A user-friendly, well-architected site will:</p>
-                    <ul>
+                    <h4><span class="blue">Information Architecture</span> &amp; <span class="green">User Experience</span></h4>
+                    <div class="box">
+                        <p class="copy--small"><strong class="blue">Information Architecture (IA)</strong> is the process of <span class="yellow">organizing</span> and labelling website <span class="yellow">content</span> in an intuitive, accessible way.</p>
+                        <p class="copy--small box--small fragment"><strong class="green">User Experience (UX)</strong> is examining <span class="yellow">how users feel</span> when interacting with an interface.</p>
+                    </div>
+
+                    <h5 class="red fragment">Benefits</h5>
+                    <ul class="copy--small list--tall">
                         <li class="fragment">Deepen engagement</li>
                         <li class="fragment">Increase conversion</li>
                         <li class="fragment">Raise satisfaction</li>
@@ -648,10 +620,10 @@
                 <!-- Site Maps & Decision Trees -->
                 <section>
                     <h3>Sitemaps &amp; Decision Trees</h3>
-                    <div style="width: 48%; margin-right: 2%; float: left; text-align: left;">
+                    <div class="box--small" style="width: 48%; margin-right: 2%; float: left; text-align: left;">
                         <img src="images/t101/sitemap.gif" alt="" />
                     </div>
-                    <div style="width: 50%; float: left; text-align: left;">
+                    <div class="box--small" style="width: 50%; float: left; text-align: left;">
                         <img src="images/t101/Imaging.jpg" alt="" />
                     </div>
                     <aside class="notes">
@@ -660,10 +632,52 @@
                             <li>Sitemaps show the organization of pages and assets for a site</li>
                             <li>Decision trees help predict how the user will move through the site or utilize interactive tools/forms</li>
                         </ul>
-                    </aside>
-                    <aside class="notes">
                         <ul>
                             <li>There are two popular versions of a site map. An XML Sitemap is a structured format that a user doesn't need to see, but it tells the search engine about the pages in a site, their relative importance to each other, and how often they are updated. HTML sitemaps are designed for the user to help them find content on the page, and don't need to include each and every subpage. This helps visitors and search engine bots find pages on the site.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- Responsive Design -->
+                <section>
+                    <h3>Responsive Web Design</h3>
+                    <div class="box--small">
+                        <p class="copy--small">The practice of building a <span class="green">single website that<br />works across all devices and screen sizes.</span>
+                            <br /><span class="copy--xsmall">Provide an optimal and intuitive experience for all users.</span>
+                        </p>
+                        <p class="copy--xsmall">Ex. <a href="http://www.bostonglobe.com" target="_blank">bostonglobe.com</a></p>
+                    </div>
+
+                    <h5 class="red fragment">Three Compontents</h5>
+                    <ol class="list--tall copy--small">
+                        <li class="fragment">Fluid Layout</li>
+                        <li class="fragment">Fluid Media</li>
+                        <li class="fragment">Media Queries</li>
+                    </ol>
+                    <p class="copy--xsmall box fragment"><em>Occasionally</em>, entire features will be toggled on / off for the display.</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Laptop, ipad, ipad mini, smartphone…</li>
+                            <li>
+                                <ul>
+                                    <li>have you ever opened a web page on your phone only to be greeted by a miniscule text with buttons so tiny you have to zoom in 3 times to get them?</li>
+                                </ul>
+                            </li>
+                            <li>goal = easy viewing/interacting experience across various devices</li>
+                            <li>fluid layout</li>
+                            <li>
+                                <ul>
+                                    <li>things float nicely to occupy available space</li>
+                                    <li>same content</li>
+                                </ul>
+                            </li>
+                            <li>selective features</li>
+                            <li>
+                                <ul>
+                                    <li>hide things from mobile users</li>
+                                    <li>boston globe example</li>
+                                </ul>
+                            </li>
                         </ul>
                     </aside>
                 </section>
@@ -671,13 +685,13 @@
                 <!-- Web Standards -->
                 <section>
                     <h2>Web Standards</h2>
-                    <p class="left-align">In general, this means a site should:</p>
-                    <ul>
-                        <li class="fragment">Have valid HTML, CSS, and JavaScript</li>
-                        <li class="fragment">Meet accessibility standards</li>
-                        <li class="fragment">Meet semantic guidelines</li>
-                        <li class="fragment">Have valid meta data</li>
-                        <li class="fragment">Have proper character encoding</li>
+                    <p class="box copy--small">Developing in a way that is <span class="green">consistent with current development methodologies</span> and in a way that will ensure the highest level of <span class="yellow">browser compatibility and performance</span>.</p>
+                    <ul class="copy--small">
+                        <li class="fragment">Valid HTML, CSS, and JavaScript syntax</li>
+                        <li class="fragment">Accessibility Requirements / Enhancements<br /><small>Content for screenreaders, colors for the colorblind.</small></li>
+                        <li class="fragment">Uses semantic formats and technologies<br /><small>Structure and identify data. Help create a "Web of Data."</small></li>
+                        <li class="fragment">Valid meta data<br /><small>Page title, page description (for search engines).</small></li>
+                        <li class="fragment">Proper character encoding</li>
                     </ul>
                     <aside class="notes">
                         <ul>
@@ -689,7 +703,7 @@
                                     <li>Meet accessibility standards</li>
                                     <li>Web standards make it easier for people with disabilities to use the Web.  i.e. keyboard alternatives, contrast ratio…</li>
                                     <li>Meet semantic guidelines</li>
-                                    <li>The Semantic Web provides a common framework that allows data to be shared and reused across application, enterprise, and community boundaries"</li>
+                                    <li>semantics means using the proper elements to structure and identify data</li>
                                     <li>Have valid meta data</li>
                                     <li>Information about the site not displayed to the user i.e. search engine description, tells the browser about the page (content="text/html)…</li>
                                     <li>Have proper character encoding</li>
@@ -706,15 +720,13 @@
             <section>
                 <section>
                     <h2>Choosing a Language</h2>
-                    <aside class="notes"></aside>
                 </section>
-
 
                 <!-- What Languages to Use -->
                 <section>
-                    <h3>What Languages to Use</h3>
-                    <p class="fragment">That depends...</p>
-                    <ul>
+                    <h3>Which Language Should I Use?</h3>
+                    <p class="box--small">It depends...</p>
+                    <ul class="list--tall copy--small">
                         <li class="fragment">HTML and CSS will almost certainly be used</li>
                         <li class="fragment">JavaScript may be used for interactivity</li>
                         <li class="fragment">Server-side languages will likely be used for any data storage or retrieval</li>
