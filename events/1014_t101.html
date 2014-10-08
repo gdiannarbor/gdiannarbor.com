@@ -143,6 +143,7 @@
                 </section>
             </section>
 
+
             <!-- Expectation -->
             <section>
                 <!-- About Us -->
@@ -222,6 +223,7 @@
                     </aside>
                 </section>
             </section>
+
 
             <!-- Terms & Technologies -->
             <section>
@@ -329,6 +331,7 @@
                 </section>
             </section>
 
+
             <!-- WWW -->
             <section>
                 <!-- What is the WWW -->
@@ -391,6 +394,7 @@
                     </aside>
                 </section>
             </section>
+
 
             <!-- Languages & Tools for Development -->
             <section>
@@ -536,6 +540,7 @@
                     </aside>
                 </section>
             </section>
+
 
             <!-- Building a Web Site -->
             <section>
@@ -722,14 +727,14 @@
                     <h2>Choosing a Language</h2>
                 </section>
 
-                <!-- What Languages to Use -->
+                <!-- Which Language Should I Use -->
                 <section>
                     <h3>Which Language Should I Use?</h3>
-                    <p class="box--small">It depends...</p>
+                    <p class="box fragment red">It depends...</p>
                     <ul class="list--tall copy--small">
-                        <li class="fragment">HTML and CSS will almost certainly be used</li>
-                        <li class="fragment">JavaScript may be used for interactivity</li>
-                        <li class="fragment">Server-side languages will likely be used for any data storage or retrieval</li>
+                        <li class="fragment"><span class="green">HTML and CSS</span> will be used on virtually <em>all</em> web facing pages.</li>
+                        <li class="fragment"><span class="green">JavaScript</span> may be used for <span class="yellow">interactivity</span> on web facing pages, or for <span class="yellow">programming logic</span> on the server-side.</li>
+                        <li class="fragment"><span class="green">Server-Side languages</span> may be used for <span class="yellow">data</span> access and <span class="yellow">programming logic</span>.</li>
                     </ul>
                     <aside class="notes">
                         <ul>
@@ -750,25 +755,17 @@
 
                 <!-- Server-side languages -->
                 <section>
-                    <h3>Server-side Languages: What are the Differences?</h3>
-                    <ul>
-                        <li>The main difference is syntax</li>
-                        <ul>
-                            <li>The set of rules that define the combinations of symbols that are considered to be correctly structured programs in that language</li>
-                        </ul>
-                        <li class="fragment">They have slightly different strengths and philosophies</li>
-                        <li class="fragment">
-                            Which you choose to use will depend on
-                            <ul>
-                                <li>What you are familiar with or want to learn</li>
-                                <li>What your host supports</li>
-                                <li>Community and documentation</li>
-                            </ul>
-                        </li>
+                    <h3>Server-Side Languages<br/><span class="copy--small red">What are the Differences?</span></h3>
+                    <ul class="list--tall box--small">
+                        <li class="fragment"><span class="blue">Syntax</span>
+                            <br /><span class="copy--xsmall">The alphabet, language, and grammar of programming language.</span></li>
+                        <li class="fragment"><span class="blue">Strengths &amp; Weaknesses</span></li>
+                        <li class="fragment"><span class="blue">Philosophies</span></li>
                     </ul>
                     <aside class="notes">
                         <ul>
                             <li>Syntax</li>
+                            <li>Strengths &amp; Weaknesses</li>
                             <li>Philosophies</li>
                             <li>Documentation</li>
                             <li>What do you want to learn</li>
@@ -776,56 +773,75 @@
                     </aside>
                 </section>
 
+                <!-- Server-side languages -->
+                <section>
+                    <h3>Server-Side Languages<br/><span class="copy--small red">Which Should I Choose?</span></h3>
+                    <ul class="list--tall box--small copy--small">
+                        <li class="fragment">What are you already <span class="green">familiar</span> with?</li>
+                        <li class="fragment">What do you want to <span class="green">learn</span>?</li>
+                        <li class="fragment">What does your hosting server <span class="green">support</span>?</li>
+                        <li class="fragment">How active is the <span class="green">community</span> and how thorough the <span class="green">documentation</span>?</li>
+                    </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>Familiar</li>
+                            <li>Learn</li>
+                            <li>Hosting Support</li>
+                            <li>Community &amp; Documentation</li>
+                        </ul>
+                    </aside>
+                </section>
+
                 <!-- Hello World -->
                 <section>
-                    <h3>Hello World</h3>
-                    <p>PHP</p>
-                    <pre>
-                    <code>
-        echo "Hello, world!";
-                                </code>
-                            </pre>
-                    <p>Java</p>
-                    <pre>
-                    <code>
-        class HelloWorld {
-          static public void main( String args[] ) {
-            System.out.println( "Hello World!" );
-          }
-        }
-                                </code>
-                            </pre>
+                    <h3>Hello, World!</h3>
+                    <div class="box pull-left" style="width: 40%;">
+                        <p>PHP</p>
+                        <pre><code class="php">
+                            echo "Hello, world!";
+                        </code></pre>
+                    </div>
+                    <div class="box pull-right" style="width: 58%;">
+                        <p>Java</p>
+                        <pre><code class="java">
+                        class HelloWorld {
+                          static public void main( String args[] ) {
+                            System.out.println( "Hello World!" );
+                          }
+                        }
+                        </code></pre>
+                    </div>
                 </section>
 
                 <!-- Hello world -->
                 <section>
-                    <h3>Hello World</h3>
-                    <p>Python</p>
-                    <pre>
-                    <code>
-        'Hello, world!'
-                                </code>
-                            </pre>
-                    <p>Ruby</p>
-                    <pre>
-                    <code>
-        puts 'Hello, world!'
-                                </code>
-                            </pre>
+                    <h3>Hello, World!</h3>
+                    <div class="box pull-left" style="width: 48%;">
+                        <p>Python</p>
+                        <pre><code class="python">
+                            'Hello, world!'
+                        </code></pre>
+                    </div>
+                    <div class="box pull-right" style="width: 48%;">
+                        <p>Ruby</p>
+                        <pre><code class="ruby">
+                            puts 'Hello, world!'
+                        </code></pre>
+                    </div>
                 </section>
 
                 <!-- Hello world -->
                 <section>
-                    <h3>Hello World</h3>
-                    <p>JavaScript</p>
-                    <p><small>Not server-side, but just for example</small></p>
-                    <pre>
-                    <code>
-        document.writeln('Hello, World!');
-                        </code>
-                    </pre>
+                    <h3>Hello, World!</h3>
+                    <div class="box">
+                        <p>JavaScript</p>
+                        <pre><code class="javascript">
+                            console.log('Hello, World!');
+                        </code></pre>
+                    </div>
                 </section>
             </section>
+
 
             <!-- Developer Tools -->
             <section>
@@ -888,6 +904,7 @@
                     </aside>
                 </section>
             </section>
+
 
             <!-- Web Development Careers -->
             <section>
@@ -996,7 +1013,7 @@
         </footer>
     </div>
 
-    <script src="lib/js/head.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/reveal.min.js"></script>
     <script>
         // Full list of configuration options available here:

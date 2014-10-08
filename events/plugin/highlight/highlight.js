@@ -4,6 +4,61 @@
 		hljs.highlightBlock( event.currentTarget );
 	}, false );
 } );
+
+(function() {
+  if( typeof window.addEventListener === 'function' ) {
+    var hljs_nodes = document.querySelectorAll( 'pre code' );
+
+    for( var i = 0, len = hljs_nodes.length; i < len; i++ ) {
+      var element = hljs_nodes[i];
+
+      // GDI MOD - Remove Tab Spaces
+      if( ! element.hasAttribute( 'data-noindent' )) {
+        var lines, offset;
+
+        // split the content of the PRE element into an array of lines
+        lines = $( element ).text().split( '\n' );
+
+        // the first line is expected to be an empty line - remove it
+        if ( lines.length > 1 && lines[ 0 ].trim() === '' ) {
+            lines.shift();
+        }
+        // the last line is expected to be an empty line - remove it
+        if ( lines.length > 1 && lines[ lines.length - 1 ].trim() === '' ) {
+            lines.pop();
+        }
+
+        // how much white-space do we need to remove form each line?
+        offset = lines[ 0 ].match( /^\s*/ )[ 0 ].length;
+
+        // remove the exess white-space from the beginning of each line
+        lines = lines.map( function ( line ) {
+            return line.slice( offset );
+        });
+
+        // set this new content to the PRE element
+        $( element ).text( lines.join( '\n' ) );
+      }
+
+      // TODO: doesn't seem to work
+      // Now escape html unless prevented by author
+      if( !element.hasAttribute( 'data-noescape' )) {
+        element.innerHTML = element.innerHTML.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+      }
+
+      // trim whitespace if data-trim attribute is present
+      if( element.hasAttribute( 'data-trim' ) && typeof element.innerHTML.trim === 'function' ) {
+        element.innerHTML = element.innerHTML.trim();
+      }
+
+      // re-highlight when focus is lost (for edited code)
+      element.addEventListener( 'focusout', function( event ) {
+        hljs.highlightBlock( event.currentTarget );
+      }, false );
+    }
+  }
+})();
+
 // END CUSTOM REVEAL.JS INTEGRATION
 
 
