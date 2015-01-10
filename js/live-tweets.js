@@ -195,7 +195,7 @@
         if(e<23.5*3600)return Math.round(e/3600)+" hours ago";
         if(e<1.5*24*3600)return"One day ago";
         var f=a.split(' ');
-        return f[4].replace(/\:\d+$/,'')+' '+f[2]+' '+f[1]+(f[3]!=c.getFullYear()?' '+f[3]:'')
+        return f[1]+' '+f[2].replace(/^0/, '')+', '+f[5];
       };
 
       var startRotation=function(){
