@@ -4,3 +4,6 @@
 [submodule "events/teacher-training"]
 	path = events/teacher-training
 	url = git@github.com:gdiannarbor/teacher-training.git
+[submodule "events/intro-pc"]
+	path = events/intro-pc
+	url = git@github.com:gdiannarbor/intro-programming-concepts.git
