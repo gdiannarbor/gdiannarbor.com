@@ -7,3 +7,6 @@
 [submodule "events/intro-pc"]
 	path = events/intro-pc
 	url = git@github.com:gdiannarbor/intro-programming-concepts.git
+[submodule "events/intro-ruby"]
+	path = events/intro-ruby
+	url = git@github.com:gdiannarbor/intro-ruby.git
