@@ -13,3 +13,6 @@
 [submodule "events/intro-ruby"]
 	path = events/intro-ruby
 	url = git@github.com:gdiannarbor/intro-ruby.git
+[submodule "events/tech-101"]
+	path = events/tech-101
+	url = git@github.com:gdiannarbor/tech-101.git
