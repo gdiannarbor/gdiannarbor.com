@@ -16,3 +16,9 @@
 [submodule "events/tech-101"]
 	path = events/tech-101
 	url = git@github.com:gdiannarbor/tech-101.git
+[submodule "events/intro-git"]
+	path = events/intro-git
+	url = git@github.com:gdiannarbor/intro-git-github.git
+[submodule "events/intro-java"]
+	path = events/intro-java
+	url = git@github.com:gdiannarbor/intro-oop-java.git
