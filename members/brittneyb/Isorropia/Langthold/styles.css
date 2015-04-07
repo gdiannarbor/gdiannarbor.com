@@ -1,0 +1,15 @@
+html {
+  background-color: #E3E8BD;
+  background-image: url('images/floral_design_background.jpg');
+  }
+
+body {
+border: 0;
+margin: auto;
+width: 1000px;
+padding: 10px;
+font-family:Arial, Verdana, Helvetica, sans-serif;
+line-height:25px;
+text-align:justify;
+background-color: #E3E8BD;
+}
