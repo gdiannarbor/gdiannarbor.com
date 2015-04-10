@@ -25,3 +25,6 @@
 [submodule "events/intro-python"]
 	path = events/intro-python
 	url = git@github.com:gdiannarbor/intro-python.git
+[submodule "events/intro-terminal"]
+	path = events/intro-terminal
+	url = git@github.com:gdiannarbor/intro-command-line.git
