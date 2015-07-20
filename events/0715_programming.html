@@ -65,7 +65,7 @@
             <section>
                 <h3>Upcoming Events</h3>
                 <div class="box">
-                    <h3 class="event__title box--small"><small><span class="green">International</span></small><br/>NodeBots Day</h3>
+                    <h3 class="event__title box--small"><small><span class="green">International</span></small><br />NodeBots Day</h3>
                     <h4 class="event__title"><small>Saturday 7/25 @ Menlo Innovations</small></h4>
                     <p><small>9:00am - 5:00pm &nbsp; | &nbsp; 505 E Liberty, Ann Arbor</small></p>
                     <aside class="notes"></aside>
@@ -425,13 +425,11 @@
                 <pre style="height: 310px; overflow: hidden;"><code>
                     using System.IO;
                     using System;
-
                     class Program
                     {
                         static void Main()
                         {
                             int cartTotal = 11;
-
                             if (cartTotal > 10)
                                 Console.WriteLine("You get free shipping!");
                         }
@@ -451,13 +449,11 @@
                 <pre style="height: 352px; overflow: hidden;"><code>
                     using System.IO;
                     using System;
-
                     class Program
                     {
                         static void Main()
                         {
                             int cartTotal = 8;
-
                             if (cartTotal > 10)
                                 Console.WriteLine("You get free shipping!");
                             else
@@ -506,7 +502,6 @@
                             Console.WriteLine(papersToDeliver);
                             papersToDeliver = papersToDeliver - 1;
                         }
-
                         Console.WriteLine("Out of papers! Go home!");
                     }
           </code></pre>
@@ -519,6 +514,7 @@
             </section>
 
             <section>
+                <h4>While Flow</h4>
                 <img src="images/WhileFlow.jpg" />
             </section>
 
@@ -527,6 +523,41 @@
                 <ul class="copy--small list--tall box--small">
                     <li>Amazon or eBay: "WHILE" it's today, display the daily deals.</li>
                     <li>Amazon cart: "WHILE" it's this book, display the book's image, title, price, etc.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Let's Do Some More Loops!</h3><br />
+                <pre style="height: 285px; overflow: hidden;"><code>
+                    static void Main()
+                    {
+                        for (int papersToDeliver = 0; papersToDeliver < 5; papersToDeliver++)
+                        {
+                            Console.WriteLine(papersToDeliver);
+                        }
+                        Console.WriteLine("Out of papers! Go home!");
+                    }
+          </code></pre>
+                <ul class="copy--small list--tall box--small">
+                    <li>Go to <a href="http://www.tutorialspoint.com/compile_csharp_online.php" target="_blank">tutorialspoint.com,</a> again</li>
+                </ul>
+                <ul class=" copy--small list--tall box--small">
+                    <li><strong>Change the numbers</strong> to see what happens.</li>
+                    <li><strong>Change the operators</strong> (greater than, less than, etc.)</li>
+                    <li><strong>Change the string</strong> statements.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>For Flow</h4>
+                <img src="images/ForFlow.jpg" />
+            </section>
+
+            <section>
+                <h3>FOR Loop Examples</h3>
+                <ul class="copy--small list--tall box--small">
+                    <li>Amazon: "FOR" each book matching your search the title.</li>
+                    <li>Amazon cart: "FOR" each item in your cart display the price.</li>
                 </ul>
             </section>
 
