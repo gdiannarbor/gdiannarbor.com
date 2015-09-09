@@ -28,3 +28,6 @@
 [submodule "events/intro-terminal"]
 	path = events/intro-terminal
 	url = git@github.com:gdiannarbor/intro-command-line.git
+[submodule "events/intro-javascript"]
+	path = events/intro-javascript
+	url = git@github.com:gdiannarbor/intro-javascript.git
