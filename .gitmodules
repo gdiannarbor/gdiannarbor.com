@@ -31,3 +31,6 @@
 [submodule "events/intro-javascript"]
 	path = events/intro-javascript
 	url = git@github.com:gdiannarbor/intro-javascript.git
+[submodule "events/intro-wordpress"]
+	path = events/intro-wordpress
+	url = git://github.com/gdiannarbor/intro-wordpress.git
