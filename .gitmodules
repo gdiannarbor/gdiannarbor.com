@@ -34,3 +34,6 @@
 [submodule "events/intro-wordpress"]
 	path = events/intro-wordpress
 	url = git://github.com/gdiannarbor/intro-wordpress.git
+[submodule "events/intro-seo"]
+	path = events/intro-seo
+	url = git@github.com:gdiannarbor/intro-seo.git
