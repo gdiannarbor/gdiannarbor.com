@@ -1,0 +1,28 @@
+body {
+  font-size: 90%
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.margin-right {
+  margin-right: 10%;
+}
+
+.terminal {
+  text-align: left;
+}
+
+.align-left {
+  text-align: left;
+}
+
+code.bash, code.javascript {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.float-left {
+  float: left;
+}
