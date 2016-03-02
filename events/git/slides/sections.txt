@@ -1,0 +1,12 @@
+Git Clone
+"git-clone.md",
+"using-git-clone.md",
+
+Removing Git
+"uninstalling-git.md",
+"un-gitting-git-demo.md",
+"seeing-the-unseen.md",
+"actually-removing-folders-for-real.md",
+
+Demo
+"demos.md",
