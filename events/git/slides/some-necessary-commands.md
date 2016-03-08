@@ -12,4 +12,4 @@ create a file | `touch <filename>`
 make a directory | `mkdir <directory name>`
 remove a file or folder | `rm [-r]` (if removing a folder)
 go through command history | up arrow key
-<!-- .element: style="font-size:90%" -->
+<!-- .element: style="font-size:85%" -->

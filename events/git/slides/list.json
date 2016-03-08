@@ -3,12 +3,34 @@
     "about-the-authors.md",
     "goals-for-this-talk.md",
     [
+        "getting-setup.md",
+        "make-a-github-profile.md",
+        "download-git.md",
+        "test-git.md",
+        "play-along-at-home.md",
+        "git-version.md",
+        "configure-git.md"
+    ],
+    [
+        "setting-up-ssh.md",
+        "generate-ssh-key.md",
+        "add-ssh-key-to-agent.md",
+        "add-ssh-key-to-github.md",
+        "add-ssh-key-to-github-2.md",
+        "add-ssh-key-to-github-3.md",
+        "add-ssh-key-to-github-4.md",
+        "testing-the-ssh-connection.md",
+        "testing-the-ssh-connection-2.md",
+        "testing-the-ssh-connection-3.md"
+    ],
+    [
         "first-things-first.md",
         "the-command-line.md",
         "cli-intro.md",
         "some-necessary-commands.md",
         "yer-hardcore-now.md",
-        "cli-caveat.md"
+        "cli-caveat.md",
+        "terminal-cheatsheet.md"
     ],
     [
         "version-control.md",
@@ -31,15 +53,6 @@
         "git-github.md",
         "git-defined.md",
         "github-defined.md"
-    ],
-    [
-        "getting-setup.md",
-        "make-a-github-profile.md",
-        "download-git.md",
-        "test-git.md",
-        "play-along-at-home.md",
-        "git-version.md",
-        "configure-git.md"
     ],
     "pair-up.md",
     [
@@ -182,6 +195,29 @@
     [
         "exercise4-a.md",
         "exercise4-b.md"
+    ],
+    [
+        "collaborating-with-a-team.md",
+        "working-on-a-team-2.md"
+    ],
+    [
+        "exercise4-a.md",
+        "exercise5-a.md",
+        "exercise5-b.md",
+        "exercise5-c.md"
+    ],
+    [
+        "merge-conflicts.md",
+        "merge-conflicts-2.md",
+        "merge-conflicts-3.md",
+        "merge-conflicts-4.md",
+        "merge-conflicts-5.md",
+        "merge-conflicts-6.md"
+    ],
+    [
+        "exercise6-a.md",
+        "exercise6-b.md",
+        "exercise6-c.md"
     ],
     [
         "review.md",
