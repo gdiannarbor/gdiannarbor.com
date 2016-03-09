@@ -37,3 +37,6 @@
 [submodule "events/intro-seo"]
 	path = events/intro-seo
 	url = git@github.com:gdiannarbor/intro-seo.git
+[submodule "events/lightning"]
+	path = events/lightning
+	url = git@github.com:gdiannarbor/lightning-talk-workshop.git
