@@ -1,0 +1,58 @@
+body {
+  font-size: 90%
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: uppercase;
+}
+
+.reveal h2 {
+  font-size: 1.75em;
+}
+
+pre code {
+  min-height: 0px;
+}
+
+
+.inline-block {
+  display: inline-block;
+}
+
+.margin-right {
+  margin-right: 10%;
+}
+
+.terminal {
+  text-align: left;
+}
+
+.align-left {
+  text-align: left;
+}
+
+
+code.bash, code.javascript {
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+.float-left {
+  float: left;
+}
+
+.reveal p {
+  text-align: left;
+}
+
+.reveal pre code {
+  width: 125%;
+  margin-left: -12%;
+}
+
+
