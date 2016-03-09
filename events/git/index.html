@@ -22,15 +22,6 @@
         <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css" id="highlight-theme">
         <link rel="stylesheet" href="css/main.css">
 
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-
-        <!-- Using jQuery to do center images inside paragraph tags. Should probably just do it with vanillaJS. Only God can judge me. -->
-        <script type="text/javascript">
-            $(function(){
-              $('.reveal p').has('img').css('text-align', 'center');
-            });
-        </script>
-
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
           if( window.location.search.match( /print-pdf/gi ) ) {
@@ -1190,6 +1181,8 @@
 
         </div>
 
+
+
         <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
         <script src="bower_components/reveal.js/js/reveal.min.js"></script>
         <script>
@@ -1218,6 +1211,19 @@
 
                     { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
                 ]
+            });
+        </script>
+
+        <!-- Using jQuery to do center images inside paragraph tags. Should probably just do it with vanillaJS. Only God can judge me. -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+        <script type="text/javascript">
+            $(function(){
+                setTimeout(centerImages, 100)
+
+                function centerImages(){
+                    $('.reveal p').has('img').css('text-align', 'center');
+                }
             });
         </script>
 
