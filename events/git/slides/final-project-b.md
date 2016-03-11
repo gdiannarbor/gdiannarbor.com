@@ -1,5 +1,6 @@
 #### `Develop It!`
 ##  Final exercise instructions
+<!-- .element style="font-size: 95%" -->
 
 1. Create a new folder called 'final-project' in the top-level folder for this class
 2. In this new folder, create two files, a new directory called 'inner' and a file inside *that* called `inner.js`
@@ -12,4 +13,6 @@
 9. Revert the last commit.
 10. Create a repo in github
 11. Push the project to github, create a readme file on github
-13. Pull down the change, make another change, and push it to github
+12. Pull down the change, make another change, and push it to github
+
+<!-- .element style="font-size: 80%" -->

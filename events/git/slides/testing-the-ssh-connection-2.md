@@ -1,6 +1,6 @@
 ##  Testing the ssh connection
 
-Hopefully, you'll get a sligtly scary looking message that looks something like this.
+Hopefully, you'll get a slightly scary looking message that looks something like this.
 
 ```bash
 The authenticity of host 'github.com (192.30.252.1)' can't be established.

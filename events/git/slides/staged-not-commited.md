@@ -8,7 +8,7 @@ There are basically 4 states in which a file can exist.
 
 1. Untracked (not included in the repo)
 2. Tracked
-3. Tracked and changed
-4. Tracked, changed, and staged
-5. Tracked, changed, staged, and commited (same as #2)
+3. Changed
+4. Staged
+5. Commited (same as #2)
 

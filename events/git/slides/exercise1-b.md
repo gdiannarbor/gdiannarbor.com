@@ -13,4 +13,4 @@
 9. Add the changes from the final file
 10. Commit it as a separate unit
 
->15 minutes
+<!-- .element style="font-size: 86%" -->

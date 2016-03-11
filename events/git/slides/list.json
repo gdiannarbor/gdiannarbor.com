@@ -63,6 +63,7 @@
     ],
     "lets-take-a-break.md",
     "git-basics.md",
+    "git-cheat-sheet.md",
     [
         "creating-a-new-repo.md",
         "setting-up-our-folders.md",
@@ -90,6 +91,7 @@
         "using-git-commit.md",
         "making-changes.md",
         "create-a-new-file.md",
+        "create-a-new-file-2.md",
         "staging-and-commiting.md",
         "staging-and-commiting2.md",
         "questions1.md"
