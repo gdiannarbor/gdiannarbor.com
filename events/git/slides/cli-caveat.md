@@ -5,7 +5,7 @@ These commands are all for Unix / Linux and OSX.
 
 <br/>
 
-A lot of these will work in a Windows terminal but not all.
+A lot of these will work in a Windows terminal but not all (unless you're using bash in Windows 10).
 <!-- .element: class="align-left" -->
 
 <br/>
