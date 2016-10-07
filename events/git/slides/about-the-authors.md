@@ -1,11 +1,8 @@
-### James York
+### Cam Herringshaw
 
 - Work:
-  - Front End Instructor: Grand Circus Detroit
-  - Developer: [OnStar, Nexient, DTE]
-- Community:
-  - Organizer: Detroit Craftsman Guild
-- Speaker: [Code Mash, Self Conference]
+  - DevOps Engineer: Duo Security
+  - Graduated UMich, Hacker Fellows
 - Contact:
-  - Twitter: **@kroysemaj**
-  - email: kroysemaj@gmail.com
+  - Twitter: **@camdroid217**
+  - email: cam@duo.com
