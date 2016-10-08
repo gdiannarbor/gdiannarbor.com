@@ -4,5 +4,4 @@ So now you know the basics of what you need to manage a repo that lives solely o
 
 <br>
 
-![Strong Bad ruins a computer](images/strongbadRuinsComputer.jpg)
-
+![Strong Bad ruins a computer](images/strongBadRuinsComputer.jpg)
