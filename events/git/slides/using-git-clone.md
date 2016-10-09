@@ -4,5 +4,5 @@
 In your terminal, `cd` to a directory in which you'd like to work.
 ```bash
 $ cd ~/git-cmd-demos
-$ git clone http://github.com/kroysemaj/git-demo.git
+$ git clone git@github.com:camdroid/gdi-git-class.git
 ```
