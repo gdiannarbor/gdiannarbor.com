@@ -2,9 +2,8 @@
 ---
 Contact Info
 
-*James York*
+*Cam Herringshaw*
 
-- twitter: @kroysemaj
-- email: kroysemaj@gmail.com
-- github: kroysemaj
-
+- twitter: @camdroid217
+- email: cam@duo.com
+- github: camdroid

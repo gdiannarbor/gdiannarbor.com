@@ -40,3 +40,6 @@
 [submodule "events/lightning"]
 	path = events/lightning
 	url = git@github.com:gdiannarbor/lightning-talk-workshop.git
+[submodule "events/photoshop"]
+	path = events/photoshop
+	url = git@github.com:gdiannarbor/photoshop-workshop.git
