@@ -1,0 +1,396 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Class 3 - Intro to JavaScript - Girl Develop It</title>
+
+    <meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="dist/css/reveal.css">
+    <link rel="stylesheet" href="dist/css/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor --> <link rel="stylesheet" href="dist/css/light.css">
+    <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css">-->
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'dist/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="dist/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
+          <h1>Introduction to JavaScript</h1>
+          <h2>Class 3</h2>
+        </section>
+
+        <!-- Loops -->
+          <section>
+          <h3>Loops</h3>
+            <img src="dist/img/hula-hoop.jpg" alt="Lego stormtrooper inside key ring"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/steve_pires/8430087504/" target="_blank">Steve Pires</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+          <h3>While loops</h3>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> will repeat the same code over and over until some condition is met.</p>
+  <pre class="javascript"><code>var bottlesOfBeer = 99;
+
+while (bottlesOfBeer &gt; 0) {
+  console.log(bottlesOfBeer + ' bottles of beer on the wall');
+  bottlesOfBeer = bottlesOfBeer - 1;
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Infinite Loops</h3>
+            <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+            <img src="dist/img/infinite-loop.jpg" alt="Spiral that goes on toward infinity"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/samueljohn/5348462863/" target="_blank">Samuel John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>For loops</h3>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> loops are very similar, but you declare a counter in the statement.</p>
+  <pre><code class="javascript">// will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+  console.log(i);
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Loops and logic</h3>
+            <p>You can add other statements or logical operators inside the loops.</p>
+  <pre><code class="javascript">// Count from 1 to 100
+
+for (var i = 1; i &lt;= 100; i++) {
+  if (i % 3 === 0) {
+    // Says 'Fizz' after multiples of three
+    console.log(' Fizz');
+  } else if (i % 5 === 0) {
+    // Says 'Buzz' after multiples of five
+    console.log(' Buzz');
+  } else {
+    console.log(i);
+  }
+}</code></pre>
+          </section>
+
+          <section>
+          <h3>Break</h3>
+            <p>To exit a loop, use the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a></code> statement.</p>
+  <pre><code class="javascript">// Count from 100 to 200
+for (var i = 100; i &lt;= 200; i++) {
+  console.log('Testing ' + i);
+
+  //Stop at the first multiple of 7
+  if (i % 7 == 0) {
+    console.log('Found it! ' + i);
+    break;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+          <h3>Let's Develop It</h3>
+          <p>Write a loop that gives you the 9's times table,<br /> from <strong>9 x 1 = 9</strong> to <strong>9 x 12 = 108</strong>.</p><br />
+          <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
+          </section>
+
+        <!-- Arrays -->
+          <section>
+            <h3>Arrays</h3>
+            <img src="dist/img/kitten-group.jpg" alt="Group of kittens"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pasotraspaso/4444291348/" target="_blank">Jesus Solana</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>Arrays</h3>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Arrays</a> are ordered lists of values.</p>
+  <pre><code class="javascript">var arrayName = [value0, value1];</code></pre><br />
+            <p>You can put different types of data into an array.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];</code></pre>
+          </section>
+
+          <section>
+            <h3>Array Length</h3>
+            <p>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length">length</a></code> property tells you how many things are in an array.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+
+console.log(rainbowColors.length);</code></pre>
+          </section>
+
+          <section>
+            <h3>Using Arrays</h3>
+            <p>You can access items with <strong>bracket notation</strong> by using the position of the item you want.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+
+var firstColor = rainbowColors[0];
+var lastColor  = rainbowColors[6];</code></pre><br>
+  <p>JS arrays are <strong>zero-indexed</strong>, so counting starts at 0.</p>
+          </section>
+
+          <section>
+            <h3>Changing arrays</h3>
+            <p>You can use bracket notation to change an item in an array</p>
+  <pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+
+myFavoriteThings[0] = 'Asparagus';</code></pre>
+          </section>
+
+          <section>
+            <h3>Expanding arrays</h3>
+            <p>Arrays do not have a fixed length. You can use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a></code> to add something to an array.</p>
+  <pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+
+myFavoriteThings.push('Dancing');</code></pre>
+          </section>
+
+          <section>
+            <h3>Let's Develop It</h3>
+            <p>Create an array of your favorite foods. <br />Print a few values onto your screen.</p>
+          </section>
+
+        <!-- Arrays and loops-->
+          <section>
+            <h3>Arrays + loops = BFF</h3>
+            <img src="dist/img/holding-hands.jpg" alt="Couple holding hands"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/mtsofan/8221708017/" target="_blank">John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>Iterating through arrays</h3>
+            <p>Use a <code>for</code> loop to easily work with each item in an array.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+
+for (var i = 0; i &lt; rainbowColors.length; i++) {
+  console.log(rainbowColors[i]);
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Let's Develop It</h3>
+            <p>Use a <code>for</code> loop to print a list of all your favorite foods.</p>
+          </section>
+
+      <!-- Objects -->
+        <section>
+          <h3>Objects</h3>
+          <img src="dist/img/matches.jpg" alt="Collection of matches"/>
+          <p class="credit">Photo credit:  <a href="https://flic.kr/p/8RnSsa">Jir&iacute; Volejn&iacute;k</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>Objects</h3>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Objects</a> let us store a collection of properties.</p>
+<pre><code class="javascript">var objectName = {
+  propertyName: propertyValue,
+  propertyName: propertyValue
+};
+</code></pre>
+<pre><code class="javascript">var user = {
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn',
+  likes: ['knitting', 'code'],
+  birthday: {month: 10, day: 17}
+};</code></pre>
+        </section>
+
+        <section>
+          <h3>Accessing Objects</h3>
+          <p>You can retrieve values using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">dot notation</a></strong></p>
+<pre><code class="javascript">var user = {
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
+};
+
+var usersHometown = user.hometown;</code></pre><br>
+          <p>Or using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">bracket notation</a></strong> (like arrays)</p>
+<pre><code class="javascript">var usersHair = user['hair'];</code></pre>
+        </section>
+
+        <section>
+          <h3>Changing Objects</h3>
+          <p>You can use dot or bracket notation to change properties</p>
+<pre><code class="javascript">var user = {
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
+};
+
+user.hair = 'blue';</code></pre><br>
+          <p>Add new properties</p>
+<pre><code class="javascript">user.married = true;
+</code></pre><br>
+          <p>Or delete them</p>
+<pre><code class="javascript">delete user.married;</code></pre>
+        </section>
+
+        <section>
+          <h3>Arrays of Objects</h3>
+          <p>Because arrays can hold any data type, they can also hold objects.</p>
+<pre><code class="javascript">var users = [
+  {name: 'Jolene', age: 21},
+  {name: 'Alexa',  age: 18}
+];
+
+for (var i = 0; i &lt; users.length; i++) {
+  var user = users[i];
+  console.log(user.name + ' is ' + user.age + ' years old.');
+}</code></pre>
+        </section>
+
+        <section>
+          <h3>Objects</h3>
+          <p>Just like other data types, objects can be passed into functions:</p>
+<pre><code class="javascript">var jolene = {
+  age: 21,
+  hairColor: 'Auburn',
+  likes: ['pizza', 'tacos'],
+  birthday: {month: 3, day: 14, year: 1995}
+}
+
+function describeUser(user) {
+  console.log('You are ' + user.age + ' years old with '
+  + user.hairColor + ' hair.');
+}
+
+describeUser(jolene);</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Create an object to hold information on your favorite recipe. It should have properties for:</p>
+          <ul>
+            <li><code>recipeTitle</code> (a string)</li>
+            <li><code>servings</code> (a number)</li>
+            <li><code>ingredients</code> (an array of strings)</li>
+            <li><code>directions</code> (a string)</li>
+          </ul>
+          <br><br>
+          <p>Try displaying some information about your recipe.</p>
+          <p>Bonus: Create a loop to list all the ingredients.</p>
+        </section>
+
+      <!-- Object Methods -->
+        <section>
+          <h3>Object methods</h3>
+          <p>Objects can also hold functions.</p>
+<pre><code class="javascript">var jolene = {
+  age: 21,
+  hairColor: 'Auburn',
+  talk: function() {
+    console.log('Hello!');
+  },
+  eat: function(food) {
+    console.log('Yum, I love ' + food);
+  }
+};
+</code></pre><br>
+          <p>Call object methods using dot notation:</p>
+<pre><code class="javascript">jolene.talk();
+
+jolene.eat('pizza');</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Go back to your recipe object. Add a function called <code>letsCook</code> that says "I'm hungry! Let's cook..." with the name of your recipe title.</p>
+          <p>Call your new method.</p>
+        </section>
+
+      <!-- Final slides-->
+        <section>
+          <h3>You did it!</h3>
+          <img src="dist/img/fireworks.jpg" alt="Fireworks"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/markwdw85/9425240584/" target="_blank">Mark W.</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+              <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+            </ul>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+        </section>
+    </div>
+    <footer>
+      <div class="copyright">
+        Intro to JavaScript -- Girl Develop It --
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+
+
+    <script src="dist/js/head.min.js"></script>
+    <script src="dist/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
