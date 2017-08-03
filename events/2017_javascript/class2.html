@@ -73,17 +73,57 @@ console.log(receipt);
 </code></pre>
         </section>
 
+      <section>
+        <section>
+          <h3>JavaScript and the Semicolon</h3>
+          <p>What is it used for?</p>
+          <ul>
+            <li>Tells JS that it has reached the end of a statement.</li>
+          </ul>
+          <br><br><p>What if I forget it?</p>
+          <ul>
+            <li>You'll probably never notice in JS. </li>
+            <li>JS has gotten very good at figuring out when a statement has ended</li>
+            <li>Use it anyway. Remember code is written for humans.</li>
+          </ul>
+          <h5>dayoneexamples</h5>
+        </section>
+
+        <section>
+          <h3>Symbols <br> When just one, just won't do</h3>
+          <ul>
+            <li>And</li>
+              <ul>
+              <li>&&</li>
+            </ul>
+            <li>Or</li>
+              <ul>
+              <li>|| (called pipe(s))</li>
+            </ul>
+            <li>Equals</li>
+              <ul>
+              <li>=     Sets a value</li>
+              <li>==    Shallow equality (Bad habit)</li>
+              <li>===   Deep equality (Good habit!)</li>
+            </ul>
+          </ul>
+        </section>
+      </section>
+
       <!-- Functions -->
+      <section>
         <section>
           <h3>Functions</h3>
-          <p>Functions are separable, reusable pieces of code.
-          <img src="dist/img/legos.jpg" alt="Pile of legos"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+          <ul>
+          <li>Functions are separable, reusable, chunks of code.</li>
+          <li>They should be as small as possible, while still being meaningful.</li>
+          <li>We use functions to save ourselves from rewriting code.</li>
+          </ul>
         </section>
 
         <section>
           <h3>Declaring Functions</h3>
-          <p>To declare (create) a function, you can give it a name, then include all the code for the function inside curly brackets <code>{}</code></p>
+          <p>To declare (create) a function, you give it a name, then include all the code for the function inside curly brackets <code>{}</code></p>
 <pre><code class="javascript">function parrotFacts() {
   console.log('Some parrot species can live for over 80 years');
   console.log('Kakapos are a critically endangered flightless parrot');
@@ -151,7 +191,15 @@ addOne(numberOfPuppies);
           <p>Write a simple program to combine a first name and a last name inside a function. Then update the function to accept a first and last name as arguments.</p>
         </section>
 
+        <section>
+          <h3>BUT WAIT!!! Your examples declared your functions after the main code!</h3>
+          <p>I thought JS executed line by line.</p>
+        </section>
+
+      </section>
+
       <!-- returning values -->
+      <section>
         <section>
           <h3>Returning Values</h3>
           <p>You can have a function give you back a value, to use later.</p>
@@ -170,8 +218,10 @@ var squareOfFive = square(5); // squareOfFive equals '25'
           <h3>Let's Develop It</h3>
           <p>Add a return statement to your 'name' function. Use that function to set the value of a variable.</p>
         </section>
+      </section>
 
       <!-- Variable Scope -->
+      <section>
         <section>
           <h3>Variable Scope</h3>
           <p>The scope of a variable determines where it's value is accessible throughout your program.</p>
@@ -205,8 +255,11 @@ whatIsAwesome();
 console.log(awesomeGroup + ' is pretty awesome.'); // Won't work
 </code></pre>
         </section>
+      </section>
+
 
       <!-- Boolean -->
+      <section>
         <section>
           <h3>Boolean Variables</h3>
           <img src="dist/img/kitten-switch.jpg" alt="Kitten with light switch"/>
@@ -231,10 +284,13 @@ var isMarried;     // remember a variable with no value is undefined</code></pre
           <p><code>null</code> and <code>NaN</code> will also evaluate as <code>false</code>.</p>
           <p>Everything else evaluates as <code>true</code>.</p>
           </section>
+      </section>
 
       <!--If/Then-->
+      <section>
         <section>
           <h3>Control Flow</h3>
+          <h5>Why programmers care enough about true and false to make a whole data type about it</h5>
           <img src="dist/img/fork-path.jpg" alt="Forked path"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/dennism2/1504087870/" target="_blank">DennisM2</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
@@ -265,7 +321,7 @@ if (age &gt; 18) {
             </thead>
             <tbody>
               <tr>
-                <td><code>a == b</code></td>
+                <td>a == b</td>
                 <td>Equal</td>
                 <td><strong><code>TRUE</code></strong> if <code>a</code> is equal to <code>b</code> (can be different types).</td>
               </tr>
@@ -320,8 +376,10 @@ if (age &gt; 18) {
           <h3>Let's Develop It</h3>
           <p>Make a variable called "temperature". Write some code that tells you to put on a coat if it is below 50 degrees.</p>
         </section>
+      </section>
 
       <!--If/else -->
+      <section>
         <section>
           <h3>Even more control flow</h3>
           <img src="dist/img/toomanysigns.jpg" alt="Sign post with multiple signs"/>
@@ -369,8 +427,10 @@ if (age &gt;= 35) {
             <li>Otherwise, wear whatever you want.</li>
           </ol>
         </section>
+      </section>
 
       <!-- Logical Operators -->
+      <section>
         <section>
           <h3>Logical Operators</h3>
           <table>
@@ -418,6 +478,8 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
           <h3>Let's Develop It</h3>
           <p>Add a logical operator to your "what to wear" program.</p>
         </section>
+      </section>
+        
 
       <!-- Final slides-->
         <section>
@@ -474,7 +536,9 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
         ]
       });
 
-    </script>
+</script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
   </body>
 </html>
