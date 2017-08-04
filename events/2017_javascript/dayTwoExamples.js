@@ -1,8 +1,10 @@
 // Function example 1
 
 // exampleOneSetup();
-// exampleOneNotMeaningful();
+exampleOneNotMeaningful();
 // exampleOneGood()
+
+
 
 function exampleOneSetup() {
 
@@ -25,35 +27,13 @@ function exampleOneSetup() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ex 1, not meaningful
 
 function exampleOneNotMeaningful() {
 
-    var kittenAdoptionNotice = kittenAdoptionNoticeNotMeaningful();
-    var numberOfKittensInLiter = numberOfKittensInLiterNotMeaningful();
-    var numberOfKittensAdopted = numberOfKittensAdoptedNotMeaningful();
+    var kittenAdoptionNotice = 'Kittens remaining for adoption: ';
+    var numberOfKittensInLiter = 7;
+    var numberOfKittensAdopted = 0;
     var numberOfKittensRemaining = numberOfKittensRemainingNotMeaningful(numberOfKittensInLiter, numberOfKittensAdopted);
 
     console.log(kittenAdoptionNotice + numberOfKittensRemaining);
@@ -70,17 +50,6 @@ function exampleOneNotMeaningful() {
 
 }
 
-function kittenAdoptionNoticeNotMeaningful() {
-    return 'Kittens remaining for adoption: ';
-}
-
-function numberOfKittensInLiterNotMeaningful() {
-    return 7
-}
-
-function numberOfKittensAdoptedNotMeaningful() {
-    return 0;
-}
 
 function numberOfKittensRemainingNotMeaningful(numberOfKittensInLiter, numberOfKittensAdopted) {
     return numberOfKittensInLiter - numberOfKittensAdopted;
@@ -105,7 +74,63 @@ function exampleOneGood() {
 
 function updateDisplayWhenKittenAdopted(numberOfKittensInLiter, numberOfKittensAdopted) {
     var kittenAdoptionNotice = 'Kittens remaining for adoption: ';
-    
+
     var numberOfKittensRemaining = numberOfKittensInLiter - numberOfKittensAdopted;
     console.log(kittenAdoptionNotice + numberOfKittensRemaining);
 }
+
+
+
+
+
+var firstName = 'Erin';
+var middleName = 'Elizabeth';
+var lastName = 'Bergman';
+
+console.log(nameCombiner(firstName, lastName));
+
+var starWarsIsCool = true;
+
+starwars();
+
+
+function starwars() {
+var starWarsIsCool2 = true;
+    console.log(starWarsIsCool);
+}
+
+
+var mathStuff;
+if (mathStuff) {
+    console.log('Slides are wrong');
+}
+
+function nameCombiner(a, b) {
+    return a + ' ' + b;
+    // console.log(a + ' ' + b);
+}
+
+
+
+var age = 30;
+
+if (age >= 35) {
+  console.log('You can vote AND run for President!');
+} else if (age >= 30) {
+  console.log('You can vote AND run for the Senate!');
+} else if (age >= 18) {
+  console.log('You can vote!');
+} else {
+  console.log('At least you can drive');
+}
+
+
+
+
+var stringAge = '18';
+var numberAge = 18;
+
+if (stringAge === numberAge) {
+  console.log(true);
+}
+
