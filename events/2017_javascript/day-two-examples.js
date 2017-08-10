@@ -105,6 +105,8 @@ if (mathStuff) {
     console.log('Slides are wrong');
 }
 
+console.log(nameCombiner('Erin', 'Bergman'));
+
 function nameCombiner(a, b) {
     return a + ' ' + b;
     // console.log(a + ' ' + b);
