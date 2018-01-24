@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="theme--main">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Girl Develop It Ann Arbor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/application.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <aside class="sidebar">
+                <a class="logo" href="/">
+                    <img src="images/logo-aa-pink.png" alt="Girl Develop It Ann Arbor">
+                </a>
+
+                <nav>
+                    <ul class="list--horz list--cozy">
+                        <li>
+                            <a href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" title="Meetup" target="_blank">
+                                <i class="fa fa-calendar"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://twitter.com/gdiannarbor" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.facebook.com/GirlDevelopItAnnArbor" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/groups?gid=6669157" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://gdiaa-slack.herokuapp.com/" target="_blank">
+                                <i class="fa fa-slack"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <strong>
+                                <a href="events.html">Event Slides</a>
+                            </strong>
+                        </li>
+                        <li>
+                            <strong>
+                                <a href="sponsors.html">Community Sponsors</a>
+                            </strong>
+                        </li>
+                        <li>
+                            <strong>
+                                <a href="community.html">Community Resources</a>
+                            </strong>
+                        </li>
+                        <li>
+                            <strong>
+                                <a href="survey.html">Community Survey</a>
+                            </strong>
+                        </li>
+                        <li>
+                            <a href="scholarships.html">Scholarship Application</a>
+                        </li>
+                        <li>
+                            <a href="volunteers.html">Volunteer Form</a>
+                        </li>
+                        <li>
+                            <a href="mailto:annarbor@girldevelopit.com?subject=GDI Ann Arbor Sponsorship Inquiry">Sponsorship Inquiry</a>
+                        </li>
+                        <li>
+                            <a href="newsletter.html">Newsletter Signup</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="main">
+                <div class="intro">
+
+                    <div class="header_bar">
+                        <h1 style="color: white">
+                            <strong>Girl Develop It Ann Arbor</strong>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <script>window.location.replace("http://www.meetup.com/Girl-Develop-It-Ann-Arbor/");</script>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <nav>
+                <ul class="list--horz">
+                    <li>
+                        <a href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" title="Meetup" target="_blank">
+                            <i class="fa fa-calendar"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/gdiannarbor" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.facebook.com/GirlDevelopItAnnArbor" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/groups?gid=6669157" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://gdiaa-slack.herokuapp.com/" target="_blank">
+                            <i class="fa fa-slack"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <a href="https://plus.google.com/107523720184522630977" rel="publisher" style="display: none;">Google+</a>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/application.js"></script>
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+                function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+            e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-49702258-1'); ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
