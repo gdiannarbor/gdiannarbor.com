@@ -1,188 +1,77 @@
 <!doctype html>
-<html class="theme--main">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>GDI Intro to HTML &amp; CSS</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <body>
+    <div id="wrapper">
+      <h1>Intro to HTML and CSS</h1>
 
-  <title>Girl Develop It Ann Arbor</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="css/application.css">
-</head>
-
-<body>
-  <div class="content">
-    <div class="container">
-      <aside class="sidebar">
-        <a class="logo" href="/">
-          <img src="images/logo-aa-pink.png" alt="Girl Develop It Ann Arbor">
-        </a>
-
-        <nav>
-          <ul class="list--horz list--cozy">
-            <li>
-              <a href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" title="Meetup" target="_blank">
-                <i class="fa fa-calendar"></i>
-              </a>
-            </li>
-            <li>
-              <a href="http://twitter.com/gdiannarbor" target="_blank">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="http://www.facebook.com/GirlDevelopItAnnArbor" target="_blank">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/groups?gid=6669157" target="_blank">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <a href="http://gdiaa-slack.herokuapp.com/" target="_blank">
-                <i class="fa fa-slack"></i>
-              </a>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <strong>
-                <a href="events.html">Event Slides</a>
-              </strong>
-            </li>
-            <li>
-              <strong>
-                <a href="sponsors.html">Community Sponsors</a>
-              </strong>
-            </li>
-            <li>
-              <strong>
-                <a href="community.html">Community Resources</a>
-              </strong>
-            </li>
-            <li>
-              <strong>
-                <a href="survey.html">Community Survey</a>
-              </strong>
-            </li>
-            <li>
-              <a href="scholarships.html">Scholarship Application</a>
-            </li>
-            <li>
-              <a href="volunteers.html">Volunteer Form</a>
-            </li>
-            <li>
-              <a href="mailto:annarbor@girldevelopit.com?subject=GDI Ann Arbor Sponsorship Inquiry">Sponsorship Inquiry</a>
-            </li>
-            <li>
-              <a href="newsletter.html">Newsletter Signup</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
-      <div class="main">
-        <div class="intro">
-
-          <div class="header_bar">
-            <h1 style="color: white">
-              <strong>Girl Develop It Ann Arbor</strong>
-            </h1>
-          </div>
-
-          <h3>
-            <strong>Want to learn how to code? Have a great idea? Don't be shy.</strong>
-            <em>Develop it.</em>
-          </h3>
-
-          <h3>
-            <strong>Want to get involved? GDIAA is currently looking for Event Organizers</strong>
-            <a href="help-wanted.html">
-              <em>Check it out here!</em>
-            </a>
-          </h3>
-
-
-          <p>At
-            <a class="blue" href="http://girldevelopit.com" target="_blank">Girl Develop It</a>, our goal is to empower and assist women interested in getting into and advancing in the
-            tech industry.</p>
-
-          <p>Our courses focus on teaching modern develop best practices and having something to show for it (ie. a sweet website,
-            a native mobile app, a browser based game, a network of industry experts, or even a stellar résumé).
-          </p>
-
-          <p>We've got a TON of awesome events lined up and a community that is ready to learn and grow! We hope to see you
-            at a future event!</p>
-
-
-        </div>
-
-        <div class="meetups">
-          <a class="meetups__join" href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" target="_blank">Join Our Meetup Group &raquo;</a>
-          <h2 class="events__header">Upcoming Events</h2>
-          <div class="events">
-            <p>
-              <em>Fetching events...</em>
-            </p>
-          </div>
-        </div>
+      <div class="box">
+        <h2>Slides</h2>
+        <ul>
+          <li><a href="session1.html">Session 1</a></li>
+          <li><a href="session2.html">Session 2</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
 
-  <footer class="footer">
-    <div class="container">
-      <nav>
-        <ul class="list--horz">
+      <div class="box">
+        <h2>HTML &amp; CSS Resources</h2>
+        <ul>
+          <li><a href="assets/vocabulary.pdf">GDI Vocabulary Sheet</a></li>
+          <li><a href="assets/css-properties-list.pdf">GDI CSS Properties List</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Element Reference</a></li>
+          <li><a href="images/h5d-sectioning-flowchart.pdf">HTML5 cheatsheet</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">Mozilla Developer Network</a></li>
+          <li><a href="http://devdocs.io">devdocs.io</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Dev Tools &amp; Debugging</h2>
+        <ul>
+          <li><a href="http://validator.w3.org/" target="_blank">W3C HTML Validator</a></li>
+          <li><a href="https://developers.google.com/chrome-developer-tools/" target="_blank">How to use inspector in Chrome</a></li>
+          <li><a href="http://developer.apple.com/library/safari/#documentation/AppleApplications/Conceptual/Safari_Developer_Guide/DebuggingYourWebsite/DebuggingYourWebsite.html" target="_blank">How to use inspector in Safari</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Tools" target="_blank">Firefox Developer Tools</a></li>
+          <li><a href="http://htmlandcssbook.com/extras/html-escape-codes/" target="_blank">HTML Character Codes</a></li>
+          <li><a href="http://www.colourlovers.com/web/trends/websites" target="_blank">COLOURLovers - website color trends</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>GDI Resources</h2>
+        <ul>
+          <li><a href="http://www.gdiannarbor.com/">GDI Ann Arbor</a></li>
+          <li><a href="http://www.girldevelopit.com/chapters/ann-arbor">Chapter Page &amp; Contact Info</a></li>
+          <li><a href="http://www.girldevelopit.com/materials" target="_blank">Additional Course Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Learning Resources</h2>
+        <ul>
           <li>
-            <a href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" title="Meetup" target="_blank">
-              <i class="fa fa-calendar"></i>
-            </a>
+            <a href="https://freecodecamp.org" target="_blank">Free Code Camp (free)</a>
           </li>
           <li>
-            <a href="http://twitter.com/gdiannarbor" target="_blank">
-              <i class="fa fa-twitter"></i>
-            </a>
+            <a href="http://www.codecademy.com/tracks/web" target="_blank">Code Academy (sign up, free)</a>
           </li>
           <li>
-            <a href="http://www.facebook.com/GirlDevelopItAnnArbor" target="_blank">
-              <i class="fa fa-facebook"></i>
-            </a>
+            <a href="http://codepupil.com/" target="_blank">Code Pupil (free)</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/groups?gid=6669157" target="_blank">
-              <i class="fa fa-linkedin"></i>
-            </a>
+            <a href="https://www.udemy.com" target="_blank">Udemy ($ per course, runs sales frequently)</a>
           </li>
+          <li><a href="http://teamtreehouse.com" target="_blank">Treehouse (free for 7 days, then $25/month)</a></li>
           <li>
-            <a href="http://gdiaa-slack.herokuapp.com/" target="_blank">
-              <i class="fa fa-slack"></i>
-            </a>
+            <a href="http://codeschool.com" target="_blank">CodeSchool ($29/month)</a>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </footer>
-
-  <a href="https://plus.google.com/107523720184522630977" rel="publisher" style="display: none;">Google+</a>
-
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="js/application.js"></script>
-  <script>
-    (function (b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l; b[l] || (b[l] =
-        function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
-      e = o.createElement(i); r = o.getElementsByTagName(i)[0];
-      e.src = '//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-49702258-1'); ga('send', 'pageview');
-  </script>
-</body>
-
+  </body>
 </html>

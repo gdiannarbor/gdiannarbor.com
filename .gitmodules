@@ -1,6 +1,3 @@
-[submodule "events/html-css"]
-	path = events/html-css
-	url = git@github.com:gdiannarbor/intro-html-css.git
 [submodule "events/teacher-training"]
 	path = events/teacher-training
 	url = git@github.com:gdiannarbor/teacher-training.git
