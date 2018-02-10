@@ -1,0 +1,52 @@
+/*********************************************
+ * RESET STYLES
+ *********************************************/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px 0;
+  color: #f05b62;
+  font-family: "Helvetica-Bold", Impact, sans-serif;
+  line-height: 0.9em;
+  text-transform: none;
+  text-shadow: #cccccc;
+}
+
+h1 {
+  color: #92BB44;
+}
+
+#wrapper {
+  margin: 50px 50px;
+}
+
+/***************lists***********/
+
+li { margin-bottom: .5em; }
+
+/***************links***********/
+
+a {
+  color: #01A9B4;
+}
+
+.box {
+  margin: 2em 0;
+}
