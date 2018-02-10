@@ -1,0 +1,2151 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Session 1 &mdash; HTML/CSS &mdash; Girl Develop It</title>
+
+  <meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, Jen Myers, Cara Jo Miller, Laura Eagin, Nicole Rodriguez, and Leeann Drees.
+
+    The course is meant to be taught in 2 four-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+  <meta name="author" content="Girl Develop It">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+  <link rel="stylesheet" href="lib/css/light.css">
+  <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+  <script src="lib/js/head.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- INTRO -->
+      <section>
+        <!-- Prep -->
+        <section>
+          <h3>Set Up Your Computer</h3>
+          <!-- TODO -->
+          <p class="box">Slides:
+            <a href="http://bit.ly/gdiaa-hc">bit.ly/gdiaa-hc</a>
+          </p>
+          <p class="copy--small">
+            <img src="images/chrome_logo.jpg" style="border:none; box-shadow: none; margin: 0 10px;" />
+            <br/>Install
+            <strong>Google Chrome</strong>, if you don't have it already.
+            <a href="http://google.com/chrome">google.com/chrome</a>
+          </p>
+
+          <!-- <p class="box copy--small"><img src="images/web-maker-icon.png" style="width: 45px;border:none; box-shadow: none; margin: 0 10px;"/><br/>Add the Chrome Extension <strong>Web Maker</strong><br />(Chrome -> Window -> Extentions -> "Get more extension" -> Search "Web Maker")</p> -->
+
+          <p class="box copy--small">
+            <img src="images/vs-code-icon.png" alt="Visual Studio Code - Download" style="border:none; box-shadow: none; width: 40px; margin: 0 10px;"
+            />
+            <br />Download
+            <strong>Visual Studio Code</strong>,
+            <a href="https://www.visualstudio.com/downloads/">https://www.visualstudio.com/downloads/</a>
+            <br />
+            <small>(free, Windows, macOS, or Linux)</small>
+          </p>
+
+          <p>
+            <small>
+              <span style="yellow">Bonus:</span> Find a few images to use later when we start building web pages.</small>
+          </p>
+        </section>
+
+        <!-- Title -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3>
+              <span class="green">Beginning HTML and CSS</span>
+            </h3>
+            <h4>
+              <span class="blue">Session 1</span>
+            </h4>
+          </div>
+        </section>
+
+        <!-- Overview -->
+        <section>
+          <h3>Overview</h3>
+          <ul class="list--tall box--small">
+            <li>Anatomy of a Website</li>
+            <li>What is HTML?</li>
+            <li>What is CSS?</li>
+            <li>Connecting CSS to HTML</li>
+            <li>Using the Inspector</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- What is HTML?-->
+      <section>
+        <section>
+          <h3>Anatomy of a Website</h3>
+          <p class="box">A website is a way to share content with the world.</p>
+          <p>We use
+            <span class="green">HTML</span> to give our content
+            <span class="green">structure</span>.</p>
+          <p class="box">And we use
+            <span class="blue">CSS</span> to make it
+            <span class="blue">look good</span>.</p>
+        </section>
+
+        <!-- Roles of HTML v CSS -->
+        <section>
+          <h3>Anatomy of a Website</h3>
+
+          <div class="blue box--small copy--small" style="float: left; width: 33.333%;">
+            <p>Content</p>
+            <img src="images/example_site_content.jpg" alt="Example of site content" />
+          </div>
+          <div class="box--small copy--small" style="float: left; width: 33.333%;">
+            <p>
+              <span class="green">+ HTML</span> (Structure)</p>
+            <img src="images/example_site_HTML.jpg" alt="Example of site structure" />
+          </div>
+          <div class="box--small copy--small" style="float: left; width: 33.333%;">
+            <p>
+              <span class="red">+ CSS</span> (Presentation)</p>
+            <img src="images/example_site_HTML_CSS.jpg" alt="Example of site with CSS" />
+          </div>
+        </section>
+
+        <section>
+          <h3>What is HTML?</h3>
+          <p class="box">
+            <b class="red">H</b>yper
+            <b class="red">T</b>ext
+            <b class="red">M</b>arkup
+            <b class="red">L</b>anguage</p>
+          <p class="fragment box--small copy--small">A language for describing web documents</p>
+          <p class="fragment box--small copy--small">Uses
+            <span class="green">tags</span> to describe different
+            <span class="blue">types</span> of content
+            <br/>
+            <span class="copy--xsmall">Like paragraphs, headers, lists, bold or italic words</span>
+          </p>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What is HTML?</h3>
+          <p class="box--small">Let's examine this simple website:</p>
+          <a href="http://gdiannarbor.com" target="_blank">
+            <img src="images/homepage-view.png" width="600">
+          </a>
+          <aside class="notes">
+            <p>just talk about what it looks like - the content on the page</p>
+          </aside>
+        </section>
+
+        <section>
+          <h3>What is HTML?</h3>
+          <p class="box--small">If you
+            <strong>'view page source'</strong>, you see this &mdash; it's HTML!</p>
+          <a href="view-source:http://www.gdiannarbor.com/" target="_blank">
+            <img src="images/homepage-html.png" width="850">
+          </a>
+        </section>
+
+        <!-- History of HTML-->
+        <!-- <section>
+            <h3>History of HTML</h3>
+
+            <div class="left" style="width: 75%;">
+              <ul>
+                <li>Invented by Tim Berners-Lee</li>
+                <li>Created "hypertext" to share<br/>scientific papers</li>
+                <li>First web page August 6, 1991</li>
+                <li>Standardized by w3 Consortium <br/>(pack of super nerds)</li>
+
+              </ul>
+            </div>
+            <div class="right" style="width: 25%;"><img src="images/tim.png" width="300px"><br/><p style="font-size: .4em; color: #888; width: 300px;">Tim Berners-Lee speaking at SXSW 2013.<br/><em>Photo credit: Dennis Lembree</em></p></div>
+          </section> -->
+
+        <!-- Terms-->
+        <section>
+          <h3>Terms</h3>
+          <ul class="list--tall box">
+            <li>
+              <div class="fragment">
+                <span class="green">Web design: </span>The process of using
+                <strong>graphic design software</strong>
+                <em>OR</em>
+                <strong>HTML &amp; CSS</strong> to
+                <i>design</i> a website.</div>
+            </li>
+            <li>
+              <div class="fragment">
+                <span class="green">Web development: </span>The process of
+                <strong>programming web applications</strong> with a variety of tools.</div>
+            </li>
+            <li>
+              <div class="fragment">
+                <span class="blue">Front end: </span>The
+                <strong>outwardly visible</strong> elements of a website or application.</div>
+            </li>
+            <li>
+              <div class="fragment">
+                <span class="blue">Back end: </span>The
+                <strong>inner workings and functionality</strong> of a website or application.</div>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Project Setup -->
+      <section>
+        <section>
+          <h3>What we'll be building today</h3>
+          <div class="left left-align" style="width: 45%;">
+            <br />
+            <p>Today we will be learning how to code a site from scratch using paragraphs, headers, links, images, and lists.</p>
+            <br
+            />
+            <p>We'll add a tiny bit of CSS for colors &amp; fonts, but we're saving CSS layouts for tomorrow.</p>
+          </div>
+          <div class="right" style="width: 45%;">
+            <img src="images/making-this-today.png" />
+          </div>
+        </section>
+
+        <!-- Nitty gritty 2 - Tools -->
+        <section>
+          <h3>Tools</h3>
+          <br/>
+          <ul>
+            <li>
+              <div class="yellow">Browser</div>
+              <div>
+                <img src="images/chrome_logo.jpg" style="border:none; box-shadow: none; margin: 0 10px; float: left;" />Chrome</div>
+              <br/>
+            </li>
+            <li>
+              <div class="yellow">Text Editor</div>
+              <div>
+                <img src="images/vs-code-icon.png" style="width: 40px; border:none; box-shadow: none; margin: 0 10px; float: left;"
+                />Visual Studio Code - Windows, macOS, &amp; Linux</div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Visual Studio Setup</h3>
+          <h4 class="blue">Optional</h4>
+          <p class="box--small copy--small">Add the Extension
+            <code>Beautify</code>.
+            <br />This will format your code. (↑⌘P -> Beautify File or Beautify Selection)</p>
+          <p class="box--small copy--small">To change your "colors", hit
+            <code>⌘K then ⌘T,</code> or
+            <code>ctrl+K then ctrl+T</code> or find "Preferences > Color Theme" in the Menu
+            <br />Suggestions:
+            <code>Solarized Light</code> or
+            <code>Monokai Dark</code>
+          </p>
+        </section>
+
+        <!-- Folder Structure -->
+        <section>
+          <h3>Folder Structure</h3>
+          <p class="box--small copy--small">A website is basically just a folder full of other folders and files.</p>
+          <div class="left box--small" style="width: 45%;">
+            <p class="left-align">
+              <strong>Today, our folder will contain:</strong>
+            </p>
+            <ul class="copy--small">
+              <li>HTML files</li>
+              <li>CSS files</li>
+              <li>images</li>
+              <li>script files
+                <small>(not today)</small>
+              </li>
+              <li>anything else that will appear on your site
+                <small>(fonts, videos, etc.)</small>
+              </li>
+            </ul>
+          </div>
+          <div class="right" style="width: 45%;">
+            <img src="images/folderstructure2.jpg" style="border:none; box-shadow: none;" />
+          </div>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <ul class="copy--small list--tall box--small">
+            <li>Create a new folder somewhere easily remembered (perhaps your desktop?) called '
+              <span class="blue">html-site</span>' &mdash; no spaces, no caps!</li>
+            <li>Drag your folder onto the Visual Studio icon to open it in Visual Studio.</li>
+            <li>Create a new
+              <span class="green">index.html</span> file.
+              <br/>
+              <small>In the Visuals Studio sidebar, click the page+ enter the filename and hit Enter.</small>
+            </li>
+            <li>Do the same to create a new
+              <span class="green">styles.css</span> file.
+              <br/>
+            </li>
+            <li>Make sure both files are saved in the
+              <span class="blue">html-site</span> folder!</li>
+          </ul>
+          <img src="images/folder.png">
+        </section>
+      </section>
+
+      <!-- Anatomy -->
+      <section>
+        <!-- HTML element-->
+        <section>
+          <h3>Anatomy of an HTML element</h3>
+          <ul class="copy--small list--bare">
+            <li class="box--small">
+              <strong class="blue">Element</strong>
+              <ul>
+                <li>An individual component of HTML</li>
+                <li>Paragraph, heading, table, list, link, image, header, footer, etc.</li>
+                <li>Elements are identified by their tags</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              <div style="float: left; width: 48%;">
+                <strong class="blue">Tag</strong>
+                <ul>
+                  <li>Marks the beginning &amp; end of an element</li>
+                  <li>Opening tag and Closing Tag
+                    <li>Tags contain characters that indicate the tag's purpose</li>
+                </ul>
+              </div>
+              <div style="float: right; width: 48%;">
+                <pre><code contenteditable class="html">
+                  &lt;tagname>Stuff in the middle&lt;/tagname>
+                  &lt;p>This is a sample paragraph.&lt;/p>
+                </code></pre>
+              </div>
+              </li>
+          </ul>
+        </section>
+
+        <!--anatomy of a tag -->
+        <section>
+          <h3>Tag Breakdown</h3>
+          <img src="images/tagbreakdown.png" alt="Tag breakdown" style="border: none; box-shadow: none; height: 600px;" />
+        </section>
+
+        <section>
+          <h3>Types of HTML Elements</h3>
+          <p class="box--small ">
+            <strong class="blue">Container Element</strong>
+          </p>
+          <ul class=" copy--small">
+            <li>An element that can contain other elements or content
+            </li>
+            <li>A paragraph (&lt;p>) contains text</li>
+          </ul>
+          <pre><code contenteditable class="html">&lt;p>Text goes here&lt;/p>
+&lt;p>Text goes &lt;b>here&lt;/b>.&lt;/p></code></pre>
+        </section>
+
+        <section>
+          <h3>Types of HTML Elements</h3>
+          <p class="box--small">
+            <strong class="blue">Stand Alone Element</strong>
+          </p>
+          <ul class="copy--small">
+            <li>An element that cannot contain anything else</li>
+            <li>Referred to as
+              <strong>self-closing tags</strong>
+            </li>
+          </ul>
+          <pre><code contenteditable class="html">&lt;hr/>
+&lt;br/>
+&lt;img src="path_to_image.jpg" /></code></pre>
+        </section>
+
+        <section>
+          <h3>Anatomy of an HTML Element</h3>
+          <p class="copy--small box--small">
+            <code>&lt;p attribute="value">Some content.&lt;/p></code>
+          </p>
+          <div class="box--small">
+            <p>
+              <strong class="blue">Attributes</strong>
+            </p>
+            <ul class="copy--small">
+              <li>Provides additional information about the HTML element</li>
+              <li>Class, ID, language, style, identity, source</li>
+              <li>Placed inside an opening tag, before the right angle bracket.</li>
+            </ul>
+          </div>
+          <div class="box--small">
+            <p>
+              <strong class="blue">Values</strong>
+            </p>
+            <ul class="copy--small">
+              <li>The value assigned to a given attribute.</li>
+              <li>Wrapping values in quotes is optional, but is helpful for readability.</li>
+            </ul>
+          </div>
+          <pre style="height: 100px; overflow: hidden;"><code contenteditable class="html">&lt;img src="my_picture.jpg" />
+&lt;a href="http://girldevelopit.com">GDI&lt;/a>
+&lt;div class="copyright">&copy; GDI 2013&lt;/div>
+            </code></pre>
+        </section>
+
+        <!-- <section>
+            <h3>An Example</h3>
+              <p class="box--small">We have a paragraph of content.</p>
+              <div class="fragment copy--small" style="width: 48%; float: left">Putting your content into an HTML tag to make it look like a paragraph is Structure
+                <pre><code contenteditable class="html">
+                  &lt;p>A paragraph is your content&lt;/p>
+                </code></pre>
+              </div>
+
+            <div class="fragment  copy--small" style="width: 48%; float: right">
+              To add the class of <code>blue</code>, we'd put the attribute &amp; value in the opening <code contenteditable>&lt;p></code> tag:
+                <pre><code contenteditable class="html">
+                    &lt;p class="blue">A paragraph is your content&lt;/p>
+                  </code></pre>
+            </div>
+          </section>
+ -->
+        <section>
+          <h3>Nesting</h3>
+          <p class="box">Elements can "nest" inside one another</p>
+          <img src="images/nesting_simple1.png" style="border: none; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h3>Nesting</h3>
+          <p class="box">Whichever element OPENS first CLOSES last</p>
+          <img src="images/nesting_simple2.png" style="border: none; box-shadow: none; width: 560px;" />
+        </section>
+
+        <section>
+          <h3>Indentation</h3>
+          <p class="box copy--small">Is
+            <i>really</i> important for
+            <strong>readability</strong> and
+            <strong>debugging</strong>.</p>
+          <pre><code contenteditable>
+              &lt;ul>
+                &lt;li>
+                  &lt;p>A paragraph of content&lt;/p>
+                  &lt;p>Another paragraph of content&lt;/p>
+                &lt;/li>
+                &lt;li>Another List Item&lt;/li>
+              &lt;/ul>
+            </code></pre>
+        </section>
+      </section>
+
+      <!-- HTML Page-->
+      <section>
+        <section>
+          <h3>doctype</h3>
+          <p class="copy--small box--small">The ﬁrst thing on an HTML page is the doctype, which tells the browser what version of the markup language the
+            page is using.</p>
+          <hr class="box--small">
+          <div style="float: left; width: 48%">
+            <p class="red">In the bad
+              <em>old days</em>...</p>
+            <pre><code contenteditable class="html">
+                  &lt;!doctype HTML PUBLIC "-//W3C//DTD
+                  HTML 4.01 Transitional//EN"
+                  "http://www.w3.org/TR/html4/loose.dtd">
+                </code></pre>
+          </div>
+          <div style="float: left; width: 48%">
+            <p class="green">Today, we rejoice!</p>
+            <pre><code contenteditable class="html">
+                  &lt;!doctype html>
+                </code></pre>
+          </div>
+          <small>This tag is special - it has no closing tag.</small>
+        </section>
+
+        <section>
+          <h3>HTML Tag</h3>
+          <p class="copy--small box">After
+            <code contenteditable>&lt;doctype></code>, the page content
+            <br/>must be contained within
+            <code contenteditable>&lt;html></code> tags.</p>
+          <pre><code contenteditable class="html">
+              &lt;!doctype html>
+              &lt;html>
+
+              &lt;/html>
+            </code></pre>
+        </section>
+
+        <section>
+          <h3>Head and Body Tags</h3>
+          <div class="left-align copy--small box--small">
+            <p class="fragment">
+              <span class="green">Head:</span> The
+              <code contenteditable>&lt;head></code> contains the
+              <strong>title of the page</strong> &amp;
+              <strong>meta information</strong> about the page. Meta information is not visible to the user, but has many purposes
+              &amp; is how search engines gather information about your page.</p>
+            <p class="fragment box--small">
+              <span class="green">Body:</span> The
+              <code contenteditable>&lt;body></code> contains the actual content of the page. Everything that is contained in the body is visible
+              to the user.</p>
+          </div>
+          <div class="fragment center-align">
+            <img src="images/head-body-tattoo.jpg" alt="one way to remember it!" width="400">
+            <br>
+            <small>One way to remember it!</small>
+          </div>
+        </section>
+
+        <!--example of head and body tags-->
+        <section>
+          <h3>Head and Body Tags
+            <span class="blue">Example</span>
+          </h3>
+          <div class="box">
+            <a target="_blank" href="http://gdiannarbor.com">
+              <img src="images/homepage-view.png" alt="example of head and body" width="700" />
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <h3>The Title Tag</h3>
+          <p class="copy--small box--small">The
+            <code>title</code> tag allows you to set the text that shows up on the browser tab, as well as in Google search results.</p>
+          <div>
+            <pre><code contenteditable class="html">&lt;title>Title of the page&lt;/title></code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Head, Body, &amp; Title Tags</h3>
+          <div class="box">
+            <pre><code contenteditable class="html">
+                &lt;!doctype html>
+                &lt;html>
+                   &lt;head>
+                      &lt;title>Title of the page&lt;/title>
+                   &lt;/head>
+                   &lt;body>
+                      The page content here.
+                   &lt;/body>
+                &lt;/html>
+              </code></pre>
+          </div>
+        </section>
+
+        <!-- Develop it -->
+        <section>
+          <h3>Let's develop it!</h3>
+          <p class="box--small copy--small blue">Let's set our HTML web page up with the following elements:</p>
+          <ul class="list--bare center-align">
+            <li>
+              <code contenteditable>&lt;doctype></code>
+            </li>
+            <li>
+              <code contenteditable>&lt;html></code>
+            </li>
+            <li>
+              <code contenteditable>&lt;head></code>
+            </li>
+            <li>
+              <code contenteditable>&lt;title></code>
+            </li>
+            <li>
+              <code contenteditable>&lt;body></code>
+            </li>
+          </ul>
+          <p class="copy--xsmall box">Later we'll add some content to the body!</p>
+        </section>
+
+        <section>
+          <h3>Check In</h3>
+          <p class="copy--small box">Your
+            <span class="blue">index.html</span> file should now have the following content: </p>
+          <pre><code contenteditable class="html">
+              &lt;!doctype html>
+              &lt;html>
+                 &lt;head>
+                    &lt;title>Title of the page &lt;/title>
+                 &lt;/head>
+                 &lt;body>
+                    The page content here.
+                 &lt;/body>
+              &lt;/html>
+            </code></pre>
+        </section>
+      </section>
+
+      <!-- Elements -->
+
+      <!-- Paragraphs-->
+      <section>
+        <section>
+          <h3>Element:
+            <span class="yellow">Paragraph</span>
+          </h3>
+          <div class="box--small left" style="width:50%">
+          <pre><code contenteditable class="html">
+              &lt;p>Paragraph 1&lt;/p>
+              &lt;p>Paragraph  2&lt;/p>
+              &lt;p> Paragraph 3 &lt;/p>
+            </code></pre>
+          </div>
+          <div class="box left-align">
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3 </p>
+
+          </div>
+          <p>
+            <small>* White space in HTML is only for humans and their sanity!</small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Example:
+            <span class="yellow">Paragraphs</span>
+          </h3>
+          <p class="box--small copy--small">Paragraphs allow you to format your content in a readable fashion.</p>
+          <img src="images/example-paragraphs.png" alt="Example of Paragraphs in the wild" />
+          <p>
+            <small>* You can edit how paragraphs are displayed with CSS</small>
+          </p>
+        </section>
+
+        <!-- Headings-->
+        <section>
+          <h3>Element:
+            <span class="yellow">Heading</span>
+          </h3>
+          <div class="box--small left" style="width:50%">
+            <pre><code contenteditable>
+                &lt;h1>Heading 1&lt;/h1>
+                &lt;h2>Heading 2&lt;/h2>
+                &lt;h3>Heading 3&lt;/h3>
+                &lt;h4>Heading 4&lt;/h4>
+                &lt;h5>Heading 5&lt;/h5>
+                &lt;h6>Heading 6&lt;/h6>
+              </code></pre>
+          </div>
+          <div class="box left align-left" style="width:50%">
+            <h1 style="font-size: 120%; text-shadow: none;">Heading 1</h1>
+            <h2 style="font-size: 110%">Heading 2</h2>
+            <h3 style="font-size: 105%">Heading 3</h3>
+            <h4 style="font-size: 95%">Heading 4</h4>
+            <h5 style="font-size: 85%">Heading 5</h5>
+            <h6 style="font-size: 75%">Heading 6</h6>
+          </div>
+          <p>
+            <small>* Heading number indicates hierarchy, not size. Think: Outlines from high school papers</small>
+          </p>
+          <p>
+            <small>* We can change the appearance of headings with CSS</small>
+          </p>
+        </section>
+
+        <!--heading examples-->
+        <section>
+          <h3>Example:
+            <span class="yellow">Headings</span>
+          </h3>
+          <img src="images/example-headings.png" alt="Example of headings" />
+        </section>
+
+        <!-- Em and Strong-->
+        <section>
+          <h3>Formatted text</h3>
+          <p class="box--small copy--small">Here's a paragraph with
+            <em>Emphasized</em> text and
+            <strong>Important</strong> text.</p>
+          <div>
+
+            <div class="left" style="width:65%">
+              <pre><code contenteditable>&lt;p>Here's a paragraph with &lt;em>Emphasized&lt;/em>
+text and &lt;strong>Important&lt;/strong> text.&lt;/p></code></pre>
+            </div>
+
+            <div class="box left left-align" style="width:35%; font-size: 70%;">
+              <p>
+                Emphasized text is
+                <em>particulary</em> geared towards screen readers because it instructs them to read this text with a different
+                voice inflection.
+              </p>
+            </div>
+
+            <p class="box--small">
+              <small>* Notice: If you want to italicize text for appearance and not
+                <br />to communicate meaning, you should use CSS.</small>
+            </p>
+          </div>
+        </section>
+
+        <!--develop it!-->
+        <section>
+          <h3>Let's Develop it!</h3>
+          <p class="box">Let's add some content to our site!</p>
+          <p class="copy--small">
+            Add some short paragraphs to the
+            <span class="blue">&lt;body></span> of your site.
+          </p>
+          <div class="box copy--xsmall">
+            <p>Don't want to write a bunch of paragraphs off the top of your head?
+              <br/>Grab some example text from a web generator. Some of our faves:</p>
+            <ul>
+              <li>
+                <a href="http://www.lipsum.com/" target="_blank">Lorem Ipsum</a>
+              </li>
+              <li>
+                <a href="http://www.cupcakeipsum.com/" target="_blank">Cupcake Ipsum</a>
+              </li>
+              <li>
+                <a href="http://www.catipsum.com/" target="_blank">Cat Ipsum</a>
+              </li>
+            </ul>
+          </div>
+          <p>View in browser!
+            <br/>
+            <small>Drag your
+              <code>index.html</code> file to your browser icon.</small>
+          </p>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Take it Up a Level!</h3>
+          <ul class="list--tall box">
+            <li class="left-align">Add a page title in an
+              <code>h1</code>
+            </li>
+            <li class="left-align">Add one of each other level of heading (
+              <code>h2</code>-
+              <code>h6</code>) in between your paragraphs. </li>
+            <li class="left-align">Italicize and bold some text within a few paragraphs.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Check In</h3>
+          <p class="copy--small box--small">Now your
+            <span class="blue">index.html</span> file should be looking something like this:</p>
+          <pre><code contenteditable class="html" style="min-height: 300px; max-height: 475px;">
+              &lt;!doctype html>
+              &lt;html>
+                 &lt;head>
+                    &lt;title>Title of the page &lt;/title>
+                 &lt;/head>
+
+                 &lt;body>
+                    &lt;h1&gt;Heading 1&lt;/h1&gt;
+                    &lt;p>A paragraph!&lt;/p>
+                    &lt;p>Another paragraph!&lt;/p>
+
+                    &lt;h2&gt;Heading 2&lt;/h2&gt;
+                    &lt;p>Yet another paragraph.&lt;/p>
+                    &lt;p>I'm a paragraph too!&lt;/p>
+
+                    &lt;h3&gt;Heading 3&lt;/h3&gt;
+                    &lt;p>I'm a paragraph with some &lt;em>emphasized&lt;/em> text.&lt;/p>
+                    &lt;p>I'm a paragraph with &lt;strong>strong&lt;/strong> text.&lt;/p>
+
+                    &lt;h4&gt;Heading 4&lt;/h4&gt;
+                    &lt;p>Another paragraph!&lt;/p>
+                    &lt;p>Maybe your content is more fun?&lt;/p>
+
+                    &lt;h5&gt;Heading 5&lt;/h5&gt;
+                    &lt;p>Another paragraph!&lt;/p>
+                    &lt;p>Yet another paragraph.&lt;/p>
+
+                    &lt;h6&gt;Heading 6&lt;/h6&gt;
+                    &lt;p>Almost done!&lt;/p>
+                    &lt;p>Yay!&lt;/p>
+                 &lt;/body>
+              &lt;/html>
+            </code></pre>
+          <p>
+            <small>* Remember to use spacing and indentation to your benefit</small>
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <!-- Links-->
+        <section>
+          <h3>Element:
+            <span class="yellow">Link</span>
+          </h3>
+          <p class="box">Tag:
+            <span class="blue">&lt;a>&lt;/a></span>
+          </p>
+          <p>The
+            <code contenteditable>a</code> tag stands for "anchor" and is a hyperlink.</p>
+          <p class="box copy--small">We surround text or other elements with the
+            <br/>
+            <code contenteditable>&lt;a&gt;</code> tag to turn them into links</p>
+        </section>
+
+        <section>
+          <h3>Element:
+            <span class="yellow">Link</span>
+          </h3>
+          <img class="box" src="images/linkbreakdown.jpg">
+        </section>
+
+        <section>
+          <h3>Element:
+            <span class="yellow">Link</span>
+          </h3>
+          <p class="copy--small box--small">Links have three main attributes that go in the opening
+            <strong>a</strong> tag:</p>
+          <ul class="list--tall copy--small">
+            <li>
+              <span class="blue">Href attribute</span>:
+              <code contenteditable>href="http://www.girldevelopit.com"</code>
+            </li>
+            <li>
+              <span class="blue">Title attribute
+                <em>(optional)</em>
+              </span>:
+              <code contenteditable>title="Girl Develop It"</code>
+            </li>
+            <li>
+              <span class="blue">Target attribute
+                <em>(optional)</em>
+              </span>:
+              <code contenteditable>target="_blank"</code>
+            </li>
+          </ul>
+          <pre><code contenteditable style="html">
+&lt;a href="http://www.girldevelopit.com" title="Girl Develop It" target="_blank">GDI&lt;/a>
+</code></pre>
+          <p>
+            <a href="http://www.girldevelopit.com" title="Girl Develop It" target="_blank" style="text-decoration: underline;">GDI</a>
+          </p>
+        </section>
+
+        <!-- Link Attributes -->
+        <section>
+          <h3>Link Attributes</h3>
+          <p class="copy--small box--small">Links can have attributes that tell the link to do different actions like open in a new tab, or launch your e-mail
+            program.</p>
+          <p>
+            <small>Links can open in a new window/tab with
+              <strong>target="_blank"</strong>
+            </small>
+          </p>
+          <pre><code contenteditable>
+&lt;a href="home.html" target="_blank">Link Text&lt;/a>
+          </code></pre>
+        </section>
+        <section>
+          <h3>Link Attributes</h3>
+          <p class="box--small copy--small">Links can open mail programs by inserting
+            <br/>
+            <code contenteditable>mailto:</code> directly before the email address.</p>
+          <pre><code contenteditable>
+&lt;a href="mailto:annarbor@girldevelopit.com">E-mail us!&lt;/a>
+          </code></pre>
+
+        </section>
+
+        <!-- Lets develop it-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="box">Let's add links to our site!</p>
+          <p class="copy--small">Add links that:</p>
+          <ul class="list--tall copy--small">
+            <li>Open in the same window or tab.</li>
+            <li>Open in a new window or tab.</li>
+            <li>Link to an e-mail address.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Check In</h3>
+          <p class="copy--small box--small">Our friendly
+            <span class="blue">index.html</span> file is starting to look a bit like so:</p>
+          <pre><code contenteditable class="html" style="min-height: 300px; max-height: 475px;">
+            &lt;!doctype html>
+            &lt;html>
+               &lt;head>
+                  &lt;title>Title of the page &lt;/title>
+               &lt;/head>
+
+               &lt;body>
+                  &lt;h1&gt;Heading 1&lt;/h1&gt;
+                  &lt;p>A paragraph!&lt;/p>
+                  &lt;p>Another paragraph, with a &lt;a href="http://google.com">link&lt;/a>!&lt;/p>
+
+                  &lt;h2&gt;Heading 2&lt;/h2&gt;
+                  &lt;p>Yet another paragraph.&lt;/p>
+                  &lt;p>I'm a paragraph too, and I have a &lt;a href="http://girldevelopit.com" target="_blank">link that opens in a new tab&lt;/a>!&lt;/p>
+
+                  &lt;h3&gt;Heading 3&lt;/h3&gt;
+                  &lt;p>I'm a paragraph with some &lt;em>emphasized&lt;/em> text.&lt;/p>
+                  &lt;p>I'm a paragraph with &lt;strong>strong&lt;/strong> text and an &lt;a href="mailto:no-reply@gdidetroit.com">email link&lt/a>.&lt;/p>
+
+                  &lt;h4&gt;Heading 4&lt;/h4&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Maybe your content is more fun?&lt;/p>
+
+                  &lt;h5&gt;Heading 5&lt;/h5&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Yet another paragraph.&lt;/p>
+
+                  &lt;h6&gt;Heading 6&lt;/h6&gt;
+                  &lt;p>Almost done!&lt;/p>
+                  &lt;p>Yay!&lt;/p>
+               &lt;/body>
+            &lt;/html>
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <!-- Images-->
+        <section>
+          <h3>Element:
+            <span class="yellow">Image</span>
+          </h3>
+          <p class="copy--small box--small">Images have four components</p>
+          <ul class="copy--xsmall">
+            <li>
+              <span class="blue">Tag</span>: &lt;img/></li>
+            <li>
+              <span class="blue">Src attribute</span>:
+              <code contenteditable>src="http://girldevelopit.com/assets/pink-logo.png"</code>
+            </li>
+            <li>
+              <span class="blue">Alt attribute
+                <em>(optional but recommended)</em>
+              </span>:
+              <code contenteditable>alt="Girl Develop It logo"</code>
+            </li>
+            <li>
+              <span class="blue">Title attribute
+                <em>(optional)</em>
+              </span>:
+              <code contenteditable>title="Girl Develop It"</code>
+            </li>
+          </ul>
+          <pre style="height: 60px; overflow: hidden;"><code contenteditable>
+          &lt;img src="http://www.girldevelopit.com/assets/pink-logo.png" alt="Girl Develop It Logo" title="Girl Develop It"/>
+          </code></pre>
+
+          <img src="images/pink-logo.png" title="Girl Develop It" alt="Girl Develop It Logo" style="border: 0; box-shadow: 0" class="img--bare box--small"
+          />
+          <p>
+            <small>* Notice: This tag is our first example of a stand-alone or "self-closing" element.</small>
+          </p>
+
+        </section>
+
+
+        <!-- relative & absolute links -->
+        <section>
+          <h3>Relative vs. Absolute paths for links &amp; images</h3>
+          <img src="images/folderstructure1.png" style="float:right; width:30%;">
+          <ul class="copy--small" style="width: 60%; float:left;">
+            <li>
+              <strong class="blue">Relative</strong> paths change depending upon the page the link is on.
+              <ul style="font-size: 70%;  margin-top: 15px;">
+                <li>Links within the same directory need no path information.
+                  <code contenteditable class="blue">"filename.jpg"</code>
+                </li>
+                <li>Subdirectories are listed without preceding slashes.
+                  <code contenteditable class="blue">"images/filename.jpg"</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="copy--small" style="margin-top: 25px; width: 60%; float:left;">
+
+            <li>
+              <strong class="blue">Absolute</strong> paths refer to a specific location of a file, including the domain.
+              <ul style="font-size: 70%; margin-top: 15px;">
+                <li>Typically used when pointing to a link that is not within your own domain.
+                  <code contenteditable class="blue">"http://www.girldevelopit.com/chapters/detroit"</code>
+                </li>
+                <li>
+                  <strong>Always</strong> includes
+                  <code contenteditable class="blue">http://</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </section>
+        <!-- Line Break-->
+        <section>
+          <h3>Element:
+            <span class="yellow">Line Break</span>
+          </h3>
+          <div>
+            <div class="left" style="width:50%">
+              <pre><code contenteditable>
+&lt;p>
+  Imagine there's no Heaven&lt;br/>
+  It's easy if you try&lt;br/>
+  No hell below us&lt;br/>
+  Above us only sky
+&lt;/p>
+</code></pre>
+            </div>
+            <div class="left left-align" style="width:50%">
+              <br/>
+              <p>
+                Imagine there's no Heaven
+                <br/> It's easy if you try
+                <br/> No hell below us
+                <br/> Above us only sky
+              </p>
+            </div>
+            <div class="clear"></div>
+            <br/>
+            <br/>
+          </div>
+        </section>
+
+        <!-- Develop it! -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="box">Let's add some:</p>
+          <ul class="list--tall copy--small">
+            <li>Images</li>
+            <li>Line breaks</li>
+            <li>And let's turn some of our images into links!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Check In</h3>
+          <p class="box--small copy--small">Our
+            <span class="blue">index.html</span> file now looks something like:</p>
+          <pre><code contenteditable class="html" style="min-height: 300px; max-height: 475px;">
+            &lt;!doctype html>
+            &lt;html>
+               &lt;head>
+                  &lt;title>Title of the page &lt;/title>
+               &lt;/head>
+
+               &lt;body>
+                  &lt;h1&gt;Heading 1&lt;/h1&gt;
+                  &lt;p>A paragraph with an image: &lt;img src="images/cat.jpg" />&lt;/p>
+                  &lt;p>Another paragraph, with a &lt;a href="http://google.com">link&lt;/a>!&lt;/p>
+
+                  &lt;h2&gt;Heading 2&lt;/h2&gt;
+                  &lt;p>Yet another paragraph, with &lt;br/>
+                  a line break.&lt;/p>
+                  &lt;p>I'm a paragraph too, and I have a &lt;a href="http://girldevelopit.com" target="_blank">link that opens in a new tab&lt;/a>!&lt;/p>
+
+                  &lt;h3&gt;Heading 3&lt;/h3&gt;
+                  &lt;p>I'm a paragraph with some &lt;em>emphasized&lt;/em> text.&lt;/p>
+                  &lt;p>I'm a paragraph with &lt;strong>strong&lt;/strong> text and an &lt;a href="mailto:no-reply@gdidetroit.com">email link&lt/a>.&lt;/p>
+
+                  &lt;h4&gt;Heading 4&lt;/h4&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Maybe your content is more fun?&lt;/p>
+
+                  &lt;h5&gt;Heading 5&lt;/h5&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Yet another paragraph.&lt;/p>
+
+                  &lt;h6&gt;Heading 6&lt;/h6&gt;
+                  &lt;p>Almost done!&lt;/p>
+                  &lt;p>Yay! This is a good place for a linked image: &lt;a href="http://girldevelopit.com">&lt;img src="images/logo.jpg"/>&lt;/a>&lt;/p>
+               &lt;/body>
+            &lt;/html>
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+
+        <!-- What's wrong with my code?  -->
+        <section>
+          <h3>What's wrong with the code?</h3>
+          <p class="copy--small box--small">Why do you think this code isn't working?</p>
+          <div>
+            <br/>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 40px; overflow: hidden;"><code contenteditable>
+&lt;p>A paragraph of text&lt;p/></code></pre>
+          </div>
+          <div class="box fragment">
+            <p class="green left-align">CORRECT:</p>
+            <pre style="height: 40px; overflow: hidden;"><code contenteditable>
+&lt;p>A paragraph of text&lt;/p></code></pre>
+            <p>
+              <small>Make sure the closing slash comes before the ending tag name.</small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Pop Quiz!</h3>
+          <p class="copy--small box--small">Which link will open in a new window or tab?</p>
+          <div style="width:100%;">
+            <pre style="height: 40px; overflow: hidden;"><code contenteditable class="html">
+&lt;a href="http://www.google.com">Search&lt;/a></code></pre>
+          </div>
+          <div style="width:100%;">
+            <pre style="height: 40px; overflow: hidden;"><code contenteditable class="html">
+&lt;a href="http://www.google.com" target="_blank">Search&lt;/a>
+</code></pre>
+          </div>
+          <p class="box fragment">
+            <small>The
+              <span class="green">target="_blank"</span> tells the browser to open the link in a new window or tab.</small>
+          </p>
+
+        </section>
+      </section>
+
+      <section>
+
+        <!-- Lists-->
+        <section>
+          <h3>Element:
+            <span class="yellow">Unordered and ordered lists</span>
+          </h3>
+          <div class="box">
+            <div class="left" style="width:50%">
+              <pre><code contenteditable>
+  &lt;ul>
+    &lt;li>List Item&lt;/li>
+    &lt;li>Another List Item&lt;/li>
+  &lt;/ul>
+
+
+
+  &lt;ol>
+    &lt;li>List Item&lt;/li>
+    &lt;li>Another List Item&lt;/li>
+  &lt;/ol>
+</code></pre>
+            </div>
+            <div class="left" style="width:50%">
+              <p class="blue">Unordered list (bullets)</p>
+              <ul>
+                <li>List Item</li>
+                <li>Another List Item</li>
+              </ul>
+              <br/>
+              <br/>
+              <p class="blue">Ordered list (sequence)</p>
+              <ol>
+                <li>List Item</li>
+                <li>Another List Item</li>
+              </ol>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </section>
+
+        <!-- example of lists -->
+        <section>
+          <h3>Lists: Examples</h3>
+          <p class="copy--small box--small">Lists can be used to organize any list of items.</p>
+          <img src="images/example-lists.png" alt="Examples of lists" width="600" />
+          <p>
+            <small>You'd be surprised how often lists are used in web design.</small>
+          </p>
+        </section>
+
+        <!-- example of lists for navigation -->
+        <section>
+          <h3>Lists: Examples in the wild</h3>
+          <p>More lists of items.</p>
+          <a href="http://www.nationalgeographic.com/" target="_blank">
+            <img src="images/nat-geo.png" alt="Examples of lists" />
+          </a>
+          <p>
+            <small>National Geographic's navigation is a list. There are even lists inside of lists.</small>
+          </p>
+        </section>
+
+        <!-- Develop it!-->
+        <section>
+          <h3>Let's Develop it!</h3>
+          <div class="box--small">
+
+            <p class="blue">Let's add one of each:</p>
+            <ul class="copy--small">
+              <li>Ordered list</li>
+              <li>Unordered list</li>
+            </ul>
+          </div>
+          <div class="box--small">
+            <p class="yellow">More advanced:</p>
+            <ul class="copy--small">
+              <li>A list of links.</li>
+              <li>A list of images!</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>Check In</h3>
+          <p class="copy--small box--small">Our
+            <span class="blue">index.html</span> now has headings,
+            <br/> paragraphs, links, images, and lists -- whew!:</p>
+
+          <pre><code contenteditable class="html" style="min-height: 300px; max-height: 475px;">
+            &lt;!doctype html>
+            &lt;html>
+               &lt;head>
+                  &lt;title>Title of the page &lt;/title>
+               &lt;/head>
+
+               &lt;body>
+                  &lt;h1&gt;Heading 1&lt;/h1&gt;
+                  &lt;p>A paragraph with an image: &lt;img src="images/cat.jpg" />&lt;/p>
+                  &lt;p>Another paragraph, with a &lt;a href="http://google.com">link&lt;/a>!&lt;/p>
+
+                  &lt;h2&gt;Heading 2&lt;/h2&gt;
+                  &lt;p>Yet another paragraph, with &lt;br/>
+                  a line break.&lt;/p>
+                  &lt;p>I'm a paragraph too, and I have a &lt;a href="http://girldevelopit.com" target="_blank">link that opens in a new tab&lt;/a>!&lt;/p>
+                  &lt;p>Here's an unordered list:&lt;/p>
+                    &lt;ul>
+                      &lt;li>A thing &lt;/li>
+                      &lt;li>Another thing &lt;/li>
+                      &lt;li>A different thing &lt;/li>
+                    &lt;/ul>
+
+                  &lt;h3&gt;Heading 3&lt;/h3&gt;
+                  &lt;p>I'm a paragraph with some &lt;em>emphasized&lt;/em> text.&lt;/p>
+                  &lt;p>Here's an ordered list:&lt;/p>
+                    &lt;ol>
+                      &lt;li>Item one &lt;/li>
+                      &lt;li>Item two &lt;/li>
+                      &lt;li>Item three &lt;/li>
+                    &lt;/ol>
+                  &lt;p>I'm a paragraph with &lt;strong>strong&lt;/strong> text and an &lt;a href="mailto:no-reply@gdidetroit.com">email link&lt/a>.&lt;/p>
+
+                  &lt;h4&gt;Heading 4&lt;/h4&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Maybe your content is more fun?&lt;/p>
+
+                  &lt;h5&gt;Heading 5&lt;/h5&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Yet another paragraph.&lt;/p>
+
+                  &lt;h6&gt;Heading 6&lt;/h6&gt;
+                  &lt;p>Almost done!&lt;/p>
+                  &lt;p>Yay! This is a good place for a linked image: &lt;a href="http://girldevelopit.com">&lt;img src="images/logo.jpg"/>&lt;/a>&lt;/p>
+               &lt;/body>
+            &lt;/html>
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+
+        <!--Comments-->
+        <section>
+          <h3>Comments</h3>
+          <p class="copy--small box">You can add comments to your code that will not be seen by the browser, but only visible when viewing the code.</p>
+          <pre style="height: 100px; overflow: hidden"><code contenteditable>
+&lt;!-- Comment goes here -->
+          </code></pre>
+          <p class="copy--xsmall box--small">Use these hotkeys
+            <code>⌘ + /</code> or
+            <code>ctrl + /</code> to create a comment.</p>
+        </section>
+
+        <section>
+          <h3>Comments</h3>
+          <p class="copy--small box--small">Comments can be used to organize your code into sections so you (or someone else) can easily understand your code.</p>
+          <p class="copy--small box--small">It can also be used to 'comment out' large chunks of code to hide it from the browser.</p>
+          <pre><code contenteditable>
+&lt;!-- Beginning of header -->
+   &lt;header>Header Content &lt;/header>
+&lt;!-- End of header -->
+
+&lt;!--
+  &lt;ol>
+    &lt;li>List Item&lt;/li>
+    &lt;li>Another List Item&lt;/li>
+  &lt;/ol>
+-->
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h3>Tables</h3>
+          <p class="copy--small box--small">Tables are a way to represent complex information
+            <br/>in a grid format.</p>
+          <p class="copy--small box--small">Tables are made up of rows and columns.</p>
+
+          <div>
+            <div class="left" style="width:50%">
+
+              <pre><code contenteditable>
+&lt;table>
+  &lt;tr>
+    &lt;th>Head&lt;/th>
+    &lt;th>Head&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>Data&lt;/td>
+    &lt;td>Data&lt;/td>
+  &lt;/tr>
+&lt;/table>
+</code></pre>
+            </div>
+            <div class="left left-align" style="width:50%">
+              <br/>
+              <table style="border: 1px solid">
+                <tr>
+                  <th style="border: 1px solid">Head</th>
+                  <th style="border: 1px solid">Head</th>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid">Data</td>
+                  <td style="border: 1px solid">Data</td>
+                </tr>
+              </table>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </section>
+
+        <!-- Table Examples -->
+        <section>
+          <h3>Tables: Examples</h3>
+          <p class="copy--small box--small">Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
+          <img src="images/example-tables.png" alt="Example of tables" />
+        </section>
+      </section>
+
+      <section>
+        <!-- Character codes-->
+        <section>
+          <h3>Character codes</h3>
+          <p class="copy--small box--small">There are character codes for many different characters in many different languages</p>
+          <div class="left" style="width:70%">
+            <ul class="list--tall copy--small">
+              <li>Delta:
+                <code contenteditable>&amp;delta;</code> &delta;</li>
+              <li>Copyright symbol:
+                <code contenteditable>&amp;copy;</code> &copy;</li>
+              <li>Ampersand:
+                <code contenteditable>&amp;amp;</code> &amp;</li>
+              <li>A thorough list can be found here
+                <a href="https://websitebuilders.com/tools/html-codes/a-z/" target="_blank">https://websitebuilders.com/tools/html-codes/a-z/</a>
+              </li>
+            </ul>
+          </div>
+          <div class="right" style="width: 30%;">
+            <img src="images/example-characters.png" alt="Example of Characters" />
+          </div>
+
+        </section>
+
+        <!-- What's wrong with my code?  -->
+        <section>
+          <h3>What's wrong with my code?</h3>
+          <p class="copy--small box--small">Why do you think this code isn't working?</p>
+          <div class="box">
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 40px; overflow: hidden"><code contenteditable>
+&lt;a href="index.html" Home Page&lt;/a></code></pre>
+          </div>
+          <div class="box--small fragment">
+            <p class="green left-align">CORRECT:</p>
+            <pre style="height: 40px; overflow: hidden"><code contenteditable>
+&lt;a href="index.html">Home Page&lt;/a></code></pre>
+            <p class="box--small">
+              <small>Don't forget to make sure all your brackets are enclosing your tag name and tag attributes.</small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>What's wrong with my code?</h3>
+          <p class="copy--small box--small">Why do you think this code isn't working?</p>
+          <div class="box--small">
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 130px; overflow: hidden"><code contenteditable>
+    &lt;ul>
+      &lt;li Milk/>
+      &lt;li Eggs/>
+      &lt;li Cocoa Puffs/>
+    &lt;/ul>
+</code></pre>
+          </div>
+          <div class="box--small fragment">
+            <p class="green left-align">CORRECT:</p>
+            <pre style="height: 130px; overflow: hidden"><code contenteditable>
+    &lt;ul>
+      &lt;li>Milk&lt;/li>
+      &lt;li>Eggs&lt;/li>
+      &lt;li>Cocoa Puffs&lt;/li>
+    &lt;/ul>
+</code></pre>
+            <p>
+              <small>Every list item gets its own set of open and close
+                <code contenteditable>li</code> tags, list items are not self-closing tags.</small>
+            </p>
+          </div>
+        </section>
+
+
+        <!-- Questions and Break -->
+        <section>
+          <h3>Questions? Frustrations?
+            <br /> Need a break?</h3>
+          <p class="copy--small box--small">We're here to help!</p>
+          <img src="images/trex-sparkler.jpg" alt="Frustrated? Let us help!" />
+        </section>
+
+      </section>
+
+      <section>
+
+
+        <!-- What is CSS-->
+        <section>
+          <h3>What is CSS?</h3>
+          <p class="box">
+            <span class='red'>C</span>ascading
+            <span class='red'>S</span>tyle
+            <span class='red'>S</span>heets</p>
+          <p class="box">CSS is a "
+            <span class="green">style sheet language</span>" that lets you style the elements on your page.</p>
+          <p class="box">CSS works in conjunction with HTML,
+            <br/>but is an entirely different language than HTML.</p>
+        </section>
+
+        <!-- Role of HTML v. CSS-->
+        <section>
+          <h3>Anatomy of a Website</h3>
+          <img class="box--small" src="images/example_site_content.jpg" alt="Example of site content" width="25%" />
+          <img class="box--small" src="images/example_site_HTML.jpg" alt="Example of site structure" width="25%" />
+          <img class="box--small" src="images/example_site_HTML_CSS.jpg" alt="Example of site with CSS" width="25%" />
+          <div class="blue">Content + HTML + CSS = Your Website</div>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <ul class="list--tall box">
+            <li>Type this line of code in the
+              <code>head</code> of your HTML file:</li>
+            <pre style="height: 40px; overflow: hidden"><code contenteditable class="html">
+            &lt;link rel="stylesheet" href="styles.css" />
+          </code></pre>
+            <li>Make sure you have a
+              <span class="green">styles.css</span> document saved in your
+              <span class="blue">html-site</span> folder!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Check In</h3>
+          <p class="copy--small box--small">Our
+            <span class="blue">index.html</span> file now links to our
+            <span class="blue">styles.css</span> document:</p>
+
+          <pre><code contenteditable class="html" style="min-height: 300px; max-height: 475px;">
+            &lt;!doctype html>
+            &lt;html>
+               &lt;head>
+                  &lt;link rel="stylesheet" href="styles.css" />
+                  &lt;title>Title of the page &lt;/title>
+               &lt;/head>
+
+               &lt;body>
+                  &lt;h1&gt;Heading 1&lt;/h1&gt;
+                  &lt;p>A paragraph with an image: &lt;img src="images/cat.jpg" />&lt;/p>
+                  &lt;p>Another paragraph, with a &lt;a href="http://google.com">link&lt;/a>!&lt;/p>
+
+                  &lt;h2&gt;Heading 2&lt;/h2&gt;
+                  &lt;p>Yet another paragraph, with &lt;br/>
+                  a line break.&lt;/p>
+                  &lt;p>I'm a paragraph too, and I have a &lt;a href="http://girldevelopit.com" target="_blank">link that opens in a new tab&lt;/a>!&lt;/p>
+                  &lt;p>Here's an unordered list:&lt;/p>
+                    &lt;ul>
+                      &lt;li>A thing &lt;/li>
+                      &lt;li>Another thing &lt;/li>
+                      &lt;li>A different thing &lt;/li>
+                    &lt;/ul>
+
+                  &lt;h3&gt;Heading 3&lt;/h3&gt;
+                  &lt;p>I'm a paragraph with some &lt;em>emphasized&lt;/em> text.&lt;/p>
+                  &lt;p>Here's an ordered list:&lt;/p>
+                    &lt;ol>
+                      &lt;li>Item one &lt;/li>
+                      &lt;li>Item two &lt;/li>
+                      &lt;li>Item three &lt;/li>
+                    &lt;/ol>
+                  &lt;p>I'm a paragraph with &lt;strong>strong&lt;/strong> text and an &lt;a href="mailto:no-reply@gdidetroit.com">email link&lt/a>.&lt;/p>
+
+                  &lt;h4&gt;Heading 4&lt;/h4&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Maybe your content is more fun?&lt;/p>
+
+                  &lt;h5&gt;Heading 5&lt;/h5&gt;
+                  &lt;p>Another paragraph!&lt;/p>
+                  &lt;p>Yet another paragraph.&lt;/p>
+
+                  &lt;h6&gt;Heading 6&lt;/h6&gt;
+                  &lt;p>Almost done!&lt;/p>
+                  &lt;p>Yay! This is a good place for a linked image: &lt;a href="http://girldevelopit.com">&lt;img src="images/logo.jpg"/>&lt;/a>&lt;/p>
+               &lt;/body>
+            &lt;/html>
+          </code></pre>
+        </section>
+
+      </section>
+
+      <section>
+
+        <section>
+          <h3>What does CSS look like?</h3>
+          <img src="images/homepage-css.png">
+        </section>
+
+        <!-- The CSS Rule-->
+        <section>
+          <h3>Anatomy of a CSS Rule</h3>
+          <img class="box" src="images/cssrule_oneline.jpg" alt="The CSS Rule one line" style="border: none; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h3>CSS Rule Spacing</h3>
+          <img class="box" src="images/cssrule_two_ways.jpg" alt="The CSS Rule and spacing" style="border: none; box-shadow: none;"
+          />
+        </section>
+
+        <!-- CSS Syntax -->
+        <section>
+          <h3>CSS Syntax</h3>
+          <div class="left-align copy--small">
+            <p class="box--small">
+              <span class="green">Declarations</span>: Property &amp; value of style you plan use on HTML element. </p>
+            <ul>
+              <li>Declarations end with a semicolon</li>
+              <li>You can write multiple declarations per selector.</li>
+              <li>Sets of declarations are surrounded by curly brackets.</li>
+            </ul>
+          </div>
+
+          <pre><code contenteditable class="html">
+selector {
+  property: value;
+  property: value;
+  property: value;
+}
+</code></pre>
+        </section>
+
+        <!-- Selectors elements-->
+        <section>
+          <h3>Selector: Element</h3>
+          <br/>
+          <pre style="height: 80px; overflow:hidden;"><code contenteditable class="html">
+p {
+  property: value;
+}
+</code></pre>
+          <p class="copy--small">Selects all paragraph elements.</p>
+          <br/>
+          <pre style="height: 80px; overflow:hidden;"><code contenteditable class="html">
+img {
+  property: value;
+}
+</code></pre>
+          <p class="copy--small">Selects all image elements.</p>
+        </section>
+
+
+        <!-- Color-->
+        <section>
+          <h3>Property: Color</h3>
+          <p class="copy--small box--small">The color property changes the color of the text.</p>
+          <pre style="height: 140px; overflow:hidden;"><code contenteditable class="html">
+p {
+  color: red;
+  color: #ff0000;
+  color: rgb(255, 0, 0);
+}
+</code></pre>
+          <p class="copy--small">Color name</p>
+          <p class="copy--small">Hexadecimal value</p>
+          <p class="copy--small">RGB value</p>
+        </section>
+
+        <section>
+          <h3>How to find ALL THE COLORS!</h3>
+          <ul class="copy--small list--tall box--small">
+            <li>If you work in Photoshop, you can find your colors there.</li>
+            <li>There are other desktop tools you can install, or...</li>
+            <li>There are lots of websites!
+              <ul class="copy--small">
+                <li>
+                  <a href="http://www.colourlovers.com/">ColourLovers:</a> Palettes, color trends, &amp; more.</li>
+                <li>
+                  <a href="http://hexu.al/">Hexu.al:</a> Colorful words!</li>
+                <li>
+                  <a href="https://kuler.adobe.com/create/color-wheel/">Kuler:</a> Adobe's interactive color wheel.</li>
+              </ul>
+            </li>
+
+        </section>
+
+        <!-- Background color-->
+        <section>
+          <h3>Property:
+            <span class="yellow">Background-color</span>
+          </h3>
+          <p class="copy--small box--small">The background-color property changes the color of the background.</p>
+          <pre><code contenteditable class="css">
+p {
+  background-color: black;
+  background-color: #000000;
+  background-color: rgb(0,0,0);
+}
+</code></pre>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <ul class="box list--tall copy--small">
+            <li>Open your .CSS file</li>
+            <li>Create a CSS rule for the
+              <code contenteditable>p</code> tag, the
+              <code contenteditable>h1</code> tag, and the
+              <code contenteditable>a</code> tag</li>
+          </ul>
+          <pre><code contenteditable class="css">
+p {
+  color:grey;
+}
+
+h1 {
+  color: #fff;
+  background-color: #333;
+}
+
+a {
+  color: orange;
+}
+          </code></pre>
+        </section>
+
+      </section>
+
+      <section>
+
+        <!-- Font family-->
+        <section>
+          <h3>Property: Font-family</h3>
+          <p class="copy--small box--small">The font-family property deﬁnes which font is used.</p>
+          <pre style="height: 80px; overflow:hidden;"><code contenteditable class="html">
+p {
+  font-family: "MySpecificFont", "Times New Roman", serif;
+}
+</code></pre>
+          <p class="copy--small box--small">We write our fonts in a
+            <span class="pink">font stack</span> -
+            <br/>a hierarchical, comma-separated list:</p>
+          <ol>
+            <li class="copy--small">Most desired font name</li>
+            <li class="copy--small">Less desirable fallback font name(s)</li>
+            <li class="copy--small">Generic font style (
+              <code contenteditable>serif</code>,
+              <code contenteditable>sans-serif</code>,
+              <code contenteditable>cursive</code>,
+              <code contenteditable>fantasy</code>)</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Where do I find fonts?</h3>
+          <ul class="box--small list--tall copy--small">
+            <li>
+              <span class="green">Web-safe fonts</span> are assumed to be installed on
+              <em>most</em> computers.</li>
+            <li class="fragment">
+              <span class="green">Web fonts</span> are hosted online &amp; imported to your site via CSS (magic!)
+              <ul>
+                <li>not supported by old browsers</li>
+                <li>may be disabled from displaying in the browser</li>
+                <li>using too many will slow down your page</li>
+              </ul>
+            </li>
+            <li class="fragment">We use a comma-separated list or
+              <span class="green">font stack</span> for either kind.</li>
+            <li class="fragment">Commonly used font combinations at
+              <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">w3schools</a>.</li>
+            <li class="fragment">Loads of free web fonts at
+              <a href="http://www.google.com/fonts/">Google Fonts</a>
+            </li>
+          </ul>
+
+        </section>
+
+        <!-- Font size -->
+        <section>
+          <h3>Property: Font-size</h3>
+          <p class="copy--small box--small">The font-size property speciﬁes the size of the font.</p>
+          <pre style="height: 130px; overflow:hidden"><code contenteditable class="html">
+p {
+  font-size: 12px;
+  font-size: 1.5em;
+  font-size: 100%;
+}
+</code></pre>
+          <p class="copy--small">Pixels</p>
+          <p class="copy--small">"em"</p>
+          <p class="copy--small">Percentage</p>
+        </section>
+
+        <!-- Fonts-->
+        <section>
+          <h3>Property: Fonts (shorthand)</h3>
+          <br/>
+          <pre style="height: 160px; overflow:hidden"><code contenteditable class="html">
+p {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+  font-family: sans-serif;
+}
+</code></pre> OR
+          <pre style="height: 80px; overflow:hidden"><code contenteditable class="html">
+p {
+  font: italic bold 10px sans-serif;
+}
+</code></pre>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <p class="copy--small box--small">Assign a font family to your
+            <code contenteditable>p</code> and your
+            <code contenteditable>h1</code> tags</p>
+          <pre><code contenteditable class="css">
+p {
+  font: italic bold 10px serif;
+}
+
+h1 {
+  font-family: CenturyGothic, Impact, sans-serif;
+}
+          </code></pre>
+        </section>
+
+
+      </section>
+
+      <section>
+
+
+
+        <!-- Selector position-->
+        <section>
+          <h3>Child Selectors</h3>
+          <br/>
+          <pre style="height: 80px; overflow:hidden"><code contenteditable class="html">
+p em {
+  color: yellow;
+}
+</code></pre>
+          <p class="copy--small box--small">Selects all
+            <code contenteditable>em</code> elements that are within a
+            <code contenteditable>p</code>
+          </p>
+          <br/>
+          <pre style="height: 60px; overflow:hidden"><code contenteditable class="html">
+&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
+</code></pre>
+          <p class="copy--xsmall">(The associated HTML.)</p>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <ul class="copy--small box--small list--tall">
+            <li>In your HTML file, identify a child selector you'd like to apply some styling to.</li>
+            <li>In your CSS file, write a rule for that particular child.</li>
+            <li>Example:
+              <pre style="height: 120px; overflow:hidden"><code contenteditable class="css">
+            ol li {
+              color: #A11E6E;
+              font: italic 15px serif;
+            }
+            </code></pre>
+          </ul>
+        </section>
+
+      </section>
+
+      <section>
+
+        <!-- Comments -->
+        <section>
+          <h3>CSS Comments</h3>
+          <p class="copy--small box--small">Just like in HTML, we can use CSS comments to organize or "comment out" our code.</p>
+          <p>
+            <span class="pink">Example:</span>
+          </p>
+          <pre><code contenteditable class="css">
+            /* Navigation */
+            nav ul li {
+              background-color: red;
+            }
+
+            /* Links */
+            a {
+              color: orange;
+            }
+
+            /*ol li a {
+              color: blue;
+            }*/
+
+          </code></pre>
+          <p class="copy--xsmall box--small">Use these hotkeys
+            <code>⌘ + /</code> or
+            <code>ctrl + /</code> to create a comment.</p>
+        </section>
+
+
+        <!-- Connecting HTML to CSS-->
+        <section>
+          <h3>Connecting CSS to HTML</h3>
+          <p class="box--small green">We have 3 ways:</p>
+          <p class="copy--small">Inline</p>
+          <p class="copy--small">Embedded</p>
+          <p class="copy--small">External</p>
+        </section>
+
+        <!-- Inline -->
+        <section>
+          <h3>Connecting CSS to HTML:
+            <span class="yellow">Inline</span>
+          </h3>
+          <br/>
+          <pre style="height: 40px; overflow:hidden"><code contenteditable class="html">
+  &lt;p style="color:red;">Some text.&lt;/p>
+</code></pre>
+          <br/>
+          <p class="copy--small">Uses the
+            <code contenteditable>style</code> HTML attribute.</p>
+          <p class="copy--small">Difficult to use in large projects.</p>
+          <p class="copy--small">Generally, not preferred.</p>
+        </section>
+
+        <!-- Embedded -->
+        <section>
+          <h3>Connecting CSS to HTML:
+            <span class="yellow">Embedded</span>
+          </h3>
+          <br/>
+          <pre style="height: 200px; overflow:hidden"><code contenteditable class="html">
+&lt;head>
+  &lt;style>
+    p {
+      color: blue;
+      font-size: 12px;
+    }
+  &lt;/style>
+&lt;/head>
+</code></pre>
+          <br/>
+          <p class="copy--small">Inside
+            <code contenteditable>&lt;head></code> element.</p>
+          <p class="copy--small">Uses
+            <code contenteditable>&lt;style></code> tag.</p>
+          <p class="copy--small">Can only be used in one html file</p>
+        </section>
+
+        <!-- External-->
+        <section>
+          <h3>Connecting CSS to HTML:
+            <span class="yellow">Linked</span>
+          </h3>
+          <br/>
+          <pre style="height: 80px; overflow:hidden"><code contenteditable class="html">
+&lt;head>
+  &lt;link rel="stylesheet" href="style.css">
+&lt;/head>
+</code></pre>
+          <br/>
+          <p class="copy--small">External resource usable on multiple pages.</p>
+          <p class="copy--small">Reduces ﬁle size &amp; bandwidth.</p>
+          <p class="copy--small">Easy to maintain in larger projects.</p>
+          <p class="copy--small">
+            <strong>Preferred by nerds everywhere!</strong>
+          </p>
+        </section>
+
+
+        <!-- Cascading-->
+        <section>
+          <h3>Cascading</h3>
+          <p class="copy--small box">Styles "cascade" down. Bottom rules override top rules.</p>
+          <pre style="height: 240px; overflow:hidden"><code contenteditable class="html">
+p{
+  color:blue;
+  font-family: 'Helvetica';
+}
+p{
+  color:red;
+}
+p{
+  font-family: Arial;
+}
+</code></pre>
+
+        </section>
+
+        <!-- Properties-->
+        <section>
+          <h3>CSS Properties</h3>
+          <p class="copy--small box--small">Many CSS properties have self-explanatory names:</p>
+          <ul class="copy--small list--tall">
+            <li>background-color</li>
+            <li>font-family</li>
+            <li>font-size</li>
+            <li>color</li>
+            <li>width</li>
+            <li>height</li>
+          </ul>
+          <p class="copy--small box--small">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">Comprehensive list of all CSS properties</a>
+          </p>
+        </section>
+      </section>
+
+      <section>
+
+        <!-- What's wrong with my code / MOVE TO SECTION 2
+       <section>
+       <h3>What's wrong with my code?</h3>
+       <p>Why do you think this code isn't working?</p>
+        <div class="fragment">
+        <p class="red left-align">WRONG:</p>
+        <pre><code contenteditable>
+#sidebar {
+   float: left
+   width: 200px
+   color: green
+}
+        </code></pre>
+        </div>
+        <div class="fragment">
+        <p class="green left-align">CORRECT:</p>
+        <pre><code contenteditable>
+#sidebar {
+   float: left;
+   width: 200px;
+   color: green;
+}</code></pre>
+<p><small>Don't forget semi-colons after CSS properties.</small></p>
+        </div>
+       </section>
+       -->
+
+        <section>
+          <h3>What's wrong with my code?</h3>
+          <p class="copy--small box--small">Why do you think this code isn't working?</p>
+          <div>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 120px; overflow:hidden"><code contenteditable>
+h1 {
+   color: green
+   font-face: serif
+}
+        </code></pre>
+          </div>
+          <div class="box--small fragment">
+            <p class="green left-align">CORRECT:</p>
+            <pre style="height: 120px; overflow:hidden"><code contenteditable>
+h1 {
+   color: green;
+   font-face: serif;
+}</code></pre>
+            <p>
+              <small>Don't forget semi-colons after CSS properties.</small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>What's wrong with my code?</h3>
+          <p class="copy--small box--small">Why do you think this code isn't working?</p>
+          <div>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 160px; overflow:hidden"><code contenteditable>
+body {
+   color: grey;
+p {
+   font-size: 30px;
+     }
+}         </code></pre>
+          </div>
+          <div class="box--small fragment">
+            <p class="green left-align">CORRECT:</p>
+            <pre style="height: 150px; overflow:hidden"><code contenteditable>
+body {
+   color: grey;
+}
+p {
+   font-size: 30px;
+}</code></pre>
+            <p>
+              <small>All CSS selectors and properties must be self contained.
+                <br/>Selectors cannot be inside the { } of other selectors.</small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Homework: Inspecting Element</h3>
+          <p class="copy--small box--small">Let's right-click, "Inspect Element" &amp; look at some code!</p>
+          <a href="http://alistapart.com" target="_blank">
+            <img src="images/ala.png" alt="A List Apart homepage" target="_blank" height="350px" />
+          </a>
+          <a href="http://tattly.com" target="_blank">
+            <img src="images/tattly.png" alt="Tattly homepage" target="_blank" height="350px" />
+          </a>
+        </section>
+
+        <section>
+          <h3>Homework for next class</h3>
+          <p class="copy--small box--small" style="text-align: left; text-decoration:underline;">Look at &amp; play with some code:</p>
+          <ul class="left copy--small ">
+            <li>Find some favorite websites, then view source &amp; inspect elements!
+            </li>
+          </ul>
+          <br/>
+          <p class="copy--small box--small" style="text-align: left; text-decoration:underline; margin-top:20px;">Get set up for Day 2:</p>
+          <ul class="copy--small list--tall">
+            <li>Create a folder for the next class, name it
+              <span class="blue">"html-site2"</span>
+            </li>
+            <li>Create
+              <span class="blue">"html-site2/images"</span>, and put the following in it:
+              <ul>
+                <li>A profile picture of yourself (JPEG or PNG file)</li>
+                <li>2 to 3 other pictures for your website</li>
+              </ul>
+              <li>Download these icons:
+                <a href="assets/icons.zip
+ ">Icons</a>
+                <li>
+                  <span class="yellow">Bonus</span>: Write a paragraph to introduce yourself</li>
+          </ul>
+        </section>
+
+        <!-- Question-->
+        <section>
+          <h3>Questions?</h3>
+          <p class="box--small">We're here to help!</p>
+          <img src="images/questions_cat.jpg" alt="Confused? Let us help!" />
+          <p class="box--small copy--small">
+            <a href="https://gdiaa.slack.com/messages/C4L2GDGHJ">#0317_intro-html</a> &nbsp; | &nbsp;
+            <a href="mailto:annarbor@girldevelopit.com">annarbor@girldevelopit.com</a> &nbsp; | &nbsp;
+            <a href="http://twitter.com/gdiannarbor">@gdiannarbor</a>
+          </p>
+        </section>
+
+    </div>
+    <footer>
+      <div class="copyright">
+        HTML/CSS &mdash; Girl Develop It &mdash;
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+          <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png"
+          />
+        </a>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      rollingLinks: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [{
+          src: 'lib/js/classList.js',
+          condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/markdown/showdown.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'plugin/markdown/markdown.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: 'plugin/zoom-js/zoom.js',
+          async: true,
+          condition: function () {
+            return !!document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true,
+          condition: function () {
+            return !!document.body.classList;
+          }
+        }
+      ]
+    });
+  </script>
+
+</body>
+
+</html>
