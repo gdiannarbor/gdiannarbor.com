@@ -1,0 +1,1628 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Session 2 &mdash; HTML/CSS &mdash; Girl Develop It</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, Jen Myers, Cara Jo Miller, Laura Eagin, Nicole Rodriguez, and Leeann Drees.
+
+    The course is meant to be taught in 2 four-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/light.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide-->
+			<div class="slides">
+			  <!-- INTRO -->
+        <section>
+  			  <!-- WiFi Info -->
+  			  <section>
+            <h3>Set Up for Today</h3>
+            <div class="box right" style="width: 35%;">
+              <img src="images/folderstructure3.jpg" style="border:none; box-shadow: none; width:75%;"/>
+            </div>
+            <div class="box left" style="width: 60%;">
+              <ul class="list--tall copy--small">
+                <li>Create your <span class="green">html-site2</span> folder if you haven't already.</li>
+                <li>Inside <span class="green">html-site2</span>, create <span class="blue">index.html</span>, <span class="blue">styles.css</span>, and an <span class="green">images</span> folder.</li>
+                <li>Download the icons <a href="assets/icons.zip">here</a></li>
+              </ul>
+            </div>
+  			  </section>
+
+          <!-- Title -->
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+            <div class="box--small">
+              <h3><span class="green">Beginning HTML and CSS</span></h3>
+              <h4><span class="blue">Session 2</span></h4>
+            </div>
+          </section>
+        </section>
+
+        <!-- REVIEW & SETUP -->
+        <section>
+          <!-- Roles of HTML v CSS -->
+          <section>
+            <h3>Anatomy of a Website</h3>
+
+            <div class="blue box--small copy--small" style="float: left; width: 33.333%;">
+              <p>Content</p>
+              <img src="images/example_site_content.jpg" alt="Example of site content" />
+            </div>
+            <div class="box--small copy--small" style="float: left; width: 33.333%;">
+              <p><span class="green">+ HTML</span> (Structure)</p>
+              <img src="images/example_site_HTML.jpg" alt="Example of site structure" />
+            </div>
+            <div class="box--small copy--small" style="float: left; width: 33.333%;">
+              <p><span class="red">+ CSS</span> (Presentation)</p>
+              <img src="images/example_site_HTML_CSS.jpg" alt="Example of site with CSS" />
+            </div>
+          </section>
+
+          <!--anatomy of a tag -->
+          <section>
+          	<h3>Review: Tag Breakdown</h3>
+              <img src="images/tagbreakdown.png" alt="Tag breakdown" style="border: none; box-shadow: none; height: 600px;" />
+          </section>
+
+          <!-- The CSS Rule-->
+          <section>
+          	<h3>Review: The CSS Rule</h3>
+          	<img src="images/cssrule.png" alt="The CSS Rule" class="box--small" style="border: none; box-shadow: none;"/>
+          </section>
+
+          <!-- <section>
+            <h3>Block &amp; Inline Elements</h3>
+            <ul class="box--small list--tall copy--small">
+              <li>CSS divides HTML into two types: inline and block.</li>
+              <li>After block elements, browsers render a new line.</li>
+              <li>Inline elements: img, a, br, em, strong</li>
+              <li>Block elements: p, h1, ul, li, almost everything else</li>
+            </ul>
+          </section> -->
+
+          <section>
+            <h3>What's wrong with my code?</h3>
+            <p class="copy--small box--small">Why do you think this code isn't working?</p>
+            <div>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 40px; overflow:hidden"><code>
+              &lt;a href="http://google.com" Google&lt;/a>
+            </code></pre>
+            </div>
+            <div class="box--small fragment">
+              <p class="green left-align">CORRECT:</p>
+              <pre style="height: 40px; overflow:hidden"><code>
+                &lt;a href="http://google.com">Google&lt;/a>
+              </code></pre>
+              <p><small>Don't forget to wrap your tags with <code>&lt;</code> <code>></code>.</small></p>
+            </div>
+          </section>
+
+          <section>
+            <h3>What's wrong with my code?</h3>
+            <p class="copy--small box--small">Why do you think this code isn't working?</p>
+            <div>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 40px; overflow:hidden"><code>
+              &lt;link rel=stylesheet" href="styles.css >
+            </code></pre>
+            </div>
+            <div class="box--small fragment">
+              <p class="green left-align">CORRECT:</p>
+              <pre style="height: 40px; overflow:hidden"><code>
+              &lt;link rel="stylesheet" href="styles.css" />
+              </code></pre>
+              <p><small>Don't forget to quote parameter values.</small></p>
+              <p><small>Don't forget to close self-closing tags.</small></p>
+            </div>
+          </section>
+
+          <section>
+            <h3>What's wrong with my code?</h3>
+            <p class="copy--small box--small">Why do you think this code isn't working?</p>
+            <div>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 120px; overflow:hidden"><code>
+              p
+                background-color: red
+                color: #eee
+              }
+            </code></pre>
+            </div>
+            <div class="box--small fragment">
+              <p class="green left-align">CORRECT:</p>
+              <pre style="height: 120px; overflow:hidden"><code>
+              p {
+                background-color: red;
+                color: #eee;
+              }              </code></pre>
+              <p><small>Don't forget to put curly braces around your declarations.</small></p>
+              <p><small>Don't forget your semi-colons.</small></p>
+            </div>
+          </section>
+
+          <section>
+            <h3>Homework: Inspecting Elements</h3>
+            <p class="copy--small box--small">Let's right-click, "Inspect Element" &amp; look at some code!</p>
+            <a href="http://alistapart.com" target="_blank"><img src="images/ala.png" alt="A List Apart homepage" target="_blank" height="350px"/></a>
+             <a href="http://tattly.com" target="_blank"><img src="images/tattly.png" alt="Tattly homepage" target="_blank" height="350px"/></a>
+          </section>
+
+          <section>
+            <h3>What we'll be making today</h3>
+              <p class="copy--small box--small">Today we will be making a site from scratch using HTML5 elements to create a header, footer, sidebar and a content area.</p>
+              <p class="copy--small">Then we'll add CSS styles to make it pretty*!</p>
+              <img class="box--small" src="images/making-this-today-2.png" width="500px">
+              <div><small>* prettiness not guaranteed</small></div>
+          </section>
+
+          <!-- Folder Structure -->
+          <section>
+            <h3>Folder Structure</h3>
+            <div class="left box--small" style="width: 48%;">
+              <p class="left-align"><strong>Do you have your folder set up yet?</strong></p><br />
+              <ul class="copy--small list--tall">
+                <li>Name it <span class="blue">html-site2</span></li>
+                <li>Create new <span class="green">index.html</span> and <span class="green">styles.css</span> files.
+                <li>Create an <span class="blue">images</span> folder <small>(lowercase)</small></li>
+                <li>Drop your image files into the images folder.</li>
+              </ul>
+            </div>
+            <div class="right box" style="width: 45%;">
+              <img src="images/folderstructure3.jpg" style="border:none; box-shadow: none;"/>
+            </div>
+          </section>
+
+         	<section>
+         		<h3>Wait...why <span class="green">index.html?</span></h3>
+            <div class="box--small">
+         		<ul class=" copy--small list--tall">
+         			<li class="fragment"><span class="green">index.html</span> is the default filename a web browser looks for when pointed to any directory.</li>
+         			<li class="fragment">You won't necessarily see it reflected in the URL &mdash; we just see <span class="pink">http://girldevelopit.com</span>, but the browser is displaying <span class="pink">http://girldevelopit.com/index.html</span>. Sneaky!</li>
+         			<li class="fragment">You should have an <span class="green">index.html</span> file for every directory on your site. If not, users will see a list of all your filenames, like this:
+                <p class="center-align box--small"><img src="images/noindex.png" /></p>
+              </li>
+         		</ul>
+         		<small class="fragment"><b>Side Note:</b> You can name your CSS stylesheets whatever you want. <br/>Common choices: <code>application.css</code>, <code>styles.css</code>, <code>style.css</code>, <code>main.css</code></small>
+            </div>
+         	</section>
+
+         	<section>
+            <h3>Let's Develop It</h3>
+            <p class="box--small">Setting up our <span class="green">index</span> file for today...</p>
+            <ul class="list--tall copy--small">
+              <li>Open your new <span class="green">index.html</span> file</li>
+              <li>Remember to start with <code>doctype</code> &amp; <code>html</code> tags.</li>
+              <li>Add the code to link to <span class="green">styles.css</span>!</li>
+            </ul>
+            <pre><code class="html" style="min-height: 300px; max-height: 475px;">
+              &lt;!DOCTYPE html>
+              &lt;html>
+                 &lt;head>
+                    &lt;title>Title of the page &lt;/title>
+                    &lt;link rel="stylesheet" href="styles.css" />
+                 &lt;/head>
+
+                 &lt;body>
+                 &lt;/body>
+              &lt;/html>
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- Structural Elements -->
+        <section>
+          <section>
+            <h3>Structural Elements!</h3>
+            <p class="copy--small box--small">Structuring our content, creating layout</p>
+            <div class="left" style="width: 35%;">
+            	<p class="box--small">Example:</p>
+            	<ul>
+              	<li class="yellow">Header</li>
+              	<li class="pink">Main</li>
+              	<li class="blue">Aside</li>
+              </ul>
+            </div>
+            <div class="right" style="width: 50%;">
+                <img src="images/html5_structure.jpg" style="border:none; box-shadow: none;"/>
+            </div>
+          </section>
+
+          <section>
+          	<h3>Structural Elements!</h3>
+          	<a href="http://girldevelopit.com/chapters/detroit" target="_blank"><img src="images/gdisite-html5.jpg"></a>
+          </section>
+
+          <!-- Header -->
+          <section>
+            <h3>HTML5 Element: <span class="yellow">&lt;header&gt;</span></h3>
+            <ul class="copy--small list--tall box--small">
+              <li>Container for a group of introductory or navigational aids</li>
+              <li>Document can have multiple header elements</li>
+              <li>E.g. One for the page, one for each section</li>
+            </ul>
+            <pre><code class="html">
+              &lt;header>
+                &lt;a href="/">&lt;img src="site-logo.png" />&lt;/a>
+
+                &lt;nav>
+                  &lt;ul>
+                    &lt;li>Your menu&lt;/li>
+                  &lt;/ul>
+                &lt;/nav>
+              &lt;/header>
+            </code></pre>
+          </section>
+
+          <!-- Footer -->
+          <section>
+            <h3>HTML5 Element:  <span class="yellow">&lt;footer&gt;</span></h3>
+            <ul class="copy--small list--tall box--small">
+              <li>Contains information about its containing element</li>
+              <li>E.g. who wrote it, copyright, links to related content, etc.</li>
+              <li>Document can have multiple footer elements</li>
+              <li>E.g. One for the page, one for each section</li>
+            </ul>
+            <pre style="height: 80px; overflow: hidden;"><code class="html">
+              &lt;footer>
+                &lt;p>&copy;2014 Girl Develop It. Super fancy codes written by Julie, Nicole and Leeann.&lt;/p>
+              &lt;/footer>
+            </code></pre>
+          </section>
+
+          <!-- Main -->
+          <section>
+            <h3>HTML5 Element:  <span class="yellow">&lt;main&gt;</span></h3>
+            <ul class="copy--small list--tall box--small">
+              <li>Use once per page to mark where main content begins</li>
+              <li>Helpful for screen readers/assistive technology, content syndication, and mobile browsers</li>
+            </ul>
+            <pre><code class="html">
+              &lt;main>
+                 &lt;h1>Web Browsers&lt;/h1>
+                 &lt;p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.&lt;/p>
+
+                 &lt;article>
+                    &lt;h1>Google Chrome&lt;/h1>
+                    &lt;p>Google Chrome is a free, open-source web browser developed by Google.&lt;/p>
+                 &lt;/article>
+
+                 &lt;article>
+                    &lt;h1>Mozilla Firefox&lt;/h1>
+                    &lt;p>Firefox is a free, open-source web browser from Mozilla.&lt;/p>
+                 &lt;/article>
+              &lt;/main>
+            </code></pre>
+          </section>
+
+          <!--<section>
+            <h3>HTML5 Element:  <span class="yellow">&lt;section&gt;</span></h3>
+            <ul>
+              <li>Group together thematically related content</li>
+              <li>Similar to prior use of the div, but div has no semantic meaning</li>
+            </ul>
+          </section> -->
+
+          <!-- Aside -->
+          <section>
+            <h3>HTML5 Element:  <span class="yellow">&lt;aside&gt;</span></h3>
+            <ul class="copy--small box--small list--tall">
+              <li>Tangentially related content</li>
+              <li>E.g. sidebar, pull quotes</li>
+            </ul>
+
+            <p class="copy--small"><strong>Ask yourself:</strong><br/>Can the content within the aside be removed without<br/> reducing the meaning of the main content?</p>
+
+            <pre style="height: 200px; overflow: hidden;"><code class="html">
+              &lt;main>
+                &lt;p>My family and I visited The Epcot center this summer.&lt;/p>
+
+                &lt;aside>
+                  &lt;h4>Epcot Center&lt;/h4>
+                  &lt;p>The Epcot Center is a theme park in Disney World, Florida.&lt;/p>
+                &lt;/aside>
+              &lt;/main>
+            </code></pre>
+          </section>
+
+          <!-- Nav -->
+          <section>
+            <h3>HTML5 Element:  <span class="yellow">&lt;nav&gt;</span></h3>
+            <ul class="copy--small list--tall box--small">
+              <li>Contains major navigational information</li>
+              <li>Usually a list of links</li>
+              <li>Often lives in the header</li>
+              <li>E.g. site navigation</li>
+            </ul>
+            <pre><code class="html">
+              &lt;nav>
+                &lt;ul>
+                  &lt;li>Menu Link 1&lt;/li>
+                  &lt;li>Menu Link 2&lt;/li>
+                &lt;/ul>
+              &lt;/nav>
+            </code></pre>
+          </section>
+
+          <!--<section>
+            <h3>HTML5 Element: <span class="yellow">&lt;article&gt;</span></h3>
+            <ul>
+              <li>Self-contained related content</li>
+              <li>E.g. blog posts, news stories, comments, reviews, forum posts</li>
+            </ul>
+          </section>-->
+
+          <!-- Exercise -->
+    	    <section>
+            <h3>Let's Develop It</h3>
+             <p class=" box--small copy--small">Inside <code>body</code>, create the following structure:</p>
+             <ul class="list--tall copy--xsmall">
+               <li>A header</li>
+               <li>A main content area</li>
+               <li>A sidebar (aside)</li>
+               <li>A footer</li>
+             </ul>
+
+             <pre><code class="html" style="min-height: 250px; max-height: 250px;">
+               &lt;header>
+               &lt;/header>
+
+               &lt;main>
+               &lt;/main>
+
+               &lt;aside>
+               &lt;/aside>
+
+               &lt;footer>
+               &lt;/footer>
+              </code></pre>
+          </section>
+
+          <section>
+            <h3>Check-in</h3>
+            <p class="copy--small box--small">Now your <span class="blue">index.html</span> file should have the following structure:</p>
+            <pre><code class="html">
+              &lt;!doctype html>
+              &lt;html>
+                &lt;head>
+                  &lt;title>&lt;/title>
+                &lt;/head>
+
+                &lt;body>
+                  &lt;header>
+                  &lt;/header>
+
+                  &lt;main>
+                  &lt;/main>
+
+                  &lt;aside>
+                  &lt;/aside>
+
+                  &lt;footer>
+                  &lt;/footer>
+                &lt;/body>
+              &lt;/html>
+              </code></pre>
+          </section>
+
+          <!-- Adding Content -->
+          <section>
+            <h3>Let's Develop It</h3>
+            <p class="box--small">Begin filling in content</p>
+            <ul class="copy--small list--tall box--small  ">
+              <li>Inside <code>header</code>, add your page's title as a <code>h1</code></li>
+              <li>Add a few paragraphs &amp; headings to <code>main</code></li>
+              <li>Add a profile image to <code>aside</code></li>
+              <li>Add a sentence to <code>footer</code></li>
+            </ul>
+          	<pre style="height: 40px; overflow: hidden;"><code class="html">
+               &lt;img src="images/profile.jpg" alt="my profile pic" width="200"/>
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Add a list and links</h3>
+            <ul class="copy--small box--small list--tall">
+              <li>Add a list to the sidebar</li>
+              <li>Add several links</li>
+            </ul>
+          	<pre><code class="html">
+              &lt;a href="http://girldevelopit.com" target="_blank"/>My Link&lt;/a>
+
+              &lt;ul>
+                 &lt;li>List Item&lt;/li>
+                 &lt;li>Another List Item&lt;/li>
+                 &lt;li>Another List Item&lt;/li>
+                 &lt;li>&lt;a href="http://girldevelopit.com" target="_blank"/>My Link&lt;/a>&lt;/li>
+                 &lt;li>Another List Item&lt;/li>
+              &lt;/ul>
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- Box Model -->
+        <section>
+          <!-- Inline vs. block-->
+          <section>
+            <h3>Inline vs Block</h3>
+            <div class="left copy--small" style="width: 50%; text-align: left;">
+              <div class="box--small fragment">
+                <p>So far, we have mostly seen <span class="green">"block"</span> elements.</p>
+                <ul>
+                  <li>They render on new lines, ie. paragraphs.</li>
+                  <li><span class="green">Block elements</span>: <code>p</code>, <code>h1</code>, <code>ul</code>, <code>li</code>, almost everything else</li>
+                </ul>
+              </div>
+              <div class="fragment">
+                <p>There are also <span class="green">"inline"</span> elements</p>
+                <ul>
+                  <li>They render on the same line that they are written on.</li>
+                  <li><span class="green">Inline elements</span>: <code>img</code>, <code>a</code>, <code>br</code>, <code>em</code>, <code>strong</code></li>
+                </ul>
+              </div>
+            </div>
+            <div class="box--small right fragment">
+              <img src="images/example-blockinline.png" alt="example of inline and block elements" />
+            </div>
+          </section>
+
+          <!-- Box model-->
+          <section>
+            <h3>Box Model</h3>
+            <div class="box left-align copy--xsmall" style="width:30%; float:left;">
+              <p>The CSS box model is essentially a box that wraps around HTML elements, and consists of: margins, borders, padding, and the actual content.</p>
+              <p class="box--small">The box model allows us to place a border around elements and space elements in relation to other elements.</p>
+              <small>Definition from <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCgQhi0wAA&url=http%3A%2F%2Fwww.w3schools.com%2Fcss%2Fcss_boxmodel.asp&ei=eEsrU6_mCcuuqQGmt4HgCg&usg=AFQjCNEDIKDFEnu59p1akFM5Hk9scACuKQ&sig2=xCrX7kFEUSukjWNosFs62g&bvm=bv.62922401,d.aWM">w3schools</a></small>
+            </div>
+
+            <div class="box--small" style="width:65%; float:right;"><img src="images/box-model.png" style="border:none;"/></div>
+          </section>
+
+          <section>
+            <h3>Alternate Box Model</h3>
+            <img src="images/box_model_cat.jpg" width="650"/>
+          </section>
+        </section>
+
+        <!-- Border -->
+        <section>
+          <!-- Border-->
+          <section>
+            <h3>Border</h3>
+            <p class="copy--small box--small">The edge around the box that we can style with CSS</p>
+            <img src="images/box-model-border.png" width="650" style="border: 0;">
+          </section>
+
+          <section>
+            <h3>Border</h3>
+            <p class="copy--small box--small">Border is specified in "thickness, style, color."</p>
+            <p class="copy--xsmall box--small">A solid red border</p>
+              <pre style="height: 80px; overflow: hidden"><code class="css">
+              .normal {
+                border: 1px solid #ff0000;
+              }
+              </code></pre><br/>
+                        <p class="copy--xsmall box--small">A thick dotted black top border</p>
+              <pre style="height: 80px; overflow: hidden"><code class="css">
+              .thick {
+                border-top: 4px dotted #000000;
+              }
+              </code></pre>
+          </section>
+
+          <section>
+            <h3>Border</h3>
+            <p class="box--small copy--small">Two diﬀerent border styles</p>
+            <pre><code class="css">
+            .woah {
+              border-top: 1px solid #ff0000;
+              border-bottom: 4px dotted #000000;
+            }
+            </code></pre>
+      		</section>
+
+          <section>
+            <h3>Fun With Borders</h3>
+            <p class="copy--small box--small">You can specify each property separately,<br/>or all three together (as "shorthand").</p>
+                <pre><code class="css">
+                .another_border {
+                  border-width: 10px;
+                  border-style: dashed;
+                  border-color: #666666;
+                }
+
+                .some_border {
+                  border: 10px dashed #666666;
+                }
+                </code></pre>
+          </section>
+
+          <!-- Exercise -->
+          <section>
+           <h3>Let's Develop it!</h3>
+           <p class="copy--small box--small">Let's add borders to our elements.</p>
+           <pre><code class="css">
+              main {
+                border: 1px solid #ff0000;
+              }
+
+              header {
+                border-bottom: 4px dotted #000000;
+              }
+
+              aside {
+                border-top: 1px solid orange;
+                border-bottom: 4px dotted #000000;
+              }
+            </code></pre>
+           </section>
+        </section>
+
+        <!-- Padding -->
+        <section>
+          <!-- Padding -->
+          <section>
+            <h3>Padding</h3>
+            <p class="copy--small box--small">Space between the border and the content</p>
+            <p class="copy--small box--small">Adds to the total width of the box.</p>
+            <img src="images/box-model-padding.png" width="600" style="border:none;"/>
+          </section>
+
+          <section>
+            <h3>Padding (all sides)</h3>
+            <p class="copy--small box--small">15 pixels on all sides</p>
+            <pre style="height: 40px; overflow: hidden;"><code class="css">
+            padding: 15px;
+            </code></pre><br/>
+
+            <h3>Padding Top</h3>
+            <p class="copy--small box--small">10 pixels on top only</p>
+            <pre style="height: 40px; overflow: hidden;"><code class="css">
+            padding-top: 10px;
+            </code></pre>
+          </section>
+
+          <section>
+            <h4>One Value</h4>
+            <pre style="height: 80px; overflow: hidden;"><code class="css">
+            .all_sides{
+              padding: 15px;
+            }
+            </code></pre><br/>
+
+            <h4>Two Values</h4>
+            <pre style="height: 80px; overflow: hidden;"><code class="css">
+            .topANDbottom_rightANDleft {
+              padding: 10px 5px;
+            }
+            </code></pre><br/>
+
+            <h4>Multiple Values</h4>
+            <pre style="height: 80px; overflow: hidden;"><code class="css">
+            .top_right_bottom_left {
+              padding: 10px 5px 3px 5px;
+            }
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Padding</h3>
+            <img src="images/box-model-padding2.png" width="650"/>
+          </section>
+
+          <!-- Exercise -->
+          <section>
+            <h3>Let's Develop it!</h3>
+            <p class="box--small copy--small">In <span class="green">styles.css</span>, let's add some padding to our elements.</p>
+              <pre style="height: 40px; overflow: hidden;"><code class="css">
+               padding: 10px;
+               </code></pre>
+
+               <pre style="height: 40px; overflow: hidden;"><code class="css">
+                 padding: 10px 20px 30px 40px;
+               </code></pre>
+          </section>
+        </section>
+
+        <!-- Margin -->
+        <section>
+          <!-- Margin -->
+          <section>
+            <h3>Margin</h3>
+            <p class="copy--small box--small">The transparent area around the box that<br/>separates it from other elements.</p>
+            <img src="images/box-model-margin.png" width="650"/>
+          </section>
+
+          <section>
+            <h3>Margin</h3>
+            <p class="box--small copy--small">15 pixels on all sides</p>
+              <pre style="height: 40px; overflow: hidden;"><code class="css">
+                margin: 15px;
+              </code></pre>
+                        <p class="box--small copy--small">10 on top, 5 on right, 3 on bottom, 5 on left</p>
+              <pre style="height: 40px; overflow: hidden;"><code class="css">
+                margin: 10px 5px 3px 5px;
+              </code></pre>
+                        <p class="box--small copy--small">10 pixels on top</p>
+              <pre style="height: 40px; overflow: hidden;"><code class="css">
+                margin-top: 10px;
+              </code></pre>
+          </section>
+
+          <section>
+            <h3>Auto Margins</h3>
+            <p class="box--small copy--small">If a block-level element <em>has a set width</em>, you can set the left and right margins to <code>auto</code> to horizontally center the element in the container.</p>
+            <pre style="height: 120px; overflow: hidden"><code class="html">
+              p {
+                margin: 0 auto;
+                width: 500px;
+              }
+            </code></pre>
+            <p class="copy--xsmall left-align box--small" style="width: 500px; margin: 20px auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+          </section>
+
+          <!-- Exercise -->
+          <section>
+          	<h3>Let's Develop it!</h3>
+          	<p class="copy--small box">Let's center our entire page in the browser<br />via width + auto margins.</p>
+            <p class="copy--small">Let's add some margins to our other elements.</p>
+          </section>
+
+          <section>
+            <h3>Check-in</h3>
+            <p class="copy--small box--small">You should now have some rules like these:</p>
+            <pre><code class="css">
+              header, footer, aside {
+                margin: 10px;
+                padding: 5px;
+              }
+
+              body {
+                margin: auto;
+                width: 800px;
+              }
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- Width & Height -->
+        <section>
+          <!-- Width-->
+      		<section>
+      			<h3>Property: <span class="yellow">Width</span></h3>
+      			<p class="box copy--small">Sets the width of an element.</p>
+            <p class="box copy--small">Value can be in pixels, percentage, or ems.</p>
+      			<small class="blue">Does not include padding or borders, remember these add to the width.</small>
+      		</section>
+
+          <!-- Height-->
+      		<section>
+      			<h3>Property: <span class="yellow">Height</span></h3>
+      			<p class="copy--small box--small">Sets the height of an element.</p>
+            <p class="copy--small box--small">Value can be in pixels, percentage, or ems.</p>
+      			<small class="blue">Does not include padding or borders, remember these add to the width and height.</small>
+      		</section>
+
+      		<!-- Exercise -->
+      		<section>
+      			<h3>Let's develop it!</h3>
+      			<div class="">
+      				<p class="box--small" style="text-decoration:underline;">Target each element with CSS:</p>
+              <ul class="copy--small list--tall">
+        				<li>Make the <span class="blue">body</span> 900px wide.</li>
+        				<li>Make the sidebar (<span class="blue">&lt;aside&gt;</span>) 300px wide.</li>
+        				<li>Make the content area (<span class="blue">&lt;main&gt;</span>) 550px wide.</li>
+        				<li>Make the <span class="blue">header</span> 150px tall</li>
+              </ul>
+      			</div>
+      		</section>
+
+          <section>
+            <h3>Check-in</h3>
+            <p class="copy--small box--small">Your styles should now contain rules like these:</p>
+            <pre><code class="css">
+                body {
+                  width: 900px;
+                }
+
+                aside {
+                  width: 300px;
+                }
+
+                main {
+                  width: 550px;
+                }
+
+                header {
+                  height: 150px;
+                }
+              </code></pre>
+            <small>Your sidebar isn't on the side yet, though! Don't worry, we'll get there. :)</small>
+          </section>
+        </section>
+
+        <!-- Break -->
+        <section>
+          <section>
+            <h1>Break time!</h1>
+          </section>
+
+        	<!-- What's wrong with my code-->
+          <section>
+           <h3>Pop Quiz</h3>
+           <p class="copy--small box--small">Which one is invisible? Margin, padding or border?</p>
+           <img src="images/box-model-padding.png" width="650"/>
+           <small class="fragment"><span class="blue">Margin.</span> <br/>Neither margin or padding can have a color assigned, <br />but padding does "show" the background color of the content.</small>
+          </section>
+
+          <section>
+            <h3>Quiz Pop</h3>
+            <p class="copy--small box--small">What color will the paragraph text be?</p>
+            <pre><code class="css">
+              p {
+                color: red;
+              }
+
+              p {
+                color: blue;
+              }
+            </code></pre>
+            <small class="fragment">The paragraph text will be <span class="blue">blue</span>, because bottom rules override earlier rules.</small>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Which element should I use?</h3>
+            <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf" target="_blank"><img src="images/h5d-sectioning-flowchart.png" alt="HTML5 Doctor chart" width="800"/></a>
+          </section>
+
+          <!-- Divs -->
+          <section>
+            <h3>Element: <span class="yellow">Div</span></h3>
+            <p class="copy--small box--small">If no specific HTML5 structural element applies, then use a <code>div</code></p>
+              <ul class="copy--xsmall list--tall">
+                <li>A division, or section of content within an HTML page.</li>
+                <li>Used to group elements to format them with CSS.</li>
+                <li>Apply IDs &amp; Classes to divs to give the browser more information about them.</li>
+              </ul>
+              <pre style="height: 100px; overflow: hidden"><code>
+                &lt;div>
+                   &lt;p>Content&lt;p>
+                   &lt;p>Content&lt;p>
+                &lt;/div>
+              </code></pre>
+              <pre style="height: 100px; overflow: hidden"><code>
+                &lt;div id="social">
+                  &lt;h1>Main Heading&lt;h1>
+                &lt;/div>
+              </code></pre>
+              <pre style="height: 100px; overflow: hidden"><code>
+                &lt;div class="sub-content">
+                  &lt;p>Some more content&lt;p>
+                &lt;/div>
+              </code></pre>
+          </section>
+
+          <section>
+            <h3>Grouping elements with div</h3>
+            <ul class="box--small copy--small list--tall">
+              <li>The div tag is used everywhere to group elements together into sections.</li>
+              <li>For example, what if we want the first 2 paragraphs of a section to be right-aligned, purple &amp; bold, but we don't want any other paragraphs to be right-aligned?</li>
+              <li>We would wrap them in a <code>div</code> element to style them differently.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Grouping elements with div</h3>
+              <pre style="height: 180px; overflow: hidden;"><code class="html">
+              &lt;div class="align-right">
+                &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
+                &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p>
+              &lt;/div>
+
+              &lt;p>Magna aliqua. Ut enim ad minim veniam.&lt;/p>
+              &lt;p>Quis nostrud exercitation ullamco.&lt;/a>
+              </code></pre>
+              <pre style="height: 140px; overflow: hidden;"><code class="css">
+              .align-right {
+                text-align: right;
+                color: purple;
+                font-weight: bold;
+              }
+              </code></pre>
+              <div style = "text-align:right; color: purple; font-weight: bold; font-size: 70%;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+              <div class="left-align" style="font-size: 70%;">
+              <p>Magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Quis nostrud exercitation ullamco.</a>
+
+              </div>
+          </section>
+
+          <!-- Let's Develop It -->
+          <section>
+            <h3>Let's Develop It</h3>
+            <ul class="list--tall box--small copy--small  ">
+              <li>Let's add a couple paragraphs to our <code>aside</code>, then group them using a <code>div</code>.</li>
+              <li>We'll style this <code>div</code> after we learn about IDs &amp; classes!</li>
+            </ul>
+              <pre><code class="html">
+                &lt;div>
+                  &lt;p>Your aside paragraph!&lt;/p>
+                  &lt;p>Your aside paragraph 2!&lt;/p>
+                &lt;/div>
+                </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <!-- IDs vs Classes -->
+          <section>
+          	<h2>Using IDs and Classes</h2>
+          	<p class="copy--small box--small ">Often, targeting <strong>all of the HTML elements</strong> is not specific enough,<br/>you want to target items in certain areas of your layout.</p>
+          	<ul class="copy--small list--tall">
+          		<li>A uniquely-styled sidebar list</li>
+          		<li>Styling footer links, rather than all links.</li>
+          		<li>Different fonts in the aside</li>
+          	</ul>
+          </section>
+
+          <!-- Selectors: ID-->
+          <section>
+            <h3>Selector: ID</h3>
+                <pre style="height: 80px; overflow: hidden"><code class="html">
+                #social {
+                  property: value;
+                }
+                </code></pre>
+                          <p class="copy--small box--small">Selects the element with an id of "social".</p>
+
+                <pre style="height: 170px; overflow: hidden"><code class="html">
+                &lt;div id="social">
+                  &lt;img src="images/twitter.jpg" alt="twitter icon">
+                &lt;/div>
+
+                &lt;div id="blog">
+                  &lt;img src="images/blog.jpg" alt="blog icon">
+                &lt;/div>
+                </code></pre>
+                         <p><small>(The associated HTML.)</small></p>
+              <p class="green copy--xsmall fragment" style="margin-top:30px;">An ID should only be applied to a single element on the page.</p>
+              <p class="blue copy--xsmall fragment" style="margin-top:30px;">Using IDs in CSS is not recommended - try to use classes instead!</p>
+          </section>
+
+          <!-- Selectors: Class-->
+          <section>
+            <h3>Selector: Class</h3>
+              <pre  style="height: 80px; overflow: hidden"><code class="html">
+              .warning {
+                color: red;
+              }
+              </code></pre>
+            <p class="copy--small box--small">Selects <em>all</em> elements with a class of "warning".</p>
+
+              <pre style="height: 60px; overflow: hidden"><code class="html">
+              &lt;p class="warning">Run away!&lt;/p>
+              &lt;p class="warning">Take cover!&lt;/p>
+              </code></pre>
+              <p><small>(The associated HTML.)</small></p>
+              <div class="copy--small box--small">
+                <p class="warning" style="color: red;">Run away!</p>
+                <p class="warning" style="color: red;">Take cover!</p>
+              </div>
+          </section>
+
+          <!-- ID vs Class example-->
+          <section>
+            <h3>IDs vs. Classes</h3>
+            <div class="box--small">
+              <p class=" copy--small"><span class="yellow">ID</span> -- Should only apply to <strong>one element</strong> on a webpage (like <code>#top</code> -- there is only one top of the page).</p>
+                <p><small>Can be used to link to different parts of a single page. (Example: <a href="http://www.npr.org/">npr.org</a>).</small></p>
+                <pre style="height: 40px; overflow: hidden; width: 42%; float: left;"><code class="html">
+                  &lt;p id="this_ID">
+              </code></pre>
+              <pre style="height: 40px; overflow: hidden; width: 42%; float: right;"><code class="css">
+                  #this_ID { color: red; }
+              </code></pre>
+            </div>
+            <div style="clear:both; padding-top: 40px;">
+                <p class="copy--small"><span class="yellow">Class</span> -- Lots of elements can have the same class.</p>
+                <p><small>Ex. There can be many warnings on one webpage.</small></p>
+            </div>
+             <div>
+                <pre style="height: 80px; overflow: hidden; width: 42%; float: left;"><code class="html">
+                  &lt;p class="this_class">
+                  &lt;div class="this_class">
+                  &lt;a href="..." class="this_class">
+              </code></pre>
+              <pre style="height: 40px; overflow: hidden; width: 42%; float: right;"><code class="css">
+                  .this_class { color: #333; }
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- ID vs Class - analogy-->
+         <section>
+            <h3>IDs vs. Classes</h3>
+            <div class="left-align">
+              <p class="yellow box--small">Another way to think about it:</p>
+            <p class="copy--small">Like a department store, you just have one women's department, one men's department, one kids' department. These departments are like ID's.</p>
+              <p class="copy--small box--small">Inside each department are all kinds of products: sweaters, shirts, socks, in all colors and sizes. There are multiples of these, so these are like classes.</p>
+            </div>
+          </section>
+
+          <!-- Let's Develop It: Adding a class -->
+          <section>
+            <h3>Let's Develop It</h3>
+            <ul class="copy--small list--xtall box--small">
+              <li>Remember the <code>div</code> we created in <code>aside</code>? Let's give it a class of <code>align-right</code>.</li>
+              <li>Now we add a rule to <span class="green">styles.css</span> to define what <code>align-right</code> will do:
+                <pre style="height: 80px; overflow: hidden;"><code class="css">
+                  .align-right {
+                    text-align: right;
+                  }
+                </code></pre>
+              </li>
+              <li>Feel free to create more classes on your own! You can even add multiple classes to an element, separated by spaces:
+                <pre style="height: 40px; overflow: hidden;"><code class="html">
+                  &lt;p class="align-right red warning">
+                </code></pre>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <!-- Span -->
+          <section>
+            <h3>Element: <span class="yellow">Span</span></h3>
+            <ul class="copy--small list--tall box--small">
+              <li><strong>Inline element.</strong> Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing element.</li>
+              <li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
+              <li>CSS classes style the span.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Span</h3>
+            <p class="copy--small box--small">Span is used to apply a specific style inline</p>
+
+            <pre style="height: 40px; overflow: auto;"><code class="html">
+              &lt;p>Paragraph with &lt;span class="yellow">yellow&lt;/span> text.&lt;/p>
+            </code></pre><br/>
+
+            <pre style="height: 80px; overflow: auto;"><code class="css">
+              .yellow {
+                color: yellow;
+              }
+            </code></pre>
+
+            <p><small>Paragraph with <span class="yellow">yellow</span> text.</small></p>
+          </section>
+
+          <!-- Exercise-->
+          <section>
+            <h3>Let's Develop It</h3>
+            <p class="copy--small box--small">Let's add some spans to our content to help highlight some text. </p>
+            <pre style="height: 150px; overflow: hidden;"><code class="html">
+              &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. &lt;span class="highlight">Ut enim ad minim
+              veniam, quis nostrud exercitation.&lt;/span> Duis aute irure
+              non proident, sunt in culpa qui officia deserunt mollit anim.&lt;/p>
+            </code></pre>
+            <pre style="height: 80px; overflow: hidden;"><code class="css">
+              .highlight {
+                color: hotpink;
+              }
+            </code></pre>
+             <p class="copy--xsmall box--small" style="margin-top: 2em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="highlight" style="color: hotpink;">Ut enim ad minim veniam, quis nostrud exercitation.</span> Duis aute irure non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+          </section>
+        </section>
+
+        <section>
+          <!-- Static Positioning-->
+          <section>
+            <h3>Positioning: Static</h3>
+            <div class=" copy--small box--small">
+            <p>HTML elements are positioned <strong>staticly by default</strong>.</p>
+            <p class="box--small">Static elements are <strong>positioned in the normal ﬂow</strong> of the page</p>
+            </div>
+            <div>
+            <img src="images/static_positioning.jpg"/>
+            </div>
+          </section>
+
+          <section>
+            <h3>Static Positioning</h3>
+            <p class="copy--small box--small"><strong>Inline elements</strong> flow from left to right,<br/>wrapping to next line when needed.</p>
+              <pre style="height: 180px; overflow: hidden;"><code class="html" style="max-height: 130px;">
+              &lt;img src="images/cat1.jpg" alt="cat1" />
+              &lt;img src="images/cat2.jpg" alt="cat2" />
+              &lt;img src="images/cat3.jpg" alt="cat3" />
+              &lt;img src="images/cat4.jpg" alt="cat4" />
+              &lt;img src="images/cat5.jpg" alt="cat5" />
+              &lt;img src="images/cat6.jpg" alt="cat6" />
+              &lt;img src="images/cat7.jpg" alt="cat7" />
+
+              </code></pre>
+              <div style="text-align: left;">
+                <img src="images/cat1.jpg" width="150" />
+                <img src="images/cat2.jpg" width="150" />
+                <img src="images/cat3.jpg" width="150" />
+                <img src="images/cat4.jpg" width="150" />
+                <img src="images/cat5.jpg" width="150" />
+                <img src="images/cat6.jpg" width="150" />
+                <img src="images/cat7.jpg" width="150" />
+              </div>
+          </section>
+
+          <section>
+            <h3>Static Positioning</h3>
+            <p class="copy--small box--small  ">In normal flow, <strong>block elements</strong> flow from top to bottom,<br/>making a new line after every box.</p>
+             <pre style="height: 140px; overflow: hidden"><code class="html">
+              &lt;p>Greetings&lt;/p>
+              &lt;p>Hello&lt;/p>
+              &lt;p>Hi there!&lt;/p>
+
+              &lt;p>Greetings&lt;/p>&lt;p>Hello&lt;/p>&lt;p>Hi there!&lt;/p>
+             </code></pre>
+             <div>
+               <p>Greetings</p>
+               <p>Hello</p>
+               <p>Hi there!</p>
+             </div>
+          </section>
+
+          <!-- Relative Positioning-->
+          <!-- Not sure where I want this slide yet.
+          <section>
+            <h3>Relative Positioning</h3>
+            <div class="left-align">
+            <ul>
+            <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
+            <li>Does not affect the elements surrounding it.</li>
+            <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
+            <li>Relative positioning and absolute positioning are used together.</li>
+            </ul>
+            </div>
+          </section> -->
+
+          <!-- Relative Positioning -->
+          <section>
+            <h3>Relative Positioning</h3>
+            <p class="copy--small box--small">The <code>relative</code> value will still put the element in the normal flow, but then offset it according to <code>top</code>/<code>left</code>/<code>right</code>/<code>bottom</code> properties.</p>
+
+            <pre><code class="html">
+              .I_am_totally_relative_yall{
+                position: relative;
+                left: 80px;
+                top: 20px;
+                height: 100px;
+                background-color: yellow;
+              }
+            </code></pre>
+             <div style="border:2px solid black;">
+             <div style="position: relative; left: 80px; top: 20px;
+               height: 100px; background-color: yellow; color:black; text-align:left">
+               Hello, hi!
+             </div>
+             </div>
+          </section>
+
+          <!-- Absolute positioning-->
+          <!--<section >
+             <h3>Absolute Positioning</h3>
+             <div class="left-align">
+             <ul>
+             <li>Positions element outside of the normal flow.</li>
+             <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
+             <li>Its container block is the nearest parent element that is positioned absolute or relative.</li>
+             <li>If no such element is found, the container block is &lt;html>.</li>
+             <li>Other elements act as if it's not there.</li>
+             <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
+             </ul>
+             </div>
+          </section>-->
+
+          <!-- Absolute Positioning -->
+          <section  style="border: 1px solid black">
+            <h3>Absolute Positioning</h3>
+            <p class="copy--xsmall box--small">The <code>absolute</code> value will take the element <strong><em>out</em></strong> of the normal flow and<br/><em>position it in relation to the window (or the closest non-static element)</em>.</p>
+            <pre style="height: 150px; overflow: hidden"><code class="html">
+              .floating_top_button{
+                position: absolute;
+                top: -40px;
+                right: 10px;
+                background-color: yellow
+              }
+            </code></pre>
+            <pre style="height: 150px; overflow: hidden"><code class="html">
+              .floating_bottom_button{
+                position: absolute;
+                bottom: -40px;
+                left:60px;
+                background-color: green
+              }
+            </code></pre>
+            <div>
+              <div style="position: absolute; top: -40px; right: 10px; background-color: yellow; color:black">
+               Up here
+              </div>
+              <div style="position: absolute; bottom: -40px; left:60px; background-color: green">
+                Down here
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Example: Absolute Positioning</h3>
+            <div class="left left-align copy--small" style="width: 45%;">
+            <p class="box">The social media icons in this example have been absolutely positioned.</p>
+            <p>Their container is absolutely positioned <code>40px</code> from the <code>top</code> of the web page.</p>
+            </div>
+            <div class="right box--small" style="width: 45%;">
+            <img src="images/absolute_buttons.png" alt="example float" width="85%"/>
+              <pre style="height: 60px; overflow: hidden"><code class="css">
+                  position: absolute;
+                  top: 40px;
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- Exercise -->
+          <section>
+            <h3>Let's Develop it!</h3>
+            <ul class="box--small copy--small list--tall">
+              <li>We will make a box that is locked to the top of our page</li>
+              <li>In your HTML file, nest a <code>div</code> under <code>body</code> with the class <code>social</code></li>
+              <li>In your CSS file, give it absolute positioning</li>
+            </ul>
+
+            <pre style="height: 60px; overflow: hidden"><code class="html">
+            &lt;div class="social">
+            &lt;/div>
+            </code></pre>
+
+            <pre  style="height: 180px; overflow: hidden"><code class="css">
+            .social{
+              background-color: teal;
+              position: absolute;
+              padding: 10px;
+              top: 10px;
+              left: 0;
+            }
+            </code></pre>
+          </section>
+
+          <!-- Exercise -->
+          <section>
+            <h3>Let's Develop it!</h3>
+            <p class="copy--small box--small">Inside of our absolutely positioned <code>div</code>,<br/>let's add some fun social media icons.</p>
+            <a href="assets/icons.zip" alt="free social media icons">Download the Icons</a>
+
+            <p class="box--small copy--small">Now, add the images inside the <code>.social</code> <code>div</code> you just created</p>
+            <pre style="height: 80px;overflow: hidden;"><code class="html">
+            &lt;div class="social">
+               &lt;img src="images/twitter.jpg" alt="twitter" />
+            &lt;/div>
+            </code></pre>
+            <p class="box--small copy--xsmall">Adjust your other styles accordingly.</p>
+          </section>
+        </section>
+
+        <!-- Fixed positioning-->
+        <section >
+          <h3>Fixed Positioning</h3>
+          <div class="left-align">
+            <ul class="copy--small list--tall box--small">
+            <li>A fixed positioned element is not relative to another HTML element, it is relative to the browser window.</li>
+            <li>A fixed element will not move when you scroll through your browser.</li>
+            </ul>
+
+            <pre style="height: 60px; overflow: hidden"><code class="css">
+             position: fixed;
+             top: 40px;
+            </code></pre>
+            <p class="fragment blue copy--small">Try making your social div fixed!</p>
+
+          </div>
+        </section>
+
+        <section>
+          <!-- Float-->
+          <section>
+            <h3>Float</h3>
+            <div class="left-align">
+               <ul class="box--small copy--small list--tall">
+               <li>"Floating" an element takes it in the normal flow, as far to the left or right of its containing element as possible. </li>
+               <li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+               </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3>Float: Example</h3>
+            <p class="copy--small box--small">Below an <code>aside</code> is floated to the left,<br/>allowing text to wrap around it on the right</p>
+            <img src="images/example-floatbq.png" alt="example float" />
+          </section>
+
+          <section>
+            <h3>Float</h3>
+            <div class="left-align">
+              <ul class="list--tall copy--small box--small">
+              <li><strong>Always specify a width when floating</strong> an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+              <li>You can specify</li>
+              <ul>
+                <li> a) whether an element is floated or not
+              	<li>b) which side it ﬂoats on.</li>
+              </ul>
+              </ul>
+              <pre style="height: 120px; overflow: auto"><code class="css">
+                float: none;
+                float: left;
+                float: right;
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Float</h3>
+            <pre style="height: 140px; overflow: hidden"><code class="css">
+              .I_am_a_floating_box{
+                float:left;
+                width:200px;
+                background:yellow;
+              }
+            </code></pre><br/>
+            <div style="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
+              <small>Hi, I'm a yellow box with black text.<br/>
+              I like to hang out on the left side.</small><br/>
+            </div>
+            <div class="copy--small left-align">Not floating element</div>
+            <div class="copy--small left-align">Not floating element</div>
+            <div class="copy--small left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+          </section>
+
+          <section>
+            <h3>Using floats to place elements side by side</h3>
+            <p class="copy--small box--small">If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
+            <img src="images/example-float-column.png" />
+          </section>
+
+          <!-- Exercise -->
+          <section>
+            <h3>Let's Develop it!</h3>
+            <p class="copy--small box--small">Float your <code>main</code> to the left.</p>
+
+            <pre style="height: 120px; overflow: hidden"><code class="css">
+              main {
+                float: left;
+                width: 300px;
+              }
+            </code></pre>
+            <p class="copy--small box--small">Float your <code>aside</code> to the right.</p>
+
+            <pre style="height: 120px; overflow: hidden"><code class="css">
+              aside {
+                float: right;
+                width: 300px;
+              }
+            </code></pre>
+            <p class="box--small"><small><strong>Note:</strong> You may need to adjust your widths to account for padding / margins / borders.</small></p>
+          </section>
+        </section>
+
+        <section>
+          <!-- Clear-->
+          <section>
+            <h3>Clear</h3>
+            <ul class="copy--small box--small list--tall">
+            <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
+            <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <code>clear:  left;</code> to the paragraph.</li>
+            <li>Clearing both sides makes sure ﬂoats don't ﬂow past the clear element.</li>
+            </ul>
+            <pre style="height: 80px; overflow: hidden;"><code class="css">
+              clear: right;
+              clear: left;
+              clear: both;
+            </code></pre>
+          </section>
+
+          <!-- <section>
+            <h3>Clear</h3>
+            <img src="images/example-float-with_clear.jpg" width="650"/>
+          </section> -->
+
+          <section>
+            <h3>Clear</h3>
+             <pre style="height: 200px; overflow: hidden;"><code class="html">
+               .little_yellow_box{
+                 float: left;
+                 width: auto;
+                 background: yellow;
+               }
+               .lonely_line{
+                 clear: left;
+               }
+             </code></pre>
+           <div style="float:left;width:auto;background:yellow; color:black; ">
+             floater<br/>
+             floater<br/>
+             floater<br/>
+           </div>
+           <div class="left-align">Not floating element</div>
+           <div class="left-align">Not floating element</div>
+           <div class="left-align" style="clear: left;">Non-floating element with a class of <code>clear-left</code></div>
+          </section>
+
+          <!-- Exercise-->
+          <section>
+            <h3>Let's Develop It</h3>
+            <p class="copy--small box--small">Let's clear the footer.</p>
+
+            <pre style="height: 100px; overflow: hidden"><code class="html">
+            &lt;footer>
+              &lt;p>My footer content!&lt;/p>
+            &lt;/footer>
+            </code></pre>
+           <pre style="height: 100px; overflow: hidden"><code class="css">
+            footer {
+              clear: both;
+            }
+           	</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <!-- Z-index -->
+          <section>
+            <h3>Z-index</h3>
+            <p class="copy--small box--small left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
+            <p class="copy--small box--small left-align">The element with highest z-index goes on top.</p>
+            <pre style="height: 160px; overflow: hidden;"><code class="html">
+              .bottom {
+                position: absolute;
+                bottom: 10px;
+                left: 60px;
+                background-color: yellow;
+              }
+            </code></pre>
+            <pre style="height: 170px; overflow: hidden;"><code class="html">
+              .top {
+                position: absolute;
+                bottom: 15px;
+                left: 60px;
+                background-color: green;
+                z-index: 2;
+              }
+            </code></pre>
+            <div style="position: absolute; bottom: -20px; left:60px;
+              background-color: yellow; color:black"> Bottom </div>
+            <div style="position: absolute; bottom: -15px; left:60px;
+              background-color: green; z-index: 2; "> Top </div>
+          </section>
+
+          <section>
+            <h4>Z-index: another way to look at it</h4>
+            <p class="copy--small box--small">Think of z-index stacking as layering.</p>
+            <img src="images/z-index.gif"/>
+          </section>
+
+          <!-- Pseudo classes -->
+          <section>
+            <h3>Pseudo-classes &amp; CSS for links</h3>
+            <div class="left left-align copy--small box" style="width:50%">
+              <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
+              <p class="box--small">CSS pseudo-classes are used to add special effects to some selectors.</p>
+            </div>
+
+            <div class="right left-align box--small" style="width:45%">
+              <p>Syntax:</p>
+              <pre style="height: 80px; overflow: hidden"><code class="html">
+              selector:pseudo-class {
+                property:value;
+              }
+              </code></pre>
+              <div class="box--small">Example:
+                <pre style="height: 80px; overflow: hidden"><code class="html">
+                a:hover {
+                  text-decoration: none;
+                }
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Pseudo-classes &amp; CSS for links</h3><br/>
+            <pre style="height: 140px; overflow: hidden"><code class="html">
+              a:link    {color: #FF0000;} /* unvisited link */
+              a:visited {color: #00FF00;} /* visited link */
+              a:focus   {color: #FF00FF;} /* link currently in focus */
+              a:hover   {color: #FF00FF;} /* mouse over link */
+              a:active  {color: #0000FF;} /* selected link */
+            </code></pre>
+            <p class="copy--xsmall box"><strong>Note:</strong> <code>a:hover</code> MUST come after <code>a:link</code> and <code>a:visited</code><br/>in the CSS definition in order to be effective!</p>
+            <p class="copy--xsmall"><strong>Note:</strong> <code>a:active</code> MUST come after <code>a:hover</code> in the<br/>CSS definition in order to be effective!</p>
+          </section>
+
+          <!-- Exercise -->
+          <section>
+            <h3>Let's Develop it!</h3>
+            <p class="copy--small box--small">Let's style our links list using pseudo classes.</p>
+
+            <pre><code class="html">
+              a:link    { color:#f05b62; }
+              a:visited { color:#ffa4a8; }
+              a:focus   { color:#000; }
+              a:hover   { color:#000; }
+              a:active  { color:yellow; }
+            </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <!-- What's wrong with my code-->
+          <section>
+           <h3>What's wrong with my code</h3>
+           <p class="copy--small box--small">Why do you think this code isn't working?</p>
+            <div >
+            <br/>
+            <p class="red left-align">WRONG:</p>
+            <pre style="height: 40px; overflow: hidden;"><code>
+               a hover {color: FF00FF;}</code></pre>
+            </div>
+            <div class="box fragment">
+            <p class="green left-align">CORRECT:</p>
+            <pre style="height: 40px; overflow: hidden;"><code>
+             a:hover {color: #FF00FF;}</code></pre>
+             <p class="copy--xsmall box--small">Missing a colon between <code>a</code> and <code>hover</code>.</p>
+             <p class="copy--xsmall">The hex code needs a <code>#</code> before the six-character value.</p>
+           </div>
+          </section>
+
+          <section>
+            <h3>What should I use?</h3>
+            <p class="red box--small">I want to create a two-column layout.</p>
+             <ol class="copy--small ">
+               <li>Fixed positioning</li>
+               <li>Absolute positioning</li>
+               <li>Floats</li>
+               <li>clear: right;</li>
+             </ol>
+             <div class="fragment box--small">
+             <p class="green">ANSWER:</p>
+             <p class="copy--xsmall"><span class="blue">Floats!</span> Float one column to the left, the other to the right.</p>
+             <p><small>Don't forget to set the width.</small></p>
+             </div>
+          </section>
+
+          <!-- Hosting & Domain -->
+          <section>
+            <h4>Wait... How does a website work?</h4>
+            <ul class="copy--small list--tall box--small">
+              <li><p>The HTML and CSS need to be online, not on your computer.</p></li>
+              <li><p>If you buy a <strong>web hosting</strong> plan, you can upload your files to a webserver.</p></li>
+              <li><p>A <strong>webserver</strong> is a computer that is accessible online</p></li>
+              <li><p>The webserver stores your files</p></li>
+            </ul>
+            <img src="images/server.jpg" alt="web server" />
+          </section>
+
+          <section>
+            <h4>How does someone find my site?</h4>
+
+            <ul class="copy--small list--tall box--small">
+              <li>A <strong>domain name</strong> is an address you buy</li>
+              <li>The address points anywhere you want,<br/>in this case, the files on the server.</li>
+            </ul>
+            <p><img src="images/address.jpeg" alt="domain resigration" /></p>
+          </section>
+
+          <section>
+            <h3>Server + Domain + You</h3>
+
+            <img src="images/site_server.jpg" alt="server domain and you" />
+          </section>
+
+          <!-- What's Next? -->
+          <section>
+            <h3>What's Next?</h3>
+            <p class="copy--small box--small">It depends on what you want to do! But here are some possibilities:</p>
+            <ul class="copy--small list--tall">
+              <!-- <li>Check out the resources on <a href="https://www.girldevelopit.com/materials" target="_blank">our national Materials page</a>.</li> -->
+              <li>Think about learning the following (yes, GDI offers workshops on all of these!):
+                <ul class="copy--small">
+                <li>Responsive Design</li>
+                <li>HTML5 + CSS3</li>
+                <li>JavaScript</li>
+                <li>Sass</li>
+                <li>Content management systems, like WordPress</li>
+                <li>PHP/MySQL</li>
+                <li>Ruby</li>
+                </ul>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Questions?</h3>
+            <p class="box--small">We're here to help!</p>
+            <img src="images/questions_cat.jpg" alt="Confused? Let us help!" />
+              <p class="box--small copy--small"><a href="mailto:annarbor@girldevelopit.com">annarbor@girldevelopit.com</a> &nbsp; | &nbsp; <a href="http://twitter.com/gdiannarbor">@gdiannarbor</a></p>
+          </section>
+
+          <section>
+            <h3>Workshop Feedback</h3>
+            <p class="box--small">Tell us how we did!</p>
+              <p class="box--small"><a href="https://goo.gl/B9UuRj">https://goo.gl/B9UuRj</a></p>
+          </section>
+
+        </section>
+      </div>
+
+      <footer>
+        <div class="copyright">
+          HTML/CSS &mdash; Girl Develop It &mdash;
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
