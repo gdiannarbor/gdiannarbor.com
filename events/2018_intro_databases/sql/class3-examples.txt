@@ -1,0 +1,102 @@
+-- Return rows from the customer table where the first or last name includes the word 'Car' and where the store_id is 2
+SELECT LOWER(first_name), LOWER(last_name), first_name
+FROM customer
+WHERE (LOWER(first_name) LIKE '%car%'
+OR LOWER(last_name) LIKE '%car%')
+AND store_id = '2';
+
+
+
+-- Create an order table
+CREATE TABLE orders
+( order_id INT PRIMARY KEY,
+  film_id INT REFERENCES film(film_id),
+  customer_id INT REFERENCES customer(customer_id),
+  order_date timestamp);
+
+
+
+
+-- Add a not null constraint on order table for customer_id
+ALTER TABLE orders
+ALTER COLUMN customer_id SET NOT NULL;
+
+
+
+-- Add a unique constraint on address to make sure the combination of address and district are unique
+ALTER TABLE address
+ADD UNIQUE(address, district);
+
+SELECT *
+FROM ADDRESS;
+
+INSERT INTO address (address, district, city_id, phone)
+VALUES ('47 MySakila Ave', 'Alberta', 299, '867-5309');
+
+
+
+-- Add a check constraint to payment to check that the payment amount is greater than 90 cents
+DELETE
+FROM payment
+WHERE amount <= 0.90;
+
+ALTER TABLE payment
+ADD CHECK(amount > 0.90);
+
+INSERT INTO payment (customer_id, staff_id, rental_id, amount, payment_date)
+VALUES (344, 1, 1543, 0.80, '2017/02/20');
+
+
+
+-- Add a default constraint to the customer table to set last_name to 'Unknown'
+ALTER TABLE customer
+ALTER COLUMN last_name SET DEFAULT 'Unknown';
+
+INSERT INTO customer (first_name, store_id, address_id)
+VALUES ('Ron', 1, 43);
+
+SELECT *
+FROM  customer
+WHERE first_name = 'Ron';
+
+
+
+-- Practice inserting some records in each table
+SELECT address.address, address.district, address.phone, city.city
+FROM address
+JOIN city ON address.city_id = city.city_id
+WHERE city.city_id = 306;
+
+
+-- Create a table of your choice!
+
+
+-- Write a query, using an inner join, that returns the customer's first name, last name and the rental date for the customer who's customer_id is 37
+SELECT customer.first_name, customer.last_name, rental.rental_date
+FROM rental
+INNER JOIN customer
+ON customer.customer_id = rental.customer_id
+WHERE customer.customer_id = 37;
+
+SELECT customer.first_name, customer.last_name, rental.rental_date
+FROM customer, rental
+WHERE customer.customer_id = rental.customer_id
+AND rental.customer_id = 37;
+
+
+-- Build a query to create a list of films not in inventory
+SELECT film.*
+FROM film
+LEFT OUTER JOIN inventory
+ON inventory.film_id = film.film_id
+WHERE inventory.film_id IS NULL
+
+
+
+-- Build a query to create a list of all film's descriptions and category name
+SELECT film.title, film.description, category.name
+FROM film
+INNER JOIN film_category
+ON film.film_id = film_category.film_id
+INNER JOIN category
+ON film_category.category_id = category.category_id

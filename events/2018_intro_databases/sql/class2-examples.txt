@@ -1,0 +1,69 @@
+-- Insert a row into the address table
+INSERT INTO address (address, district, city_id, phone)
+VALUES ('456 Mockingbird Lane', 'Anywhere', 3, '12334')
+
+
+
+-- Update the category 'Sci-Fi' to 'Science Fiction'
+UPDATE category
+SET name = 'Science Fiction'
+WHERE name = 'Sci-Fi'
+
+SELECT *
+FROM category
+WHERE name = 'Science Fiction'
+
+
+
+-- Delete the address you inserted
+SELECT *
+FROM address
+WHERE address = '456 Mockingbird Lane'
+
+SELECT *
+FROM address
+WHERE address = '456 Mockingbird Lane'
+
+
+
+-- Create two tables, a Video Game System table and a Video Game's table
+CREATE TABLE IF NOT EXISTS video_game
+(video_game_id int,
+ title varchar(30),
+ description varchar(255),
+ release_date date,
+ rating varchar(5),
+ video_game_system_id int
+);
+
+CREATE TABLE IF NOT EXISTS video_game_system
+(video_game_system_id int,
+ name varchar(30)
+);
+
+
+-- Insert a few rows of data into each table
+INSERT INTO  video_game_system (video_game_system_id, name)
+VALUES (1, 'xbox');
+
+INSERT INTO  video_game_system (video_game_system_id, name)
+VALUES (2, 'Playstation');
+
+INSERT INTO  video_game (video_game_id, title, description, release_date, rating, video_game_system_id)
+VALUES (1, 'Dance Dance Revolution', 'Crazy dancing game', date '2004-01-07', 'E', 1);
+
+INSERT INTO  video_game (video_game_id, title, description, release_date, rating, video_game_system_id)
+VALUES (2, 'Sonic The Hedgehog', 'Something about getting gold cirlces', date '2000-10-11', 'E', 2);
+
+
+
+-- Create a new table with one field an then drop that table
+CREATE TABLE IF NOT EXISTS cookies
+( name varchar(30) )
+
+DROP TABLE cookies
+
+
+-- Alter the city table to add a new column for state
+ALTER TABLE city
+ADD state varchar(50);
