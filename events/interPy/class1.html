@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Intermediate Python | Girl Develop It Ann Arbor</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intermediate Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+  <script src="lib/js/head.min.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <!-- INTRO -->
+      <section>
+        <!-- Opening slide -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intermediate Python</span><br/><small><span class="blue">Class 1</span></small></h3>
+            <p><small>@gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #InterPython</small></p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Prior Classes</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">Python variables</li>
+            <li class="fragment">For loops</li>
+            <li class="fragment">Functions</li>
+            <li class="fragment">Lists and Dictionaries</li>
+            <li class="fragment">Intro to Flask</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What we'll cover in this class</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">Git and Pip</li>
+            <li class="fragment">Flask Review</li>
+            <li class="fragment">Routing and Templating</li>
+            <li class="fragment">Using a Database</li>
+            <li class="fragment">Using APIs</li>
+          </ul>
+        </section>
+      </section>
+
+
+      <!-- Background Knowledge: ?? minutes -->
+      <section>
+          <h3>Background Knowledge</h3>
+          <p class="box--small copy--small">Stuff you don't really need to know, but comes in handy</p>
+          <!-- TODO <p class="box--small copy--small">(Links to further reading)</p> -->
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment"><strong>Git:</strong> Version control
+              <p class="copy--small">What you really wish you had after you break your project</p>
+            </li>
+            <li class="fragment"><strong>Module:</strong> Take advantage of code that other people have written</li>
+            <li class="fragment"><strong>pip:</strong> Tool to easily install Python modules</p></li>
+            <li class="fragment"><strong>Virtual Environment:</strong> Make sure nothing we install today messes up your other projects</li>
+            <li class="fragment"><strong>Request:</strong> What happens when you enter a URL or click a button</li>
+          </ul>
+      </section>
+      <section> <!-- Class Prep -->
+        <section>
+          <h3>Class Prep</h3>
+          <p class="box--small copy--small">Let's make sure we're all running Flask!</p>
+          <ul class="list--xtall box--small copy--small">
+              <li>
+                  <a href="https://atom.io/" target="_blank">Install Atom</a> - A text editor
+              </li>
+              <li>
+                  <a href="http://www.python.org/download/" target="_blank">Install Python 3</a>
+              </li>
+              <li>
+                  <strong>Windows Users:</strong> When installing Python, make sure you select:
+                  <br/><code class="copy--xsmall">Add Python 3.X to PATH</code>
+              </li>
+              <li>
+                  <a href="https://github.com/camdroid/0318-sample" targt="_blank">Class Git Repo</a>
+              </li>
+              <li>
+                  Locate and run the terminal (PowerShell for Windows) program. Type <code>python3</code> and hit enter.
+              </li>
+              <li>
+                  More setup instructions are available:
+                  <a href="http://learnpythonthehardway.org/book/ex0.html" target="_blank">here</a>
+                  <br/><small>(Unlike these instructions, install Python 3, not Python 2. You can, but don't have to install the other text editors recommended in this guide)</small>
+              </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Example Project Setup</h3>
+          <p class="box--small copy--small">Set up the example project from Github</p>
+          <ul class="list--xtall box--small copy--small">
+            <li>
+              <a href="https://github.com/camdroid/0318-sample" target="_blank">Class Git Repo</a>
+            </li>
+            <li>
+              <p class="box--small copy--small">Click "Clone" and copy the URL</p>
+            </li>
+            <li>
+              <p class="box--small copy--small">On your computer, run <code>git clone url_you_copied</code></p>
+            </li>
+            <li>
+              <p>Go into the directory:
+                <code class="copy--xsmall">cd 0318-sample</code>
+              </p>
+            </li>
+        </section>
+        <section>
+          <h3>Setting up Your Virtual Environment</h3>
+          <p class="box--small copy--small">What the heck is a virtual environment?</p>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">Virtual environments let you install multiple versions of packages</li>
+            <li class="fragment">Doesn't mean much right now, but very useful when you have multiple projects</li>
+            <li class="fragment"><code>python3 -m venv env; source env/bin/activate</code></li>
+            <li class="fragment">With virtual environments, you can easily install project dependencies</li>
+            <li class="fragment"><code>pip install -r requirements.txt</code></li>
+            <li class="fragment"><a href="https://realpython.com/blog/python/python-virtual-environments-a-primer/" target="_blank">Further Reading on Virtual Environments</a></li>
+          </ul>
+        </section>
+        <section>
+          <img src="images/git_clone.png" class="img--bare" height="450px" />
+        </section>
+        <section>
+          <h4>(This section may change, depending what the dependencies are)</h4>
+          <img src="images/pip_install.png" class="img--bare" height="450px" />
+        </section>
+      </section>
+
+      <!-- Block 2: 30 minutes -->
+      <section>
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="box--small">Try running <code>python hello_world.py</code></p>
+          <p class="fragment copy--small box--small">Launch your browser, go to <code>localhost:5000</code></p>
+          <p class="fragment copy--small box--small">You should see something like this:</p>
+          <img class="fragment" src="images/hello_world.png"></img>
+        </section>
+        <section>
+          <h3>Let's look at the code</h3>
+          <p class="box--small">Open up <code>hello_world.py</code> in your preferred text editor.</p>
+        </section>
+        <section>
+           <h3>Flask Boilerplate</h3>
+           <pre><code contenteditable class="python">
+from flask import Flask
+app = Flask(__name__)
+
+# ...
+# Other stuff
+# ...
+
+if __name__ == '__main__':
+    app.run()
+           </code></pre>
+           <p class="fragment">This is the boilerplate code that tells flask to run.</p>
+           <p class="fragment">Don't really need to worry about much more than that right now.</p>
+        </section>
+        <section>
+          <h3>Flask Routes</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>A "route" is how you tell a server what program you want it to run.</li>
+            <li><code>@app.route('/')</code> - means "run this code when someone requests '/' (the root directory)"</li>
+            <li>If we want to make other routes possible, we can add more lines like <code>@app.route('my_route')</code></li>
+            <!-- <li><pre><code class="python">
+@app.route('/')
+def hello():
+    return 'Hello World!'
+              </code></pre>
+            </li> -->
+            <li>The route is what you enter in your web browser (after the server name)
+              <p class="copy--small box--small">For example: <code>https://twitter.com/camdroid217</code></p>
+              <p class="copy--small box--small"><code>twitter.com</code> specifies the server, and <code>camdroid217</code> specifies that I want data for a particular user (me!)</p>
+              <!-- TODO Add example of static route that isn't root -->
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Dynamic Routes</h3>
+          <ul class="list--xtall box--small">
+            <li class="fragment">As you can imagine, if Twitter had to have a specific route for each user, that would be a huge amount of code!</li>
+            <li class="fragment">To avoid this, we can use something called "dynamic routes."</li>
+            <li class="fragment">We give the program an idea of what to expect, and it handles the rest!</li>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <pre><code class="python">
+@app.route('/&lt;username&gt;')
+def hello(username):
+    return "Hello " + username
+          </code></pre>
+        </section>
+        <section>
+          <h3>Let's Develop It!</h3>
+          <ul class="list--xtall box--small">
+            <li class="fragment">Let's try adding a dynamic route to our application!</li>
+            <li class="fragment">Add a dynamic route to your program that will output your favorite animal!</li>
+            <li class="fragment"><strong>Stretch Goal:</strong> Add a dynamic route that will take in a temperature, and output "hot" or "cold" based on that!</li>
+        </section>
+      </section>
+
+      <!-- Flask Templating -->
+      <section>
+        <section>
+          <h3>Templating</h3>
+          <p class="fragment">So far, not very useful - can only display basic sentences, nothing fancy.</p>
+          <p class="fragment">Flask is a "back-end" language - it deals with what happens behind the scenes, not what the user sees.</p>
+        </section>
+        <section>
+          <h3>Back End?</h3>
+          <ul class="list--xtall box--small">
+            <li class="fragment">The web is split (mostly) into two types of development - "front end" and "back end"</li>
+            <li class="fragment">Flask is a back-end language - it works on the servers, and isn't very useful for displaying results to the user (by itself)</li>
+            <li class="fragment">To display things on a nice webpage, we turn to the front-end: HTML, CSS, and Javascript</li>
+            <li class="fragment">In this class, we'll only focus on HTML, but CSS and JS are really useful!</li>
+          </ul>
+        </section>
+        <section>
+           <h3>Basic Templating</h3>
+           <p>Just going to display a simple HTML page</p>
+           <pre><code class="html">
+&lt;html>
+    &lt;head>
+        &lt;title>Hello!&lt;/title>
+    &lt;/head>
+    &lt;body>
+        &lt;h1>Hello World!</h1>
+    &lt;/body>
+&lt;/html>
+          </code></pre>
+        </section>
+        <section>
+          <h3>In Flask, we write</h3>
+          <pre><code class="python">
+@app.route('/world')
+def hello_world():
+    return render_template('index.html')
+          </code></pre>
+        </section>
+        <section>
+          <h3>Result:</h3>
+          <img src="images/basic_templating.png"></img>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Dynamic Templating</h3>
+          <ul class="list--xtall box--small">
+            <li class="fragment">Make all the things dynamic!</li>
+            <li class="fragment">With <code>render_template</code>, we can use Python variables inside our templates!</li>
+
+        </section>
+        <section>
+          <h3>Templating Example - HTML</h3>
+          <pre><code class="html">
+&lt;html>
+    &lt;head>
+        &lt;title>Hello World!&lt;/title>
+    &lt;/head>
+    &lt;body>
+        &lt;h1>Hello {{ username }}&lt;/h1>
+    &lt;/body>
+&lt;/html>
+          </code></pre>
+        </section>
+        <section>
+          <h3>Templating Example - Python</h3>
+          <pre><code class="python">
+@app.route('/&lt;username>')
+def hello():
+    return render_template('index.html', username=username)
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- OUTRO -->
+      <section>
+        <section>
+            <h3>Questions?</h3>
+        </section>
+
+        <section>
+          <h3>Homework</h3>
+          <p class="copy--small box">Write a program that could replace the initial conversation you have at the checkout line.  It should do the following:</p>
+          <div class='box--small'>
+            <pre><code contenteditable class="python" style="min-height: 50px;">
+>> Did you find everything ok?
+(wait for input)
+
+>> What's your name?
+(read in a name from the user)
+
+>> Hi, (User's Name) do you want paper or plastic?
+(wait for input)
+
+>> What is your total before tax?
+(read in a total)
+
+>> Your total with sales tax is: (total with sales tax)
+(wait for input before exiting)
+          </code></pre></div>
+        </section>
+
+        <section>
+          <h3>Want help?</h3>
+          <div class="box">
+            <p class="box"><a href="https://gdiaa.slack.com/messages/0516-intro-python/details/" target="_blank" class="roll"><span>#0516-intro-python</span></a></p>
+            <p><small>Not on Slack? <a target="_blank" href="http://bit.ly/gdiaa-slack" class="roll"><span data-title="bit.ly/gdiaa-slack">bit.ly/gdiaa-slack</span></a></small></p>
+          </div>
+        </section>
+
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intro to Python</span><br/><small><a href="class2.html">Class 2 &raquo;</a></small></h3>
+            <p><small>@gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
+          </div>
+        </section>
+
+      </section>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      rollingLinks: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+  </script>
+</body>
+</html>
