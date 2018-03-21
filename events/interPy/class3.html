@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Intermediate Python | Girl Develop It Ann Arbor</title>
+
+  <meta name="description" content="This is the official Girl Develop It Core Intermediate Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+  <script src="lib/js/head.min.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <!-- INTRO -->
+      <section>
+        <!-- Opening slide -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3>
+              <span class="green">Intermediate Python</span>
+              <br/>
+              <small>
+                <span class="blue">Class 3</span>
+              </small>
+            </h3>
+            <p>
+              <small>@gdiannarbor &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #InterPython</small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>What we'll cover in this class</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">Databases: SQLAlchemy</li>
+          </ul>
+        </section>
+      </section>
+
+
+      <!-- Background Knowledge: ?? minutes -->
+      <section>
+        <section>
+          <h3>What is a Database?</h3>
+          <!-- TODO <p class="box-small copy-small">(Links to further reading)</p> -->
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">
+              <p>DBs are a way to save data between instances of your server running, or between multiple web sessions</p>
+            </li>
+            <li class="fragment">
+              <p>For example, without databases, you would have to re-enter all of your friends every time you logged onto Facebook!</p>
+            </li>
+            <li class="fragment">
+              <p>Easiest way to visualize is to think of each SQL table in Excel</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h4>Database CRUD</h4>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">Databases need to do a couple things in order to be useful. These make up the acronym CRUD:</li>
+            <li class="fragment">
+              <strong>C (Create)</strong>: We need to be able to create new database entries.</li>
+            <li class="fragment">
+              <strong>R (Read)</strong>: When we put data into the database, we need a way to get it back out</li>
+            <li class="fragment">
+              <strong>U (Update)</strong>: If data we've entered previously becomes out of date, we need a way to update it.</li>
+            <li class="fragment">
+              <strong>D (Delete)</strong>: We need to be able to delete data that we no longer need</li>
+            <li class="fragment">For this class, we'll only focus on creating and reading - feel free to add the others as practice!</li>
+          </ul>
+        </section>
+
+      </section>
+      <section>
+        <!-- Intro to SQL Alchemy -->
+        <section>
+          <h3>What does the code look like?</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>We won't be dealing directly with the database.</li>
+            <li>We'll be using a module called SQLAlchemy, that lets us treat databases like regular Python code</li>
+            <li>Run
+              <code>git checkout db</code> to see the database code!</li>
+          </ul>
+        </section>
+        <section>
+          <h3>SQLAlchemy Boilerplate</h3>
+          <p class="box--small copy--small">Like the rest of the boilerplate provided, you don't
+            <i>really</i> need to understand this, but it comes in handy.</p>
+          <ul>
+            <li class="fragment">
+              <pre><code class="python">
+app = Flask(__name__)
+app.config.from_object(config)
+db = SQLAlchemy(app)
+              </code></pre>
+            </li>
+            <li class="fragment">If you look in
+              <code>config.py</code>, you'll see some configuration options for your database.
+            </li>
+            <li class="fragment">Basically, this tells SQLAlchemy where to create your database</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Creating the Database</h3>
+          <ul class="list--xtall">
+            <li class="fragment">
+              <pre><code class="python">
+db.create_all()
+            </code></pre>
+            </li>
+            <li class="fragment">This is what actually creates the database</li>
+            <li class="fragment">It takes everything that has been created so far (we'll get to that in a minute) and creates tables for it all</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Remembering Recipes</h3>
+          <p class="box--small copy--small">We use databases to get our program to remember things.</p>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">
+              <pre><code class="python">
+class Recipe(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(64))
+            </code></pre>
+            </li>
+            <li class="fragment">What do these lines actually do?</li>
+            <li class="fragment">
+              <code>db.Model</code> tells SQLAlchemy that we want to add this to the database</li>
+            <li class="fragment">It also gives us access to some really neat helper functions</li>
+          </ul>
+        </section>
+        <section>
+          <h3>db Helper Functions</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">
+              <code>db.Column</code> tells the program that we want a column in the database with certain properties</li>
+            <li class="fragment">
+              <code>db.Integer</code> and
+              <code>db.String</code> specify what type of data each column is</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Our Current Database</h3>
+          <img src="images/spreadsheet_two_columns.png">
+        </section>
+      </section>
+      <section>
+        <!-- Reading and writing to databases -->
+        <section>
+          <h3>Writing to a Database</h3>
+          <p>Databases aren't very useful if we can't add information to them</p>
+          <ul class="list--xtall box--small copy--small">
+            <li>First, let's create an object we want to save</li>
+            <li>
+              <pre><code>
+my_recipe = new Recipe(
+    title='My new recipe!',
+    ingredients='1 pound of chicken, 1 tsp cumin',
+    instructions='Mix well'
+)
+            </code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Writing to a Database</h3>
+          <ul class="list--tall box--small copy--small">
+            <li>Now, let's tell the database to save it! This looks a little weird:</li>
+            <li>
+              <pre><code class="python">
+db.session.add(my_recipe)
+db.session.commit()
+            </code></pre>
+            </li>
+            <li>This tells the database to save the recipe we just created.</li>
+            <li>"Add" tells the database that we'll want to save this object</li>
+            <li>"Commit" tells the database to go ahead and save this</li>
+            <li>Doesn't make much of a difference now, but with large projects, it's helpful to have these be two separate steps</li>
+          </ul>
+        </section>
+        <!-- TODO Add an exercise here -->
+        <section>
+          <h3>Reading from a database</h3>
+          <p>Doesn't make much sense to write to a database if we can't get the information back!</p>
+          <ul class="list--xtall box--small copy--small">
+            <li>We can query the database to get our data back</li>
+            <li>
+              <pre><code class="python">
+recipes = Recipe.query.all()
+            </code></pre>
+            </li>
+            <li>This gets a list of all of the Recipe objects that we've put into our database</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- OUTRO -->
+      <section>
+        <section>
+          <h3>Questions?</h3>
+        </section>
+
+        <section>
+          <h3>Homework</h3>
+          <p class="copy--small box">Write a program that could replace the initial conversation you have at the checkout line. It should do the following:</p>
+          <div class='box--small'>
+            <pre><code contenteditable class="python" style="min-height: 50px;">
+>> Did you find everything ok?
+(wait for input)
+
+>> What's your name?
+(read in a name from the user)
+
+>> Hi, (User's Name) do you want paper or plastic?
+(wait for input)
+
+>> What is your total before tax?
+(read in a total)
+
+>> Your total with sales tax is: (total with sales tax)
+(wait for input before exiting)
+          </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Want help?</h3>
+          <div class="box">
+            <p class="box">
+              <a href="https://gdiaa.slack.com/messages/0516-intro-python/details/" target="_blank" class="roll">
+                <span>#0516-intro-python</span>
+              </a>
+            </p>
+            <p>
+              <small>Not on Slack?
+                <a target="_blank" href="http://bit.ly/gdiaa-slack" class="roll">
+                  <span data-title="bit.ly/gdiaa-slack">bit.ly/gdiaa-slack</span>
+                </a>
+              </small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3>
+              <span class="green">Intro to Python</span>
+              <br/>
+              <small>
+                <a href="class2.html">Class 2 &raquo;</a>
+              </small>
+            </h3>
+            <p>
+              <small>@gdiannarbor &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small>
+            </p>
+          </div>
+        </section>
+
+      </section>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        @gdiannarbor &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+          <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      rollingLinks: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+      ]
+    });
+  </script>
+</body>
+
+</html>

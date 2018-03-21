@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Intermediate Python | Girl Develop It Ann Arbor</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intermediate Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+  <script src="lib/js/head.min.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <!-- INTRO -->
+      <section>
+        <!-- Opening slide -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intermediate Python</span><br/><small><span class="blue">Class 2</span></small></h3>
+            <p><small>@gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #InterPython</small></p>
+          </div>
+        </section>
+
+        <section>
+          <h3>What we'll cover in this class</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">Python Classes and Objects</li>
+            <li class="fragment">Forms</li>
+            <li class="fragment">Flask redirects</li>
+          </ul>
+        </section>
+      </section>
+
+
+      <!-- Background Knowledge: ?? minutes -->
+      <section>
+        <section>
+          <h3>Background Knowledge</h3>
+          <p class="box--small copy--small">What is a class?</p>
+          <ul class="list--xtall box--small copy--small">
+            <li class="fragment">What is a class? </li>
+            <li class="fragment">Technically, a class is "a means of bundling data and functionality together"</li>
+            <li class="fragment">More practically, a class is a way to keep track of a bunch of related data</li>
+            <li class="fragment">For example, I could have a "recipe" class, and have associated data with that</li>
+            <li class="fragment">Name of the recipe, ingredients and quantities required, instructions</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Classes and Objects</h3>
+          <p>What's the difference?</p>
+          <ul class="list--xtall box--small copy--small">
+            <li>A class is a template, an object is a </li>
+            <li>For a Car class, you might want to keep track of:
+              <ul>
+                <li>Number of wheels</li>
+                <li>Color of the car</li>
+                <li>Automatic/Manual transmission</li>
+              </ul></li>
+            <li>A car object is a specific instance of the class</li>
+            <li>You can't say <i>all</i> cars have four wheels (i.e. semi trucks), but you can say <i>this</i> car has four wheels</li>
+          </ul>
+        </section>
+        <section>
+          <h3>What does the code look like?</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li><pre><code class="python">
+class Recipe():
+            </code></pre></li>
+            <li>This tells Python that we want a class named "Recipe", but nothing else</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Make our class more useful</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>To keep track of the title of a recipe, we need a field for that</li>
+            <li><pre><code class="python">
+class Recipe():
+    title = ''
+    ingredients = ''
+    instructions = ''
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Using our Class</h3>
+          <ul>
+            <li>Now, when we want to create a new recipe object, we can do this:</li>
+            <li><pre><code class="python">
+my_recipe = Recipe()
+my_recipe.title = 'Tasty Chicken'
+my_recipe.ingredients = '1 whole chicken, 1 tsp of cumin'
+my_recipe.instructions = 'Mix the two'
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>This is pretty cumbersome</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>To make it easier to create objects, we can make something called a <strong>constructor</strong></li>
+            <li>That looks like this in our class:</li>
+            <li><pre><code class="python">
+class Recipe:
+    def __init__(self, title, ingredients, instructions):
+        self.title = title
+        self.ingredients = ingredients
+        self.instructions = instructions
+            </code></pre></li>
+            <li><code>self</code> is shorthand for "this object being created right now"</li>
+            <li>This just says "save all of these values that we're giving to you"</li>
+          </ul>
+        </section>
+        <section>
+          <h3>These two bits of code are equivalent</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li><pre><code class="python">
+my_chicken_recipe = Recipe()
+my_chicken_recipe.title = 'Tasty Chicken'
+my_chicken_recipe.ingredients = '1 whole chicken, 1 tsp of cumin'
+my_chicken_recipe.instructions = 'Mix the two'
+            </code></pre></li>
+            <li><pre><code class="python">
+my_chicken_recipe = Recipe(
+    title='Tasty Chicken',
+    ingredients='1 whole chicken, 1 tsp of cumin',
+    instructions='Mix the two'
+            </code></pre></li>
+            <li>Both objects will end up with the same values, but the second is easier to read</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Using objects</h3>
+          <p>We can use objects to group together related information</p>
+          <pre><code class="python">
+my_chicken_recipe = Recipe(
+    title='Tasty Chicken',
+    ingredients='1 whole chicken, 1 tsp of cumin',
+    instructions='Mix the two'
+)
+
+my_fish_recipe = Recipe(
+    title='Delicious Fish',
+    ingredients='1 fish, 1 tsp garlic',
+    instructions='Mix and fry!'
+)
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>How do we use this with Flask?</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>We can use Flask to display our recipes!</li>
+            <li>Last session, we learned how to use templates, and show those to our users</li>
+            <li>This session, we've provided a template that you can use for this!</li>
+            <li>Try putting this in one of your existing functions:</li>
+            <li><pre><code class="python">
+recipes = [my_chicken_recipe, my_fish_recipe]
+return render_template('list_recipes.html', recipes=recipes)
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>This is pretty limiting...</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>Obviously, it'd be a <strong><i>huge</i></strong> pain if we had to put every new recipe in code</li>
+            <li>What if we built a way to enter them from the website?</li>
+            <li>This is where forms come in - we can give users a form, and they can enter their own recipes</li>
+          </ul>
+        </section>
+      </section>
+      <section> <!-- Forms -->
+        <section>
+          <h3>What is a form?</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>You've probably seen these before</li>
+            <li>Really easy way to get information from users</li>
+            <li>Can build a form using another Flask module</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Building a Flask Form</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>Using <code>flask_wtf</code> and <code>wtforms</code> modules</li>
+            <li>This means someone else has already done the work for making these forms, we just have to customize them to suit our needs.</li>
+            <li><pre><code class="python">
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, SubmitField
+
+class RecipeForm(FlaskForm):
+    title = StringField('Title')
+    ingredients = TextAreaField('Ingredients')
+    instructions = TextAreaField('Instructions')
+    submit = SubmitField('Submit')
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>What does that code actually do?</h3>
+          <p>Let's break it down</p>
+          <ul class="list--xtall box--small copy--small">
+              <li><code>class RecipeForm(FlaskForm):</code>
+                  <ul class="copy--xsmall"><li>Makes a class (RecipeForm) based on FlaskForm (gives a lot of helper functions and variables)</li></ul>
+              </li>
+              <li><code>title = StringField('Title')</code>
+                <ul class="copy--xsmall"><li>This will end up making a field for the recipe title in our HTML form</li></ul>
+              </li>
+              <li><code>ingredients = TextAreaField('Ingredients')</code></li>
+              <ul class="copy--xsmall"><li>This will make a multi-line input field for ingredients</li></ul>
+              <li><code>submit = SubmitField('Submit')</code></li>
+              <ul class="copy--xsmall"><li>This makes a button that the user can click to submit their answers when they're done filling out the form</li></ul>
+          </ul>
+        </section>
+        <section>
+          <h3>Our Code In Action</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>In order to see our code in action, add this view function to your code:</li>
+            <li><pre><code class="python">
+@app.route('/add_recipe')
+def show_recipe_form():
+    recipe_form = RecipeForm()
+    return render_template('recipe_form.html', form=recipe_form)
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Our Code In Action</h3>
+          <p>Your site should look something like this</p>
+          <img src="images/recipe_form.png">
+        </section>
+        <section>
+          <h3>Our Code's Inaction?</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>As it is right now, clicking the "Submit" button will result in a 'Method Not Allowed' error</li>
+            <li>What does that mean?</li>
+          </ul>
+        </section>
+        <section>
+          <h3>GET and POST Methods</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>There are a couple ways to send data over the internet</li>
+            <li>GET and POST methods are the most popular</li>
+            <li>"GET" means that your request is just fetching information, it won't change anything.</li>
+            <li>i.e. Fetching your emails, or looking up a recipe</li>
+            <li>"POST" means that your request may change information</li>
+            <li>i.e. Sending an email, or submitting a recipe to another website</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Why are we seeing this?</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>If you take a look at <code>templates/recipe_form.html</code>, you'll see this line:</li>
+            <li><code class="html">&lt;form action='/add_recipe' method='post'&gt;</code></li>
+            <li>Because adding a recipe is a change of information, the form is using a post request to '/add_recipe'</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Back to our Handler</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>We have this decorating our <code>show_recipe_form</code> method:</li>
+            <li><pre><code class="python">
+@app.route('/add_recipe')
+            </code></pre></li>
+            <li>By default, flask routes only accept GET requests</li>
+            <li>If we want to accept a POST request, we have to specifically tell the method that</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Adding a POST handler</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>We can add another route to be:</li>
+            <li><pre><code class="python">
+@app.route('/add_recipe', methods=['POST'])
+            </code></pre></li>
+            <li>Whatever method we use this with will receive responses from the form</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Let's receive a POST request</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>We need a method that starts like this:</li>
+            <li><pre><code class="python">
+@app.route('/add_recipe', methods=['POST'])
+def add_recipe():
+    form = RecipeForm()
+            </code></pre></li>
+            <li><code>form</code> is where we'll get all of the information that the user entered</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Getting Data From a Form</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>We can read the data from each part of the form</li>
+            <li>When we created the form, we had three pieces of information we were looking for:
+              <ul class="copy--xsmall">
+                <li>title</li>
+                <li>ingredients</li>
+                <li>instructions</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Getting Data From a Form</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>To get each of those, we can use code like this: <pre><code class="python">
+form.title.data
+form.ingredients.data
+form.instructions.data
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Making the data useful</h3>
+          <ul class="list--xtall box--small copy--small">
+              <li>We have our Recipe object from earlier - we can use that here!</li>
+              <li><pre><code class="python">
+new_recipe = Recipe(
+    title=form.title.data,
+    ingredients=form.ingredients.data,
+    instructions=form.instructions.data
+)
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Showing our Results</h3>
+          <ul class="list--xtall box--small copy--small">
+            <li>After the user enters their results, we can use our previous template to show their recipe</li>
+            <li><pre><code class="python">
+return render_template('list_recipes.html', recipes=[new_recipe])
+            </code></pre></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Our Code So Far</h3>
+          <pre><code class="python">
+@app.route('/add_recipe')
+def show_recipe_form():
+    recipe_form = RecipeForm()
+    return render_template('recipe_form.html', form=recipe_form)
+
+@app.route('/add_recipe', methods=['POST'])
+def add_recipe():
+    form = RecipeForm()
+    new_recipe = Recipe(
+        title=form.title.data,
+        ingredients=form.ingredients.data,
+        instructions=form.instructions.data
+    )
+    return render_template('list_recipes.html', recipes=[new_recipe])
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- OUTRO -->
+      <section>
+        <section>
+            <h3>Questions?</h3>
+        </section>
+
+        <section>
+          <h3>Homework</h3>
+          <p class="copy--small box">Write a program that could replace the initial conversation you have at the checkout line.  It should do the following:</p>
+          <div class='box--small'>
+            <pre><code contenteditable class="python" style="min-height: 50px;">
+>> Did you find everything ok?
+(wait for input)
+
+>> What's your name?
+(read in a name from the user)
+
+>> Hi, (User's Name) do you want paper or plastic?
+(wait for input)
+
+>> What is your total before tax?
+(read in a total)
+
+>> Your total with sales tax is: (total with sales tax)
+(wait for input before exiting)
+          </code></pre></div>
+        </section>
+
+        <section>
+          <h3>Want help?</h3>
+          <div class="box">
+            <p class="box"><a href="https://gdiaa.slack.com/messages/0516-intro-python/details/" target="_blank" class="roll"><span>#0516-intro-python</span></a></p>
+            <p><small>Not on Slack? <a target="_blank" href="http://bit.ly/gdiaa-slack" class="roll"><span data-title="bit.ly/gdiaa-slack">bit.ly/gdiaa-slack</span></a></small></p>
+          </div>
+        </section>
+
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intro to Python</span><br/><small><a href="class3.html">Class 3 &raquo;</a></small></h3>
+            <p><small>@gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #InterPython</small></p>
+          </div>
+        </section>
+
+      </section>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      rollingLinks: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+  </script>
+</body>
+</html>
