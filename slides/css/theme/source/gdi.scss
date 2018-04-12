@@ -1,0 +1,117 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Roboto');
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+// Colors
+$white: rgb(255, 255, 255);
+$pink: rgb(249, 90, 97);
+$green: rgb(128, 179, 45);
+$blue: rgb(0, 154, 166);
+$black: rgb(0, 0, 0);
+
+$dark-blue: rgb(42, 71, 88);
+$gold: rgb(216, 174, 100);
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: 'Roboto', Impact, sans-serif;
+$headingFont: 'Fira Sans', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: rgb(4, 146, 228);;
+$linkColorHover: lighten( $linkColor, 30% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+/*********************************************
+ * GDI Styles
+ *********************************************/
+
+#gdi-logo {
+	max-width: 40%;
+	max-height: 40%;
+	border: 0;
+	box-shadow: none;
+}
+
+.reveal .controls button {
+	color: $pink;
+}
+
+#blue-title {
+	color: $blue;
+}
+
+#green-subtitle {
+	color: $green;
+}
+
+#title-list {
+	list-style: none;
+}
+
+#title-list li {
+	display: inline;
+}
+
+#pink-title {
+	color: $pink;
+}
+
+#other-list {
+	list-style: none;
+}
+
+#no-border {
+	border: 0;
+	box-shadow: none;
+}
+
+.reveal footer {
+	position:fixed;
+	height:26px;
+	width:100%;
+	bottom:3px;
+	left:0;
+	z-index:1;
+	font-size:30%;
+	text-align:left;
+	background-repeat:no-repeat;
+	background-size:auto 74%;
+	background-position:7px 0
+}
