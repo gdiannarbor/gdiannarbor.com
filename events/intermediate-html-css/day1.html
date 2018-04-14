@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="css/slides.css">
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
-    if (window.location.search.match(/print-pdf/gi)) {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal/css/print/pdf.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    }
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'reveal/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
     </script>
     <link rel="icon" type="image/x-icon" href="reveal/favicon.ico" />
     <!--[if lt IE 9]>
@@ -50,19 +50,24 @@
             <section>
                 <h2>Welcome!</h2>
                 <h3>Download workshop files</h3>
-                <p>Please download workshop files at:<br />
-                <a href="http://girldevelopit.github.io/gdi-featured-intermediate-html-css/workshop-files.zip">http://girldevelopit.github.io/gdi-featured-intermediate-html-css/workshop-files.zip</a></p>
+                <p>Please download workshop files at:
+                    <br />
+                    <a href="./workshop-files.zip">http://girldevelopit.github.io/gdi-featured-intermediate-html-css/workshop-files.zip</a>
+                </p>
             </section>
             <section>
                 <h3>Class notes</h3>
-                <p>All slides are available at:<br />
-                <a href="http://girldevelopit.github.io/gdi-featured-intermediate-html-css/">http://girldevelopit.github.io/gdi-featured-intermediate-html-css/</a></p>
+                <p>All slides are available at:
+                    <br />
+                    <a href="http://girldevelopit.github.io/gdi-featured-intermediate-html-css/">http://girldevelopit.github.io/gdi-featured-intermediate-html-css/</a>
+                </p>
             </section>
             <!-- Welcome-->
             <section class="hide-pdf">
                 <h3>Welcome!</h3>
                 <div class="left-align">
-                    <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+                    <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship
+                        and hands-on instruction.</p>
                     <p class="green">Some "rules"</p>
                     <ul>
                         <li>We are here for you!</li>
@@ -91,18 +96,21 @@
                 <h3>Workshop files</h3>
                 <p>Last reminder to download the files for today's class! </p>
                 <ul>
-                    <li>We have provided a folder that contains sample images for you to use today. We encourage you to be creative so don't feel like you're restricted to these images</li>
-                    <li>We've also included a blank index.html file for you to work from, as well as the final site for you to use as a reference if you get stuck.</li>
+                    <li>We have provided a folder that contains sample images for you to use today. We encourage you to be creative
+                        so don't feel like you're restricted to these images</li>
+                    <li>We've also included a blank index.html file for you to work from, as well as the final site for you to
+                        use as a reference if you get stuck.</li>
                 </ul>
             </section>
             <section>
                 <h3>Folder Structure</h3>
                 <p>We've set up the folder structure for the site today to reflect common practices used.</p>
-                <img src="images/folder-structure.png" alt="folder structure" style="width:500px;"/>
+                <img src="images/folder-structure.png" alt="folder structure" style="width:500px;" />
             </section>
             <section>
                 <h3>Cheat sheets</h3>
-                <p>We've provided a copy of the site you'll be building today with notes on how to break down the layout of the page.</p>
+                <p>We've provided a copy of the site you'll be building today with notes on how to break down the layout of
+                    the page.</p>
             </section>
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Common Applications</h1>
@@ -173,7 +181,8 @@
             <section>
                 <h3>Standard widths and sizes</h3>
                 <ul>
-                    <li>Screen sizes vary from computer to computer. Standardize your site on different screen sizes by defining specific widths.</li>
+                    <li>Screen sizes vary from computer to computer. Standardize your site on different screen sizes by defining
+                        specific widths.</li>
                     <li>Wrap your content in containers to control the max width it can span across a screen.</li>
                     <li>Keep in mind screen sizes also mean different font size display.</li>
                     <li>Retina screens have a higher pixel density and a larger resolution, so fonts appear smaller.</li>
@@ -225,7 +234,8 @@
 
             <section>
                 <h3>HTML 5: What is it?</h3>
-                <p>Formally, HTML5 is the <a href="http://www.w3.org/TR/html5/" target="_blank">W3C’s specification</a> for the next version of HTML.</p>
+                <p>Formally, HTML5 is the
+                    <a href="http://www.w3.org/TR/html5/" target="_blank">W3C’s specification</a> for the next version of HTML.</p>
                 <p>Informally, people use "HTML5" to refer to a whole set of new web standards and abilities:
                     <ul class>
                         <li>HTML5</li>
@@ -267,14 +277,16 @@
                     <li class="fragment">
                         <strong class="blue">Sept. 2012:</strong> WC3 proposes stable release of HTML5 by end of 2014!</li>
                     <li class="fragment">
-                        <strong class="blue">Oct. 2014:</strong> Final and complete!</li>    
+                        <strong class="blue">Oct. 2014:</strong> Final and complete!</li>
                 </ul>
             </section>
             <!-- Browser compatibility -->
             <aside class="notes">up-to-date-stats as of 7/2015</aside>
             <section>
                 <h2>What about the browsers?</h2>
-                <p>Score on <a href="https://html5test.com">HTML5 Test</a></p>
+                <p>Score on
+                    <a href="https://html5test.com">HTML5 Test</a>
+                </p>
                 <ul>
                     <li class="chrome">
                         <strong>Chrome 62:</strong>
@@ -456,7 +468,8 @@
             </section>
             <section>
                 <h3>Fixed Nav: CSS</h3>
-                <p>Remember, using fixed position is like using absolute position, except that it's fixed to the viewport, not the containing element.</p>
+                <p>Remember, using fixed position is like using absolute position, except that it's fixed to the viewport, not
+                    the containing element.</p>
                 <p>We also have to define a width for it, and its location.</p>
                 <pre><code class="css">
 nav {
@@ -514,7 +527,8 @@ nav li a {
             <section>
                 <h3>Fixed Nav: Adding a brand</h3>
                 <p>We can use an
-                    <code>H1</code> with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.</p>
+                    <code>H1</code> with text replacement to include a brand, or logo, in the corner that will still work if images are
+                    turned off, making it accesible to screen readers.</p>
                 <pre><code class="xml">
 <header>
     <nav>
@@ -553,7 +567,8 @@ nav ul {
             </section>
             <section>
                 <h3>Fixed Nav: Container</h3>
-                <p>Notice how the edge of the nav bumps up against the edge of the browser? Let's fix that by adding a container around it.</p>
+                <p>Notice how the edge of the nav bumps up against the edge of the browser? Let's fix that by adding a container
+                    around it.</p>
                 <pre><code class="xml">
 <header>
     <nav>
@@ -599,7 +614,8 @@ nav ul {
                 <h3>What is a Hero?</h3>
                 <ul>
                     <li>Large banner image, prominently placed on a web page, generally in the front and center</li>
-                    <li>First visual a visitor encounters on the site and its purpose is to present an overview of the site's most important content</li>
+                    <li>First visual a visitor encounters on the site and its purpose is to present an overview of the site's
+                        most important content</li>
                     <li>Often consists of image and text, can be static or dynamic</li>
                 </ul>
             </section>
@@ -631,7 +647,7 @@ nav ul {
     <img src="images/zebra.jpg" alt="IMA Zebra" />
     <h2>IMA Zebra</h2>
     <span class="city">Africa</span>
-&lt;/section> </code></pre> 
+&lt;/section> </code></pre>
             </section>
             <section>
                 <h3>Hero: CSS</h3>
@@ -641,7 +657,7 @@ nav ul {
     color: #fafafa;
     text-align: center;
 }
-</code></pre> 
+</code></pre>
             </section>
             <section>
                 <h3>Hero: CSS</h3>
@@ -653,7 +669,7 @@ nav ul {
     height: 350px;
     padding: 25px 0;
 }
-</code></pre> 
+</code></pre>
                 <p>Remember the Box Model from Intro to HTML/CSS. Padding adds to the height &amp; width of elements.</p>
                 <p>So the height of our hero will be
                     <code>400px</code>
@@ -677,97 +693,99 @@ nav ul {
 }</code></pre>
                 <p>That should do it</p>
             </section>
-                <section data-background="#f05b62">
-                    <h1 style="color: #fafafa;">Border Magic</h1>
-                </section>
-                <section>
-                    <h3>Turning squares into circles with magic!</h3>
-                    <p>Okay, it's not really magic, it's just a bit of CSS3.</p>
-                </section>
-                <section>
-                    <h3>Border-Radius</h3>
-                    <p>Simply put, allows you to create rounded corners on boxes.</p>
-                    <p>Designers rejoice!</p>
-                </section>
-                <section>
-                    <h3>Border-radius</h3>
-                    <p>20px radius on all corners</p>
-                    <pre><code class="css">#hero img {
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Border Magic</h1>
+            </section>
+            <section>
+                <h3>Turning squares into circles with magic!</h3>
+                <p>Okay, it's not really magic, it's just a bit of CSS3.</p>
+            </section>
+            <section>
+                <h3>Border-Radius</h3>
+                <p>Simply put, allows you to create rounded corners on boxes.</p>
+                <p>Designers rejoice!</p>
+            </section>
+            <section>
+                <h3>Border-radius</h3>
+                <p>20px radius on all corners</p>
+                <pre><code class="css">#hero img {
     border-radius: 20px;
 }</code></pre>
-                    <img src="images/radius-20.png" />
-                </section>
-                <section>
-                    <h3>Border-radius</h3>
-                    <p>10px radius on top left &amp; bottom right</p>
-                    <p>40px on top right &amp; bottom left</p>
-                    <pre><code class="css">#hero img {
+                <img src="images/radius-20.png" />
+            </section>
+            <section>
+                <h3>Border-radius</h3>
+                <p>10px radius on top left &amp; bottom right</p>
+                <p>40px on top right &amp; bottom left</p>
+                <pre><code class="css">#hero img {
     border-radius: 10px 40px;
 }</code></pre>
-                    <img src="images/radius-10-40.png" />
-                </section>
-                <section>
-                    <h3>Border-radius</h3>
-                    <p>10px radius on top left</p>
-                    <p>20px radius top right</p>
-                    <p>40px radius bottom right</p>
-                    <p>80px radius bottom left</p>
-                    <pre><code class="css">#hero img {
+                <img src="images/radius-10-40.png" />
+            </section>
+            <section>
+                <h3>Border-radius</h3>
+                <p>10px radius on top left</p>
+                <p>20px radius top right</p>
+                <p>40px radius bottom right</p>
+                <p>80px radius bottom left</p>
+                <pre><code class="css">#hero img {
     border-radius: 10px 20px 40px 80px;
 }</code></pre>
-                    <img src="images/radius-10-20-40-80.png" />
-                </section>
-                <section>
-                    <h3>Border-radius</h3>
-                    <p>50% radius on all corners</p>
-                    <pre><code class="css">#hero img {
+                <img src="images/radius-10-20-40-80.png" />
+            </section>
+            <section>
+                <h3>Border-radius</h3>
+                <p>50% radius on all corners</p>
+                <pre><code class="css">#hero img {
     border-radius: 50%;
 }</code></pre>
-                    <img src="images/radius-50.png" />
-                </section>
-                <section data-background="#f05b62">
-                    <h1 style="color: #fafafa;">Vendor Prefixes</h1>
-                </section>
-                <section>
-                    <h3>Vendor Prefixes</h3>
-                    <p>HTML5 and CSS3 are still new!</p>
-                    <p>This is great, but it means that not all browsers treat new CSS3 properties the same</p>
-                </section>
-                <section>
-                    <h3>Vendor Prefixes</h3>
-                    <p>Flags it as a work-in-progress</p>
-                    <p>When finished, the browser should support the non-prefixed name</p>
-                </section>
-                <section>
-                    <h3>Vendor Prefixes</h3>
-                    <p>Each browser has their own:</p>
-                    <ul>
-                        <li>
-                            <span class="green">Chrome:</span>-webkit-</li>
-                        <li>
-                            <span class="green">Firefox:</span>-moz-</li>
-                        <li>
-                            <span class="green">Safari:</span>-webkit-</li>
-                        <li>
-                            <span class="green">Opera:</span>-o-</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Using Prefixes</h3>
-                    <pre><code class="css">#hero img {
+                <img src="images/radius-50.png" />
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Vendor Prefixes</h1>
+            </section>
+            <section>
+                <h3>Vendor Prefixes</h3>
+                <p>HTML5 and CSS3 are still new!</p>
+                <p>This is great, but it means that not all browsers treat new CSS3 properties the same</p>
+            </section>
+            <section>
+                <h3>Vendor Prefixes</h3>
+                <p>Flags it as a work-in-progress</p>
+                <p>When finished, the browser should support the non-prefixed name</p>
+            </section>
+            <section>
+                <h3>Vendor Prefixes</h3>
+                <p>Each browser has their own:</p>
+                <ul>
+                    <li>
+                        <span class="green">Chrome:</span>-webkit-</li>
+                    <li>
+                        <span class="green">Firefox:</span>-moz-</li>
+                    <li>
+                        <span class="green">Safari:</span>-webkit-</li>
+                    <li>
+                        <span class="green">Opera:</span>-o-</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Using Prefixes</h3>
+                <pre><code class="css">#hero img {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
 }</code></pre>
-                    <p>Order matters! The non-prefixed version should always go last.</p>
-                </section>
-                <section>
-                    <h3>NOTE:</h3>
-                    <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.</p>
-                    <p>This is to save time during the code exercises</p>
-                </section>
+                <p>Order matters! The non-prefixed version should always go last.</p>
+            </section>
+            <section>
+                <h3>NOTE:</h3>
+                <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed
+                    property.
+                </p>
+                <p>This is to save time during the code exercises</p>
+            </section>
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Back to our Hero!</h1>
             </section>
@@ -786,7 +804,9 @@ nav ul {
 }
 </code></pre>
                 <p>
-                    <code>cover</code> scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
+                    <code>cover</code> scales the image to the largest size such that both its width and its height can fit inside the content
+                    area.
+                </p>
             </section>
 
             <section>
@@ -819,18 +839,20 @@ nav ul {
         &lt;a href="home.html" class="btn">See my home&lt;/a>
     &lt;/section>   
     &lt;!-- Repeat .column x3 -->
-&lt;/section> </code></pre> 
+&lt;/section> </code></pre>
 
             </section>
             <section>
                 <h3>3 Column: CSS</h3>
-                <p>Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.</p>
+                <p>Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them
+                    all left.</p>
                 <pre><code class="css">.column {
     float: left;
     width: 30%;
     padding: 15px;
 }        </code></pre>
-                <p>We used 30%, because it lets us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns some space.</p>
+                <p>We used 30%, because it lets us perfectly spaced columns without doing math! Don't forget padding (or margin)
+                    to give the columns some space.</p>
             </section>
             <section>
                 <h3>Wow. Large Images.</h3>
@@ -850,7 +872,8 @@ nav ul {
             </section>
             <section>
                 <h3>3 Column: Container</h3>
-                <p>We've got our 3 column layout set, our images are scaled based on the width of the column, but our columns are still bumping against the edges of the browser.</p>
+                <p>We've got our 3 column layout set, our images are scaled based on the width of the column, but our columns
+                    are still bumping against the edges of the browser.</p>
                 <pre><code class="xml">&lt;section id="main-content">
     <div class="container">
         <h3>...</h3>
@@ -882,7 +905,7 @@ nav ul {
                 <h2>That's it for today!</h2>
                 <h3>Questions?</h3>
             </section>
-                
+
         </div>
         <footer>
             <div class="copyright">
@@ -900,52 +923,52 @@ nav ul {
     <script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/slides.js"></script>
     <script>
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-        // Optional libraries used to extend on reveal.js
-        dependencies: [{
-            src: 'reveal/lib/js/classList.js',
-            condition: function() {
-                return !document.body.classList;
-            }
-        }, {
-            src: 'reveal/plugin/markdown/showdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'reveal/plugin/markdown/markdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'reveal/plugin/highlight/highlight.js',
-            async: true,
-            callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {
-            src: 'reveal/plugin/zoom-js/zoom.js',
-            async: true,
-            condition: function() {
-                return !!document.body.classList;
-            }
-        }, {
-            src: 'reveal/plugin/notes/notes.js',
-            async: true,
-            condition: function() {
-                return !!document.body.classList;
-            }
-        }]
-    });
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: 'reveal/lib/js/classList.js',
+                condition: function () {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'reveal/plugin/markdown/showdown.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'reveal/plugin/markdown/markdown.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'reveal/plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'reveal/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function () {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: 'reveal/plugin/notes/notes.js',
+                async: true,
+                condition: function () {
+                    return !!document.body.classList;
+                }
+            }]
+        });
     </script>
 
 </body>
