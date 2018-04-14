@@ -46,6 +46,3 @@
 [submodule "intro-databases"]
 	path = intro-databases
 	url = git@github.com:gdiannarbor/intro-databases.git
-[submodule "events/intro-databases"]
-	path = events/intro-databases
-	url = git@github.com:gdiannarbor/intro-databases.git

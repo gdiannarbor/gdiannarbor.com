@@ -18,9 +18,6 @@
 
     <script src="lib/js/head.min.js"></script>
 
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
   </head>
   <body>
     <div class="reveal">
@@ -95,15 +92,16 @@
               <li>Data from a <code>SELECT</code> statement can be grouped with the <code>GROUP BY</code> clause</li>
               <li>Can group by more than one column</li>
               <li>Be aware of the order you group columns in</li>
+              <li><code>GROUP BY</code> isn't particularly useful without <code>HAVING</code> or aggregate functions.</li>
             </ul>
           </section>
 
           <section>
             <h3>GROUP BY Syntax</h3>
             <p><pre><code contenteditable class="JavaScript">
-              SELECT column1, column2, column3
+              SELECT column1
               FROM tableA
-              GROUP BY column2
+              GROUP BY column1
             </code></pre></p>
           </section>
 
