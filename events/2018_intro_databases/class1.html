@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Databases : Class 1 ~ Girl Develop It</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intro to Databases course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/light.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <!-- Welcome & Intros - 20 min -->
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+            <div class="box--small">
+              <h3><span class="green">Intro to Databases</span></h3>
+              <h4><span class="blue">Class 1</span></h4>
+            </div>
+          </section>
+
+          <section>
+            <h3>About Me</h3>
+            <div class="left" style="margin-right: 40px"><img src="./images/Megan.JPG" class="img--bare" height="400px" /></div>
+            <ul class="fa-ul list--bare list--tall box--small">
+              <li><i class="fa-li fa fa-user"></i><a target="_blank" href="http://mlboczar.github.io">Megan Boczar</a></li>
+              <li><i class="fa-li fa fa-github"></i><a target="_blank" href="https://github.com/mlboczar">github.com/mlboczar</a></li>
+              <li><i class="fa-li fa fa-envelope-o"></i><a target="_blank" href="mailto:mlboczar@gmail.com">mlboczar@gmail.com</a></li>
+            </u>
+          </section>
+
+          <section>
+            <h3>Meet Your Mates!</h3>
+            <ul class="center-align list--xtall list--bare">
+              <li>Who are you?</li>
+              <li>What do you hope to get out of this class?</li>
+              <li>For fun: what's your favorite breakfast food?</li>
+            </ul>
+          </section>
+
+          <!-- Setting the Stage - 10 min -->
+          <section>
+            <h3>What we will cover today</h3>
+            <ul class="list--xtall box--small">
+              <li class ="fragment">What is a database?</li>
+              <li class ="fragment">What is SQL?</li>
+              <li class ="fragment">Installs & setup</li>
+              <li class ="fragment">Create and load up a sample database</li>
+              <li class ="fragment">Go through basic commands</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h3>What is a Database?</h3>
+          <ul>
+            <li>Databases are logically modelled storage spaces</li>
+            <li>Hold all kinds of different information (data)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What is a Database?</h3>
+          <br/>
+          <img class="img--bare" src="images/filing-cabinet-open-drawer.png" />
+        </section>
+
+        <section>
+          <h3>What is a PostreSQL?</h3>
+          <br/>
+          <img class="img--bare" src="images/filing-cabinets.png" />
+        </section>
+
+        <section>
+          <h3>What is a SQL?</h3>
+          <ul>
+            <li class ="fragment">SQL - Structured Query Language</li>
+            <li class ="fragment">Special purpose language for managing data within a relational database</li>
+            <li class ="fragment">Main language used to manipulate data in database platforms</li>
+            <li class ="fragment">SQL standard but there are different versions of SQL. All variations support the major commands in a similar manner.</li>
+            <li class ="fragment">SQL is great to know, because it is <em>everywhere</em>
+          </ul>
+        </section>
+
+        <section>
+        	<h3>What does SQL do?</h3>
+        	<ul>
+        		<li class ="fragment">Execute queries against a database and retrieve information from a database</li>
+        		<li class ="fragment">Create a new database and create tables in that database</li>
+        		<li class ="fragment">Insert, update and delete records</li>
+        		<li class ="fragment">Create stored procedures and views</li>
+        		<li class ="fragment">Set permissions on database objects</li>
+        	</ul>
+        </section>
+
+        <section>
+          <h3>Vendors that use SQL</h3>
+          <ul>
+            <li>Microsoft SQL Server (T-SQL)</li>
+            <li>Oracle (PL-SQL)</li>
+            <li><strong>PostgreSQL</strong></li>
+            <li>MySQL</li>
+            <li>DB2 (IBM Product)</li>
+            <li>Sybase</li>
+            <li>Microsoft Azure</li>
+          </ul>
+        </section>
+
+        <section>
+					<h3>Why PostgreSQL?</h3>
+					<ul>
+						<li class ="fragment">Great platform to use for learning SQL</li>
+						<li class ="fragment">Huge community support</li>
+						<li class ="fragment">Widely used in the industry and easy to use with various applications</li>
+						<li class ="fragment">It is open source</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Installing PostgreSQL</h3>
+          <h5><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target = "_blank">Download PostgreSQL</a></h5>
+          <br />
+          <h4 class="green">Mac OS X</h4>
+          <br />
+          <h4 class="green">Windows x86-64</h4>
+				</section>
+
+        <section>
+					<h3>Open PostgreSQL Terminal</h3>
+          <h4 class="green">Mac</h4>
+          <img src="images/mac-postgres-menu.png" class="left img--bare"/>
+          <img src="images/mac-postgres-terminal.png" style="width: 50%" class="pull-right img--bare"/>
+				</section>
+
+        <section>
+					<h3>Open PostgreSQL Terminal</h3>
+          <h4 class="green">Windows</h4>
+          <img src="images/windows-psql-menu.jpg" style="width: 30%" class="left img--bare"/>
+          <img src="images/windows-psql-terminal.png" style="width: 60%" class="pull-right img--bare"/>
+				</section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Spend a few minutes to get familiar with psql.<p>
+            <br/>
+          <ul>
+            <li><strong>Open postgres</strong>: <code>psql</code>
+              <br/>
+            <li>List databases: <code>\l</code> or <code>\list</code></li>
+            <li>Help: <code>\h</code> or <code>\help</code></li>
+            <li>Command help: <code>\h SELECT</code> or <code>\help SELECT</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Quit/Exit PostgreSQL</h3>
+          <p>To quit the database terminal use: <code>\q</code> or <code>\quit</code></p>
+          <img src="images/terminal-quit.png" class="img--bare"/>
+        </section>
+
+        <section>
+          <h3>Installing pgAdmin</h3>
+          <p>An app to interact with the PostgreSQL database, without the Terminal.</p>
+          <h4 class="green">Mac</h4>
+          <a class="copy--small" href="http://bit.ly/pgadmin-mac" target = "_blank">http://bit.ly/pgadmin-mac</a>
+          <br /><br /><br />
+          <h4 class="green">Windows</h4>
+          <a class="copy--small" href="http://bit.ly/pgadmin-windows" target="_blank">
+            http://bit.ly/pgadmin-windows</a>
+        </section>
+
+        <section>
+					<h3>pgAdmin - Setup Local Server</h3>
+          <img src="images/pg-admin-home.png" class="img--bare"/>
+				</section>
+
+        <section>
+          <h3>pgAdmin - Setup Local Server</h3>
+          <img src="images/pg-admin-add-server-1.png" style="width: 40%" class="left img--bare"/>
+          <img src="images/pg-admin-add-server-2.png" style="width: 40%" class="pull-right img--bare"/>
+        </section>
+
+				<section>
+				<h3>Relational Databases</h3>
+          <ul>
+  					<li class ="fragment">Is a database whose organization is based on the relational model</li>
+  					<li class ="fragment">This model organizes data into tables of rows and columns, with a unique key for each row</li>
+  					<li class ="fragment">Tables store unique keys from other tables, which allows tables to be linked/related</li>
+          </ul>
+				</section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Create a sample database and fill it with data.<p>
+          <br/>
+          <p>Download install files from: <a href="http://bit.ly/dvdrental-gdiaa">http://bit.ly/dvdrental-gdiaa</a></p>
+          <br />
+          <h4 class="green">Couple Ways to Load Sample Database...</h4>
+          <ol>
+            <li><code>psql</code> Prompt</li>
+            <li>Restore in pgAdmin</li>
+          </ol>
+        </section>
+
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <h4 class="green">From <code>psql</code> Prompt</h4>
+          <br/>
+          <p>Open Terminal go to where you downloaded the <strong>dvdrental.tar</strong> file.</p>
+          <code>createdb dvdrental</code>
+          <br/>
+          <code>pg_restore -d dvdrental dvdrental.tar</code>
+        </section>
+
+        <section>
+          <section>
+            <h3>Let's Develop It!</h3>
+            <br/>
+            <h4 class="green">Restore in pgAdmin</h4>
+            <ol>
+              <li>Create <code>dvdrental</code> database</li>
+              <li>Pick option to "Restore" to that database</li>
+              <li>Select <code>dvdrental.tar</code> </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <img src="images/create-database-option.png" class="left img--bare"/>
+            <img src="images/create-database.png" style="width: 45%" class="pull-right img--bare" />
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <img src="images/restore-database-option.png" class="left img--bare"/>
+            <img src="images/select-tar-from-all-files.png" style="width: 60%" class="pull-right img--bare" />
+          </section>
+        </section>
+
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Checkout our dvdrental database in pgAdmin.<p>
+          <ol>
+            <li>Open <strong>pgAdmin</strong> tool</li>
+            <li>Expand <strong>Servers</strong></li>
+            <li>Expand <strong>localhost</strong></li>
+            <li>Expand <strong>Databases</strong></li>
+            <li>Expand our new database <strong>dvdrental</strong></li>
+          <ol>
+        </section>
+
+        <section>
+					<h3>Pieces and parts of a relational database</h3>
+          <p>A relational database consists of many different elements, some of which include: </p>
+          <div style="float: left; width: 50%;" class="copy--small">
+            <ul>
+              <li>schema</li>
+              <li>tables</li>
+              <li>views</li>
+              <li>relationships</li>
+              <li>indexes</li>
+            </ul>
+          </div>
+          <div style="float: left; width: 50%;" class="copy--small">
+            <ul>
+              <li>functions</li>
+              <li>stored procedures</li>
+              <li>triggers</li>
+              <li>server objects</li>
+              <li>and other elements</li>
+            </ul>
+          </div>
+				</section>
+
+				<section>
+					<h3>Schema</h3>
+          <ul>
+  					<li class ="fragment">Is a way to logically group database objects</li>
+  					<li class ="fragment">Acts as a blueprint for how the database is constructed</li>
+  					<li class ="fragment">In a relational database, the schema defines relationships, tables, fields in tables etc.</li>
+          </ul>
+				</section>
+
+        <section>
+					<h3>Tables</h3>
+					<p>In a relational database, a table is an organized set of data using columns and rows.</p>
+					<img src="images/table.gif" class="img--bare" />
+					<p>You may sometimes hear a table referred to as a "relation".</p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Spend a few minutes exploring DVD Rental database<p>
+          <ol>
+            <li>Expand <strong>Schemas</strong></li>
+            <li>Checkout <strong>Tables</strong></li>
+            <li>Right click on a table, select option to view data</li>
+          </ol>
+				</section>
+
+				<section>
+					<h3>The SELECT Statement</h3>
+					<ul>
+						<li class ="fragment">We use the <code>SELECT</code> command to show/query data from a database</li>
+						<li class ="fragment">The output from a <code>SELECT</code> statement is always a grid of rows and columns.</li>
+						<li class ="fragment">The most simple <code>SELECT</code> statement retrieves all values from a single table</li>
+						<li class ="fragment"><code>SELECT</code> columns <code>FROM</code> database</li>
+					</ul>
+				</section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Explore the dvdrental tables & data.</p>
+          <ul style="width: 50%">
+            <li>Right-click on <strong>dvdrental</strong></li>
+            <li>Select <strong>Query Tool</strong></li>
+          </ul>
+          <br/><br/>
+          <p class="copy--small" style="width: 50%; padding-left: 20px"><span class="green"><em>Note:</em></span> SQL is not case sensitive</p>
+
+          <pre><code contenteditable class="JavaScript">SELECT * FROM actor;
+          </code></pre>
+          <p>This will return all of the results from the actor table.</p>
+        </section>
+
+				<section>
+					<h3>SELECT DISTINCT</h3>
+					<p><code>DISTINCT</code> keyword is used to return only distinct values, if there are duplicate values</p>
+
+          <p class="copy--small left-align"><span class="green"><em>Note:</em></span> Some database systems require a semi colon after each SQL statement. PostgreSQL is one of them.</p>
+
+					<div class="box--small"><pre><code contenteditable class="terminal">SELECT distinct first_name FROM actor;
+					</code></pre></div>
+					<p>This will return a distinct list of first names from the actor table in the dvdrentals db</p>
+				</section>
+
+				<section>
+					<h3>The WHERE Clause</h3>
+					<p class="copy--small">Returns a subset of rows filtered on the <code>WHERE</code> clause criteria</p>
+					<p class="copy--small"><code>SELECT</code> .. <code>WHERE</code> statement can be made on one line:</p>
+          <br/>
+          <p class="copy--small left-align" style="padding-left: 20px"><span class="green"><em>Note:</em></span> PostgreSQL uses double-quotes to look for internal database object. Use single-quote to wrap string values.</p>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM actor WHERE first_name = 'Bette';</code></pre>
+				</section>
+
+				<section>
+					<h3>WHERE Clause Operators</h3>
+					<table style="font-size: 2rem; line-height: 1.4em;">
+						<tr>
+							<td><strong>Operator</strong></td>
+							<td><strong>Description</strong></td>
+						</tr>
+						<tr>
+							<td>=</td>
+							<td>Equal</td>
+						</tr>
+						<tr>
+							<td>&lt;&gt;</td>
+							<td>Not equal. <em>Note:</em> In some versions of SQL, this may be written as !=</td>
+						</tr>
+						<tr>
+							<td>&gt;</td>
+							<td>Greater than</td>
+						</tr>
+						<tr>
+							<td>&lt;</td>
+							<td>Less than</td>
+						</tr>
+						<tr>
+							<td>&gt;=</td>
+							<td>Greater than or equal</td>
+						</tr>
+						<tr>
+							<td>&lt;=</td>
+							<td>Less than or equal</td>
+						</tr>
+						<tr>
+							<td>BETWEEN</td>
+							<td>Between an inclusive range</td>
+						</tr>
+						<tr>
+							<td>LIKE</td>
+							<td>Search for a pattern (can use a wildcard character)</td>
+						</tr>
+						<tr>
+							<td>IN</td>
+							<td>To specify multiple possible values for a column</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h3>Not Equal</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM actor WHERE first_name <> 'Catherine';
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Greater Than</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM rental WHERE rental_date > '2005-12-31';
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Less Than</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM film WHERE rental_duration < 4;
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>BETWEEN</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM film WHERE replacement_cost BETWEEN 21.99 AND 24.99;
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>LIKE</h3>
+					<p>Uses the wildcard character</p>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM customer WHERE last_name LIKE '%Will%';
+					</code></pre>
+					<p>Can use the character at the beginning or end of the word/phrase</p>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM customer WHERE last_name LIKE 'Will%';
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>IN</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM film WHERE rating IN ('G', 'PG');
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<ul>
+						<li>Spend some time writing SELECT statements with WHERE clauses</li>
+						<li>Feel free to work with a neighbor!</li>
+						<li>Practice Problems:</li>
+						<ul>
+							<li>Return all films that have an id greater than 900</li>
+							<li>Return all customers with a Last name of 'Smith'</li>
+							<li>Return all payment over 7 dollars</li>
+						</ul>
+					</ul>
+				</section>
+
+        <section>
+          <section>
+            <h3>Questions?</h3>
+          </section>
+
+          <section>
+            <h3>Homework</h3>
+            <p>Explore your sample dvdrental database.<br/>Get familiar with pgAdmin. Play. Have fun!</p>
+            <br/><br/>
+            <h3>Resources</h3>
+            <ul style="width: 50%">
+              <li><a href="http://www.tutorialspoint.com/postgresql/">Tutorials Point</a></li>
+              <li><a href="https://sqlzoo.net/">SQL Zoo</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+            <div class="box--small">
+              <h3><span class="green">Intro to Databases</span></h3>
+              <h4><span class="blue">Class 1</span></h4>
+            </div>
+          </section>
+        </section>
+
+      </div>
+      <footer>
+        <div class="copyright">
+          Intro to Databases ~ GDI Ann Arbor ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>

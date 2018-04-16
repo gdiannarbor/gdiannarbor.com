@@ -1,0 +1,5 @@
+-- Return all films that have an id greater than 900
+
+-- Return all customers with a Last name of 'Smith'
+
+-- Return all payment over 7 dollars

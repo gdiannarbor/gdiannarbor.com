@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Databases : Class 3 ~ Girl Develop It</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intro to Databases course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/light.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intro to Databases</span></h3>
+            <h4><span class="blue">Class 3</span></h4>
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h3>What we've already covered...</h3>
+            <ul class="box--small" style="width: 50%">
+              <li>Retreiving and deleting data</li>
+              <li>Manipulating data</li>
+              <li>Database table opertations</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>What we will cover today...</h3>
+            <ul class="box--small" style="width: 50%">
+              <li class ="fragment">Constraints
+                <ul>
+                  <li class="copy--small">Primary Keys</li>
+                  <li class="copy--small">Foreign Keys</li>
+                  <li class="copy--small">Unique</li>
+                </ul>
+              </li>
+              <li class ="fragment">Joins
+                <ul>
+                  <li class="copy--small">Inner Joins</li>
+                  <li class="copy--small">Outer Joins</li>
+                  <li class="copy--small">Left and Right Joins</li>
+                  <li class="copy--small">Cross Joins</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+              <h3>Questions on what we've already covered?</h3>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Constraints</h3>
+            <p>Limit the type of data that can be inserted into a table</p>
+            <br/>
+            <p style="text-align: left; padding-left: 50px;" class="green"><strong>Types include</strong>:</p>
+            <ul style="width:40%; display: inline-block">
+              <li>Primary Key</li>
+              <li>Foreign Key</li>
+              <li>Unique</li>
+            </ul>
+            <ul style="width:40%; display: inline-block">
+              <li>Not NULL</li>
+              <li>Check</li>
+              <li>Default</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Primary Key Constraints</h3>
+            <ul>
+              <li>Used as a unique indentifier for a row in a table</li>
+              <li>There is only one PK (Primary Key) constraint allowed on a table</li>
+              <li>Can have more than one unique constraints</li>
+              <li>PK's become FK's (Foreign Key) when creating relations among tables</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Primary Key Example</h3>
+            <p>When creating a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS format
+                (format_id int PRIMARY KEY,
+                type varchar(20),
+                download boolean,
+                language varchar(30),
+                max_number_of_views int,
+                updated_at timestamp);
+            </code></pre></p>
+            <p>When altering a table:</p>
+            <p><pre><code contenteditable class="JavaScript">
+              ALTER TABLE format
+              ADD PRIMARY KEY (ID);
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Foreign Key Constraints</h3>
+            <ul style="width: 70%;">
+              <li>Points to a PK in another table</li>
+              <li>Enforces referential integrity</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>What is referential integrity?</h3>
+            <ul style="width: 70%;">
+              <li>Table relationships must always be consistent</li>
+              <li>Any foreign key field must agree with the primary key that is referenced by the foreign key</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Foreign Key Example</h3>
+            <p>When creating a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS format
+                (format_id int PRIMARY KEY,
+                film_id int REFERENCES film(film_id),
+                type varchar(20),
+                download boolean,
+                language varchar(30),
+                max_number_of_views int,
+                updated_at timestamp);
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Foreign Key Example</h3>
+            <p>When altering a table:</p>
+            <p><pre><code contenteditable class="JavaScript">
+              ALTER TABLE format
+              ADD FOREIGN KEY (film_id)
+              REFERENCES film(film_id);
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Entity Relationship Diagram</h3>
+            <a href="dvd-rental-diagram.pdf" target="_blank">dvdrental diagram</a>
+          </section>
+
+          <section>
+  					<h3>Let's Develop It!</h3>
+  					<p class="left-align"><strong>Practice Problems</strong>:</p>
+  					<ul>
+              <li>Return rows from the <strong>customer</strong> table where the first or last name includes the word 'Car' and where the <strong>store_id</strong> is 2</li>
+              <li>Create an <strong>order</strong> table. Include the following fields:
+                <ul style="width: 40%; display: inline-block" class="copy--small">
+                  <li>primary key</li>
+                  <li>foreign key to film (film_id)</li>
+                </ul>
+                <ul style="width: 40%; display: inline-block" class="copy--small">
+                  <li>foreign key to customer (customer_id)</li>
+                  <li>order date</li>
+                </ul>
+              </li>
+              <br/>
+              <p class="copy--small"><span class="green"><em>Note:</em></span> <strong>order</strong> is a reserved word, try <strong>orders</strong></p>
+  					</ul>
+  				</section>
+
+  				<section>
+  					<h3>Unique Constraints</h3>
+            <ul>
+              <li>Ensures that all data in a column is unique</li>
+    					<li>Primary key constraints automatically have unique constraints defined</li>
+    					<li>Unique constraints may include one to many multiple columns to guarantee uniqueness</li>
+            </ul>
+  				</section>
+
+  				<section>
+  					<h3>Unique Constraint Example</h3>
+  					<p>When creating a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS website
+              (website_id int PRIMARY KEY,
+              company_name varchar(30),
+              domain_name varchar(30),
+              last_update timestamp,
+              UNIQUE (domain_name));
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Unique Constraint Example</h3>
+  					<p>When altering a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              ALTER TABLE website
+              ADD UNIQUE (website_id);
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Not NULL Constraints</h3>
+  					<p>A column with this type of constraint cannot containt NULL values</p>
+  				</section>
+
+  				<section>
+  					<h3>Not NULL Example</h3>
+  					<p>When creating a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS student
+              (student_id int PRIMARY KEY,
+              store_id int REFERENCES store(store_id),
+              first_name varchar(30) NOT NULL,
+              last_name varchar(30) NOT NULL,
+              email varchar(30),
+              last_update timestamp,
+              UNIQUE (email));
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Let's Develop It!</h3>
+            <ul>
+              <li>Add a not null constraint on <strong>order</strong> table for <strong>customer_id</strong></li>
+              <li>Add a unique constraint on <strong>address</strong> to make sure the combination of address and district are unique</li>
+            </ul>
+            <br/><br/>
+            <p>Practice inserting some records in each table</p>
+  				</section>
+
+  				<section>
+  					<h3>Check Constraints</h3>
+  					<p>Imposes a validation on the value being added or updated in a column</p>
+  				</section>
+
+  				<section>
+  					<h3>Check Constraint Example</h3>
+  					<p>When creating a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS orders
+              (order_id int PRIMARY KEY,
+              film_id int REFERENCES film(film_id),
+              customer_id int REFERENCES customer(customer_id),
+              order_date timestamp,
+              deposit numeric(3,2),
+              CHECK (deposit > 0));
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Check Constraint Example</h3>
+  					<p>When altering a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              ALTER TABLE orders
+              ADD CHECK (deposit > 0);
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Default Constraints</h3>
+            <ul>
+              <li>Inserts the specified default value when no column value is provided</li>
+    					<li>Inserts the specified default value when the inserted or updated value meets a certain criteria</li>
+    					<li>For example: If the value inserted is 0, default the column value to 1</li>
+            </ul>
+  				</section>
+
+  				<section>
+  					<h3>Default Constraint Example</h3>
+  					<p>When creating a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS orders
+              (order_id int PRIMARY KEY,
+              film_id int REFERENCES film(film_id),
+              customer_id int REFERENCES customer(customer_id),
+              order_date timestamp DEFAULT NOW(),
+              deposit numeric(3,2),
+              CHECK (deposit > 0));
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Default Constraint Example</h3>
+  					<p>When altering a table: </p>
+            <p><pre><code contenteditable class="JavaScript">
+              ALTER TABLE orders
+              ALTER COLUMN price SET DEFAULT 29.99;
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Let's Develop It!</h3>
+            <ul>
+              <li>Add a check constraint to payment to check that the payment amount is greater than 90 cents</li>
+              <li>Add a default constraint to the customer table to set last_name to 'Unknown'</li>
+            </ul>
+            <br/><br/>
+            <p>Practice inserting some records in each table</p>
+  				</section>
+
+  				<section>
+  					<h3>Let's Develop It!</h3>
+  					<p>Create a table of your choice!</p>
+            <br/>
+            <ul>
+              <li>Be cognizant of the datatypes you give your columns</li>
+              <li>Try to add in some constraints and some defaults</li>
+            </ul>
+  				</section>
+        </section>
+
+        <section>
+          <section>
+  					<h3>Joins</h3>
+  					<p>The SQL <code>JOIN</code> clause combines records from two or more tables in a database. You will primarly use two types of joins, with some variations on these.</p>
+            <br/>
+            <ul style="width: 50%">
+    					<li>Inner Joins</li>
+    					<li>Outer Joins</li>
+    					<li>Left and Right Joins</li>
+    					<li>Cross Joins</li>
+            </li>
+  				</section>
+
+  				<section>
+  					<h3>INNER JOIN</h3>
+  					<p>Selects records that match Table A and Table B</p>
+  					<p>Is the default join type in many database systems</P>
+              <br/>
+  					<p><img src="images/innerjoin.png" class="img--bare"></p>
+  					<P></P>
+  				</section>
+
+  				<section>
+  					<h3>INNER JOIN Example</h3>
+
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT address.address, address.district, address.phone
+              FROM address
+              JOIN city ON address.city_id = city.city_id
+              WHERE city.city_id = 306;
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Let's Develop It!</h3>
+  					<p>Write a query, using an inner join, that returns the customer's first name, last name and the rental date for the customer who's <strong>customer_id</strong> is 37</p>
+  				</section>
+
+  				<section>
+  					<h3>Full Outer Join</h3>
+            <ul>
+    					<li>Returns all sets of records in Table A and Table B</li>
+    					<li>Records from both sides are included, where available.</li>
+    					<li>If there is no matching record, the missing side will have a null value.</li>
+            </ul>
+  				</section>
+
+          <section>
+            <h3>Full Outer Join</h3>
+            <br/>
+            <p><img src="images/fullouterjoin.png" class="img--bare"></p>
+          </section>
+
+          <section>
+  					<h3>Full Outer Join Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT column_name(s)
+              FROM table1
+              FULL OUTER JOIN table2
+              ON table1.column_name = table2.column_name;
+            </code></pre></p>
+  				</section>
+
+          <section>
+  					<h3>Full Outer Join Example</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT f.description, l.name
+              FROM film as f
+              FULL OUTER JOIN language as l
+              ON f.language_id = l.language_id;
+            </code></pre></p>
+            <br/>
+  					<p>Returns all the rows from film and language using null in fields that don't have a matching value from the other table.</p>
+  				</section>
+
+  				<section>
+  					<h3>Left Join</h3>
+            <ul>
+              <li>Produces all records from TableA, with matching records from TableB if they are available.</li>
+    					<li>If there is no matching record in TableB, the right side will have a null value.</li>
+            </ul>
+  				</section>
+
+          <section>
+            <h3>Left Join</h3>
+            <br/>
+            <p><img src="images/leftouterjoin.png" class="img--bare"></p>
+          </section>
+
+  				<section>
+  					<h3>Left Join Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT column_name(s)
+              FROM table1
+              LEFT JOIN table2
+              ON table1.column_name = table2.column_name;
+            </code></pre></p>
+  				</section>
+
+          <section>
+  					<h3>Left Join Example</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT f.description, l.name
+              FROM language as l
+              LEFT JOIN film as f
+              ON f.language_id = l.language_id;
+            </code></pre></p>
+            <br/>
+            <p>Returns all the rows from the left table (film), even if there are no matches in the right table (language).</p>
+  				</section>
+
+  				<section>
+  					<h3>Right Join</h3>
+            <ul>
+    					<li>Produces all records from the right table, with matching records from TableA if they are available.</li>
+    					<li>If there is no matching record in TableA, the left side will have a null value.</li>
+            </ul>
+  				</section>
+
+          <section>
+            <h3>Right Join</h3>
+            <br/>
+            <p><img src="images/rightjoin.png" class="img--bare"></p>
+          </section>
+
+          <section>
+  					<h3>Right Join Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT column_name(s)
+              FROM table1
+              RIGHT JOIN table2
+              ON table1.column_name = table2.column_name;
+            </code></pre></p>
+  				</section>
+
+          <section>
+  					<h3>Right Join Example</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT f.description, i.inventory_id
+              FROM inventory as i
+              RIGHT JOIN film as f
+              ON i.film_id = f.film_id;
+            </code></pre></p>
+            <br/>
+            <p>Returns all the rows from the right table (film), even if there are no matches in the left table (inventory).</p>
+  				</section>
+
+  				<section>
+  					<h3>Cross Join</h3>
+            <ul>
+              <li>Produces a result set which is the product of rows of two associated tables when no <code>WHERE</code> clause is used with <code>CROSS JOIN</code>.</li>
+    					<li>Multiplies the each row in the first table with each row in the second table.</li>
+    					<li>The result is known as a Cartesian Product.</li>
+    					<li>There are very few situations where this would be used.</li>
+            </ul>
+  				</section>
+
+          <section>
+            <h3>Cross Join</h3>
+            <br/>
+            <p><img src="images/crossjoin.png" class="img--bare"></p>
+          </section>
+
+  				<section>
+  					<h3>Cross Join Example</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE T1 (label CHAR(1) PRIMARY KEY);
+
+              CREATE TABLE T2 (score INT PRIMARY KEY);
+
+              INSERT INTO T1 (label)
+              VALUES
+               ('A'),
+               ('B');
+
+              INSERT INTO T2 (score)
+              VALUES
+               (1),
+               (2),
+               (3);
+
+              SELECT * FROM T1
+              CROSS JOIN T2;
+            </code></pre></p>
+  				</section>
+
+  				<section>
+  					<h3>Let's Develop It!</h3>
+  					<ul>
+              <li>Build a query to create a list of films not in inventory.
+                <span class="copy--small"><em>Tip:</em> try a right or left join, and a where clause</span>
+              </li>
+              <li>Build a query to create a list of all film's descriptions and category name
+                <span class="copy--small"><em>Tip:</em> use multiple joins</span>
+              </li>
+  					</ul>
+  				</section>
+        </section>
+
+        <section>
+          <section>
+              <h3>Questions?</h3>
+          </section>
+
+          <section>
+            <h3>Homework</h3>
+            <p>
+              Practicing joining tables in different ways. Checkout how each join is
+              different and changes the data returned.
+            </p>
+            <br/><br/>
+            <h3>Resources</h3>
+            <ul style="width: 50%">
+              <li><a href="http://www.tutorialspoint.com/postgresql/">Tutorials Point</a></li>
+              <li><a href="http://www.w3schools.com/sql/">W3 Schools Tutorials</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+            <div class="box--small">
+              <h3><span class="green">Intro to Databases</span></h3>
+              <h4><span class="blue">Class 3</span></h4>
+            </div>
+          </section>
+        </section>
+      </div>
+
+    <footer>
+      <div class="copyright">
+        Intro to Databases ~ GDI Ann Arbor ~
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      rollingLinks: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+  </script>
+</body>
+</html>
