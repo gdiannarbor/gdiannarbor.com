@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Databases : Class 2 ~ Girl Develop It</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intro to Databases course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/light.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intro to Databases</span></h3>
+            <h4><span class="blue">Class 2</span></h4>
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h3>What we've already covered...</h3>
+            <ul class="box--small" style="width: 50%">
+              <li>Install pgsql and pgAdmin</li>
+              <li>Loaded sample dvdrental database</li>
+              <li><code>SELECT</code></li>
+              <li><code>WHERE</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>What we will cover today...</h3>
+            <ul class="box--small" style="width: 50%">
+              <li class ="fragment">Manipulating Data
+                <ul>
+                  <li class="copy--small"><code>INSERT</code></li>
+                  <li class="copy--small"><code>UPDATE</code></li>
+                  <li class="copy--small"><code>DELETE</code></li>
+                </ul>
+              </li>
+              <li class ="fragment">Data Definition Language
+                <ul>
+                  <li class="copy--small"><code>CREATE</code></li>
+                  <li class="copy--small"><code>DROP</code></li>
+                  <li class="copy--small"><code>TRUNCATE</code></li>
+                  <li class="copy--small"><code>ALTER</code></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+              <h3>Questions on what we've already covered?</h3>
+          </section>
+        </section>
+
+          <section>
+            <h3>Data Manipulation Language (DML)</h3>
+            <p>Used for manipulating data<p>
+            <ul>
+              <li>INSERT</li>
+              <li>UPDATE</li>
+              <li>DELETE</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>INSERT statement</h3>
+            <p>Used to insert a new row (or set) of data into a table</p>
+          </section>
+
+          <section>
+            <h3>INSERT statement</h3>
+            <p><code>INSERT INTO</code> dbo.tableName <code>VALUES</code> x, y, z</p>
+            <p><pre><code contenteditable class="JavaScript">
+              INSERT INTO actor (first_name, last_name)
+              VALUES ('Leslie', 'Knope');</code></pre></p>
+            <p class="copy--small" style="padding-left: 20px">
+              <span class="green">
+                <em>Note:</em>
+              </span> If there is an identity or primary key column on a table, you should omit that column from your insert statement.
+              This certainly isn't always the case, but for our purposes it is!
+            </p>
+          </section>
+
+          <section>
+            <h3>UPDATE statement</h3>
+            <p>Is used to update or change the value of columns in selected row(s) of data</p>
+            <p>Use <code>WHERE</code> clause to define your set or row to update</p>
+          </section>
+
+          <section>
+            <h3>UPDATE example</h3>
+            <p><code>UPDATE</code> dbo.tableName <code>SET</code> field(s) = new value(s) <code>WHERE</code> condition(s)</p>
+            <p><pre><code contenteditable class="JavaScript">
+              UPDATE film
+              SET rental_duration = 4
+              WHERE film_id = 692;
+            </code></pre></p>
+            <p class="copy--small" style="padding-left: 20px">
+              <span class="green">
+                <em>Note:</em>
+              </span> If you forget your <code>WHERE</code> clause, you'll update EVERY column in the table.
+            </p>
+          </section>
+
+          <section>
+            <h3>DELETE statement</h3>
+            <p>Used to remove data from tables</p>
+            <p>For <code>UPDATE</code> and <code>DELETE</code> statements, it is helpful to write the <code>WHERE</code> clause first to avoid unintended results</p>
+          </section>
+
+          <section>
+            <h3>DELETE example</h3>
+            <p><code>DELETE FROM</code> dbo.tableName <code>WHERE</code> condition(s)</p>
+            <p><pre><code contenteditable class="JavaScript">
+              DELETE FROM payment
+              WHERE payment_id = 17873;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <p>Using the dvdrental database practice inserting, updating and deleting records</p>
+            <p>Practice Problems</p>
+            <ul>
+              <li>Insert a row into the address table</li>
+              <p class="copy--small" style="padding-left: 20px"><span class="green"><em>Note:</em></span> Checkout 'city_id', how do you think we can set this?</p>
+              <li>Update the category 'Sci-Fi' to 'Science Fiction'</li>
+              <li>Delete the address you inserted</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Data Definition Language (DDL)</h3>
+            <p>Used for defining data<p>
+            <ul>
+              <li>CREATE</li>
+              <li>DROP</li>
+              <li>TRUNCATE</li>
+              <li>ALTER</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>CREATE statement</h3>
+            <ul>
+              <li class="fragment">Can use <code>CREATE</code> to create a database, tables, views, stored procedures, indexes etc. (objects of a db)</li>
+              <li class="fragment">To create a table, we need to give the table a name and define the columns with a name and datatype</li>
+              <li class="fragment">Defining primary and foriegn keys as well as constraints and default values is an option here</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>CREATE example</h3>
+            <p><code>CREATE TABLE IF NOT EXISTS</code> dbo.tableName<br/>
+              <code>(</code> field definition(s) <code>);</code> condition(s)</p>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXISTS format
+                (ID int,
+                type varchar(20),
+                download boolean,
+                language varchar(30),
+                max_number_of_views int,
+                updated_at timestamp);
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <ul>
+              <li>Create two tables, a Video Game System table and a Video Game's table</li>
+              <li>Video Game System table should have:
+                <ul style="width: 40%; display: inline-block" class="copy--small">
+                  <li>video_game_system_id</li>
+                </ul>
+                <ul style="width: 40%; display: inline-block" class="copy--small">
+                  <li>name</li>
+                </ul>
+              </li>
+              <li>Video Game's table should have:
+                <ul style="width: 40%; display: inline-block" class="copy--small">
+                  <li>video_game_id</li>
+                  <li>title</li>
+                  <li>description</li>
+                </ul>
+                <ul style="width: 40%; display: inline-block" class="copy--small">
+                  <li>release_date</li>
+                  <li>rating</li>
+                  <li>video_game_system_id</li>
+                </ul>
+              </li>
+              <br/>
+              <li>Insert a few rows of data into each table</li>
+              <p class="copy--small"><span class="green"><em>Note:</em></span> be aware of the data types you are inserting into the table!!</p>
+            </ul>
+          </section>
+
+          <section>
+            <h3>DROP statement</h3>
+            <ul>
+              <li>Used to delete an object from a database</li>
+              <li>Be very cautious when using this command!</li>
+              <li>Cannot drop a table that does not exist, you will get an error</li>
+              <li>Can use <code>IF EXISTS</code> at the beginning of the statement</li>
+            </ul>
+            <p><pre><code contenteditable class="JavaScript">
+              CREATE TABLE IF NOT EXIST sample
+                (title varchar(20));
+              <br/>
+              DROP TABLE sample;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>DROP statement</h3>
+            <img src="images/bobby-tables.png" height="300rem"/>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <p>For practice, let's create a new table with one field an then drop that table.</p>
+            <ul>
+              <li>Build the SQL command to create a new table (name it and the field in it anything you want)</li>
+              <li>Once created, drop the table from the database</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>TRUNCATE statement</h3>
+            <ul>
+              <li>Used to delete all the contents of object from a database</li>
+              <li>If all data should be removed from a table, <code>TRUNCATE</code> is a less expensive operation than <code>DELETE</code></li>
+              <li>Again, be very cautious when using this command!</li>
+            </ul>
+            <p><pre><code contenteditable class="JavaScript">
+              INSERT INTO format (type, download, language, max_number_of_views)
+              VALUES ('stream', true, 'English', 4);
+              <br/>
+              SELECT * FROM format;
+              <br/>
+              TRUNCATE TABLE format;
+              <br/>
+              SELECT * FROM format;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>ALTER statement</h3>
+            <ul>
+              <li>Used to alter an object in database</li>
+              <li>Not all objects can be altered, this can be vendor specific</li>
+              <li>If an object cannot be altered, you can drop and recreate the object with the changes needed</li>
+            </ul>
+            <p><pre><code contenteditable class="JavaScript">
+              ALTER TABLE customer
+              ADD birthday date;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <p>We want to start saving the state with our city records</p>
+            <ul>
+              <li>Alter the city table to add a new column for state</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+              <h3>Questions?</h3>
+          </section>
+
+          <section>
+            <h3>Homework</h3>
+            <p>Explore the dvdrental database and see if you can find all the primary and foreign keys.</p>
+            <br/><br/>
+            <h3>Resources</h3>
+            <ul style="width: 50%">
+              <li><a href="http://www.tutorialspoint.com/postgresql/">Tutorials Point</a></li>
+              <li><a href="http://www.w3schools.com/sql/">W3 Schools Tutorials</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+            <div class="box--small">
+              <h3><span class="green">Intro to Databases</span></h3>
+              <h4><span class="blue">Class 2</span></h4>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <footer>
+        <div class="copyright">
+          Intro to Databases ~ GDI Ann Arbor ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>

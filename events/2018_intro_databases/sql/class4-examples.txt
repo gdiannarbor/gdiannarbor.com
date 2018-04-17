@@ -1,0 +1,91 @@
+-- Build list of city name with country name
+SELECT city.city, country.country
+FROM city
+INNER JOIN country
+ON city.country_id = country.country_id;
+
+SELECT city.city, country.country
+FROM city, country
+WHERE city.country_id = country.country_id;
+
+
+
+-- Build a query to create a list of films not in inventory.
+SELECT film.title, inventory.inventory_id
+FROM film
+LEFT JOIN inventory
+ON film.film_id = inventory.film_id
+WHERE inventory.inventory_id IS NULL;
+
+-- Build a query to create a list of all film's descriptions and category name Tip: use multiple joins
+SELECT film.title, category.name
+FROM film
+JOIN film_category
+ON film.film_id = film_category.film_id
+JOIN category
+ON film_category.category_id = category.category_id
+
+
+-- Get a list of all languages ordered alphabetically
+SELECT *
+FROM language
+ORDER BY name ASC;
+
+-- Build a query that gets a list of all used rental durations
+SELECT rental_duration
+FROM film
+GROUP BY rental_duration
+ORDER BY rental_duration;
+
+
+-- Find the average film length
+SELECT avg(length)
+FROM film;
+
+-- Find the count of films you have for each category
+SELECT c.name, count(f.film_id) as filmCount
+FROM film as f
+JOIN film_category as fc
+ON f.film_id = fc.film_id
+JOIN category as c
+ON c.category_id = fc.category_id
+GROUP BY c.name
+ORDER BY filmCount;
+
+-- Find the min payment, and max payment
+SELECT min(amount), max(amount)
+FROM payment;
+
+-- Create a list of addresses with a phone length under 10 digits
+SELECT *
+FROM address
+WHERE length(phone) < 10;
+
+GROUP BY length
+ORDER BY length;
+
+
+
+-- Create a list of each staff member and the total amounts of payments each has processed
+SELECT staff.staff_id, staff.first_name, sum(amount)
+FROM staff
+JOIN payment
+ON staff.staff_id = payment.staff_id
+GROUP BY staff.staff_id;
+
+-- Build a query to return the number of rentals you have for each film.
+-- Have it list the film's title and count of rentals each has had.
+SELECT film.title, count(rental.rental_id)
+FROM rental
+JOIN inventory USING (inventory_id)
+-- ON inventory.inventory_id = rental.inventory_id
+JOIN film USING(film_id)
+-- ON inventory.film_id = film.film_id
+GROUP BY film.film_id
+ORDER BY film.title
+
+
+-- cool thing you can do
+SELECT *
+FROM actor
+WHERE actor_id IN (SELECT actor_id FROM film_actor)

@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to Databases - Girl Develop It</title>
+
+		<meta name="description" content="Introduction to Databases. Developed by Pippa Grundy.
+		The course is meant to be taught in two four workshops.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/gdilight.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor--><!-- <link rel="stylesheet" href="lib/css/light.css"> -->
+		<!-- dark editor --><link rel="stylesheet" href="lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!--@author: Pippa Grundy-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Introduction to Databases</h3>
+                    <img src="images/gdi_logo_badge.png" alt="" />
+				</section>
+
+				<!-- Welcome-->
+				<section>
+					<h3>Welcome!</h3>
+					<div class = "left-align">
+					<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+					<p class ="green">Some "rules"</p>
+					<ul>
+						<li>We are here for you!</li>
+						<li>Every question is important</li>
+						<li>Help each other</li>
+						<li>Have fun</li>
+					</ul>
+					</div>
+				</section>
+		    <section>
+					<h3>Intro to SQL</h3>
+					<ul>
+						<li>SQL - Structured Query Language</li>
+						<li>Special purpose language for managing data in a RDBMS</li>
+						<li>Main language to manipulate data in database platforms</li>
+						<li>First introduced by Oracle in 1979</li>
+						<li>SQL is an ANSI and ISO standard but there are different versions of SQL. All variations support the major commands in a similar manner.</li>
+						<li>SQL is great to know, because it is <em>everywhere</em>.
+					</ul>
+        </section>
+        <section>
+        	<h3>What does SQL do?</h3>
+        	<ul>
+        		<li>Execute queries against a database and retrieve information from a database</li>
+        		<li>Create a new database and create tables in that database</li>
+        		<li>Insert, update and delete records</li>
+        		<li>Create stored procedures and views</li>
+        		<li>Set permissions on database objects</li>
+
+        	</ul>
+        </section>
+
+        </section>
+        <section>
+        	<h3>Vendors that use SQL</h3>
+        	<ul>
+        		<li>Microsoft SQL Server (T-SQL)</li>
+        		<li>Oracle (PL-SQL)</li>
+        		<li>Postgre SQL</li>
+        		<li>MySQL</li>
+        		<li>DB2 (IBM Product)</li>
+        		<li>Sybase</li>
+        		<li>Microsoft Azure</li>
+        	</ul>
+        </section>
+
+				<section>
+					<h3>Why MySQL?</h3>
+					<ul>
+						<li>Great platform to use for learning SQL</li>
+						<li>Plenty of documentation and tutorials on learning SQL</li>
+						<li>Widely used in the industry and easy to use with various applications</li>
+						<li>It is open source</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h3>Installing MySQL</h3>
+					<h4>Mac & Windows</h4>
+					<p>Download MySQL <a href = "http://dev.mysql.com/downloads/mysql" target = "_blank">http://dev.mysql.com/downloads/mysql</a></p>
+					<p>Download the latest general availability release</p>
+					<p>Accept all the default settings (ex: port 3306; password: admin)</p>
+					<p>If you change the password from admin, please remember it (for this class, you are advised to leave it as admin)</p>
+				</section>
+
+				<section>
+					<h3>Configuring MySQL</h3>
+					<h4>Mac & Windows</h4>
+					<p>Can do this via the command line client or using the GUI</p>
+					<p>For this class, we will use the GUI</p>
+					<p>Download the MySQL GUI <a href="http://dev.mysql.com/downloads/workbench/" target="_blank">http://dev.mysql.com/downloads/workbench/</a></p>
+					<p>Accept all the defaults</p>
+				</section>
+
+				<section>
+					<h3>Creating a connection</h3>
+					<p>Open MySQL Workbench</p>
+					<p>Click on  + sign to connect to an instance of MySQL</p>
+					<img src = "images/workbench.png">
+				</section>
+
+				<section>
+					<h3>Creating a connection</h3>
+					<img src = "images/newConnection.png">
+				</section>
+
+				<section>
+					<h3>MySQL GUI</h3>
+					<img src = "images/gui.png">
+				</section>
+
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Download MySQL and MySQL workbench</p>
+					<p>Create a new connection to MySQL</p>
+				</section>
+
+				<section>
+					<h3>The AdventureWorks Database</h3>
+					<ul>
+						<li>An extensive sample database many SQL tutorials are based on</li>
+						<li>Available for many popular RDBMS, including SQL Server, Oracle, MySQL, PostgreSQL, and SQLite</li>
+						<li>Great for learning SQL and for practicing more advanced SQL operations</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<li>Locate the AdventureWorksDB.sql file in the downloaded material provided</li>
+					<li>Open AdventureWorksDB.sql in MySQL workbench</li>
+					<li>Execute the script</li>
+					<p>Create a new connection to MySQL</p>
+				</section>
+
+				<section>
+				<h3>Relational Databases</h3>
+					<li>Is a database whose organization is based on the relational mode</li>
+					<li>This model organizes data into tables of rows and columns, with a unique key for each row</li>
+					<li>Tables store unique keys from other tables, which allows tables to be linked/related</li>
+				</section>
+
+				<section>
+					<h3>Pieces and parts of a relational database</h3>
+					<ul>
+					<p>A relational database consists of many different elements, some of which include: </p>
+						<ul>
+							<li>schema</li>
+							<li>tables</li>
+							<li>views</li>
+							<li>relationships</li>
+							<li>indexes</li>
+							<li>functions</li>
+							<li>stored procedures</li>
+							<li>triggers</li>
+							<li>server objects</li>
+							<li>and other elements</li>
+						</ul>
+					</li>
+				</section>
+
+				<section>
+					<h3>Schema</h3>
+					<p>Is a way to logically group database objects</p>
+					<p>Acts as a blueprint for how the database is constructed</p>
+					<p>In a relational database, the schema defines relationships, tables, fields in tables etc.</p>
+					<p>Default schema for many RDBMS is dbo</p>
+				</section>
+
+				<section>
+					<h3>Tables</h3>
+					<p>In a relational database, a table is an organized set of data using columns and rows.</p>
+					<img src="images/table.gif"/>
+					<p>You may sometimes hear a table referred to as a "relation".</p>
+				</section>
+
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Spend a few minutes exploring SSMS<p>
+					<ul>
+						<li>Pair up with your neighbor and discuss what you find.</li>
+						<li>View a few tables.</li>
+						<li>What do you find in the Structure tab? What are some different data types you can find?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Data Manipulation Language (DML)</h3>
+					<p>Used for manipulating data<p>
+					<ul>
+						<li>INSERT</li>
+						<li>UPDATE</li>
+						<li>DELETE</li>
+						<li>MERGE</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Data Definition Language (DDL)</h3>
+					<p>Used for defining data<p>
+					<ul>
+						<li>CREATE</li>
+						<li>DROP</li>
+						<li>TRUNCATE</li>
+						<li>ALTER</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h3>Data Control Language (DCL)</h3>
+					<p>Used to control access to data<p>
+					<ul>
+						<li>GRANT</li>
+						<li>REVOKE</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Transaction Control Language (TCL)</h3>
+					<p>Used to control transactional processing of data<p>
+					<ul>
+						<li>COMMIT</li>
+						<li>SAVEPOINT</li>
+						<li>ROLLBACK</li>
+						<li>SET TRANSACTION (isolation level)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>The SELECT Statement</h3>
+					<ul>
+						<li>We use the SELECT command to show/query data from a database</li>
+						<li>The output from a SELECT statement is always a grid of rows and columns.</li>
+						<li>The most simple SELECT statement retrieves all values from a single table</li>
+						<li><p>SELECT columns FROM database</p></li>
+					</ul>
+
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.contact;
+					</code></pre>
+					<p>This will return all of the results from the table, which could be expensive. Don't use this in production!</p>
+				</section>
+
+				<section>
+					<h3>SELECT DISTINCT</h3>
+					<p>DISTINCT keyword is used to return only distinct values, if there are duplicate values</p>
+					<ul>
+						<p>Note:</p>
+						<li>SQL is not case sensitive</li>
+						<li>Some database systems do require a semi colon after each SQL statement, MySQL does not</li>
+					</ul>
+
+					<pre><code contenteditable class="JavaScript">SELECT distinct FirstName FROM adventureworks.contact;
+					</code></pre>
+					<p>This will return a distinct list of first names from the contact table in the adventureworks db</p>
+				</section>
+
+				<section>
+					<h3>The WHERE Clause</h3>
+					<p>Returns a subset of rows filtered on the set criteria in the WHERE clause</p>
+					<p>SELECT .. WHERE statement can be made on one line:</p>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.contact where FirstName = "Catherine";</code></pre>
+				</section>
+
+				<section>
+					<h3>WHERE Clause Operators</h3>
+					<table style="font-size: 20px; line-height: 1.4em;">
+						<tr>
+							<td>Operator</td>
+							<td>Description</td>
+						</tr>
+						<tr>
+							<td>=</td>
+							<td>Equal</td>
+						</tr>
+						<tr>
+							<td>&lt;&gt;</td>
+							<td>Not equal. <em>Note:</em> In some versions of SQL, this may be written as !=</td>
+						</tr>
+						<tr>
+							<td>&gt;</td>
+							<td>Greater than</td>
+						</tr>
+						<tr>
+							<td>&lt;</td>
+							<td>Less than</td>
+						</tr>
+						<tr>
+							<td>&gt;=</td>
+							<td>Greater than or equal</td>
+						</tr>
+						<tr>
+							<td>&lt;=</td>
+							<td>Less than or equal</td>
+						</tr>
+						<tr>
+							<td>BETWEEN</td>
+							<td>Between an inclusive range</td>
+						</tr>
+						<tr>
+							<td>LIKE</td>
+							<td>Search for a pattern (can use a wildcard character)</td>
+						</tr>
+						<tr>
+							<td>IN</td>
+							<td>To specify multiple possible values for a column</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h3>Not Equal</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.contact WHERE FirstName <> "Catherine";
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Greater Than</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.Employee WHERE BirthDate > "1970-01-01";
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Less Than</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.Employee WHERE BirthDate < "1970-01-01";
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>BETWEEN</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.Employee WHERE BirthDate BETWEEN "1965-01-01" AND "1971-01-01";
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>LIKE</h3>
+					<p>Uses the wildcard character</p>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.Track WHERE Name LIKE "%Love%";
+					</code></pre>
+					<p>Can use the character at the beginning or end of the word/phrase</p>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.Track WHERE Name LIKE "%Lo";
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>IN</h3>
+					<pre><code contenteditable class="JavaScript">SELECT * FROM adventureworks.currency WHERE CurrencyCode IN ('AFA', 'ZAR');
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<ul>
+						<li>Spend some time writing SELECT statements with WHERE clauses</li>
+						<li>Feel free to work with a neighbor!</li>
+						<li>Practice Problems:</li>
+						<ul>
+							<li>Return all employees with a contact id of greater than 1200</li>
+							<li>Return all contacts with a Last name of 'Smith'</li>
+							<li>Return all employees with a title beginning with 'Production'</li>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Resources</h3>
+					<ul>
+						<li><a href="http://www.tutorialspoint.com/mysql/">Tutorials Point</a></li>
+						<li><a href="http://www.w3schools.com/sql/">W3 Schools Tutorials</a></li>
+					</ul>
+				</section>
+<!--
+				<section>
+					<h3>Break Time!</h3>
+				</section> -->
+
+
+<!--  BREAK -->
+
+
+				<section>
+					<h3>DML (Data Manipulation Language) Commands</h3>
+					<p>We will now learn to insert, update, and delete objects in a database!<p>
+				</section>
+
+				<section>
+					<h3>INSERT statement</h3>
+					<p>INSERT INTO dbo.table1 VALUES x, y, z</p>
+					<p><pre><code contenteditable class="JavaScript">INSERT INTO dbo.table1 SELECT col from dbo.table2</code></pre></p>
+					<p>Note: If there is an identity or primary key column on a table, you should omit that column from your insert statement</p>
+				</section>
+
+				<section>
+					<h3>INSERT statement example</h3>
+					<p><pre><code contenteditable class="JavaScript">INSERT INTO adventureworks.currency </code></pre></p>
+					<p><pre><code contenteditable class="JavaScript">VALUES ('PIP', 'Pippa', '2014-06-01 00:00:00');</code></pre></p>
+				</section>
+
+				<section>
+					<h3>UPDATE statement</h3>
+					<p>Is used to update or change the value of columns in selected row(s) of data</p>
+					<p>Use WHERE Clause to define your set or row to update</p>
+				</section>
+
+				<section>
+					<h3>UPDATE example</h3>
+					<p><pre><code contenteditable class="JavaScript">UPDATE adventureworks.currency</code></pre></p>
+					<p><pre><code contenteditable class="JavaScript">SET Name = 'PippaNew'</code></pre></p>
+					<p><pre><code contenteditable class="JavaScript">WHERE CurrencyCode = 'PIP';</code></pre></p>
+				</section>
+
+				<section>
+					<h3>DELETE statement</h3>
+					<p>Is used to DELETE data from tables</p>
+					<p>Unlike TRUNCATE, DELETE is used when removing data based on a set of criteria</p>
+					<p>For UPDATE and DELETE statements, it is helpful to write the WHERE clause first to avoid unintended results</p>
+				</section>
+
+				<section>
+					<h3>DELETE example</h3>
+					<p><pre><code contenteditable class="JavaScript">DELETE FROM adventureworks.currency</code></pre></p>
+					<p><pre><code contenteditable class="JavaScript">WHERE CurrencyCode = 'PIP';</code></pre></p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Using the database you have created, practice inserting, updating and deleting records</p>
+					<p>Practice Problems</p>
+					<ul>
+						<li>Insert a row into the currency table with a code, name and modified date</li>
+						<p>**Note: be aware of the data types you are inserting into the table!!</p>
+						<li>Update a row in the address table to change the City to 'Boulder' where the AddressLine1 is '1226 Shoe St.'</li>
+						<li>Delete the row you inserted into the currency table</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>DDL (Data Definition Language) Commands</h3>
+					<p>We will now learn to create, drop, truncate, and alter objects in a database!<p>
+				</section>
+
+				<section>
+					<h3>CREATE statement</h3>
+					<p>Can use CREATE to create a database, tables, views, stored procedures, indexes etc. (objects of a db)</p>
+					<p>To create a table, we need to give the table a name and define the columns with a name and datatype</p>
+					<p>Defining primary and foriegn keys as well as constraints and default values is an option here</p>
+				</section>
+
+				<section>
+					<h3>CREATE example</h3>
+					<p><pre><code contenteditable class="JavaScript">CREATE TABLE IF NOT EXISTS dbo.Students</p>
+					<p>(ID int,</p>
+					<p>FirstName varchar(20),</p>
+					<p>LastName varchar(20),</p>
+					<p>BirthDate int,</p>
+					<p>ModifiedDate datetime);</code></pre></p>
+				</section>
+
+				<section>
+					<h3>DROP statement</h3>
+					<p>Used to delete an object from a database</p>
+					<p>Be very cautious when using this command!</p>
+					<p>Cannot drop a table that does not exist, you will get an error</p>
+					<p>Can use IF EXISTS at the beginning of the statement</p>
+					<p><pre><code contenteditable class="JavaScript">DROP TABLE dbo.Customers</code></pre></p>
+				</section>
+
+				<section>
+					<h3>TRUNCATE statement</h3>
+					<p>Used to delete all the contents of object from a database</p>
+					<p>If all data should be removed from a table, TRUNCATE is a less expensive operation than DELETE</p>
+					<p>Again, be very cautious when using this command!</p>
+					<p><pre><code contenteditable class="JavaScript">TRUNCATE TABLE dbo.Customers</code></pre></p>
+				</section>
+
+				<section>
+					<h3>ALTER statement</h3>
+					<p>Used to alter an object in database</p>
+					<p>Not all objects can be altered, this can be vendor specific</p>
+					<p>If an object cannot be altered, you can drop and recreate the object with the changes needed</p>
+				</section>
+
+				<section>
+					<h3>ALTER example</h3>
+					<p><pre><code contenteditable class="JavaScript">ALTER TABLE dbo.Students</p>
+					<p>ADD Age int</code><pre></p>
+				</section>
+
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Create two tables in MySQL, a Student's table and an Activity table</p>
+					<p>Students table should have a StudentID, FirstName, LastName, BirthDate, ActivityID</p>
+					<p>Classes table should have an ActivityID, ActivityName</p>
+					<ul>
+						<li>Insert a few rows of data into each table</li>
+						<p>**Note: be aware of the data types you are inserting into the table!!</p>
+					</ul>
+				</section>
+
+
+				<!-- BREAK -->
+
+
+				<section>
+					<h3>Constraints</h3>
+					<p>Types: </p>
+					<ul>
+						<li>Primary Key</li>
+						<li>Foreign Key</li>
+						<li>Unique</li>
+						<li>Not NULL</li>
+						<li>Check</li>
+						<li>Default</li>
+					</ul>
+					<p>Limit the type of data that can be inserted into a table</p>
+				</section>
+
+				<section>
+					<h3>Primary Key Contraints</h3>
+					<p>Used as a unique indentifier for a row in a table</p>
+					<p>There is only one PK contraint allowed on a table</p>
+					<p>Can have more than one unique contraints</p>
+					<p>PK's become FK's when creating relations among tables</p>
+				</section>
+
+				<section>
+					<h3>Primary Key Example</h3>
+					<p>When creating a table: </p>
+					<ul>
+						<li>CREATE TABLE IF NOT EXISTS dbo.Students</li>
+						<li>(int ID PRIMARY KEY,</li>
+						<li>FirstName varchar(20),</li>
+						<li>LastName varchar(20),</li>
+						<li>BirthDate int,</li>
+						<li>ModifiedDate datetime);</li>
+					</ul>
+					<p>When altering a table: </p>
+					<ul>
+						<li>ALTER TABLE dbo.Students</li>
+						<li>ADD PRIMARY KEY (ID)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Foreign Key Contraints</h3>
+					<p>Points to a PK in another table</p>
+					<p>Enforces referential integrity</p>
+				</section>
+
+				<section>
+					<h3>Foreign Key Example</h3>
+					<p>When creating a table: </p>
+					<ul>
+						<li>CREATE TABLE IF NOT EXISTS dbo.Students</li>
+						<li>(int ID PRIMARY KEY,</li>
+						<li>PersonID int FOREIGN KEY REFERENCES Person(P_ID),
+						<li>FirstName varchar(20),</li>
+						<li>LastName varchar(20),</li>
+						<li>BirthDate int,</li>
+						<li>ModifiedDate datetime);</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Foreign Key Example</h3>
+					<p>When altering a table: </p>
+					<ul>
+						<li>ALTER TABLE dbo.Students</li>
+						<li>ADD FOREIGN KEY(P_ID)</li>
+						<li>REFERENCES Person(ID)</li>
+					</ul>
+				</section>
+
+
+<!--  BREAK -->
+
+
+				<section>
+					<h3>Recap from yesterday</h3>
+					<p>DML and DDL commands</p>
+					<p>Primary key and foreign keys</p>
+					<p>We will start with a few practice problems to reinforce the concepts</p>
+				</section>
+
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Practice Problems:</p>
+					<ul>
+					<li>Return rows from the Department table where the Name includes the word 'Control' and where the DepartmentID is between 4 and 14</li>
+					<li>Create a new table that replicates the existing SalesPerson table in the AdventureWorks DB. Insert all the rows from the existing SalesPerson table into the new SalesPerson table</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Practice Problems:</p>
+					<ul>
+					<li>Update the row in the Vendor table to change the name of the vendor to 'American Bikes in Boulder' where the AccountNumber is 'AMERICAN0002'</li>
+					<li>Update the vendor table to set the ActiveFlag to 0 where the VendorID is greater than 8 but less than or equal to 11</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Unique Contraints</h3>
+					<p>Ensures that all data in a column is unique</p>
+					<p>Primary key constraints automatically have unique constraints defined</p>
+					<p>Unique constraints may include multiple columns to guarantee uniqueness</p>
+				</section>
+
+				<section>
+					<h3>Unique Contraint Example</h3>
+					<p>When creating a table: </p>
+					<ul>
+						<li>CREATE TABLE IF NOT EXISTS dbo.Students</li>
+						<li>(int ID PRIMARY KEY,</li>
+						<li>FirstName varchar(20),</li>
+						<li>LastName varchar(20),</li>
+						<li>BirthDate int,</li>
+						<li>ModifiedDate datetime,</li>
+						<li>UNIQUE (ID));</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Unique Contraint Example</h3>
+					<p>When altering a table: </p>
+					<ul>
+						<li>ALTER TABLE dbo.Students</li>
+						<li>ADD UNIQUE (ID)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Not NULL Contraints</h3>
+					<p>A column with this type of constraint cannot containt NULL values</p>
+				</section>
+
+				<section>
+					<h3>Not NULL Example</h3>
+					<p>When creating a table: </p>
+					<ul>
+						<li>CREATE TABLE IF NOT EXISTS dbo.Students</li>
+						<li>(int ID NOT NULL,</li>
+						<li>FirstName varchar(20),</li>
+						<li>LastName varchar(20),</li>
+						<li>BirthDate int NOT NULL,</li>
+						<li>ModifiedDate datetime)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Create a unique constraint on your second Activity table you created yesterday. Create the unique constraint on the ID column</p>
+					<p>Create a not null constraint on the Store table. The constraint should be on the Name column.</p>
+				</section>
+
+				<section>
+					<h3>Check Contraints</h3>
+					<p>Imposes a validation on the value being added or updated in a column</p>
+				</section>
+
+				<section>
+					<h3>Check Contraint Example</h3>
+					<p>When creating a table</p>
+					<ul>
+						<li>CREATE TABLE IF NOT EXISTS dbo.Students</li>
+						<li>(int ID NOT NULL,</li>
+						<li>FirstName varchar(20),</li>
+						<li>LastName varchar(20),</li>
+						<li>BirthDate int NOT NULL,</li>
+						<li>ModifiedDate datetime,</li>
+						<li>CHECK (ID>0)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Check Contraint Example</h3>
+					<p>When altering a table</p>
+					<ul>
+						<li>ALTER TABLE dbo.Students</li>
+						<li>ADD CHECK (ID>0)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Default Contraints</h3>
+					<p>Inserts the specified default value when no column value is provided</p>
+					<p>Inserts the specified default value when the inserted or updated value meets a certain criteria</p>
+					<p>For example: If the value inserted is 0, default the column value to 1</p>
+				</section>
+
+				<section>
+					<h3>Default Contraint Example</h3>
+					<p>When creating a table</p>
+					<ul>
+						<li>CREATE TABLE IF NOT EXISTS dbo.Students</li>
+						<li>(int ID NOT NULL,</li>
+						<li>FirstName varchar(20),</li>
+						<li>LastName varchar(20),</li>
+						<li>BirthDate int NOT NULL,</li>
+						<li>ModifiedDate datetime DEFAULT GETDATE())</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Default Contraint Example</h3>
+					<p>When altering a table</p>
+					<ul>
+						<li>ALTER TABLE IF NOT EXISTS dbo.Students</li>
+						<li>ALTER COLUMN LastName SET DEFAULT 'Smith'</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Add a check constraint to the Students and the Activity table to check the StudentID and the ActivityID respectively, are greater than 0</p>
+					<p>Add a default constraint to the Students table and set the LastName column to default to 'Unknown'</p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Create a table of your choice</p>
+					<p>Be cognizant of the datatypes you give you columns</p>
+					<p>Bonus: Add a primary key constraint to your table during creation!</p>
+				</section>
+
+				<section>
+					<h3>Joins</h3>
+					<p>The SQL JOIN clause combines records from two or more tables in a database. You will primarly use two types of joins, with some variations on these.</p>
+					<p>Inner Joins</p>
+					<p>Outer Joins</p>
+					<p>Left and Right Joins</p>
+					<p>Cross Joins</p>
+				</section>
+
+				<section>
+					<h3>INNER JOIN</h3>
+					<p>Selects records that match Table A and Table B</p>
+					<p>Is the default join type in many RDBMS systems</P>
+					<p><img src="images/innerjoin.png"></p>
+					<P></P>
+				</section>
+
+				<section>
+					<h3>INNER JOIN Example</h3>
+					<p><pre><code contenteditable class="JavaScript">SELECT p.ProductID, p.Name, p.ListPrice, sd.UnitPrice</p>
+					<p>FROM adventureworks.Product p </P>
+					<p>JOIN adventureworks.SalesOrderDetail sd ON p.ProductID = sd.ProductID</p>
+					<P>WHERE p.ProductID = 718;</code></pre></P>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<p>Write a query, using an inner join, that returns the employeeID, loginID, and addressID where the employeeId is greater than or equals to 12 (Hint: you will use the employees
+						and employeeaddress tables!)</p>
+					<p></p>
+				</section>
+
+				<section>
+					<h3>Full Outer Join</h3>
+					<p>Returns all sets of records in Table A and Table B</p>
+					<p>Records from both sides are included, where available.</p>
+					<p>If there is no matching record, the missing side will have a null value.</p>
+					<p>Full outer joins are not supported in MySQL but you can emulate them by unioning a right and left join </p>
+				</section>
+
+				<section>
+					<h3>Full Outer Join</h3>
+					<p><img src="images/fullouterjoin.png"></p>
+				</section>
+
+				<section>
+					<h3>Left Join</h3>
+					<p>Produces all records from TableA, with matching records from TableB if they are available.</p>
+					<p>If there is no matching record in TableB, the right side will have a null value.</p>
+				</section>
+
+				<section>
+					<h3>Left Join Example</h3>
+					<p><pre><code contenteditable class="JavaScript">SELECT Customers.CustomerName, Orders.OrderID</p>
+					<p>FROM Customers</p>
+					<p>LEFT JOIN Orders</p>
+					<p>ON Customers.CustomerID=Orders.CustomerID</p></code></pre></p>
+					<p>Returns all the rows from the left table (Customers), even if there are no matches in the right table (Orders).</p>
+				</section>
+
+				<section>
+					<h3>Left Join Example</h3>
+					<p><pre><code contenteditable class="JavaScript">SELECT C.Customerid, O.addressid</p>
+					<p>FROM adventureworks.customer c</p>
+					<p>LEFT JOIN adventureworks.customeraddress o</p>
+					<p>on c.customerid = o.customerid</p></code></pre></p>
+					<p>Returns all the rows from the left table (Customers), even if there are no matches in the right table (Customer Address).</p>
+				</section>
+
+				<section>
+					<h3>Left Join</h3>
+					<p><img src="images/leftouterjoin.png"></p>
+				</section>
+
+				<section>
+					<h3>Right Join</h3>
+					<p>Produces all records from the right table, with matching records from TableA if they are available.</p>
+					<p>If there is no matching record in TableA, the left side will have a null value.</p>
+				</section>
+
+
+				<!-- BREAK -->
+
+
+				<section>
+					<h3>Cross Join</h3>
+					<p>Produces a result set which is the product of rows of two associated tables when no WHERE clause is used with CROSS JOIN.</p>
+					<p>Multiplies the each row in the first table with each row in the second table.</p>
+					<p>The result is known as a Cartesian Product.</p>
+					<p>There are very few situations where this would be used.</p>
+				</section>
+
+				<section>
+					<h3>Cross Join Example</h3>
+					<p><pre><code contenteditable class="JavaScript">SELECT C.Customerid, O.addressid</p>
+					<p>FROM adventureworks.customer c</p>
+					<p>CROSS JOIN adventureworks.customeraddress o </p></code></pre></p>
+					<p>Returns all the rows from the left table (Customers), even if there are no matches in the right table (CustomerAddress).</p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<ul>
+					<li>Return a list of first names in the students table that have a match in the activity table (hint, use an inner join)</li>
+					<li>Return a list of first names and activity ids (from the activity table) using a left join from students to activity. Notice how some records that do not have a match in the activity table return NULL</li>
+					<li>Cross join the store table with the state province table.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Ordering Data</h3>
+					<p>Data from a SELECT statement can be ordered with the ORDER BY clause.</p>
+					<p>Default ordering is ascending</p>
+					<p>Can explicitly add asc or desc</p>
+				</section>
+
+				<section>
+					<h3>ORDER BY Example</h3>
+					<p><pre><code contenteditable class="JavaScript">SELECT *</p>
+					<p>FROM adventureworks.Employee</p>
+					<p>ORDER BY BirthDate DESC</code></pre></p>
+				</section>
+
+
+				<section>
+					<h3>GROUP BY</h3>
+					<p>Data from a SELECT statement can be grouped with the GROUP BY clause.</p>
+					<p>Can group by more than one column</p>
+					<p>Be aware of the order you group columns in</p>
+				</section>
+
+				<section>
+					<h3>GROUP BY Example</h3>
+					<p><pre><code contenteditable class="JavaScript">SELECT count(*), Title</p>
+					<p>FROM adventureworks.Employee</p>
+					<p>GROUP BY Title</code></pre></p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<ul>
+					<li>Get a count of the employeeID's and the loginID's and group the list by the ManagerID (Employee table)</li>
+					<li>Order the results by ManagerID descending</li>
+					<li>Return a count of the department id and the group name, grouped by group name from the department table</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Functions in SQL</h3>
+					<p>Will vary by vendor</p>
+					<p>Aggregate, Datetime, User defined etc.</p>
+				</section>
+
+
+				<section>
+					<h3>Aggregate Functions</h3>
+					<p>count(*)</p>
+					<p>count(x)</p>
+					<p>sum(x)</p>
+					<p>avg(x)</p>
+				</section>
+
+				<section>
+					<h3>Date Functions</h3>
+					<p>count(x)</p>
+					<p>sum(x)</p>
+					<p>avg(x)</p>
+				</section>
+
+				<section>
+					<h3>Core Functions</h3>
+					<p>abs()</p>
+					<p>max()</p>
+					<p>min()</p>
+					<p>length()</p>
+					<p>ltrim()</p>
+					<p>rtrim()</p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It!</h3>
+					<ul>
+					<li>Find the average unit price of sale orders (from the SalesOrderDetail table) when the unit price is greater than $200.00
+						but less than $1000.00</li>
+					<li>Find the sum of sales orders (from the SalesOrderDetail table) where the order quantity is equal to 1</li>
+					<li>Return the Name and the length of the the Name column in the ProductCategory table</li>
+					<li>Return the total count of all rows in the ProductlistPriceHistory table</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Advanced Topics</h3>
+					<h4>Stored Procedures</h4>
+					<p>Are a sequence of instructions (SQL Statements) that perform a task and are stored in a single execution plan</p>
+					<p>Available to pplications that access relational database systems</p>
+					<p>Used for extensive and/or complex operations that involve multiple SQL statements</p>
+				</section>
+
+				<section>
+					<h3>Advanced Topics</h3>
+					<h4>Indexes</h4>
+					<p>Indexes reduces the number of database pages that have to be visited/scanned</p>
+					<p>Used to enhance query performance</p>
+					<p>Can be thought of as a pointer to data in a table (much like an index of a book)</p>
+					<p>Can only have one clustered index per table (determines the physical order of a table)</p>
+					<p>The clustered index is the table</p>
+					<p>Can have many non clustered indexes per table</p>
+				</section>
+
+				<section>
+					<h3>Advanced Topics</h3>
+					<h4>Triggers</h4>
+					<p>Triggers are database operations that are automatically performed when a specific event occurs in your database.</p>
+					<p>Among other things, triggers often used to insert records into log tables when changes are made to data.</p>
+					<p>Creating triggers is beyond the scope of this class, but know they exist.</p>
+				</section>
+
+				<section>
+					<h3>Advanced Topics</h3>
+					<h4>Transaction Level Operations</h4>
+					<p>A transaction is an atomic unit of database operations.</p>
+					<p>The effect of a transaction is that either all of the SQL statements in a transaction are committed to the database, or all of them are rolled back (no changes).</p>
+					<p>A transaction begins with the BEGIN TRANSACTION statement, followed by COMMIT or ROLLBACK.</p>
+					<p>Transactions are beyond the scope of this class, but good to learn if you are dealing with a group of changes that are "all or nothing".</p>
+				</section>
+
+				<section>
+					<h3>More Practice</h3>
+					<h4>SQL Zoo</h4>
+					<p>http://sqlzoo.net/wiki/SQL_Tutorial</p>
+				</section>
+
+
+        <section>
+          <h2>Questions?</h2>
+          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
+            <div class ="clear"></div></div>
+        </section>
+			</div>
+  		<footer>
+        <div class="copyright">
+          Intro to Databases -- Girl Develop It --
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

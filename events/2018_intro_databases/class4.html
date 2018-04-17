@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Databases : Class 4 ~ Girl Develop It</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intro to Databases course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
+    <link rel="stylesheet" href="lib/css/light.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3><span class="green">Intro to Databases</span></h3>
+            <h4><span class="blue">Class 4</span></h4>
+          </div>
+        </section>
+
+
+        <section>
+          <section>
+            <h3>What we've already covered...</h3>
+            <ul class="box--small" style="width: 50%">
+              <li>Retreiving and deleting data</li>
+              <li>Manipulating data</li>
+              <li>Database table opertations</li>
+              <li>Constraints</li>
+              <li>Joins</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>What we will cover today...</h3>
+            <ul class="box--small" style="width: 50%">
+              <li>Ordering Data</li>
+              <li>Grouping Data</li>
+              <li>Functions</li>
+              <li>Fun advanced topics</li>
+            </ul>
+          </section>
+
+          <section>
+              <h3>Questions on what we've already covered?</h3>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Ordering Data</h3>
+            <ul>
+              <li>Data from a <code>SELECT</code> statement can be ordered with the <code>ORDER BY</code> clause</li>
+              <li>Default ordering is ascending</li>
+              <li>Can explicitly add <code>ASC</code> or <code>DESC</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>ORDER BY Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT column1, column2
+              FROM tableA
+              ORDER BY column2
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>ORDER BY Example</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT *
+              FROM actor
+              ORDER BY first_name DESC;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>GROUP BY</h3>
+            <ul>
+              <li>Data from a <code>SELECT</code> statement can be grouped with the <code>GROUP BY</code> clause</li>
+              <li>Can group by more than one column</li>
+              <li>Be aware of the order you group columns in</li>
+              <li><code>GROUP BY</code> isn't particularly useful without <code>HAVING</code> or aggregate functions.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>GROUP BY Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT column1
+              FROM tableA
+              GROUP BY column1
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>GROUP BY Example</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT district
+              FROM address
+              GROUP BY district;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <ul>
+              <li>Get a list of all languages ordered alphabetically</li>
+              <li>Build a query that gets a list of all used rental durations
+                <span class="copy--small">(<em>Tip:</em> Try using GROUP BY)</span>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Functions in SQL</h3>
+            <ul>
+              <li>Built in database functions</li>
+              <li>Some will vary on database platform</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Aggregate Functions</h3>
+            <p>Used in conjunction with <code>GROUP BY</code></p>
+            <ul>
+              <li><code>count(*)</code></li>
+              <li><code>count(x)</code></li>
+              <li><code>sum(x)</code></li>
+              <li><code>avg(x)</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Aggregate Function Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT function(column2)
+              FROM tableA
+              GROUP BY column2;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Core Functions</h3>
+            <ul>
+              <li><code>abs()</code></li>
+              <li><code>max()</code></li>
+              <li><code>min()</code></li>
+              <li><code>length()</code></li>
+              <li><code>ltrim()</code></li>
+              <li><code>rtrim()</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Core Function Syntax</h3>
+            <p><pre><code contenteditable class="JavaScript">
+              SELECT function(column2)
+              FROM tableA;
+            </code></pre></p>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <ul>
+              <li>Find the average film length</li>
+              <li>Find the count of films you have for each category</li>
+              <li>Find the min payment, and max payment</li>
+              <li>Create a list of addresses with a phone length under 10 digits</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Let's Develop It!</h3>
+            <ul>
+              <li>Create a list of each staff member and the total amounts of payments each has processed</li>
+              <br/>
+              <li>Build a query to return the number of rentals you have for each film. Have it list the film's title and count of rentals each has had. </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Advanced Topics</h3>
+            <h4>Stored Procedures</h4>
+            <ul>
+              <li class="copy--small">A sequence of instructions (SQL Statements) that perform a task and are stored in a single execution plan</li>
+              <li class="copy--small">Available to applications that access relational database systems</li>
+              <li class="copy--small">Used for extensive and/or complex operations that involve multiple SQL statements</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Advanced Topics</h3>
+            <h4>Indexes</h4>
+            <ul>
+              <li class="copy--small">Indexes reduces the number of database pages that have to be visited/scanned</li>
+              <li class="copy--small">Used to enhance query performance</li>
+              <li class="copy--small">Can be thought of as a pointer to data in a table (much like an index of a book)</li>
+              <li class="copy--small">Can only have one clustered index per table (determines the physical order of a table)</li>
+              <li class="copy--small">The clustered index is the table</li>
+              <li class="copy--small">Can have many non clustered indexes per table</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Advanced Topics</h3>
+            <h4>Triggers</h4>
+            <ul>
+              <li class="copy--small">Triggers are database operations that are automatically performed when a specific event occurs in your database.</li>
+              <li class="copy--small">Among other things, triggers often used to insert records into log tables when changes are made to data.</li>
+              <li class="copy--small">Creating triggers is beyond the scope of this class, but know they exist.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Advanced Topics</h3>
+            <h4>Transaction Level Operations</h4>
+            <ul>
+              <li class="copy--small">A transaction is an atomic unit of database operations.</li>
+              <li class="copy--small">The effect of a transaction is that either all of the SQL statements in a transaction are committed to the database, or all of them are rolled back (no changes).</li>
+              <li class="copy--small">A transaction begins with the BEGIN TRANSACTION statement, followed by COMMIT or ROLLBACK.</li>
+              <li class="copy--small">Transactions are beyond the scope of this class, but good to learn if you are dealing with a group of changes that are "all or nothing".</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h3>More Practice</h3>
+          <ul style="width: 50%">
+            <li><a href="https://www.codecademy.com/learn/learn-sql" target="_blank">Code Academy SQL</a></li>
+            <li><a href="http://sqlzoo.net/wiki/SQL_Tutorial" target="_blank">SQL Zoo</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+          <ul style="width: 50%">
+            <li><a href="http://www.tutorialspoint.com/postgresql/" target="_blank">Tutorials Point</a></li>
+            <li><a href="http://www.w3schools.com/sql/" target="_blank">W3 Schools Tutorials</a></li>
+          </ul>
+        </section>
+
+          <section>
+            <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+            <div class="box--small">
+              <h3><span class="green">Intro to Databases</span></h3>
+              <h4><span class="blue">Class 4</span></h4>
+            </div>
+          </section>
+        </section>
+      </div>
+
+    <footer>
+      <div class="copyright">
+        Intro to Databases ~ GDI Ann Arbor ~
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      rollingLinks: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+  </script>
+</body>
+</html>
