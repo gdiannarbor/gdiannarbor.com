@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<!-- 1. -->
+	<title>Decoupling the Frontend through Modular CSS</title>
+
+	<!-- 2. -->
+	<meta name="description" content="Welcome to GDI present's Intermediate HTML/CSS">
+	<meta name="author" content="Erin Bergman">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/gdi.css" id="theme">
+
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- 3. Title Page -->
+			<section>
+				<img id="gdi-logo" src="../events/images/gdi_logo_badge.png">
+				<h5 id="green-subtitle">Decoupling the Frontend through</h5>
+				<h2 id="blue-title">Modular CSS</h2>
+				<small>
+					<ul id="title-list">
+						<li>
+							Julie Cameron&nbsp;|
+						</li>
+						<li>
+							<a href="https://twitter.com/jewlofthelotus?lang=en" target="_blank">
+								@jewlofthelotus
+							</a>
+							&nbsp;|
+						</li>
+						<li>
+							<a href="https://twitter.com/gdiannarbor" target="_blank">
+								@GDIAnnArbor
+							</a>
+							&nbsp;|
+						</li>
+						<li>
+							<a href="https://twitter.com/search?q=gdia2&AMP;src=typd" target="_blank">
+								#gdia2
+							</a>
+						</li>
+					</ul>
+				</small>
+			</section>
+
+			<!-- 4. GDI Welcome -->
+			<section>
+				<h2 id="pink-title">Welcome!</h2>
+				<small>
+					<p>
+						Girl Develop It is a nonprofit organization that provides affordable programs for adult women interested in learning web
+						and software development in a judgment-free environment.
+					</p>
+					<br>
+					<h3 id="green-subtitle">some "rules"</h3>
+					<ul>
+						<li>We are here for you!</li>
+						<li>
+							<strong>Every</strong> question is important
+						</li>
+						<li>Help each other</li>
+						<li>Have fun!</li>
+					</ul>
+					<br>
+					<br>
+					<br>
+					<p>
+						<small>
+							<strong>Girl Develop It is dedicated to providing a harassment free learning experience for
+								<em>everyone</em>.</strong>
+							<br />For more information, see our
+							<a href="http://www.girldevelopit.com/code-of-conduct" target="_blank">Code of Conduct</a>.</small>
+					</p>
+				</small>
+			</section>
+
+			<!-- 5.1 Upcoming Events -->
+			<section>
+				<section>
+					<h2 id="pink-title">Upcoming GDI Event</h2>
+					<h4 id="blue-title">Code &AMP; Coffee</h4>
+					<small>
+						<h4 id="green-subtitle">
+							At Espresso Royale
+						</h4>
+						<ul id="other-list">
+							<li>
+								Saturday, June 9
+							</li>
+						</ul>
+						<br>
+						<br>
+						<br>
+						<small>
+							<ul id="title-list">
+								<li>10:00am - 1:00pm&nbsp;|</li>
+								<li>
+									<a href="https://www.google.com/maps/search/?api=1&AMP;query=324+South+State+Street%2C+Ann+Arbor%2C+MI%2C+48104%2C+us" target="_blank">
+										324 South State Street, Ann Arbor
+									</a>
+									&nbsp;|
+								</li>
+								<li>
+									<a href="https://www.meetup.com/Girl-Develop-It-Ann-Arbor/events/249328678/" target="_blank">
+										Join us!
+									</a>
+								</li>
+							</ul>
+						</small>
+
+					</small>
+					<br>
+				</section>
+
+				<!-- 5.2 Upcoming Events -->
+				<section>
+					<h2 id="pink-title">Upcoming GDI Event</h2>
+					<h4 id="blue-title">GDI Ann Arbor's 4th Anniversary Party</h4>
+					<small>
+						<h4 id="green-subtitle">
+							at DOMINO'S PIZZA HQ
+						</h4>
+						<ul id="other-list">
+							<li>
+								Thursday, June 21st
+							</li>
+						</ul>
+						<br>
+						<br>
+						<br>
+						<small>
+							<ul id="title-list">
+								<li>6:00pm - 8:30pm&nbsp;|</li>
+								<li>
+									<a href="https://www.google.com/maps/place/30+Frank+Lloyd+Wright+Dr,+Ann+Arbor,+MI+48105/data=!4m2!3m1!1s0x883cac74bdd2fb0f:0x4991b41e2c4e2b36?sa=X&ved=0ahUKEwjc7p3WwrzbAhXRjVkKHQf-DvsQ8gEIKDAA"
+									 target="_blank">
+										30 Frank Lloyd Wright Drive, Ann Arbor, MI 48104
+									</a>
+									&nbsp;|
+								</li>
+								<li>
+									<a href="http://bit.ly/GDIA2Party" target="_blank">
+										Join us!
+									</a>
+								</li>
+							</ul>
+						</small>
+
+					</small>
+					<br>
+				</section>
+
+				<!-- 5.3 Upcoming Events -->
+				<!-- <section>
+					<h2 id="pink-title">Upcoming GDI Event</h2>
+					<h4 id="blue-title">Public Speaking through Lightning Talks</h4>
+					<small>
+						<h4 id="green-subtitle">
+							4-part workshop at The Forge by Pillar Technology
+						</h4>
+						<ul id="other-list">
+							<li>
+								Monday, April 30
+							</li>
+							<li>
+								Thursday, May 3
+							</li>
+							<br>
+							<li>
+								Monday, May 7
+							</li>
+							<li>
+								Thursday, May 10
+							</li>
+						</ul>
+						<br>
+						<br>
+						<br>
+						<small>
+							<ul id="title-list">
+								<li>6:00pm - 9:00pm&nbsp;|</li>
+								<li>
+									<a href="https://www.google.com/maps/search/?api=1&AMP;query=301+E.+Liberty+St%2C+Suite+700%2C+Ann+Arbor%2C+MI%2C+us" target="_blank">
+										301 E. Liberty St, Suite 700, Ann Arbor
+									</a>
+									&nbsp;|
+								</li>
+								<li>
+									<a href="https://www.meetup.com/Girl-Develop-It-Ann-Arbor/events/249032497/" target="_blank">
+										Join us!
+									</a>
+								</li>
+							</ul>
+						</small>
+
+					</small>
+					<br>
+				</section> -->
+			</section>
+
+			<!-- 6. Sponsors -->
+			<section>
+				<!-- 6.1 Community Sponsors -->
+				<section>
+					<h2 id="pink-title">Our Community Partners</h2>
+					<img id="no-border" src="../events/images/sponsors_2017.png">
+				</section>
+
+				<!-- 6.2 Sponsor Spotlight -->
+				<section>
+					<h2 id="pink-title">Sponsor Spotlight</h2>
+					<img style="max-width: 40%;" id="no-border" src="../events/images/atomic_object.png">
+				</section>
+			</section>
+
+			<!-- 7. People -->
+			<section>
+				<!-- 7.1 Introduce Organizer -->
+				<section>
+					<h2 id="pink-title">Your GDI Organizer</h2>
+					<h5 id="green-subtitle">Dana</h5>
+					<img id="gdi-logo" src="../events/images/dana.jpeg">
+				</section>
+
+				<!-- 7.2 Introduce Instructor -->
+				<section>
+					<h2 id="pink-title">Your Instructor</h2>
+					<h5 id="green-subtitle">Julie Cameron</h5>
+					<img id="gdi-logo" src="../events/images/julie.jpg">
+					<br>
+					<small>
+						<ul id="title-list">
+							<li>
+								<a href="https://twitter.com/jewlofthelotus?lang=en" target="_blank">
+									@jewlofthelotus
+								</a>
+							</li>
+						</ul>
+					</small>
+				</section>
+			</section>
+
+			<!-- 8. Attendance -->
+			<section>
+				<h2 id="pink-title">Let us know you made it!</h2>
+				<p>
+					<a href="https://bit.ly/2kQ47jb" target="_blank">https://bit.ly/2kQ47jb</a>
+					<br>
+					<small>(Case is important!)</small>
+				</p>
+			</section>
+
+			<!-- 8. Slack -->
+			<section>
+				<h2 id="pink-title">Join us on Slack!</h2>
+				<p>
+					<a href="http://gdiaa-slack.herokuapp.com/" target="_blank">http://gdiaa-slack.herokuapp.com/</a>
+					<br>
+				</p>
+			</section>
+
+			<!-- 9. Slide Deck -->
+			<!-- <section>
+				<h2 id="pink-title">Slides</h2>
+				<p>
+					<a href="../events/intermediate-html-css/index.html" target="_blank">Intermediate HTML/CSS</a>
+				</p>
+			</section> -->
+
+
+			<!-- 10. Title Page Again! -->
+			<section>
+				<img id="gdi-logo" src="../events/images/gdi_logo_badge.png">
+				<h2 id="blue-title">Intermediate HTML and CSS</h2>
+				<h5 id="green-subtitle"></h5>
+				<small>
+					<ul id="title-list">
+						<li>
+							Julie Cameron&nbsp;|
+						</li>
+						<li>
+							<a href="https://twitter.com/jewlofthelotus?lang=en" target="_blank">
+								@jewlofthelotus
+							</a>
+							&nbsp;|
+						</li>
+						<li>
+							<a href="https://twitter.com/gdiannarbor" target="_blank">
+								@GDIAnnArbor
+							</a>
+							&nbsp;|
+						</li>
+						<li>
+							<a href="https://twitter.com/search?q=gdia2&AMP;src=typd" target="_blank">
+								#gdia2
+							</a>
+						</li>
+					</ul>
+				</small>
+			</section>
+
+			<!-- YOU'RE DONE!!!!! -->
+			<!-- YOU'RE DONE!!!!! -->
+			<!-- YOU'RE DONE!!!!! -->
+			<!-- YOU'RE DONE!!!!! -->
+			<!-- YOU'RE DONE!!!!! -->
+			<!-- YOU'RE DONE!!!!! -->
+			<!-- YOU'RE DONE!!!!! -->
+
+		</div>
+		<footer>
+			<div class="copyright">
+				#GDIA2 &nbsp; | &nbsp; @gdiannarbor &nbsp;
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+					<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+				</a>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
